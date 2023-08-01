@@ -1,0 +1,6 @@
+/node_modules/
+
+# sensitive files to ignore
+/documents/company_list.csv
+/client_secrets.json
+/.env

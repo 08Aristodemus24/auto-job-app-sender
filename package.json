@@ -1,0 +1,18 @@
+{
+  "name": "auto-job-app-sender",
+  "version": "1.0.0",
+  "description": "1. Search for **Gmail API**\r 2. select the entry, and click **Enable**.\r 3. Select **Credentials** from the left menu, click **Create Credentials**, select **OAuth client ID**.\r 4. Now, the product name and consent screen need to be set -> click **Configure consent screen** and follow the instructions.\r 5. Once finished select **Application type** to be *Web application*.\r 6. Enter an appropriate name.\r 7. Input *http://localhost:8080* for **Authorized JavaScript origins**.\r 8. Input *http://localhost:8080/* for **Authorized redirect URIs**.\r 9. Click **Save**.\r 10. Click **Download JSON** on the right side of Client ID to download `client_secret_<really long ID>.json`.\r 11. The downloaded file has all authentication information of your application. Rename the file to `client_secrets.json` and place it in your working directory.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^6.3.1",
+    "dotenv": "^16.3.1",
+    "googleapis": "^123.0.0",
+    "nodemailer": "^6.9.4"
+  }
+}
