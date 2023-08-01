@@ -1,5 +1,7 @@
 # **STILL IN PRODUCTION**
 
+# A mini-project that automates sending my cv/resume and cover letter to companies and job recruiters en masse.
+
 # Note: Gmail API requires OAuth2.0 for authentication. PyDrive makes your life much easier by handling complex authentication steps for you.**
 
 # Go to APIs Console and make your own project.
