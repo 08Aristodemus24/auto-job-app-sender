@@ -2,5 +2,6 @@
 
 # sensitive files to ignore
 /documents/company_list.csv
+/documents/dummy.csv
 /client_secrets.json
 /.env
