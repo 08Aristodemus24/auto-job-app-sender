@@ -1,6 +1,6 @@
 Dearest Maam/Sir,
 
-My name is Larry Miguel R. Cueva and I am excited to submit my application for the {position} position at {company_name} As a highly motivated aspiring data professional with experience in Python, Keras, Tensorflow, Machine Learning, and Deep Learning to develop intelligible and data driven applications, I believe that my skills and passion for [position] make me the ideal candidate for this position.
+My name is Larry Miguel R. Cueva and I am very much excited to submit my application for the {position} position at {company_name} As a highly motivated aspiring data professional with experience in Python, Keras, Tensorflow, Machine Learning, and Deep Learning to develop intelligible and data driven applications, I believe that my skills and passion for [position] make me the ideal candidate for this position.
 
 Throughout my academic career and ventures in the world of data, I have gained valuable experience in data related processes, working on a range of projects that have honed my skills in Data Analysis, Machine Learning, and Deep Learning, which I know I'm still not the best at but am confident in saying I'm continuously being more competent at. I have a strong background in Python programming, with deep understanding in the aforementioned libraries/technologies associated with it to develop as I said data driven applications that would benefit not only our world of tech but of other people outside our community as well.
 

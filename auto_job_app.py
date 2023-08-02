@@ -114,6 +114,7 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument('--host', type=str, default='smtp.gmail.com')
     parser.add_argument('--port', type=int, default='465')
+    parser.add_argument('--position', type=str, default='Data Analytics')
 
     args = parser.parse_args()
     host = args.host
@@ -127,12 +128,13 @@ if __name__ == "__main__":
     SENDER_PASSWORD = os.environ['SENDER_PASSWORD']
 
     # load csv of company meta data
-    company_list = load_company_list('./documents/dummy.csv')
+    company_list = load_company_list('./documents/company_list.csv')
+    print(company_list)
 
     # create emails based on company meta data
-    messages = create_emails(company_list)
-    # print(type(messages), end='\n')
+    # messages = create_emails(company_list)
+    # # print(type(messages), end='\n')
 
-    # bulk send all messages
-    bulk_send(messages=messages, host=host, port=port)
+    # # bulk send all messages
+    # bulk_send(messages=messages, host=host, port=port)
     
