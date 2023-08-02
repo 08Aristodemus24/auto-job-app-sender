@@ -66,26 +66,6 @@ def create_emails(company_list: pd.DataFrame, position: str='Data Analytics', su
         return msg
     
     messages = company_list.apply(helper, axis=1)
-
-    # # extract company emails
-    # for row in company_list.index:
-    #     data = company_list.loc[row, :]
-    #     print(data)
-
-    #     company_name = data['company_name']
-    #     email = data['email']
-    #     print(cover_letter.format(position='Data Analytics', company_name=company_name))
-
-    #     # create email objects. Add file also
-    #     # as attachment to email object
-    #     msg = EmailMessage()
-    #     msg['Subject'] = 'test'
-    #     msg['To'] = email
-    #     msg.set_content(cover_letter.format(position='Data Analytics', company_name=company_name))
-    #     msg.add_attachment(resume, maintype='application', subtype='octet-stream', filename=resume_name)
-
-    #     # append msg object to messages list
-    #     messages.append(msg)
     
     return messages
 
