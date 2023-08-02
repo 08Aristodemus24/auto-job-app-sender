@@ -13,14 +13,25 @@ import pandas as pd
 
 
 def load_env_file() -> None:
+    """
+    
+    """
     BASE_DIR = Path('./').resolve()
     load_dotenv(os.path.join(BASE_DIR, '.env'))
 
+
 def load_company_list(path: str) -> pd.DataFrame:
+    """
+    
+    """
     df = pd.read_csv(path, index_col=0)
     return df
 
+
 def load_files(path: str, is_txt=False) -> tuple:
+    """
+    
+    """
     with open(path, 'rb') as file:
         # read binary data of file. If file is .txt then deocde to normal string
         file_data = file.read() if is_txt is False else file.read().decode('ascii')
@@ -30,12 +41,13 @@ def load_files(path: str, is_txt=False) -> tuple:
 
     return file_data, file_name
 
-def create_emails(company_list: pd.DataFrame, position: str='Data Analytics', subject='Data Analytics application') -> List[EmailMessage]:
-    # initialize list to contain all email objects
-    # messages = []
 
+def create_emails(company_list: pd.DataFrame, position: str='Data Analytics', subject='Data Analytics application'):
+    """
+    
+    """
     # load cover letter and resume
-    resume, resume_name = load_files('./documents/Cueva, Larry Miguel_Resume_A.pdf')
+    resume, resume_name = load_files('./documents/Cueva, Larry Miguel_Resume_B.pdf')
     cover_letter, _ = load_files('./documents/DA_cover_letter_2.txt', is_txt=True)
 
     def helper(row):
@@ -50,8 +62,8 @@ def create_emails(company_list: pd.DataFrame, position: str='Data Analytics', su
         msg['To'] = email
         msg.set_content(cover_letter.format(position=position, company_name=company_name))
         msg.add_attachment(resume, maintype='application', subtype='octet-stream', filename=resume_name)
-        
-        return email
+
+        return msg
     
     messages = company_list.apply(helper, axis=1)
 
@@ -77,6 +89,26 @@ def create_emails(company_list: pd.DataFrame, position: str='Data Analytics', su
     
     return messages
 
+
+def bulk_send(messages: pd.Series, host: str, port: int) -> None:
+    """
+    
+    """
+    for index in range(messages.shape[0]):
+        # this block will send the email message to either a local 
+        # host or the email address it was intended to go
+        if host == "localhost" or host == "127.0.0.1":
+            with smtplib.SMTP(host, port) as smtp:
+                # send message to local host at port 1025
+                smtp.send_message(msg=messages.iloc[index])
+        else:
+            with smtplib.SMTP_SSL(host, port) as smtp:
+                # login with credentials
+                smtp.login(SENDER_EMAIL, SENDER_PASSWORD)
+                smtp.send_message(msg=messages.iloc[index])
+
+
+
 if __name__ == "__main__":
     # port argument and server
     parser = ArgumentParser()
@@ -96,20 +128,11 @@ if __name__ == "__main__":
 
     # load csv of company meta data
     company_list = load_company_list('./documents/dummy.csv')
-    print(company_list.head())
 
+    # create emails based on company meta data
     messages = create_emails(company_list)
+    # print(type(messages), end='\n')
 
-
-    # # this block will send the email message to either a local 
-    # # host or the email address it was intended to go
-    # if host == "localhost" or host == "127.0.0.1":
-    #     with smtplib.SMTP(host, port) as smtp:
-    #         # send message to local host at port 1025
-    #         smtp.send_message(msg=msg)
-    #         smtp.send
-    # else:
-    #     with smtplib.SMTP_SSL(host, port) as smtp:
-    #         # login with credentials
-    #         smtp.login(SENDER_EMAIL, SENDER_PASSWORD)
-    #         smtp.send_message(msg=msg)
+    # bulk send all messages
+    bulk_send(messages=messages, host=host, port=port)
+    
