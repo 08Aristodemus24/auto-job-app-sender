@@ -24,7 +24,8 @@ def load_company_list(path: str) -> pd.DataFrame:
     """
     
     """
-    df = pd.read_csv(path, index_col=0)
+    # df = pd.read_csv(path, index_col=0)
+    df = pd.read_excel(path)
     return df
 
 
@@ -42,18 +43,32 @@ def load_files(path: str, is_txt=False) -> tuple:
     return file_data, file_name
 
 
-def create_emails(company_list: pd.DataFrame, position: str='Data Analytics', subject='Data Analytics application'):
+def create_emails(company_list: pd.DataFrame):
     """
     
     """
-    # load cover letter and resume
-    resume, resume_name = load_files('./documents/Cueva, Larry Miguel_Resume_B.pdf')
-    cover_letter, _ = load_files('./documents/DA_cover_letter_2.txt', is_txt=True)
+    
 
-    def helper(row):
+    def _helper(row):
+        load_resume = {
+            "Data Analyst": lambda: load_files('./documents/Cueva, Larry Miguel_Resume_B.pdf'),
+            "Machine Learning Engineer": lambda: load_files('./documents/Cueva, Larry Miguel_Resume_A.pdf')
+        }
+
+        load_cover_letter = {
+            "Data Analyst": lambda: load_files('./documents/DA_cover_letter_2.txt', is_txt=True),
+            "Machine Learning Engineer": lambda: load_files('./documents/MLE_cover_letter_2.txt', is_txt=True)
+        }
+
         company_name = row['company_name']
         email = row['email']
-        # print(cover_letter.format(position='Data Analytics', company_name=company_name))
+        position = row['position']
+        subject = "{} Application".format(row['position'])
+
+        # load cover letter and resume
+        resume, resume_name = load_resume[position]()
+        cover_letter, _ = load_cover_letter[position]()
+        print(cover_letter.format(position=position, company_name=company_name))
 
         # create email objects. Add file also
         # as attachment to email object
@@ -65,7 +80,7 @@ def create_emails(company_list: pd.DataFrame, position: str='Data Analytics', su
 
         return msg
     
-    messages = company_list.apply(helper, axis=1)
+    messages = company_list.apply(_helper, axis=1)
     
     return messages
 
@@ -108,12 +123,12 @@ if __name__ == "__main__":
     SENDER_PASSWORD = os.environ['SENDER_PASSWORD']
 
     # load csv of company meta data
-    company_list = load_company_list('./documents/company_list.csv')
+    company_list = load_company_list('./documents/dummy.xlsx')
     print(company_list)
 
     # create emails based on company meta data
-    # messages = create_emails(company_list)
-    # # print(type(messages), end='\n')
+    messages = create_emails(company_list)
+    # print(type(messages), end='\n')
 
     # # bulk send all messages
     # bulk_send(messages=messages, host=host, port=port)

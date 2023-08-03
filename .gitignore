@@ -1,7 +1,7 @@
-/node_modules/
-
 # sensitive files to ignore
-/documents/company_list.csv
-/documents/dummy.csv
+/documents/ask_recruiters_list.xlsx
+/documents/companies_submitted_apps_to.xlsx
+/documents/follow_up_recruiters_list.xlsx
+/documents/dummy.xlsx
 /client_secrets.json
 /.env

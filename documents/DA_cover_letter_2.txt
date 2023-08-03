@@ -1,13 +1,13 @@
 Dearest Maam/Sir,
 
-I hope this message finds you well, for I am very much enthusiastic to submit my application for the {position} position at {company_name}, and hopefully be accepted as part of your team. My name is Larry Miguel R. Cueva and as a highly motivated aspiring data professional with experience in technologies which frankly I'm fond of, such as Python, SQL, Deep Learning and its lot to develop intelligible data driven applications, I believe that my skills and passion for building AI/Machine Learning models make me the ideal candidate for this position.
+I hope this message finds you well, for I am very much enthusiastic to submit my application for the {position} position at {company_name}, and hopefully be accepted as part of your team. My name is Larry Miguel R. Cueva and as a highly motivated aspiring data professional with experience in technologies which frankly I'm fond of, such as Python, SQL, Machine Learning and its lot to develop intelligible data driven applications, I believe that my skills and passion for analyzing data and hence making informed decisions from it make me the ideal candidate for this position.
 
 Throughout my academic career and ventures in the world of data, I have gained valuable experience in data related processes, working on a range of projects that have honed my skills in Data Analysis, Visualization, and Machine Learning which I know I'm still not the best at but am confident in saying I'm continuously being more competent at. Moreover, I have a strong background in Python programming, with deep understanding in the aforementioned technologies associated with it to develop, as I said, data driven applications. 
 
-In addition to my technical skills, I am also highly analytical and possess a strong initiative to ask questions and learn quickly. And so with that I am always eager to take on new challenges and adapt to new situations coupled always with my willingness to face the challenge head on even if failure awaits me in order to learn as quickly as possible, which in turn has allowed me to succeed in the various academic and brain-challenging environments I've been in. With this I am confident that my ability to work collaboratively with others, communicate effectively, and drive results would make a positive impact on the, I'm sure, likewise passionate {company_name} team.
+In addition to my technical skills, I am also highly analytical/meticulous and possess a strong initiative to ask questions and therefore learn quickly. And so with that I am always eager to take on new challenges and adapt to new situations coupled always with my willingness to face the challenge head on even if failure awaits me in order to learn as quickly as possible, which in turn has allowed me to succeed in the various academic and brain-challenging environments I've been in. With this I am confident that my ability to work collaboratively with others, communicate effectively, and drive results would make a positive impact on the, I'm sure, likewise passionate {company_name} team.
 
-Thank you for your time and consideration, and I look forward to discussing my qualifications further in the next steps of my application.
+Thank you Sir/Maam, for I do so appreciate it for taking the time to read and consider my application. I look forward to discussing my qualifications further in in the next steps of my application – Godspeed.
 
 Sincerely, Larry
 
-P.S. Below is my attached resume for your reference
+P.S. With this is my attached resume for your reference
