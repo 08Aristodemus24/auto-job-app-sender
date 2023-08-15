@@ -85,7 +85,7 @@ def create_emails(company_list: pd.DataFrame):
     return messages
 
 
-def bulk_send(messages: pd.Series, host: str, port: int) -> None:
+def bulk_send(SENDER_EMAIL: str, SENDER_PASSWORD: str, messages: pd.Series, host: str, port: int) -> None:
     """
     
     """
@@ -130,6 +130,6 @@ if __name__ == "__main__":
     messages = create_emails(company_list)
     # print(type(messages), end='\n')
 
-    # # bulk send all messages
-    # bulk_send(messages=messages, host=host, port=port)
+    # bulk send all messages
+    bulk_send(SENDER_EMAIL, SENDER_PASSWORD, messages=messages, host=host, port=port)
     
