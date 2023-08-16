@@ -78,21 +78,34 @@ def collect_links_to_connections(driver: webdriver.Chrome, link: str):
 
 def main():
     # if using chrome
-    chrome_options = ChromeOptions()
-    chrome_options.add_experimental_option('detach', True)
-    chrome_options.add_experimental_option('useAutomationExtension', False)
-    chrome_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Google/Chrome/User Data/Profile 1")
-    service = ChromeService(executable_path=ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    # chrome_options = ChromeOptions()
+    # chrome_options.add_experimental_option('detach', True)
+    # chrome_options.add_experimental_option('useAutomationExtension', False)
+    # service = ChromeService(executable_path=ChromeDriverManager().install())
+    # driver = webdriver.Chrome(service=service, options=chrome_options)
 
-    # # if using edge
-    # edge_options = EdgeOptions()
-    # edge_options.add_experimental_option('detach', True)
+    # if using edge
+    
+    # to check what profile to use when set to profile-directory argument 
+    # passed toself.add_argument() enter edge://version/ in search address 
+    # of edge to see the meta data. There you will see the Profile Path of the 
+    # account signed in in your browser, in this Profile Path you will see
+    # C:\Users\<user>\AppData\Local\Microsoft\Edge\User Data\<folder of the 
+    # profile being used> just assign this to the profile-directory argument 
+    # and pass the string in the self.add_argument() method
+
+    edge_options = EdgeOptions()
+    edge_options.add_experimental_option('detach', True)
+    edge_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Microsoft/Edge/User Data/")
+    edge_options.add_argument("profile-directory=Default")
+
     # edge_options.add_experimental_option('useAutomationExtension', False)
+    # edge_options.add_argument("--headless")
     # edge_options.add_argument("--disable-web-security")
     # edge_options.add_argument("--allow-running-insecure-content")
-    # service = EdgeService(executable_path=EdgeChromiumDriverManager().install())
-    # driver = webdriver.Edge(service=service, options=edge_options)
+    service = EdgeService(executable_path=EdgeChromiumDriverManager().install())
+    # service = EdgeService(executable_path="C:/Program Setups.Exe/msedgedriver/msedgedriver.exe")
+    driver = webdriver.Edge(service=service, options=edge_options)
 
 
     
