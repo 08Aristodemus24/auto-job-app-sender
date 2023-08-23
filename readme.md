@@ -89,3 +89,17 @@ done!
 [<some token>/184912.991:ERROR:gpu_disk_cache.cc(216)] Failed to create blob cache entry: -2
 
 (gmail-automations) D:\Projects\To Github\auto-job-app-sender>[<some token>/184918.305:ERROR:device_event_log_impl.cc(222)] [18:49:18.305] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+
+e. kill all chrome or edge tasks and processes
+f. arg combinations:
+chrome_options.add_argument('--headless')
+chrome_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Google/Chrome/User Data/")
+chrome_options.add_argument("profile-directory=Default")
+
+chrome_options.add_experimental_option('detach', True)
+
+g. solution combination was to use chrome, using chrome with my google account profile signed in, and killing all task processes
+
+h. get number of last number of paginator to determine how many times you loop and use the driver to request these pages and then get the links then move on
+
+
