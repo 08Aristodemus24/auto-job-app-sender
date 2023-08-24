@@ -1,7 +1,7 @@
 # **STILL IN PRODUCTION**
 
 # A mini-project that automates sending my cv/resume and cover letter to companies and job recruiters en masse.
-<img align="center" src="https://github.com/08Aristodemus24/auto-job-app-sender/blob/master/assets/mediafiles/We%20Are%20Not%20The%20Same%206395.jpg" alt="gus" style="max-width: 100% max-height: 100%;"/>
+<img src="https://github.com/08Aristodemus24/auto-job-app-sender/blob/master/assets/mediafiles/We%20Are%20Not%20The%20Same%206395.jpg" alt="gus" style="max-width: 100% max-height: 100% align: center;"/>
 
 # Usage:
 1. clone repository with `git clone https://github.com/08Aristodemus24/auto-job-app-sender`
