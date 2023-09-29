@@ -1,4 +1,4 @@
-from apps.recruiter_email_scraper import main
+from apps.linkedin_prof_link_scraper import main
 
 
 

@@ -31,7 +31,12 @@ def collect_recruiter_info(driver: webdriver.Chrome, links: list[str]):
     for link in links:
         try:
             driver.get(link)
-            wait_val = WebDriverWait(driver, timeout=10).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
+            _ = WebDriverWait(driver, timeout=10).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
+
+            # programmatically scroll to see experience section
+            driver.execute_script("""
+                window.location.hash = "experience"
+            """)
 
         except TimeoutError as error:
             print("Error {} has occured".format(error))
@@ -46,7 +51,7 @@ def collect_recruiter_info(driver: webdriver.Chrome, links: list[str]):
 
 
 
-def concurrently_extract_con_links(driver: webdriver.Chrome | webdriver.Edge, last_paginator_num: int):
+def concurrently_extract_con_links(driver: webdriver.Chrome | webdriver.Edge, last_paginator_num: int, excluded_profiles: list[str]):
     """
     given each pagination link concurrently extract the clickable link elements
     of each connection in each paginator number
@@ -65,9 +70,8 @@ def concurrently_extract_con_links(driver: webdriver.Chrome | webdriver.Edge, la
     paginator number> will be the last link to visit
     """
 
-    rules = ["recruiter", "recruitment", "recruiting", "hr", "talent", "talent", "acquisition", "human", "resources", "hiring"]
-
     links_to_profiles = []
+    profile_names = []
 
     conn_page_link = "https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&page={}"
     # paginator_links = [conn_page_link.format(paginator_num) for paginator_num in range(1, last_paginator_num + 1)]
@@ -76,20 +80,60 @@ def concurrently_extract_con_links(driver: webdriver.Chrome | webdriver.Edge, la
         try:
             driver.get(conn_page_link.format(paginator_num))
 
+            # wait until the document is loaded
             _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
-            driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
 
-            _ = WebDriverWait(driver, timeout=20).until(EC.visibility_of_all_elements_located([By.CSS_SELECTOR, ".reusable-search__result-container"]))
+            # wait until the whole UL containing all the list of profiles 
+            # is loaded and wait again for 3 seconds
+            _ = WebDriverWait(driver, timeout=20).until(EC.visibility_of_all_elements_located([By.CSS_SELECTOR, ".reusable-search__entity-result-list"]))
+            time.sleep(3)
+
+            # scroll to the bottom and wait for three seconds again
+            driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
+            time.sleep(3)
     
             # finds the clickable link elements in connections page of linked in
             div_tag_con_profs = driver.find_elements(By.CSS_SELECTOR, ".reusable-search__result-container .entity-result .mb1")
 
-            #  .app-aware-link
+            # get value of href in each link if and only if 
+            # name is not included in excluded profiles
+            link_to_con_profs = []
+            con_profs_name = []
+            idx_where_err_occured = 0
+            for index, div_tag_con_prof in enumerate(div_tag_con_profs):
+                # show current profile index to execute
+                print(f'executing profile {index}')
 
-            # get value of href in each link
-            link_to_con_profs = [div_tag_con_prof.get_attribute('href') for div_tag_con_prof in div_tag_con_profs if div_tag_con_prof.find_element(By.CSS_SELECTOR, ".linked-area.flex-1.cursor-pointer .entity-result__primary-subtitle.t-14.t-black.t-normal").text.lower()]
+                # set current index to this variable in case
+                # error is raised we can track which profile index
+                # it occured and still continue searching through profiles
+                idx_where_err_occured = index
+
+                # check if element exists and if it does get its span 
+                # containing name and exclude those elements included 
+                # in the excluded profiles list
+                profile_name = div_tag_con_prof.find_element(By.CSS_SELECTOR, ".entity-result__title-text") \
+                .find_element(By.CSS_SELECTOR, "span[dir='ltr']") \
+                .find_element(By.CSS_SELECTOR, "span[aria-hidden='true']").text.lower()
+
+                # print profile name
+                print(f'profile {profile_name}')
+
+                if profile_name not in excluded_profiles:
+                    # print profile index
+                    print(f'profile {index}: {div_tag_con_prof}')
+
+                    # extract link
+                    link = div_tag_con_prof.find_element(By.CSS_SELECTOR, ".entity-result__title-text") \
+                    .find_element(By.CSS_SELECTOR, ".app-aware-link") \
+                    .get_attribute('href')
+
+                    # append link to profile to list
+                    link_to_con_profs.append(link)
+                    con_profs_name.append(profile_name)
+
             links_to_profiles.extend(link_to_con_profs)
-            # print(links_to_profiles)
+            profile_names.extend(con_profs_name)
 
         except TimeoutError as error:
             print("Error {} has occured".format(error))
@@ -101,15 +145,7 @@ def concurrently_extract_con_links(driver: webdriver.Chrome | webdriver.Edge, la
         finally:
             print("Done!")
 
-    # def helper(link):
-    #     pass
-
-    # with ThreadPoolExecutor() as thread:
-    #     thread.map()
-
-    # print(paginator_links)
-
-    return links_to_profiles
+    return links_to_profiles, profile_names
 
 
 def collect_last_paginator_num(driver: webdriver.Chrome | webdriver.Edge, link: str):
@@ -126,7 +162,7 @@ def collect_last_paginator_num(driver: webdriver.Chrome | webdriver.Edge, link: 
     try:
         driver.get(link)
         _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
-        driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
+        driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
 
         _ = WebDriverWait(driver, timeout=20).until(EC.visibility_of_all_elements_located([By.CSS_SELECTOR, ".reusable-search__result-container"]))
 
@@ -136,8 +172,8 @@ def collect_last_paginator_num(driver: webdriver.Chrome | webdriver.Edge, link: 
 
         # grab last li element of paginator
         last_num = num_lists[-1].text
-        print(paginator)
-        print(num_lists)
+        # print(paginator)
+        # print(num_lists)
         print(last_num)
 
     except TimeoutError as error:
@@ -154,6 +190,21 @@ def collect_last_paginator_num(driver: webdriver.Chrome | webdriver.Edge, link: 
         print("Done!")
         return int(last_num)
 
+
+def load_excluded(file_path: str):
+    """
+    returns a list of names from a text file of a list of names
+    to exclude in email search
+    """
+    with open(file_path, 'r') as names_file:
+        names = names_file.readline()
+        names_file.close()
+
+    with ThreadPoolExecutor() as executor:
+        names = list(executor.map(lambda name: name.lower(), names))
+
+    return names
+    
     
 
 def main():
@@ -199,12 +250,14 @@ def main():
     # driver = webdriver.Edge(service=service, options=edge_options)
 
     
-
+    excluded_profiles = load_excluded('./documents/excluded_profiles.txt')
     last_paginator_num = collect_last_paginator_num(driver=driver, link="https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&sid=KSa")
-    links_to_profiles = concurrently_extract_con_links(driver=driver, last_paginator_num=last_paginator_num)
-    print(links_to_profiles)
-    print(len(links_to_profiles))
-    
+    profiles = concurrently_extract_con_links(driver=driver, last_paginator_num=last_paginator_num, excluded_profiles=excluded_profiles)
+
+    # save current links collected to .csv file and continue script
+    dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
+    dump.to_csv('./documents/profiles_dump.csv')
+
     driver.close()
     driver.quit()
 

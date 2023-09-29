@@ -65,6 +65,23 @@ c. go to LinkedIn profile of recruiters, see their connections and add every rec
 3. main app:
 a. use selenium webdriver and ChromDriverManager().install()
 a. 
+4. identify if name is male or female through genderize.io api. Below is an example of using the API and using a batch of names to process whether male or female which can be up to 10. Note that requests per day can be up to 1000 names/day
+```
+>>> import requests
+>>>
+>>> response = requests.get('https://api.genderize.io/?name=larry')
+>>> response = requests.get('https://api.genderize.io/?name[]=larry&name[]=lalai')
+>>> response.status_code
+200
+>>> response.json()
+[{'count': 269573, 'name': 'larry', 'gender': 'male', 'probability': 1.0}, {'count': 24, 'name': 'lalai', 'gender': 'female', 'probability': 0.71}]
+>>> response.headers
+{'Server': 'nginx/1.16.1', 'Date': 'Fri, 29 Sep 2023 02:32:43 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '132', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'x-rate-limit-limit,x-rate-limit-remaining,x-rate-limit-reset', 'cache-control': 'max-age=0, private, must-revalidate', 'x-rate-limit-limit': '1000', 'x-rate-limit-remaining': '995', 'x-rate-limit-reset': '77237', 'x-request-id': 'F4k930HDta9MRfMVIdEx'}
+```
+The headers also contain information about how much names we have left to process for a given time period. X-Rate-Limit-Limit is the amount of names available in current time window, X-Rate-Limit-Remaining is the number of names left in the current time window
+
+SOme errors that we can handle are 401 unauthorized, 402 payment required, 422 unprocessable entity, 429 too many requests, a
+
 ### Problems:
 1. can't sign in in google account using webdriver. Possible solution: https://stackoverflow.com/questions/60117232/selenium-google-login-block
 
@@ -103,5 +120,7 @@ chrome_options.add_experimental_option('detach', True)
 g. solution combination was to use chrome, using chrome with my google account profile signed in, and killing all task processes
 
 h. get number of last number of paginator to determine how many times you loop and use the driver to request these pages and then get the links then move on
+
+i. so each page in paginator will eventually give out an error because an element that you select does not exist. Which basically kills all the chances that other profiles could even exist and yet is skipped unfortunately. Potential solution is to implement a fallback not to skip the current page in the paginator but to find the next element that could exist
 
 
