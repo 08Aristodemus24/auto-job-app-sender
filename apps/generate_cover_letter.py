@@ -51,12 +51,10 @@ def view_sections(sections: List[str]) -> None:
     for section in sections:
         print(f"{section}")
 
-if __name__ == "__main__":
-    parser = ArgumentParser()
-    parser.add_argument('--position', type=str, default='Data Analyst')
-    parser.add_argument('--company_name', type=str, default='Accenture')
-
-    args = parser.parse_args()
+def main(args):
+    """
+    
+    """
     position = emphasize(feature=args.position)
     company_name = emphasize(feature=args.company_name) 
 

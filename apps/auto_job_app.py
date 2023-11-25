@@ -104,14 +104,10 @@ def bulk_send(SENDER_EMAIL: str, SENDER_PASSWORD: str, messages: pd.Series, host
 
 
 
-if __name__ == "__main__":
-    # port argument and server
-    parser = ArgumentParser()
-    parser.add_argument('--host', type=str, default='smtp.gmail.com')
-    parser.add_argument('--port', type=int, default='465')
-    parser.add_argument('--position', type=str, default='Data Analytics')
-
-    args = parser.parse_args()
+def main(args):
+    """
+    
+    """
     host = args.host
     port = args.port
     

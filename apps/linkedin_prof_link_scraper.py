@@ -207,9 +207,10 @@ def load_excluded(file_path: str):
     
     
 
-def main():
+def main(args):
     # if using chrome
     chrome_options = ChromeOptions()
+    edge_options = EdgeOptions()
     
     # chrome_options.add_argument("--no-sandbox")
     # chrome_options.add_argument("--disable-setuid-sandbox") 
@@ -246,7 +247,7 @@ def main():
     # # edge_options.add_argument("--disable-web-security")
     # # edge_options.add_argument("--allow-running-insecure-content")
     # service = EdgeService(executable_path=EdgeChromiumDriverManager().install())
-    # # service = EdgeService(executable_path="C:/Program Setups.Exe/msedgedriver/msedgedriver.exe")
+    # service = EdgeService(executable_path="C:/Program Setups.Exe/msedgedriver/msedgedriver.exe")
     # driver = webdriver.Edge(service=service, options=edge_options)
 
     
