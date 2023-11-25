@@ -265,7 +265,6 @@ def main(args):
 
     # get parent window
     parent_window = driver.current_window_handle
-    print(parent_window)
 
     # click sign in with google
     time.sleep(5)
@@ -275,7 +274,6 @@ def main(args):
 
     # get all windows currently open
     windows = driver.window_handles
-    print(windows)
     driver.switch_to.window(windows[1])
 
     # select the username input in popup authentication window of google
@@ -291,7 +289,6 @@ def main(args):
     
     # switch again to current window
     driver.switch_to.window(parent_window)
-    print(driver.window_handles)
     time.sleep(5)
 
     # go to new link where connections live
