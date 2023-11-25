@@ -5,10 +5,6 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
 
-from selenium.webdriver.edge.service import Service as EdgeService
-from selenium.webdriver.edge.options import Options as EdgeOptions
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
@@ -78,7 +74,6 @@ def concurrently_extract_con_links(driver: webdriver.Chrome | webdriver.Edge, la
     profile_names = []
 
     conn_page_link = "https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&page={}"
-    # paginator_links = [conn_page_link.format(paginator_num) for paginator_num in range(1, last_paginator_num + 1)]
 
     for paginator_num in range(1, last_paginator_num + 1):
         try:
@@ -226,6 +221,14 @@ def main(args):
     # chrome_options.add_argument("--disable-extensions") 
     # chrome_options.add_argument("--disable-gpu") 
     # chrome_options.add_argument('--headless')
+
+    # to check what profile to use when set to profile-directory argument 
+    # passed toself.add_argument() enter edge://version/ in search address 
+    # of edge to see the meta data. There you will see the Profile Path of the 
+    # account signed in in your browser, in this Profile Path you will see
+    # C:\Users\<user>\AppData\Local\Microsoft\Edge\User Data\<folder of the 
+    # profile being used> just assign this to the profile-directory argument 
+    # and pass the string in the self.add_argument() method
     # chrome_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Google/Chrome/User Data/")
     # chrome_options.add_argument("profile-directory=Profile 3")
     
@@ -235,29 +238,7 @@ def main(args):
     service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
-    # if using edge
-    
-    # to check what profile to use when set to profile-directory argument 
-    # passed toself.add_argument() enter edge://version/ in search address 
-    # of edge to see the meta data. There you will see the Profile Path of the 
-    # account signed in in your browser, in this Profile Path you will see
-    # C:\Users\<user>\AppData\Local\Microsoft\Edge\User Data\<folder of the 
-    # profile being used> just assign this to the profile-directory argument 
-    # and pass the string in the self.add_argument() method
-
-    # edge_options = EdgeOptions()
-    # edge_options.add_experimental_option('detach', True)
-    # edge_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Microsoft/Edge/User Data/")
-    # edge_options.add_argument("profile-directory=Default")
-
-    # # edge_options.add_experimental_option('useAutomationExtension', False)
-    # # edge_options.add_argument("--headless")
-    # # edge_options.add_argument("--disable-web-security")
-    # # edge_options.add_argument("--allow-running-insecure-content")
-    # service = EdgeService(executable_path=EdgeChromiumDriverManager().install())
-    # service = EdgeService(executable_path="C:/Program Setups.Exe/msedgedriver/msedgedriver.exe")
-    # driver = webdriver.Edge(service=service, options=edge_options)
-
+    # login first
     driver.get("https://www.linkedin.com/uas/login/")
 
     # wait until the document is loaded
@@ -299,13 +280,13 @@ def main(args):
     print("test", test)
 
 
-    # excluded_profiles = load_excluded('./documents/excluded_profiles.txt')
+    excluded_profiles = load_excluded('./documents/excluded_profiles.txt')
     # last_paginator_num = collect_last_paginator_num(driver=driver, link="https://www.linkedin.com/mynetwork/invite-connect/connections/")
-    # profiles = concurrently_extract_con_links(driver=driver, last_paginator_num=last_paginator_num, excluded_profiles=excluded_profiles)
+    profiles = concurrently_extract_con_links(driver=driver, last_paginator_num=last_paginator_num, excluded_profiles=excluded_profiles)
 
-    # # save current links collected to .csv file and continue script
-    # dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
-    # dump.to_csv('./documents/profiles_dump.csv')
+    # save current links collected to .csv file and continue script
+    dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
+    dump.to_csv('./documents/profiles_dump.csv')
 
     # driver.close()
     # driver.quit()
