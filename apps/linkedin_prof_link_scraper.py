@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
@@ -12,14 +13,17 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
-import requests
+
 import pandas as pd
 
 from concurrent.futures import ThreadPoolExecutor
 from typing import List, Tuple
 
 import time
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
 
 
 def collect_recruiter_info(driver: webdriver.Chrome, links: list[str]):
@@ -208,6 +212,10 @@ def load_excluded(file_path: str):
     
 
 def main(args):
+    # load environment variables path
+    env_dir = Path('./').resolve()
+    load_dotenv(os.path.join(env_dir, '.env'))
+
     # if using chrome
     chrome_options = ChromeOptions()
     
@@ -222,8 +230,9 @@ def main(args):
     # chrome_options.add_argument("profile-directory=Profile 3")
     
     chrome_options.add_experimental_option('detach', True)
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # chrome_options.add_experimental_option('useAutomationExtension', False)
-    service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver.exe")
+    service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # if using edge
@@ -249,15 +258,48 @@ def main(args):
     # service = EdgeService(executable_path="C:/Program Setups.Exe/msedgedriver/msedgedriver.exe")
     # driver = webdriver.Edge(service=service, options=edge_options)
 
-    driver.get("https://www.linkedin.com/mynetwork/invite-connect/connections/")
+    driver.get("https://www.linkedin.com/uas/login/")
+
     # wait until the document is loaded
     _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
 
-    # wait until the whole UL containing all the list of profiles 
-    # is loaded and wait again for 3 seconds
-    _ = WebDriverWait(driver, timeout=20).until(EC.visibility_of_all_elements_located([By.CSS_SELECTOR, ".scaffold-finite-scroll__content"]))
-    test = driver.find_elements(By.CSS_SELECTOR, ".mn-connection-card.artdeco-list")
-    print(test)
+    # get parent window
+    parent_window = driver.current_window_handle
+    print(parent_window)
+
+    # click sign in with google
+    time.sleep(5)
+    gsign_in_btn = driver.find_element(By.CSS_SELECTOR, ".alternate-signin__btn--google")
+    gsign_in_btn.click()
+    time.sleep(5)
+
+    # get all windows currently open
+    windows = driver.window_handles
+    print(windows)
+    driver.switch_to.window(windows[1])
+
+    # select the username input in popup authentication window of google
+    username = driver.find_element(By.CSS_SELECTOR, "input[type='email'].whsOnd")
+    username.send_keys(os.environ['GOOGLE_EMAIL'])
+    username.send_keys(Keys.ENTER)
+    time.sleep(5)
+
+    # select the password input in popup authentication window of google
+    password = driver.find_element(By.CSS_SELECTOR, "input[type='password'].whsOnd")
+    password.send_keys(os.environ['GOOGLE_PASS'])
+    password.send_keys(Keys.ENTER)
+    
+    # switch again to current window
+    driver.switch_to.window(parent_window)
+    print(driver.window_handles)
+    time.sleep(5)
+
+    # go to new link where connections live
+    driver.get("https://www.linkedin.com/mynetwork/invite-connect/connections/")
+    time.sleep(5)
+
+    test = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
+    print("test", test)
 
 
     # excluded_profiles = load_excluded('./documents/excluded_profiles.txt')
