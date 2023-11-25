@@ -210,7 +210,6 @@ def load_excluded(file_path: str):
 def main(args):
     # if using chrome
     chrome_options = ChromeOptions()
-    edge_options = EdgeOptions()
     
     # chrome_options.add_argument("--no-sandbox")
     # chrome_options.add_argument("--disable-setuid-sandbox") 
@@ -219,12 +218,12 @@ def main(args):
     # chrome_options.add_argument("--disable-extensions") 
     # chrome_options.add_argument("--disable-gpu") 
     # chrome_options.add_argument('--headless')
-    chrome_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Google/Chrome/User Data/")
-    chrome_options.add_argument("profile-directory=Default")
+    # chrome_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Google/Chrome/User Data/")
+    # chrome_options.add_argument("profile-directory=Profile 3")
     
     chrome_options.add_experimental_option('detach', True)
     # chrome_options.add_experimental_option('useAutomationExtension', False)
-    service = ChromeService(executable_path=ChromeDriverManager().install())
+    service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver.exe")
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # if using edge
@@ -250,17 +249,27 @@ def main(args):
     # service = EdgeService(executable_path="C:/Program Setups.Exe/msedgedriver/msedgedriver.exe")
     # driver = webdriver.Edge(service=service, options=edge_options)
 
-    
-    excluded_profiles = load_excluded('./documents/excluded_profiles.txt')
-    last_paginator_num = collect_last_paginator_num(driver=driver, link="https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&sid=KSa")
-    profiles = concurrently_extract_con_links(driver=driver, last_paginator_num=last_paginator_num, excluded_profiles=excluded_profiles)
+    driver.get("https://www.linkedin.com/mynetwork/invite-connect/connections/")
+    # wait until the document is loaded
+    _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
 
-    # save current links collected to .csv file and continue script
-    dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
-    dump.to_csv('./documents/profiles_dump.csv')
+    # wait until the whole UL containing all the list of profiles 
+    # is loaded and wait again for 3 seconds
+    _ = WebDriverWait(driver, timeout=20).until(EC.visibility_of_all_elements_located([By.CSS_SELECTOR, ".scaffold-finite-scroll__content"]))
+    test = driver.find_elements(By.CSS_SELECTOR, ".mn-connection-card.artdeco-list")
+    print(test)
 
-    driver.close()
-    driver.quit()
+
+    # excluded_profiles = load_excluded('./documents/excluded_profiles.txt')
+    # last_paginator_num = collect_last_paginator_num(driver=driver, link="https://www.linkedin.com/mynetwork/invite-connect/connections/")
+    # profiles = concurrently_extract_con_links(driver=driver, last_paginator_num=last_paginator_num, excluded_profiles=excluded_profiles)
+
+    # # save current links collected to .csv file and continue script
+    # dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
+    # dump.to_csv('./documents/profiles_dump.csv')
+
+    # driver.close()
+    # driver.quit()
 
 
     # collect_recruiter_info(driver, links)

@@ -123,4 +123,6 @@ h. get number of last number of paginator to determine how many times you loop a
 
 i. so each page in paginator will eventually give out an error because an element that you select does not exist. Which basically kills all the chances that other profiles could even exist and yet is skipped unfortunately. Potential solution is to implement a fallback not to skip the current page in the paginator but to find the next element that could exist
 
-
+j. selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 119.0.6045.160 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+Stacktrace:
