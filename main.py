@@ -1,6 +1,6 @@
 from apps.auto_job_app import main as app_1
 from apps.generate_cover_letter import main as app_2
-from apps.linkedin_prof_link_scraper import main as app_4
+from apps.linkedin_conn_scraper import main as app_4
 
 from argparse import ArgumentParser
 
