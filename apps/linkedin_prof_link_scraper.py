@@ -51,129 +51,82 @@ def collect_recruiter_info(driver: webdriver.Chrome, links: list[str]):
 
 
 
-def concurrently_extract_con_links(driver: webdriver.Chrome | webdriver.Edge, last_paginator_num: int, excluded_profiles: list[str]):
+def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
     """
-    given each pagination link concurrently extract the clickable link elements
-    of each connection in each paginator number
+    because of pages infinite scroll capability we need to scroll 
+    at the very bottom of the page until connection list is exhausted
 
-    a single connection page at paginator 1 can look like this
-    "https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&page=1
-    "https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&sid=KSa"
-    
-    page 2 can look like this
-    "https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&page=2&sid=D8T"
-
-    that means we can create a list of links with this links structure 
-    https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&page=2&sid=D8T
-    and assign merely the argument value of page to be equal to numbers 1 to last paginator number. Meaning if page 1 is like
-    the above then https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&page=<last
-    paginator number> will be the last link to visit
+    if .csv already exists extract dataframe info and add only the ones not in the
+    dataframe that have been scraped 
     """
 
-    links_to_profiles = []
-    profile_names = []
-
-    conn_page_link = "https://www.linkedin.com/search/results/people/?network=%5B%22F%22%5D&origin=MEMBER_PROFILE_CANNED_SEARCH&page={}"
-
-    for paginator_num in range(1, last_paginator_num + 1):
-        try:
-            driver.get(conn_page_link.format(paginator_num))
-
-            # wait until the document is loaded
-            _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
-
-            # wait until the whole UL containing all the list of profiles 
-            # is loaded and wait again for 3 seconds
-            _ = WebDriverWait(driver, timeout=20).until(EC.visibility_of_all_elements_located([By.CSS_SELECTOR, ".reusable-search__entity-result-list"]))
-            time.sleep(3)
-
-            # scroll to the bottom and wait for three seconds again
-            driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
-            time.sleep(3)
-    
-            # finds the clickable link elements in connections page of linked in
-            div_tag_con_profs = driver.find_elements(By.CSS_SELECTOR, ".reusable-search__result-container .entity-result .mb1")
-
-            # get value of href in each link if and only if 
-            # name is not included in excluded profiles
-            link_to_con_profs = []
-            con_profs_name = []
-            idx_where_err_occured = 0
-            for index, div_tag_con_prof in enumerate(div_tag_con_profs):
-                # show current profile index to execute
-                print(f'executing profile {index}')
-
-                # set current index to this variable in case
-                # error is raised we can track which profile index
-                # it occured and still continue searching through profiles
-                idx_where_err_occured = index
-
-                # check if element exists and if it does get its span 
-                # containing name and exclude those elements included 
-                # in the excluded profiles list
-                profile_name = div_tag_con_prof.find_element(By.CSS_SELECTOR, ".entity-result__title-text") \
-                .find_element(By.CSS_SELECTOR, "span[dir='ltr']") \
-                .find_element(By.CSS_SELECTOR, "span[aria-hidden='true']").text.lower()
-
-                # print profile name
-                print(f'profile {profile_name}')
-
-                if profile_name not in excluded_profiles:
-                    # print profile index
-                    print(f'profile {index}: {div_tag_con_prof}')
-
-                    # extract link
-                    link = div_tag_con_prof.find_element(By.CSS_SELECTOR, ".entity-result__title-text") \
-                    .find_element(By.CSS_SELECTOR, ".app-aware-link") \
-                    .get_attribute('href')
-
-                    # append link to profile to list
-                    link_to_con_profs.append(link)
-                    con_profs_name.append(profile_name)
-
-            links_to_profiles.extend(link_to_con_profs)
-            profile_names.extend(con_profs_name)
-
-        except TimeoutError as error:
-            print("Error {} has occured".format(error))
-
-        # catch both NoSuchElementException and StaleElementReferenceException errors
-        except (NoSuchElementException, StaleElementReferenceException) as error:
-            print("Error {} has occured".format(error))
-
-        finally:
-            print("Done!")
-
-    return links_to_profiles, profile_names
-
-
-def collect_last_paginator_num(driver: webdriver.Chrome | webdriver.Edge, link: str):
-    """
-        this function has to be operated by chrome webdriver because linked
-        in page has dynamic elements
-        args:
-            driver
-    """
-
-    links_to_profiles = []
-    last_num = -1
+    # will store all non existent connections for concatenation to
+    # new or existing dataframe lookup_file
+    conn_links = []
+    conn_names = []
 
     try:
-        driver.get(link)
+        # login first
+        driver.get("https://www.linkedin.com/uas/login/")
+
+        # wait until the document is loaded
         _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
+
+        # get parent window
+        parent_window = driver.current_window_handle
+
+        # click sign in with google
+        time.sleep(5)
+        gsign_in_btn = driver.find_element(By.CSS_SELECTOR, ".alternate-signin__btn--google")
+        gsign_in_btn.click()
+        time.sleep(5)
+
+        # get all windows currently open
+        windows = driver.window_handles
+        driver.switch_to.window(windows[1])
+
+        # select the username input in popup authentication window of google
+        username = driver.find_element(By.CSS_SELECTOR, "input[type='email'].whsOnd")
+        username.send_keys(os.environ['GOOGLE_EMAIL'])
+        username.send_keys(Keys.ENTER)
+        time.sleep(5)
+
+        # select the password input in popup authentication window of google
+        password = driver.find_element(By.CSS_SELECTOR, "input[type='password'].whsOnd")
+        password.send_keys(os.environ['GOOGLE_PASS'])
+        password.send_keys(Keys.ENTER)
+        
+        # switch again to current window
+        driver.switch_to.window(parent_window)
+        time.sleep(5)
+
+        # go to new link where connections live
+        driver.get("https://www.linkedin.com/mynetwork/invite-connect/connections/")
+        time.sleep(5)
+
+        # scroll to the very bottom until there is none left to scroll
         driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
+        time.sleep(1.5)
+        
+        connections = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
+        # print("test", connections)
+        # print(len(connections))
+        
+        for connection in connections:
+            card_link = connection.find_element(By.CSS_SELECTOR, ".mn-connection-card__link")
+            conn_link = card_link.get_attribute('href')
 
-        _ = WebDriverWait(driver, timeout=20).until(EC.visibility_of_all_elements_located([By.CSS_SELECTOR, ".reusable-search__result-container"]))
+            card_name = connection.find_element(By.CSS_SELECTOR, ".mn-connection-card__name")
+            conn_name = card_name.text
+            
+            # if connection link and connection name already exists
+            # exclude it in dataframe
+            if ((lookup_file['conn_link'] == conn_link) & (lookup_file['conn_name'] == conn_name)).any():
+                continue
 
-        # grab paginator of page to determine last pagination number
-        paginator = driver.find_element(By.CSS_SELECTOR, ".artdeco-pagination__pages")
-        num_lists = paginator.find_elements(By.CSS_SELECTOR, ".artdeco-pagination__indicator.artdeco-pagination__indicator--number.ember-view")
-
-        # grab last li element of paginator
-        last_num = num_lists[-1].text
-        # print(paginator)
-        # print(num_lists)
-        print(last_num)
+            # if dataframe is empty or has some rows we can just concatenate an empty dataframe
+            conn_links.append(conn_link)
+            conn_names.append(conn_name)
 
     except TimeoutError as error:
         print("Error {} has occured".format(error))
@@ -182,13 +135,14 @@ def collect_last_paginator_num(driver: webdriver.Chrome | webdriver.Edge, link: 
     except (NoSuchElementException, StaleElementReferenceException) as error:
         print("Error {} has occured".format(error))
 
-    # except:
-    #     print('ERROR HAS OCCURED')
-
     finally:
         print("Done!")
-        return int(last_num)
 
+    # concatenate collected connection names and respective links
+    print(conn_links)
+    temp = pd.DataFrame({'conn_link': conn_links, 'conn_name': conn_names})
+    dump = pd.concat([temp, lookup_file], axis=0)
+    dump.to_csv('./documents/profiles_dump.csv')
 
 def load_excluded(file_path: str):
     """
@@ -203,6 +157,21 @@ def load_excluded(file_path: str):
         names = list(executor.map(lambda name: name.lower(), names))
 
     return names
+
+def load_file():
+    """
+    loads and/or creates a .csv file if one does not already exist
+    """
+
+    try:
+        dump = pd.read_csv('./documents/profiles_dump.csv', index_col=0)
+    except FileNotFoundError as e:
+        # if no file has been found creawte a new dataframe and return it
+        # in order to be populated by the connection information extractor
+        print(f'{e} has occured. Creating a new dataframe...')
+        dump = pd.DataFrame({'conn_link': [], 'conn_name': []})
+
+    return dump
     
     
 
@@ -238,55 +207,14 @@ def main(args):
     service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
-    # login first
-    driver.get("https://www.linkedin.com/uas/login/")
-
-    # wait until the document is loaded
-    _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
-
-    # get parent window
-    parent_window = driver.current_window_handle
-
-    # click sign in with google
-    time.sleep(5)
-    gsign_in_btn = driver.find_element(By.CSS_SELECTOR, ".alternate-signin__btn--google")
-    gsign_in_btn.click()
-    time.sleep(5)
-
-    # get all windows currently open
-    windows = driver.window_handles
-    driver.switch_to.window(windows[1])
-
-    # select the username input in popup authentication window of google
-    username = driver.find_element(By.CSS_SELECTOR, "input[type='email'].whsOnd")
-    username.send_keys(os.environ['GOOGLE_EMAIL'])
-    username.send_keys(Keys.ENTER)
-    time.sleep(5)
-
-    # select the password input in popup authentication window of google
-    password = driver.find_element(By.CSS_SELECTOR, "input[type='password'].whsOnd")
-    password.send_keys(os.environ['GOOGLE_PASS'])
-    password.send_keys(Keys.ENTER)
-    
-    # switch again to current window
-    driver.switch_to.window(parent_window)
-    time.sleep(5)
-
-    # go to new link where connections live
-    driver.get("https://www.linkedin.com/mynetwork/invite-connect/connections/")
-    time.sleep(5)
-
-    test = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
-    print("test", test)
-
-
-    excluded_profiles = load_excluded('./documents/excluded_profiles.txt')
-    # last_paginator_num = collect_last_paginator_num(driver=driver, link="https://www.linkedin.com/mynetwork/invite-connect/connections/")
-    profiles = concurrently_extract_con_links(driver=driver, last_paginator_num=last_paginator_num, excluded_profiles=excluded_profiles)
+    # extract all connections info
+    dump = load_file()
+    profiles = extract_con_links(driver=driver, lookup_file=dump)
 
     # save current links collected to .csv file and continue script
-    dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
-    dump.to_csv('./documents/profiles_dump.csv')
+    
+    # dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
+    # dump.to_csv('./documents/profiles_dump.csv')
 
     # driver.close()
     # driver.quit()
