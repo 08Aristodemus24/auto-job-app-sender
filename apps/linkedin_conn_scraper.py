@@ -121,7 +121,7 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
             
             # if connection link and connection name already exists
             # exclude it in dataframe
-            if ((lookup_file['conn_link'] == conn_link) & (lookup_file['conn_name'] == conn_name)).any():
+            if ((lookup_file['conn_link'] == conn_link) & (lookup_file['conn_name'] == conn_name)).any() or conn_name == 'Michael Cueva':
                 continue
 
             # if dataframe is empty or has some rows we can just concatenate an empty dataframe
