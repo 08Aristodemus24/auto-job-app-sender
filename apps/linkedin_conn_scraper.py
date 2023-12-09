@@ -15,6 +15,7 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
 from typing import List, Tuple
 
+import re
 import time
 import os
 from dotenv import load_dotenv
@@ -49,6 +50,17 @@ def collect_recruiter_info(driver: webdriver.Chrome, links: list[str]):
         finally:
             print("will go to next link")
 
+def element_exists(driver: webdriver.Chrome, css_path: str, ):
+    """
+    should .find_element() raise a NoSuchElement or StaleElementReference
+    exception return false because the element being searched does not exist
+    """
+    try:
+        driver.find_element(By.CSS_SELECTOR, css_path)
+    except:
+        return False
+    return True
+    
 
 
 def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
@@ -105,8 +117,23 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
         time.sleep(5)
 
         # scroll to the very bottom until there is none left to scroll
+        n_connections_header = driver.find_element(By.CSS_SELECTOR, "header.mn-connections__header")
+        n_connections = int(re.findall(r"\d+", n_connections_header.text)[0])
+
         driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
         time.sleep(1.5)
+        for _ in range(n_connections // 10):
+            driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
+            time.sleep(1.5)
+
+            # sometimes infinite scrollling will stop and instead show 
+            # load more button. If this is the case check if such an 
+            # element exists and just click on it then continue scrolling down
+            if element_exists(driver=driver, css_path=".scaffold-finite-scroll__load-button") == True:
+                print("element exists")
+                driver.execute_script("window.scrollBy(0, -10)")
+                # load_more_btn = driver.find_element(By.CSS_SELECTOR, ".scaffold-finite-scroll__load-button")
+                # load_more_btn.click()
         
         connections = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
         # print("test", connections)
