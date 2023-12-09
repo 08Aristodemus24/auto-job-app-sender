@@ -131,9 +131,13 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
             # element exists and just click on it then continue scrolling down
             if element_exists(driver=driver, css_path=".scaffold-finite-scroll__load-button") == True:
                 print("element exists")
-                driver.execute_script("window.scrollBy(0, -10)")
+                
+                """THIS DOESN"T WORK BECAUSE EVEN IF THE ELEMTN EXISTS THE FACT THAT IT IS DYNAMIC
+                WILL MAKES IT STALE AND THEREFORE CLICKING ON IT WILL RAISE A STALE ELEMENT REFERENCE
+                ERROR"""
                 # load_more_btn = driver.find_element(By.CSS_SELECTOR, ".scaffold-finite-scroll__load-button")
                 # load_more_btn.click()
+                time.sleep(1.5)
         
         connections = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
         # print("test", connections)
