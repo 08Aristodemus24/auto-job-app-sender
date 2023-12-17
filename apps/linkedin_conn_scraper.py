@@ -60,7 +60,14 @@ def element_exists(driver: webdriver.Chrome, css_path: str, ):
     except:
         return False
     return True
-    
+
+
+def click_until_permitted(driver: webdriver.Chrome):
+    """
+    clicks an element over and over if it is stale
+    """
+
+    pass
 
 
 def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
@@ -129,14 +136,16 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
             # sometimes infinite scrollling will stop and instead show 
             # load more button. If this is the case check if such an 
             # element exists and just click on it then continue scrolling down
-            if element_exists(driver=driver, css_path=".scaffold-finite-scroll__load-button") == True:
+            if element_exists(driver=driver, css_path=".scaffold-layout__main .scaffold-finite-scroll__load-button") == True:
                 print("element exists")
+                driver.refresh()
+                time.sleep(5)
                 
                 """THIS DOESN"T WORK BECAUSE EVEN IF THE ELEMTN EXISTS THE FACT THAT IT IS DYNAMIC
                 WILL MAKES IT STALE AND THEREFORE CLICKING ON IT WILL RAISE A STALE ELEMENT REFERENCE
                 ERROR"""
-                # load_more_btn = driver.find_element(By.CSS_SELECTOR, ".scaffold-finite-scroll__load-button")
-                # load_more_btn.click()
+                load_more_btn = driver.find_element(By.CSS_SELECTOR, ".scaffold-layout__main .scaffold-finite-scroll__load-button")
+                load_more_btn.click()
                 time.sleep(1.5)
         
         connections = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
