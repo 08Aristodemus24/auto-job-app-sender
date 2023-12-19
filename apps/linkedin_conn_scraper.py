@@ -23,33 +23,6 @@ from pathlib import Path
 
 
 
-def collect_recruiter_info(driver: webdriver.Chrome, links: list[str]):
-    """
-    the links contain links to all recruiter profiles pages
-    collected by beautiful soup statemetns
-    """
-
-    for link in links:
-        try:
-            driver.get(link)
-            _ = WebDriverWait(driver, timeout=10).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
-
-            # programmatically scroll to see experience section
-            driver.execute_script("""
-                window.location.hash = "experience"
-            """)
-
-        except TimeoutError as error:
-            print("Error {} has occured".format(error))
-            driver.quit() # or .close()
-
-        # catch both NoSuchElementException and StaleElementReferenceException errors
-        except (NoSuchElementException, StaleElementReferenceException) as error:
-            print("Error {} has occured".format(error))
-
-        finally:
-            print("will go to next link")
-
 def element_exists(driver: webdriver.Chrome, css_path: str,):
     """
     should .find_element() raise a NoSuchElement or StaleElementReference
@@ -69,6 +42,7 @@ def click_until_permitted(driver: webdriver.Chrome, css_path: str, num_tries: in
     if click is successful function will return true 
     """
     while num_tries > 0:
+
         try:
             """THIS DOESN"T WORK BECAUSE EVEN IF THE ELEMTN EXISTS THE FACT THAT IT IS DYNAMIC
             WILL MAKES IT STALE AND THEREFORE CLICKING ON IT WILL RAISE A STALE ELEMENT REFERENCE
@@ -79,7 +53,10 @@ def click_until_permitted(driver: webdriver.Chrome, css_path: str, num_tries: in
         except (StaleElementReferenceException, NoSuchElementException) as e:
             print(f'error {e} has occured')
             num_tries -= 1
-
+    
+    # if after num_tries the function has not returned true then
+    # return a false flag
+    return False
 
 def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
     """
@@ -149,7 +126,10 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
             # sometimes infinite scrollling will stop and instead show 
             # load more button. If this is the case check if such an 
             # element exists and just click on it then continue scrolling down
-            click_until_permitted(driver=driver, css_path=".scaffold-layout__main .scaffold-finite-scroll__load-button")
+            # call this function over and over until it returns a flag indicating it has 
+            # finished clicking
+            if click_permitted == False:
+                click_permitted = click_until_permitted(driver=driver, css_path=".scaffold-layout__main .scaffold-finite-scroll__load-button")
                 
         
         connections = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
@@ -186,6 +166,7 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
     print(conn_links)
     temp = pd.DataFrame({'conn_link': conn_links, 'conn_name': conn_names})
     dump = pd.concat([temp, lookup_file], axis=0)
+    dump.reset_index(drop=True, inplace=True)
     dump.to_csv('./documents/profiles_dump.csv')
 
 def load_excluded(file_path: str):
