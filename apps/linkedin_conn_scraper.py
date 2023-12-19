@@ -234,18 +234,11 @@ def main(args):
 
     # extract all connections info
     dump = load_file()
-    profiles = extract_con_links(driver=driver, lookup_file=dump)
+    extract_con_links(driver=driver, lookup_file=dump)
 
-    # save current links collected to .csv file and continue script
-    
-    # dump = pd.DataFrame({'links_to_profiles': profiles[0], 'profile_names': profiles[1]})
-    # dump.to_csv('./documents/profiles_dump.csv')
-
-    # driver.close()
-    # driver.quit()
-
-
-    # collect_recruiter_info(driver, links)
+    # close driver
+    driver.close()
+    driver.quit()
 
     
 
