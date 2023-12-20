@@ -74,20 +74,22 @@ def filter_valid(sequence: list):
 def rem_mi(name: str):
     pass
 
-def assign_gender(row):
+def assign_gender(row, api_key):
     # extract gender if any
     gender = row['gender']
 
     # check if null
     if pd.isnull(gender):
         name = row['conn_name']
-        response = requests.get(f'https://api.genderize.io/?name={name}')
+        response = requests.post(f"https://genderapi.io/api/?key={api_key}&name={name}")
         headers = response.headers
-        print(headers)
-
         data = response.json()
-        
+        print(data)
 
-        return data['gender']
+        # if request gives a request limit reached error
+        # thus returning a json without hte gender key, just
+        # use an alternative return value of the null value 
+        # of the empty cell
+        return data.get('gender', gender)
     else:
         return row['gender']

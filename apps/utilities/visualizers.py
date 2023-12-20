@@ -1,6 +1,6 @@
 import pandas as pd
 
 
-def view_rows(df: pd.DataFrame):
+def view_rows(df: pd.DataFrame, column: str):
     for _, row in df.iterrows():
-        print(row['conn_name'])
+        print(row[column])

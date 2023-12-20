@@ -37,25 +37,25 @@ This automated job application sender will consist of about three phases: sendin
 5. Some ideas also that I can also implement will be to automate the manual process of filling up online forms on LinkedIn, Glassdoor, Indeed, Kalibrr, Jobyoda, Jobstreet, Foundit, and Company Websites. **TBD**
 
 ## Automated cover letter and CV sender
-### Usage:
+**Usage:**
 1. if you don't want to send cover letter and cv directly to emails use `"localhost"` for `--host` arg and `1025` for `--port` arg
 
-### Ideas:
+**Ideas:**
 1. 
 
-### Problems:
+**Problems:**
 1. for some reason long hyphen character in cover letter when read and then decoded gives error `UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 2036: ordinal not in range(128)`. Solution was to replace it with a tilde `~` character.
 
 ## Automated follow up letter sender
-### Ideas:
-### Problems:
+**Ideas:**
+**Problems:**
 
 ## Automated letter of inquiry sender
-### Ideas:
-### Problems:
+**Ideas:**
+**Problems:**
 
 ## Automated scraper of recruiter emails
-### Ideas:
+**Ideas:**
 1. places where to find recruiter and HR emails:
 a. contacts section of website of company applied to 
 b. LinkedIn profile of company applied to, see people and add every recruiter you can see, go to recuiters profile and extact email if any
@@ -78,11 +78,18 @@ a.
 >>> response.headers
 {'Server': 'nginx/1.16.1', 'Date': 'Fri, 29 Sep 2023 02:32:43 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '132', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'x-rate-limit-limit,x-rate-limit-remaining,x-rate-limit-reset', 'cache-control': 'max-age=0, private, must-revalidate', 'x-rate-limit-limit': '1000', 'x-rate-limit-remaining': '995', 'x-rate-limit-reset': '77237', 'x-request-id': 'F4k930HDta9MRfMVIdEx'}
 ```
+
+note that if x-rate-limit-remaining is 0 then you must wait for x-rate-limit-reset to count down to zero since it represents the seconds left until a new set of x-rate-limit-remaining's is refreshed. 47505 seconds or 13 hours is the amount of time left until I can make requests again.
+
 The headers also contain information about how much names we have left to process for a given time period. X-Rate-Limit-Limit is the amount of names available in current time window, X-Rate-Limit-Remaining is the number of names left in the current time window
 
 SOme errors that we can handle are 401 unauthorized, 402 payment required, 422 unprocessable entity, 429 too many requests, a
 
-### Problems:
+**To do:**
+1. Because linked sent notice for suspicions of my using of automation tools like selenium, I'll have to go under for a while and just complete running the connection info scraper application next time, and collect all connection info. For now just merge what dataframes you have along the index, since both dataframes containing profile names and their respective emails, mobile num, and company name are all aligned by index.
+
+
+**Problems:**
 1. can't sign in in google account using webdriver. Possible solution: https://stackoverflow.com/questions/60117232/selenium-google-login-block
 
 ff. solutions do not work:
