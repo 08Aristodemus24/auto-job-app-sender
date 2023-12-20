@@ -1,4 +1,4 @@
-Dearest Maam/Sir
+Dear {salutation} {first_name}
 
 I hope this message finds you well. I wanted to personally follow up on my recent application for the {position} position at {company_name}, because I am very interested in the opportunity and would be thrilled to have the chance to discuss my qualifications further with you, because I do believe that with my experience I believe I would be a valuable addition to the team and contribute positively to the {company_name} team.
 
