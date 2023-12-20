@@ -1,6 +1,7 @@
-from apps.auto_job_app import main as app_1
-from apps.generate_cover_letter import main as app_2
-from apps.linkedin_conn_scraper import main as app_4
+from auto_job_app import main as app_1
+from generate_cover_letter import main as app_2
+from linkedin_conn_scraper import main as app_4
+from linkedin_conn_info_scraper import main as app_5
 
 from argparse import ArgumentParser
 
@@ -25,7 +26,8 @@ if __name__ == "__main__":
         1 - AUTOMATED COVER LETTER AND CV/RESUME SENDER
         2 - AUTOMATED COVER LETTER GENERATOR
         3 - AUTOMATED LETTER OF INQUIRY SENDER
-        4 - RECRUITER EMAIL SCRAPER
+        4 - RECRUITER LINK & NAME SCRAPER
+        5 - RECRUITER CONTACT INFO SCRAPER
         CHOOSE WHICH APPLICATION TO USE:
     """))
 
@@ -33,7 +35,8 @@ if __name__ == "__main__":
         1: app_1,
         2: app_2,
         3: 0,
-        4: app_4
+        4: app_4,
+        5: app_5
     }
     
     apps[option](args)

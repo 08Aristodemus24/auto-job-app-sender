@@ -12,36 +12,20 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import pandas as pd
 
-import re
-import time
 import os
+import time
 from dotenv import load_dotenv
 from pathlib import Path
 
 from utilities.loaders import load_file
-from utilities.utilities import click_until_permitted
+from utilities.utilities import element_exists
 
 
-def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
-    """
-    because of pages infinite scroll capability we need to scroll 
-    at the very bottom of the page until connection list is exhausted
 
-    if .csv already exists extract dataframe info and add only the ones not in the
-    dataframe that have been scraped 
-    """
-
-    # will store all non existent connections for concatenation to
-    # new or existing dataframe lookup_file
-    conn_links = []
-    conn_names = []
-    genders = []
-    salutations = []
+def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
     emails = []
     mobile_nums = []
     company_names = []
-
-    click_permitted = False
 
     try:
         # login first
@@ -78,55 +62,52 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
         driver.switch_to.window(parent_window)
         time.sleep(5)
 
-        # go to new link where connections live
-        driver.get("https://www.linkedin.com/mynetwork/invite-connect/connections/")
-        time.sleep(5)
+        # now loop through all links to connections and extract their contact info
+        for index, df in lookup_file.iterrows():
+            # extract link from dataframe and navigate to it
+            curr_link = df['conn_link']
+            driver.get(curr_link)
 
-        # scroll to the very bottom until there is none left to scroll
-        n_connections_header = driver.find_element(By.CSS_SELECTOR, "header.mn-connections__header")
-        n_connections = int(re.findall(r"\d+", n_connections_header.text)[0])
-
-        driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
-        time.sleep(1.5)
-        for _ in range(n_connections // 10):
-            driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
-            time.sleep(1.5)
-
-            # sometimes infinite scrollling will stop and instead show 
-            # load more button. If this is the case check if such an 
-            # element exists and just click on it then continue scrolling down
-            # call this function over and over until it returns a flag indicating it has 
-            # finished clicking
-            if click_permitted == False:
-                click_permitted = click_until_permitted(driver=driver, css_path=".scaffold-layout__main .scaffold-finite-scroll__load-button")
-                
-        
-        connections = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
-        # print("test", connections)
-        # print(len(connections))
-        
-        for connection in connections:
-            card_link = connection.find_element(By.CSS_SELECTOR, ".mn-connection-card__link")
-            conn_link = card_link.get_attribute('href')
-
-            card_name = connection.find_element(By.CSS_SELECTOR, ".mn-connection-card__name")
-            conn_name = card_name.text
+            # wait until the document is loaded
+            _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
             
-            # if connection link and connection name already exists
-            # exclude it in dataframe
-            if ((lookup_file['conn_link'] == conn_link) & (lookup_file['conn_name'] == conn_name)).any() or conn_name == 'Michael Cueva':
-                continue
+            # scroll to half of page
+            driver.execute_script("window.scrollBy(0, document.body.scrollHeight / 3)")
+            time.sleep(5)
 
-            # if dataframe is empty or has some rows we can just concatenate an empty dataframe
-            conn_links.append(conn_link)
-            conn_names.append(conn_name)
-            genders.append("")
-            salutations.append("")
-            emails.append("")
-            mobile_nums.append(0)
-            company_names.append("")
+            # get parent window
+            parent_window = driver.current_window_handle
+            # print(parent_window)
 
+            # there are two waysthe company is layed out on the page
+            # either through
+            div = driver.find_element(By.CSS_SELECTOR, "div#experience ~ div.pvs-list__outer-container li:first-child div.display-flex")
+            print(div.text)
+            # company_name = div.find_element(By.CSS_SELECTOR, "div > div > div > div > div > div > span:first-child").text \
+            #     if element_exists(driver, "ul.pvs-list li:first-child div.display-flex > div > div > span:nth-child(2) > span:first-child") \
+            #     else div.find_element(By.CSS_SELECTOR, "div > a.optional-action-target-wrapper > div > div > div > span:first-child").text
+            
+            # # extract button and click it
+            # con_info_btn = driver.find_element(By.CSS_SELECTOR, "#top-card-text-details-contact-info")
+            # con_info_btn.click()
+            # time.sleep(5)
 
+            # # check if the element containing the email and mobile number exists
+            # # because if it does not then just append nan to the array of emails or
+            # # mobile nubmers
+            # email = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="envelope-medium"] ~ .pv-contact-info__ci-container').text \
+            #     if element_exists(driver, 'svg[data-test-icon="envelope-medium"] ~ .pv-contact-info__ci-container') \
+            #     else ""
+            # mobile_no = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="phone-handset-medium"] ~ ul').text \
+            #     if element_exists(driver, 'svg[data-test-icon="phone-handset-medium"] ~ ul') \
+            #     else 0            
+            
+            # print(f"email, mobile number, and company name: {email} {mobile_no} {company_name}")
+            
+            # emails.append(email)
+            # mobile_nums.append(mobile_no)
+            # company_names.append(company_name)
+            
     except TimeoutError as error:
         print("Error {} has occured".format(error))
 
@@ -136,15 +117,6 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
 
     finally:
         print("Done!")
-
-    # concatenate collected connection names and respective links
-    print(conn_links)
-    temp = pd.DataFrame({'conn_link': conn_links, 'conn_name': conn_names, 'gender': genders, 'salutation': salutations, 'email': emails, 'mobile_no': mobile_nums, 'company_name': company_names})
-    dump = pd.concat([temp, lookup_file], axis=0)
-    dump.reset_index(drop=True, inplace=True)
-    dump.to_csv('../documents/profiles_dump.csv')
-    
-
 
 def main(args):
     # load environment variables path
@@ -180,12 +152,4 @@ def main(args):
 
     # extract all connections info
     dump = load_file()
-    extract_con_links(driver=driver, lookup_file=dump)
-
-    # close driver
-    driver.close()
-    driver.quit()
-
-    
-
-    
+    extract_conn_info(driver=driver, lookup_file=dump)

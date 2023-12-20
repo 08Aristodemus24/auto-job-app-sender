@@ -31,8 +31,8 @@ def load_cover_letter(position: str):
     """
 
     cover_letter = {
-        "Data Analyst": lambda: load_files('./documents/DA_cover_letter_2.txt', is_txt=True),
-        "Machine Learning Engineer": lambda: load_files('./documents/MLE_cover_letter_2.txt', is_txt=True)
+        "Data Analyst": lambda: load_files('../documents/DA_cover_letter_2.txt', is_txt=True),
+        "Machine Learning Engineer": lambda: load_files('../documents/MLE_cover_letter_2.txt', is_txt=True)
     }
 
     file_data, file_name = cover_letter[position]()
@@ -108,5 +108,5 @@ def main(args):
     ps = document.add_paragraph(ps_sect)
     
     # save document
-    document.save('cover_letter_2.docx')
+    document.save('../documents/cover_letter_2.docx')
 
