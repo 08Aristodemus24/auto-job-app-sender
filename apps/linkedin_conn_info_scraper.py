@@ -22,7 +22,7 @@ from utilities.utilities import element_exists
 
 
 
-def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
+def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame, dump: pd.DataFrame):
     emails = []
     mobile_nums = []
     company_names = []
@@ -60,7 +60,7 @@ def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
         
         # switch again to current window
         driver.switch_to.window(parent_window)
-        time.sleep(5)
+        time.sleep(20)
 
         # now loop through all links to connections and extract their contact info
         for index, df in lookup_file.iterrows():
@@ -70,43 +70,48 @@ def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
 
             # wait until the document is loaded
             _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
-            
+
             # scroll to half of page
             driver.execute_script("window.scrollBy(0, document.body.scrollHeight / 3)")
             time.sleep(5)
 
-            # get parent window
-            parent_window = driver.current_window_handle
-            # print(parent_window)
-
             # there are two waysthe company is layed out on the page
             # either through
-            div = driver.find_element(By.CSS_SELECTOR, "div#experience ~ div.pvs-list__outer-container li:first-child div.display-flex")
-            print(div.text)
-            # company_name = div.find_element(By.CSS_SELECTOR, "div > div > div > div > div > div > span:first-child").text \
-            #     if element_exists(driver, "ul.pvs-list li:first-child div.display-flex > div > div > span:nth-child(2) > span:first-child") \
-            #     else div.find_element(By.CSS_SELECTOR, "div > a.optional-action-target-wrapper > div > div > div > span:first-child").text
+            company_name = driver.find_element(By.CSS_SELECTOR, "div#experience ~ div.pvs-list__outer-container li:first-child > div > div:nth-child(2) > div > div > span:nth-child(2) > span:first-child").text \
+                if element_exists(driver, "div#experience ~ div.pvs-list__outer-container li:first-child > div > div:nth-child(2) > div > div > span:nth-child(2) > span:first-child") \
+                else driver.find_element(By.CSS_SELECTOR, "div#experience ~ div.pvs-list__outer-container li:first-child > div > div:nth-child(2) > div > a.optional-action-target-wrapper span:first-child").text
             
-            # # extract button and click it
-            # con_info_btn = driver.find_element(By.CSS_SELECTOR, "#top-card-text-details-contact-info")
-            # con_info_btn.click()
-            # time.sleep(5)
+            # after scrolling to 1/3 of page move back to top again
+            driver.execute_script("window.scrollTo(0, 0)")
+            time.sleep(5)
+            
+            # extract contact info button
+            # click contact info button after extracting company nane
+            con_info_btn = driver.find_element(By.CSS_SELECTOR, "#top-card-text-details-contact-info")
+            con_info_btn.click()
+            time.sleep(5)
 
-            # # check if the element containing the email and mobile number exists
-            # # because if it does not then just append nan to the array of emails or
-            # # mobile nubmers
-            # email = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="envelope-medium"] ~ .pv-contact-info__ci-container').text \
-            #     if element_exists(driver, 'svg[data-test-icon="envelope-medium"] ~ .pv-contact-info__ci-container') \
-            #     else ""
-            # mobile_no = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="phone-handset-medium"] ~ ul').text \
-            #     if element_exists(driver, 'svg[data-test-icon="phone-handset-medium"] ~ ul') \
-            #     else 0            
+            # check if the element containing the email and mobile number exists
+            # because if it does not then just append nan to the array of emails or
+            # mobile nubmers
+            email = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="envelope-medium"] ~ .pv-contact-info__ci-container').text \
+                if element_exists(driver, 'svg[data-test-icon="envelope-medium"] ~ .pv-contact-info__ci-container') \
+                else ""
+            mobile_no = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="phone-handset-medium"] ~ ul').text \
+                if element_exists(driver, 'svg[data-test-icon="phone-handset-medium"] ~ ul') \
+                else 0            
             
-            # print(f"email, mobile number, and company name: {email} {mobile_no} {company_name}")
-            
-            # emails.append(email)
-            # mobile_nums.append(mobile_no)
-            # company_names.append(company_name)
+
+            # if connection email, mobilenumver, and company name all exist
+            # skip the link and move on to next link to another profile
+            if ((dump['email'] == email) & (dump['mobile_no'] == mobile_no) & (dump['company_name'] == company_name)).any():
+                continue
+
+            # if dataframe is empty or has some rows we can just concatenate an empty dataframe
+            print(f"email, mobile number, and company name: {email} {mobile_no} {company_name}") 
+            emails.append(email)
+            mobile_nums.append(mobile_no)
+            company_names.append(company_name)
             
     except TimeoutError as error:
         print("Error {} has occured".format(error))
@@ -117,6 +122,11 @@ def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
 
     finally:
         print("Done!")
+
+    temp = pd.DataFrame({'email': emails, 'mobile_no': mobile_nums, 'company_name': company_names})
+    dump = pd.concat([temp, dump], axis=0)
+    dump.reset_index(drop=True, inplace=True)
+    dump.to_csv('../documents/conn_info.csv')
 
 def main(args):
     # load environment variables path
@@ -145,11 +155,20 @@ def main(args):
     # chrome_options.add_argument("profile-directory=Profile 3")
     
     chrome_options.add_experimental_option('detach', True)
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging', 'enable-automation'])
     # chrome_options.add_experimental_option('useAutomationExtension', False)
     service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # extract all connections info
-    dump = load_file()
-    extract_conn_info(driver=driver, lookup_file=dump)
+    lookup_file = load_file(
+        '../documents/profiles_dump.csv',
+        pd.DataFrame({'conn_link': [], 'conn_name': [], 'gender': [], 'salutation': [], 'email': [], 'mobile_no': [], 'company_name': []})
+    )
+
+    dump = load_file(
+        '../documents/conn_info.csv',
+        pd.DataFrame({'email': [], 'mobile_no': [], 'company_name': []})
+    )
+
+    extract_conn_info(driver=driver, lookup_file=lookup_file, dump=dump)

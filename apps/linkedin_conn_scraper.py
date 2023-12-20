@@ -179,7 +179,10 @@ def main(args):
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # extract all connections info
-    dump = load_file()
+    dump = load_file(
+        '../documents/profiles_dump.csv',
+        pd.DataFrame({'conn_link': [], 'conn_name': [], 'gender': [], 'salutation': [], 'email': [], 'mobile_no': [], 'company_name': []})
+    )
     extract_con_links(driver=driver, lookup_file=dump)
 
     # close driver
