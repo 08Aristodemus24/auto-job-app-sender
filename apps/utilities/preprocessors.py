@@ -85,6 +85,7 @@ def assign_gender(row, api_key):
         headers = response.headers
         data = response.json()
         print(data)
+        print(headers)
 
         # if request gives a request limit reached error
         # thus returning a json without hte gender key, just
