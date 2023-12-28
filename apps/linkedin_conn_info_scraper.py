@@ -18,14 +18,17 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 from utilities.loaders import load_file
-from utilities.utilities import element_exists
+from utilities.utilities import element_exists, augment_df
 
 
 
 def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame, dump: pd.DataFrame):
-    emails = []
-    mobile_nums = []
-    company_names = []
+    """
+    args:
+        driver - 
+        lookup_file - 
+        dump - 
+    """
 
     try:
         # login first
@@ -60,10 +63,14 @@ def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
         
         # switch again to current window
         driver.switch_to.window(parent_window)
-        time.sleep(20)
+        time.sleep(5)
 
         # now loop through all links to connections and extract their contact info
         for index, df in lookup_file.iterrows():
+            # if any of the columns of dump is not null then skip row
+            if not pd.isnull(dump.loc[index, 'email']) or not (dump.loc[index, 'mobile_no'] == 0) or not pd.isnull(dump.loc[index, 'company_name']):
+                continue
+
             # extract link from dataframe and navigate to it
             curr_link = df['conn_link']
             driver.get(curr_link)
@@ -100,18 +107,12 @@ def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
             mobile_no = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="phone-handset-medium"] ~ ul').text \
                 if element_exists(driver, 'svg[data-test-icon="phone-handset-medium"] ~ ul') \
                 else 0            
-            
-
-            # if connection email, mobilenumver, and company name all exist
-            # skip the link and move on to next link to another profile
-            if ((dump['email'] == email) & (dump['mobile_no'] == mobile_no) & (dump['company_name'] == company_name)).any():
-                continue
 
             # if dataframe is empty or has some rows we can just concatenate an empty dataframe
-            print(f"email, mobile number, and company name: {email} {mobile_no} {company_name}") 
-            emails.append(email)
-            mobile_nums.append(mobile_no)
-            company_names.append(company_name)
+            print(f"email, mobile number, and company name: {email} {mobile_no} {company_name}")
+            dump.loc[index, 'email'] = email
+            dump.loc[index, 'mobile_no'] = mobile_no
+            dump.loc[index, 'company_name'] = company_name
             
     except TimeoutError as error:
         print("Error {} has occured".format(error))
@@ -123,8 +124,6 @@ def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
     finally:
         print("Done!")
 
-    temp = pd.DataFrame({'email': emails, 'mobile_no': mobile_nums, 'company_name': company_names})
-    dump = pd.concat([temp, dump], axis=0)
     dump.reset_index(drop=True, inplace=True)
     dump.to_csv('../documents/conn_info.csv')
 
@@ -155,7 +154,7 @@ def main(args):
     # chrome_options.add_argument("profile-directory=Profile 3")
     
     chrome_options.add_experimental_option('detach', True)
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging', 'enable-automation'])
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # chrome_options.add_experimental_option('useAutomationExtension', False)
     service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
     driver = webdriver.Chrome(service=service, options=chrome_options)
@@ -166,9 +165,8 @@ def main(args):
         pd.DataFrame({'conn_link': [], 'conn_name': [], 'gender': [], 'salutation': [], 'email': [], 'mobile_no': [], 'company_name': []})
     )
 
-    dump = load_file(
-        '../documents/conn_info.csv',
-        pd.DataFrame({'email': [], 'mobile_no': [], 'company_name': []})
-    )
+    # load preexisting dataframe or create and/or augment it
+    dump = augment_df(lookup_file, '../documents/conn_info.csv')
 
+    # extract connection info
     extract_conn_info(driver=driver, lookup_file=lookup_file, dump=dump)

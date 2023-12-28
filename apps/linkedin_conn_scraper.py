@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 from utilities.loaders import load_file
-from utilities.utilities import click_until_permitted
+from utilities.utilities import click_until_permitted, augment_df
 
 
 def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd.DataFrame):
@@ -183,7 +183,12 @@ def main(args):
         '../documents/profiles_dump.csv',
         pd.DataFrame({'conn_link': [], 'conn_name': [], 'gender': [], 'salutation': [], 'email': [], 'mobile_no': [], 'company_name': []})
     )
+
+    # extract connection links and names
     extract_con_links(driver=driver, lookup_file=dump)
+
+    # augment conn_info or create conn_info.csv
+    augment_df(dump, '../documents/conn_info.csv')
 
     # close driver
     driver.close()

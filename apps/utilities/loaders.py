@@ -15,7 +15,7 @@ def load_excluded(file_path: str):
 
     return names
 
-def load_file(file_name: str, df_template: pd.DataFrame):
+def load_file(file_name: str, df_template: pd.DataFrame=None):
     """
     loads and/or creates a .csv file if one does not already exist
     """
