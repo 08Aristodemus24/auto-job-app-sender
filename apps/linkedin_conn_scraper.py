@@ -187,9 +187,6 @@ def main(args):
     # extract connection links and names
     extract_con_links(driver=driver, lookup_file=dump)
 
-    # augment conn_info or create conn_info.csv
-    augment_df(dump, '../documents/conn_info.csv')
-
     # close driver
     driver.close()
     driver.quit()
