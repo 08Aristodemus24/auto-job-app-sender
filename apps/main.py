@@ -1,5 +1,5 @@
-from auto_job_app import main as app_1
 from generate_cover_letter import main as app_2
+from apps.send_letter import main as app_3
 from linkedin_conn_scraper import main as app_4
 from linkedin_conn_info_scraper import main as app_5
 
@@ -32,9 +32,9 @@ if __name__ == "__main__":
     """))
 
     apps = {
-        1: app_1,
+        1: 0,
         2: app_2,
-        3: 0,
+        3: app_3,
         4: app_4,
         5: app_5
     }

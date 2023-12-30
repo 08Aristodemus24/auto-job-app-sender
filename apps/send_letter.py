@@ -45,7 +45,8 @@ def load_files(path: str, is_txt=False) -> tuple:
 
 def create_emails(company_list: pd.DataFrame):
     """
-    
+    will create the email objects for each and every recruiter
+    collected email
     """
     
 
