@@ -84,7 +84,10 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
 
         # scroll to the very bottom until there is none left to scroll
         n_connections_header = driver.find_element(By.CSS_SELECTOR, "header.mn-connections__header")
-        n_connections = int(re.findall(r"\d+", n_connections_header.text)[0])
+        num_string = "".join(re.findall(r"\d+", n_connections_header.text))
+        num_string_cleaned = num_string.replace(",", "")
+        n_connections = int(num_string_cleaned)
+        print(n_connections)
 
         driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
         time.sleep(1.5)
@@ -175,7 +178,9 @@ def main(args):
     chrome_options.add_experimental_option('detach', True)
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # chrome_options.add_experimental_option('useAutomationExtension', False)
-    service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
+    # service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
+
+    service = ChromeService(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # extract all connections info
@@ -188,8 +193,8 @@ def main(args):
     extract_con_links(driver=driver, lookup_file=dump)
 
     # close driver
-    driver.close()
-    driver.quit()
+    # driver.close()
+    # driver.quit()
 
     
 

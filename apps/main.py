@@ -1,5 +1,5 @@
 from generate_cover_letter import main as app_2
-from apps.send_letter import main as app_3
+from send_letter import main as app_3
 from linkedin_conn_scraper import main as app_4
 from linkedin_conn_info_scraper import main as app_5
 
