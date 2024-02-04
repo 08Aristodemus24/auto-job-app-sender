@@ -43,10 +43,10 @@ def load_files(path: str, is_txt=False) -> tuple:
     return file_data, file_name
 
 
-def create_emails(company_list: pd.DataFrame):
+def create_application_emails(company_list: pd.DataFrame):
     """
     will create the email objects for each and every recruiter
-    collected email
+    collected email as a means of application
     """
     
 
@@ -85,6 +85,12 @@ def create_emails(company_list: pd.DataFrame):
     
     return messages
 
+def create_inquiry_emails(company_list: pd.DataFrame, position: str):
+    """
+    will create the email objects for each and every recruiter
+    collected email that inquires if a certain position is available
+    """
+
 
 def bulk_send(SENDER_EMAIL: str, SENDER_PASSWORD: str, messages: pd.Series, host: str, port: int) -> None:
     """
@@ -111,6 +117,8 @@ def main(args):
     """
     host = args.host
     port = args.port
+    position = args.position
+    company_name = args.company_name
     
     # load path to .env file
     load_env_file()
