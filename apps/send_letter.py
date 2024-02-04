@@ -16,7 +16,8 @@ def load_env_file() -> None:
     """
     
     """
-    BASE_DIR = Path('./').resolve()
+    BASE_DIR = Path('./').resolve().parent
+    print(BASE_DIR)
     load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 
@@ -24,8 +25,9 @@ def load_company_list(path: str) -> pd.DataFrame:
     """
     
     """
-    # df = pd.read_csv(path, index_col=0)
-    df = pd.read_excel(path)
+    
+    df = pd.read_csv(path, index_col=0) if ".csv" in path else pd.read_excel(path)
+
     return df
 
 
@@ -52,13 +54,13 @@ def create_application_emails(company_list: pd.DataFrame):
 
     def _helper(row):
         load_resume = {
-            "Data Analyst": lambda: load_files('./documents/Cueva, Larry Miguel_Resume_B.pdf'),
-            "Machine Learning Engineer": lambda: load_files('./documents/Cueva, Larry Miguel_Resume_A.pdf')
+            "Data Analyst": lambda: load_files('../documents/Cueva, Larry Miguel_Resume_B.pdf'),
+            "Machine Learning Engineer": lambda: load_files('../documents/Cueva, Larry Miguel_Resume_A.pdf')
         }
 
         load_cover_letter = {
-            "Data Analyst": lambda: load_files('./documents/DA_cover_letter_2.txt', is_txt=True),
-            "Machine Learning Engineer": lambda: load_files('./documents/MLE_cover_letter_2.txt', is_txt=True)
+            "Data Analyst": lambda: load_files('../documents/DA_cover_letter_2.txt', is_txt=True),
+            "Machine Learning Engineer": lambda: load_files('../documents/MLE_cover_letter_2.txt', is_txt=True)
         }
 
         company_name = row['company_name']
@@ -91,6 +93,40 @@ def create_inquiry_emails(company_list: pd.DataFrame, position: str):
     collected email that inquires if a certain position is available
     """
 
+    def _helper(row, position):
+        load_resume = {
+            "Data Analyst": lambda: load_files('../documents/Cueva, Larry Miguel_Resume_B.pdf'),
+            "Machine Learning Engineer": lambda: load_files('../documents/Cueva, Larry Miguel_Resume_A.pdf')
+        }
+
+        load_letter_of_inq = lambda: load_files('../documents/MLE_cover_letter_2.txt', is_txt=True)
+
+        # load cover letter and resume
+        resume, resume_name = load_resume[position]()
+        letter_of_inq, _ = load_letter_of_inq()
+
+        # extract info of each row in dataframe to loadi nto text files
+        company_name = row['company_name']
+        email = row['email']
+        position = position
+        subject = "Inquiry Regarding {position} Opportunities at {company_name}".format(position=position, company_name=company_name)
+        salutation = row['salutation']
+        print(letter_of_inq.format(position=position, company_name=company_name, salutation=salutation))
+
+        # # create email objects. Add file also
+        # # as attachment to email object
+        # msg = EmailMessage()
+        # msg['Subject'] = subject
+        # msg['To'] = email
+        # msg.set_content(letter_of_inq.format(position=position, company_name=company_name, salutation=salutation))
+        # msg.add_attachment(resume, maintype='application', subtype='octet-stream', filename=resume_name)
+
+        # return msg
+    
+    messages = company_list.apply(_helper, args=(position, ), axis=1)
+    
+    return messages
+
 
 def bulk_send(SENDER_EMAIL: str, SENDER_PASSWORD: str, messages: pd.Series, host: str, port: int) -> None:
     """
@@ -118,7 +154,6 @@ def main(args):
     host = args.host
     port = args.port
     position = args.position
-    company_name = args.company_name
     
     # load path to .env file
     load_env_file()
@@ -128,13 +163,14 @@ def main(args):
     SENDER_PASSWORD = os.environ['SENDER_PASSWORD']
 
     # load csv of company meta data
-    company_list = load_company_list('./documents/dummy.xlsx')
+    company_list = load_company_list('../documents/profiles_dump.csv')
     print(company_list)
 
     # create emails based on company meta data
-    messages = create_emails(company_list)
+    # messages = create_application_emails(company_list)
+    messages = create_inquiry_emails(company_list, position)
     # print(type(messages), end='\n')
 
     # bulk send all messages
-    bulk_send(SENDER_EMAIL, SENDER_PASSWORD, messages=messages, host=host, port=port)
+    # bulk_send(SENDER_EMAIL, SENDER_PASSWORD, messages=messages, host=host, port=port)
     
