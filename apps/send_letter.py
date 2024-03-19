@@ -91,37 +91,40 @@ def create_inquiry_emails(company_list: pd.DataFrame, position: str):
     """
     will create the email objects for each and every recruiter
     collected email that inquires if a certain position is available
+
+    position/roles arg can be 'Machine Learning Engineer', 
+    'Machine Learning Engineer related' since letter of inquiry has context
+    'Is there an available {position} role?' or perhaps 'I want to apply in a
+    {position} role'
     """
 
     def _helper(row, position):
-        load_resume = {
-            "Data Analyst": lambda: load_files('../documents/Cueva, Larry Miguel_Resume_B.pdf'),
-            "Machine Learning Engineer": lambda: load_files('../documents/Cueva, Larry Miguel_Resume_A.pdf')
-        }
-
-        load_letter_of_inq = lambda: load_files('../documents/MLE_cover_letter_2.txt', is_txt=True)
+        load_resume = lambda: load_files('../documents/Larry_Miguel_R_Cueva_Resume_Plain.pdf')
+        load_letter_of_inq = lambda: load_files('../documents/letter_of_inquiry.txt', is_txt=True)
 
         # load cover letter and resume
-        resume, resume_name = load_resume[position]()
+        resume, resume_name = load_resume()
         letter_of_inq, _ = load_letter_of_inq()
 
         # extract info of each row in dataframe to loadi nto text files
+        position = position
+        first_name = row['conn_name']
         company_name = row['company_name']
         email = row['email']
-        position = position
-        subject = "Inquiry Regarding {position} Opportunities at {company_name}".format(position=position, company_name=company_name)
+        subject = "Inquiry regarding {position} roles/opportunities at {company_name}".format(position=position, company_name=company_name)
         salutation = row['salutation']
-        print(letter_of_inq.format(position=position, company_name=company_name, salutation=salutation))
+        body = letter_of_inq.format(position=position, company_name=company_name, salutation=salutation, first_name=first_name)
+        print(body)
 
-        # # create email objects. Add file also
-        # # as attachment to email object
-        # msg = EmailMessage()
-        # msg['Subject'] = subject
-        # msg['To'] = email
-        # msg.set_content(letter_of_inq.format(position=position, company_name=company_name, salutation=salutation))
-        # msg.add_attachment(resume, maintype='application', subtype='octet-stream', filename=resume_name)
+        # create email objects. Add file also
+        # as attachment to email object
+        msg = EmailMessage()
+        msg['Subject'] = subject
+        msg['To'] = email
+        msg.set_content(body)
+        msg.add_attachment(resume, maintype='application', subtype='octet-stream', filename=resume_name)
 
-        # return msg
+        return msg
     
     messages = company_list.apply(_helper, args=(position, ), axis=1)
     
@@ -169,8 +172,7 @@ def main(args):
     # create emails based on company meta data
     # messages = create_application_emails(company_list)
     messages = create_inquiry_emails(company_list, position)
-    # print(type(messages), end='\n')
+    print(messages, end='\n')
 
     # bulk send all messages
     # bulk_send(SENDER_EMAIL, SENDER_PASSWORD, messages=messages, host=host, port=port)
-    

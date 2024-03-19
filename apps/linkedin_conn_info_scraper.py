@@ -79,6 +79,8 @@ def extract_conn_info(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
                 curr_link = df['conn_link']
                 driver.get(curr_link)
 
+                print(df['conn_name'])
+
                 # wait until the document is loaded
                 _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
 
