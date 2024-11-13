@@ -133,3 +133,27 @@ i. so each page in paginator will eventually give out an error because an elemen
 j. selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
 Current browser version is 119.0.6045.160 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 Stacktrace:
+
+```
+# chrome_options.add_argument("--no-sandbox")
+# chrome_options.add_argument("--disable-setuid-sandbox") 
+# chrome_options.add_argument("--remote-debugging-port=5000")
+# chrome_options.add_argument("--disable-dev-shm-using") 
+# chrome_options.add_argument("--disable-extensions") 
+# chrome_options.add_argument("--disable-gpu") 
+# chrome_options.add_argument('--headless')
+
+# to check what profile to use when set to profile-directory argument 
+# passed toself.add_argument() enter edge://version/ in search address 
+# of edge to see the meta data. There you will see the Profile Path of the 
+# account signed in in your browser, in this Profile Path you will see
+# C:\Users\<user>\AppData\Local\Microsoft\Edge\User Data\<folder of the 
+# profile being used> just assign this to the profile-directory argument 
+# and pass the string in the self.add_argument() method
+# chrome_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Google/Chrome/User Data/")
+# chrome_options.add_argument("profile-directory=Profile 3")
+
+# chrome_options.add_experimental_option('detach', True)
+# chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+# chrome_options.add_experimental_option('useAutomationExtension', False)
+```
