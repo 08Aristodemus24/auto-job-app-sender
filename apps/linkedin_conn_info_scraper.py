@@ -1,4 +1,4 @@
-# import undetected_chromedriver.v2 as webdriver
+# import undetected_chromedriver as webdriver
 import selenium.webdriver as webdriver
 from selenium.webdriver.common.keys import Keys
 
@@ -31,112 +31,140 @@ def extract_conn_info(driver: webdriver.Chrome, lookup_file: pd.DataFrame, dump:
         dump - 
     """
 
-    try:
-        # login first
-        # driver.get("https://www.linkedin.com/uas/login/")
+    for index, df in lookup_file.iterrows():
+        try:
+            # login first
+            # driver.get("https://www.linkedin.com/uas/login/")
 
-        # # wait until the document is loaded
-        # _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
+            # # wait until the document is loaded
+            # _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
 
-        # # get parent window
-        # parent_window = driver.current_window_handle
+            # # get parent window
+            # parent_window = driver.current_window_handle
 
-        # # click sign in with google
-        # time.sleep(5)
-        # gsign_in_btn = driver.find_element(By.CSS_SELECTOR, ".alternate-signin__btn--google")
-        # gsign_in_btn.click()
-        # time.sleep(5)
+            # # click sign in with google
+            # time.sleep(5)
+            # gsign_in_btn = driver.find_element(By.CSS_SELECTOR, ".alternate-signin__btn--google")
+            # gsign_in_btn.click()
+            # time.sleep(5)
 
-        # # get all windows currently open
-        # windows = driver.window_handles
-        # driver.switch_to.window(windows[-1])
+            # # get all windows currently open
+            # windows = driver.window_handles
+            # driver.switch_to.window(windows[-1])
 
-        # # whsOnd zHQkBf
+            # # whsOnd zHQkBf
 
-        # # select the username input in popup authentication window of google
-        # username = driver.find_element(By.CSS_SELECTOR, "input[type='email'].whsOnd")
-        # username.send_keys(os.environ['GOOGLE_EMAIL'])
-        # username.send_keys(Keys.ENTER)
-        # time.sleep(5)
+            # # select the username input in popup authentication window of google
+            # username = driver.find_element(By.CSS_SELECTOR, "input[type='email'].whsOnd")
+            # username.send_keys(os.environ['GOOGLE_EMAIL'])
+            # username.send_keys(Keys.ENTER)
+            # time.sleep(5)
 
-        # # select the password input in popup authentication window of google
-        # password = driver.find_element(By.CSS_SELECTOR, "input[type='password'].whsOnd")
-        # password.send_keys(os.environ['GOOGLE_PASS'])
-        # password.send_keys(Keys.ENTER)
-        
-        # # switch again to current window
-        # driver.switch_to.window(parent_window)
-        # time.sleep(5)
-
-        # now loop through all links to connections and extract their contact info
-        for index, df in lookup_file.iterrows():
-            # if any of the columns of dump is not null then skip row
-            if pd.isnull(dump.loc[index, 'email']) or (dump.loc[index, 'mobile_no'] == 0.0) or pd.isnull(dump.loc[index, 'company_name']):
-                # email = pd.isnull(dump.loc[index, 'email'])
-                # mobile_num = dump.loc[index, 'mobile_no'] == 0.0
-                # company_name = pd.isnull(dump.loc[index, 'company_name'])
-
-                # print(f"{email} {mobile_num} {company_name}")
-
-                # extract link from dataframe and navigate to it
-                curr_link = df['conn_link']
-                driver.get(curr_link)
-
-                print(df['conn_name'])
-
-                # wait until the document is loaded
-                _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
-
-                # scroll to half of page
-                driver.execute_script("window.scrollBy(0, document.body.scrollHeight / 3)")
-                time.sleep(5)
-
-                # there are two waysthe company is layed out on the page
-                # either through
-                company_name = driver.find_element(By.CSS_SELECTOR, "div#experience ~ div.pvs-list__outer-container li:first-child > div > div:nth-child(2) > div > div > span:nth-child(2) > span:first-child").text \
-                    if element_exists(driver, "div#experience ~ div.pvs-list__outer-container li:first-child > div > div:nth-child(2) > div > div > span:nth-child(2) > span:first-child") \
-                    else driver.find_element(By.CSS_SELECTOR, "div#experience ~ div.pvs-list__outer-container li:first-child > div > div:nth-child(2) > div > a.optional-action-target-wrapper span:first-child").text \
-                    if element_exists(driver, "div#experience ~ div.pvs-list__outer-container li:first-child > div > div:nth-child(2) > div > a.optional-action-target-wrapper span:first-child") else \
-                    ""
-                
-                # after scrolling to 1/3 of page move back to top again
-                driver.execute_script("window.scrollTo(0, 0)")
-                time.sleep(5)
-                
-                # extract contact info button
-                # click contact info button after extracting company nane
-                con_info_btn = driver.find_element(By.CSS_SELECTOR, "#top-card-text-details-contact-info")
-                con_info_btn.click()
-                time.sleep(5)
-
-                # check if the element containing the email and mobile number exists
-                # because if it does not then just append nan to the array of emails or
-                # mobile nubmers
-                email = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="envelope-medium"] ~ div').text \
-                    if element_exists(driver, 'svg[data-test-icon="envelope-medium"] ~ div') \
-                    else ""
-                mobile_no = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="phone-handset-medium"] ~ ul').text \
-                    if element_exists(driver, 'svg[data-test-icon="phone-handset-medium"] ~ ul') \
-                    else 0            
-
-                # if dataframe is empty or has some rows we can just concatenate an empty dataframe
-                print(f"email, mobile number, and company name: {email} {mobile_no} {company_name}")
-                dump.loc[index, 'email'] = email
-                dump.loc[index, 'mobile_no'] = mobile_no
-                dump.loc[index, 'company_name'] = company_name
+            # # select the password input in popup authentication window of google
+            # password = driver.find_element(By.CSS_SELECTOR, "input[type='password'].whsOnd")
+            # password.send_keys(os.environ['GOOGLE_PASS'])
+            # password.send_keys(Keys.ENTER)
             
-    except TimeoutError as error:
-        print("Error {} has occured".format(error))
+            # # switch again to current window
+            # driver.switch_to.window(parent_window)
+            # time.sleep(5)
 
-    # catch both NoSuchElementException and StaleElementReferenceException errors
-    except (NoSuchElementException, StaleElementReferenceException, TimeoutException) as error:
-        print("Error {} has occured".format(error))
+            # now loop through all links to connections and extract their contact info
+            # if this somehow crashes the dataframe has already saved data and will go to finally
+            # block for post processing
+            
+                # if any of the columns of dump is not null then skip row
+                # if an email is present but no number or if a number is present but no email skip the row
+                # i.e. klsldf@gmail.com detected will return false and be negated resulting in true
+                # and there is no mobile number which will also result in true
+                if (~pd.isnull(dump.loc[index, 'email']) and (dump.loc[index, 'mobile_no'] == 0.0)) or \
+                    (pd.isnull(dump.loc[index, 'email']) and ~(dump.loc[index, 'mobile_no'] == 0.0)) or \
+                    (pd.isnull(dump.loc[index, 'email']) and (dump.loc[index, 'mobile_no'] == 0.0)):
+                    continue
 
-    finally:
-        print("Done!")
+                # else if both email and mobile numbers are non existent that means there
+                # is not yet information collected on this connection so ff statements will
+                # collect such info 
+                else:
+                    # email = pd.isnull(dump.loc[index, 'email'])
+                    # mobile_num = dump.loc[index, 'mobile_no'] == 0.0
+                    # company_name = pd.isnull(dump.loc[index, 'company_name'])
 
-    dump.reset_index(drop=True, inplace=True)
-    dump.to_csv('../documents/conn_info.csv')
+                    # print(f"{email} {mobile_num} {company_name}")
+
+                    # extract link from dataframe and navigate to it
+                    curr_link = df['conn_link']
+                    curr_name = df['conn_name']
+                    driver.get(curr_link)
+                    print(curr_name)
+
+                    # wait until the document is loaded
+                    _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
+
+                    # scroll to half of page
+                    driver.execute_script("window.scrollBy(0, document.body.scrollHeight / 3)")
+                    time.sleep(5)
+                    
+                    # get company name of connection through experience
+                    company_name = ""
+                    if element_exists(driver, By.CSS_SELECTOR, "div#experience"):
+                        exp_div = driver.find_element(By.CSS_SELECTOR, "div#experience")
+                        parent = exp_div.find_element(By.XPATH, "./..")
+
+                        # there are two waysthe company is layed out on the page
+                        # either through
+                        if element_exists(parent, By.XPATH, "div[3]/ul/li[1]/div/div[2]/div[1]/div/span[1]/span[1]"):
+                            company_name_con = parent.find_element(By.XPATH, "div[3]/ul/li[1]/div/div[2]/div[1]/div/span[1]/span[1]")
+
+                        elif element_exists(parent, By.XPATH, "div[3]/ul/li[1]/div/div[2]/div[1]/a/div/div/div/div/span[1]"):
+                            company_name_con = parent.find_element(By.XPATH, "div[3]/ul/li[1]/div/div[2]/div[1]/a/div/div/div/div/span[1]")
+                        
+                        # if experience section does exist rename blank to company name
+                        company_name = company_name_con.text
+                        
+                    
+                    # after scrolling to 1/3 of page move back to top again
+                    driver.execute_script("window.scrollTo(0, 0)")
+                    time.sleep(5)
+                    
+                    # extract contact info button
+                    # click contact info button after extracting company nane
+                    con_info_btn = driver.find_element(By.CSS_SELECTOR, "#top-card-text-details-contact-info")
+                    con_info_btn.click()
+                    time.sleep(5)
+
+                    # check if the element containing the email and mobile number exists
+                    # because if it does not then just append nan to the array of emails or
+                    # mobile nubmers
+                    email = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="envelope-medium"] ~ div').text \
+                        if element_exists(driver, By.CSS_SELECTOR, 'svg[data-test-icon="envelope-medium"] ~ div') \
+                        else ""
+                    mobile_no = driver.find_element(By.CSS_SELECTOR, 'svg[data-test-icon="phone-handset-medium"] ~ ul').text \
+                        if element_exists(driver, By.CSS_SELECTOR, 'svg[data-test-icon="phone-handset-medium"] ~ ul') \
+                        else 0            
+
+                    # if dataframe is empty or has some rows we can just concatenate an empty dataframe
+                    print(f"email, mobile number, and company name: {email} {mobile_no} {company_name}")
+                    dump.loc[index, 'email'] = email
+                    dump.loc[index, 'mobile_no'] = mobile_no
+                    dump.loc[index, 'company_name'] = company_name
+                    dump.loc[index, 'conn_name'] = curr_name
+                    dump.loc[index, 'conn_link'] = curr_link
+                
+        except TimeoutError as error:
+            print("Error {} has occured".format(error))
+
+        # catch both NoSuchElementException and StaleElementReferenceException errors
+        except (NoSuchElementException, StaleElementReferenceException, TimeoutException) as error:
+            print("Error {} has occured".format(error))
+
+        finally:
+            # if somehow the current index fails to collect connection info then
+            # current index is just left blank and loop moves on
+            """but what happens when the dataframe is read again?"""
+            print("Done!")
+            dump.reset_index(drop=True, inplace=True)
+            dump.to_csv('../documents/conn_info.csv')
 
 def main(args):
     # load environment variables path
@@ -163,11 +191,13 @@ def main(args):
     # # and pass the string in the self.add_argument() method
     chrome_options.add_argument("--user-data-dir=C:/Users/LARRY/AppData/Local/Google/Chrome/User Data")
     chrome_options.add_argument("--profile-directory=Profile 4")
-    chrome_options.add_experimental_option('detach', True)
+    # chrome_options.add_experimental_option('detach', True)
     # chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # chrome_options.add_experimental_option('useAutomationExtension', False)
     service = ChromeService(executable_path="C:/Executables/chromedriver-win64/chromedriver.exe")
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options, service=service)
+    # # for undetected chrome driver
+    # driver = webdriver.Chrome(options=chrome_options)
 
     # extract all connections info
     print('loading file...')

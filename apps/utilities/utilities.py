@@ -6,13 +6,13 @@ from selenium.common.exceptions import NoSuchElementException, StaleElementRefer
 import pandas as pd
 import numpy as np
 
-def element_exists(driver: webdriver.Chrome, css_path: str,):
+def element_exists(driver: webdriver.Chrome, by, path:str):
     """
     should .find_element() raise a NoSuchElement or StaleElementReference
     exception return false because the element being searched does not exist
     """
     try:
-        driver.find_element(By.CSS_SELECTOR, css_path)
+        driver.find_element(by, path)
     except:
         return False
     return True
@@ -53,6 +53,10 @@ def augment_df(df: pd.DataFrame, path: str):
         temp = pd.read_csv(path, index_col=0)
         n_rows_temp = temp.shape[0]
         template = pd.DataFrame({
+            'conn_link': [""] * (n_rows_dump - n_rows_temp), 
+            'conn_name': [""] * (n_rows_dump - n_rows_temp), 
+            'gender': [""] * (n_rows_dump - n_rows_temp), 
+            'salutation': [""] * (n_rows_dump - n_rows_temp), 
             'email': [""] * (n_rows_dump - n_rows_temp),
             'mobile_no': [0] * (n_rows_dump - n_rows_temp),
             'company_name': [""] * (n_rows_dump - n_rows_temp)})
