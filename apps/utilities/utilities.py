@@ -53,13 +53,14 @@ def augment_df(df: pd.DataFrame, path: str):
         temp = pd.read_csv(path, index_col=0)
         n_rows_temp = temp.shape[0]
         template = pd.DataFrame({
+            'email': [""] * (n_rows_dump - n_rows_temp),
+            'mobile_no': [0] * (n_rows_dump - n_rows_temp),
+            'company_name': [""] * (n_rows_dump - n_rows_temp),
             'conn_link': [""] * (n_rows_dump - n_rows_temp), 
             'conn_name': [""] * (n_rows_dump - n_rows_temp), 
             'gender': [""] * (n_rows_dump - n_rows_temp), 
             'salutation': [""] * (n_rows_dump - n_rows_temp), 
-            'email': [""] * (n_rows_dump - n_rows_temp),
-            'mobile_no': [0] * (n_rows_dump - n_rows_temp),
-            'company_name': [""] * (n_rows_dump - n_rows_temp)})
+        })
         temp = pd.concat([temp, template], axis=0)
         temp.reset_index(drop=True, inplace=True)
         temp.to_csv(path)
@@ -72,7 +73,15 @@ def augment_df(df: pd.DataFrame, path: str):
         print(f'{e} has occured. Creating a new dataframe...')
 
         
-        template = pd.DataFrame({'email': [""] * n_rows_dump, 'mobile_no': [0] * n_rows_dump, 'company_name': [""] * n_rows_dump})
+        template = pd.DataFrame({
+            'email': [""] * n_rows_dump, 
+            'mobile_no': [0] * n_rows_dump, 
+            'company_name': [""] * n_rows_dump,
+            'conn_link': [""] * n_rows_dump, 
+            'conn_name': [""] * n_rows_dump, 
+            'gender': [""] * n_rows_dump, 
+            'salutation': [""] * n_rows_dump, 
+        })
         template.to_csv(path)
 
         return template
