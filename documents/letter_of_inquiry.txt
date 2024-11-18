@@ -1,6 +1,6 @@
 Dear {salutation} {first_name},
 
-I hope this email finds you well. My name is Larry Miguel R. Cueva, and I am writing to express my interest in potential opportunities within your esteemed company, {company_name}, potentially for a {position} role.
+I hope this email finds you well. My name is Larry Miguel R. Cueva, and I am writing to express my interest in potential opportunities within your esteemed company, {company_name}, potentially for a {position} related role.
 
 As an undergraduate student majoring in Computer Science with a focus on Machine Learning and Data Analysis, I am eager to apply the skills and knowledge I have gained in a practical and real-world setting. After researching and learning more about {company_name}'s reputation for innovation and commitment to excellence, and I am very much excited about the prospect of hopefully contributing to your dynamic team.
 

@@ -166,7 +166,7 @@ def main(args):
     SENDER_PASSWORD = os.environ['SENDER_PASSWORD']
 
     # load csv of company meta data
-    company_list = load_company_list('../documents/profiles_dump.csv')
+    company_list = load_company_list('../documents/conn_info.csv')
     print(company_list)
 
     # create emails based on company meta data

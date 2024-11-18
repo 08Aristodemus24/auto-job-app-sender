@@ -39,7 +39,7 @@ This automated job application sender will consist of about three phases: sendin
 ## Automated cover letter and CV sender
 **Usage:**
 1. if you don't want to send cover letter and cv directly to emails use `"localhost"` for `--host` arg and `1025` for `--port` arg
-
+2. python main.py --host localhost --port 1025 --position "Data Analyst"
 **Ideas:**
 1. 
 

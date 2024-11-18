@@ -64,6 +64,8 @@ def filter_valid(sequence: list):
         'Cssyb',
         'Mdrt',
         'Ceqp',
+        'Msp',
+        'Chrp'
         'Icyb'], sequence))
     
     # join the filtered words
