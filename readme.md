@@ -157,3 +157,55 @@ Stacktrace:
 # chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 # chrome_options.add_experimental_option('useAutomationExtension', False)
 ```
+
+# Insights
+**A vague plan for getting a job**
+1. Exhaust networking by messaging each of my classmates if a spot is open in their company, or if they have an email of their recruiter
+2. Go to healthy gamer and ask for websites where to apply for a software engineering job or any data related job
+3. Apply at the ff. according to rank in terms of probability of success
+* Glassdoor 
+* Wellfound/angel list
+* indeed
+* that green P
+* kalibre
+* onlinejobs ph
+* upwork
+* workana
+* prosple
+* https://www.remoteimpact.io/
+* https://remoteok.com/
+* https://www.toptal.com/
+* referral from colleague
+
+4. Use fiverr and accept clients only that are within reason of your work sched, project scope i.e. no chat gpt related, research how clients pay you for your services
+5. Create accounts for each career website if you have to
+6. Tune your resume/cv tailored for Machine Learning, Data Science, and Software Engineering because this is what you're good at.
+7. Tune your cover letter for the aforementioned roles
+8. Ready your premade answers to application questions like "why do want to work at this company?" Which will be found at project Solzhenitsyn
+9. Prepare for technical interviews especially in Sql, machine learning, data structures, and take home projects if any, but attempt to do first an interview even if you feel your rusty or unknowledgeable you never know what awaits you so jist try, and if you don't know it means you have learning to do, it's time that yous top always preparing and feeling like you're not ready, because you never know you are unless you really try. Take the leap now and be courageous
+10. Prepare excel sheet that will contain list of all applied companies, their email, and the role your applying for, and its current status
+11. when submitting job applications usually there will be application fields like:
+* why do you want to work at this company?
+* attach your CV or resume
+* Minimum salary
+* 
+
+with this you should always have your `generate_cover_letter` script always ready, and the `message body to professionals` document always ready which is part of `project Solzhenitsyn`, so you can move and apply quickly. This is a numbers game and it all depends hwo much input you put in during the day. Recall that `generate_cover_letter.py` usage requires `position` and `company` args
+
+**What interests you about working for this company?**
+* I'm drawn to DNA Micro's commitment to delivering innovative, high-quality solutions that resonate with clients and their target audiences. Your focus on understanding and enhancing a brand's identity through effective web design and development aligns perfectly with my passion for creating engaging digital experiences.
+
+The opportunity to contribute to the development of cutting-edge mobile applications across various platforms is particularly exciting. I'm eager to leverage my skills to build robust, user-friendly apps that deliver exceptional value.
+
+Moreover, DNA Micro's dedication to product development and its agile approach to bringing products to market resonate strongly with me. I'm impressed by your team's ability to balance speed and quality, ensuring that innovative solutions are delivered efficiently.
+
+Beyond the technical aspects, I'm inspired by your company's strong sense of social responsibility. Your commitment to giving back to the community reflects a shared value system and reinforces my desire to work for an organization that makes a positive impact.
+
+I believe that my skills and experience, combined with your company's supportive culture and innovative spirit, would make a valuable contribution to DNA Micro's ongoing success.
+
+* I'm drawn to DNA Micro's commitment to delivering innovative, high-quality solutions that resonate with clients and their target audiences. Your focus on understanding and enhancing a brand's identity through effective web design and development aligns perfectly with my fondness for creating above average digital applications that I hope everyone can be glad in using.
+
+The opportunity to contribute to the development of cutting-edge mobile applications across various platforms is also particularly exciting, and I'm eager to leverage my skills to build robust, user-friendly apps that deliver exceptional value.
+
+Beyond the technical aspects, I'm inspired by your company's strong sense of social responsibility. Your commitment to giving back to the community reflects my own values and reinforces my desire to work for an organization that has values aligning with my own.
+

@@ -32,7 +32,8 @@ def load_cover_letter(position: str):
 
     cover_letter = {
         "Data Analyst": lambda: load_files('../documents/DA_cover_letter_2.txt', is_txt=True),
-        "Machine Learning Engineer": lambda: load_files('../documents/MLE_cover_letter_2.txt', is_txt=True)
+        "Machine Learning Engineer": lambda: load_files('../documents/MLE_cover_letter_2.txt', is_txt=True),
+        "Software Engineer": lambda: load_files('../documents/SWE_cover_letter_2.txt', is_txt=True)
     }
 
     file_data, file_name = cover_letter[position]()
@@ -44,7 +45,7 @@ def emphasize(feature: str):
     Capitalizes each letter in a phrase. E.g. creative dynamix solutions, 
     inc. is converted to Creative Dynamix Solutions, Inc.
     """
-
+    feature = feature.strip()
     return " ".join([word.capitalize() for word in feature.split(' ')])
 
 def view_sections(sections: List[str]) -> None:
@@ -71,7 +72,7 @@ def main(args):
     # view_sections(sections)
 
     salutation_sect = sections[0] + '\r\n'
-    contents = sections[1:-3]
+    contents = sections[1:-3]   
     conclusion_sect = sections[-3] + '\r\n'
     close_sect = sections[-2] + '\r\n'
     ps_sect = sections[-1]
@@ -107,6 +108,9 @@ def main(args):
     # align left P.S.
     ps = document.add_paragraph(ps_sect)
     
+    pos_placeholder = position.replace(' ', '-')
+    comp_placeholder = company_name.replace(' ', '-') 
+
     # save document
-    document.save('../documents/cover_letter_2.docx')
+    document.save(f'../documents/cover-letter_{pos_placeholder}_{comp_placeholder}.docx')
 
