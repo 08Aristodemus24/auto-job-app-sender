@@ -107,6 +107,7 @@ def main(args):
 
     # align left P.S.
     ps = document.add_paragraph(ps_sect)
+    print(document)
     
     pos_placeholder = position.replace(' ', '-')
     comp_placeholder = company_name.replace(' ', '-') 

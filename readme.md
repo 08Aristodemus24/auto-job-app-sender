@@ -187,25 +187,21 @@ Stacktrace:
 11. when submitting job applications usually there will be application fields like:
 * why do you want to work at this company?
 * attach your CV or resume
-* Minimum salary
+* Minimum salary. 50000php/$850 per month or 600000php/$10000 per month 
 * 
+12. so if I am to work in Pacific Standard Time? (dayshift), i.e. start time of work is 9:00am in the us what tiem would I work in the philippines?
+
+If you're working a 9 AM to 5 PM Pacific Standard Time (PST) shift, considering the 16-hour time difference between PST and Philippine Standard Time (PST), your work hours in the Philippines would be:
+
+9:00 AM PST = 9:00 PM PST (Philippines)
+5:00 PM PST = 5:00 AM PST (Philippines, the next day)
+
+So, you'd be working an overnight shift from 9:00 PM to 5:00 AM Philippine Standard Time.
+
+Philippine Standard Time: Tuesday, Wednesday, Thursday at 9am-12pm and 1pm-5pm 
+13. reply to recruiters after application: 
+`Hello and Good day Maam Edna I've answered the application form you've sent me, about the AI Engineer position. I also look forward to your response to me back. Best, regards.`
+
 
 with this you should always have your `generate_cover_letter` script always ready, and the `message body to professionals` document always ready which is part of `project Solzhenitsyn`, so you can move and apply quickly. This is a numbers game and it all depends hwo much input you put in during the day. Recall that `generate_cover_letter.py` usage requires `position` and `company` args
-
-**What interests you about working for this company?**
-* I'm drawn to DNA Micro's commitment to delivering innovative, high-quality solutions that resonate with clients and their target audiences. Your focus on understanding and enhancing a brand's identity through effective web design and development aligns perfectly with my passion for creating engaging digital experiences.
-
-The opportunity to contribute to the development of cutting-edge mobile applications across various platforms is particularly exciting. I'm eager to leverage my skills to build robust, user-friendly apps that deliver exceptional value.
-
-Moreover, DNA Micro's dedication to product development and its agile approach to bringing products to market resonate strongly with me. I'm impressed by your team's ability to balance speed and quality, ensuring that innovative solutions are delivered efficiently.
-
-Beyond the technical aspects, I'm inspired by your company's strong sense of social responsibility. Your commitment to giving back to the community reflects a shared value system and reinforces my desire to work for an organization that makes a positive impact.
-
-I believe that my skills and experience, combined with your company's supportive culture and innovative spirit, would make a valuable contribution to DNA Micro's ongoing success.
-
-* I'm drawn to DNA Micro's commitment to delivering innovative, high-quality solutions that resonate with clients and their target audiences. Your focus on understanding and enhancing a brand's identity through effective web design and development aligns perfectly with my fondness for creating above average digital applications that I hope everyone can be glad in using.
-
-The opportunity to contribute to the development of cutting-edge mobile applications across various platforms is also particularly exciting, and I'm eager to leverage my skills to build robust, user-friendly apps that deliver exceptional value.
-
-Beyond the technical aspects, I'm inspired by your company's strong sense of social responsibility. Your commitment to giving back to the community reflects my own values and reinforces my desire to work for an organization that has values aligning with my own.
 
