@@ -162,20 +162,9 @@ Stacktrace:
 **A vague plan for getting a job**
 1. Exhaust networking by messaging each of my classmates if a spot is open in their company, or if they have an email of their recruiter
 2. Go to healthy gamer and ask for websites where to apply for a software engineering job or any data related job
-3. Apply at the ff. according to rank in terms of probability of success
-* Glassdoor 
-* Wellfound/angel list
-* indeed
-* that green P
-* kalibre
-* onlinejobs ph
-* upwork
-* workana
-* prosple
-* https://www.remoteimpact.io/
-* https://remoteok.com/
-* https://www.toptal.com/
-* referral from colleague
+3. Apply at the ff. according to rank in terms of probability of success (list of websites are in `.env` file)
+
+* referral from colleague. This strategy you will message each of your remotely close colleagues and old classmates and see if they have their HRs email, and then email that HR regarding if there is an open position at their <comapny name> and that your <friend or colleage who works at said company> can vouch for your skills and accomplished projects
 
 4. Use fiverr and accept clients only that are within reason of your work sched, project scope i.e. no chat gpt related, research how clients pay you for your services
 5. Create accounts for each career website if you have to
