@@ -79,6 +79,7 @@ def rem_mi(name: str):
 def assign_gender(row, api_key):
     # extract gender if any
     gender = row['gender']
+    print(gender)
 
     # check if null
     if pd.isnull(gender):
