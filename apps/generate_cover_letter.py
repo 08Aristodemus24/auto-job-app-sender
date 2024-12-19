@@ -33,7 +33,8 @@ def load_cover_letter(position: str):
     cover_letter = {
         "Data Analyst": lambda: load_files('../documents/DA_cover_letter_2.txt', is_txt=True),
         "Machine Learning Engineer": lambda: load_files('../documents/MLE_cover_letter_2.txt', is_txt=True),
-        "Software Engineer": lambda: load_files('../documents/SWE_cover_letter_2.txt', is_txt=True)
+        "Software Engineer": lambda: load_files('../documents/SWE_cover_letter_2.txt', is_txt=True),
+        "Data Engineer": lambda: load_files('../documents/DE_cover_letter_2.txt', is_txt=True),
     }
 
     file_data, file_name = cover_letter[position]()
