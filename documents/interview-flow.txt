@@ -6,17 +6,31 @@ interviewer descrbes workflow and technologies
 - salina is cool, this ml can take in fiels and interpet it
 transcription using whisper X from audio/video, speech to text AI, can chapterize and summarize submitted video/audio
 
+they'll list the technologies they use, some of it you have experience and some of it you won't list those as your strengths and weaknesses
+strengths:
+python
+web scraping
+node.js
+
 weaknesses:
-redis, 
-etl,
+redis 
+etl
+apache airflow
+aws
+azure
+docker/containerization
+separate my code based on functionality like django with apps, urls, settings
+basically I should've separated the UI from the insertion of the reading of data and insertion of said data to db
+use try catch block for potential errors in database transactions
+try to write utilities.py that contains all helper functions
+replace index.py with a more udnerstandable one where the name of the file represents what happens in the source code itself
+naubusan lang ako oras pero important rin may comments, lagyan ng type ang mga arguments
 
 
-- pipeline
-- automatic web scraper, SQL, 
-- orchestrate
-- transform data
-- pass transformed data to ml model (salina) to train
+employer will describe their worflow:
+automatic web scraper, SQL, 
+orchestrate
+transform data
+pass transformed data to ml model (salina) to train
 
-- proof of concept (venn diagram) -> prototype code -> execution
-
-- company has LMD 
+proof of concept (venn diagram) -> prototype code -> execution
