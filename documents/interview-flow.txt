@@ -1,0 +1,22 @@
+interviewer descrbes workflow and technologies
+- web scraping
+- data orchestration
+- ml they use pub/sub I can relate with this
+- I currently had experience with RAG agetns at my current internship
+- salina is cool, this ml can take in fiels and interpet it
+transcription using whisper X from audio/video, speech to text AI, can chapterize and summarize submitted video/audio
+
+weaknesses:
+redis, 
+etl,
+
+
+- pipeline
+- automatic web scraper, SQL, 
+- orchestrate
+- transform data
+- pass transformed data to ml model (salina) to train
+
+- proof of concept (venn diagram) -> prototype code -> execution
+
+- company has LMD 
