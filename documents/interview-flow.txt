@@ -11,6 +11,7 @@ strengths:
 python
 web scraping
 node.js
+in db management usually download mo yung management system like mongo db compass for mongo db, pgadmin 4 for postgresql, or mysql workbench for mysql, add to path the bin folder for accessible commands in command line, create instance in cloud or management system application itself and then save the insances credentials this will be the URI you will need with hostname and password you will need to connect to the instance, then we connect to the db via this instance
 
 weaknesses:
 redis 
@@ -26,11 +27,9 @@ try to write utilities.py that contains all helper functions
 replace index.py with a more udnerstandable one where the name of the file represents what happens in the source code itself
 naubusan lang ako oras pero important rin may comments, lagyan ng type ang mga arguments
 
-
 employer will describe their worflow:
 automatic web scraper, SQL, 
 orchestrate
 transform data
 pass transformed data to ml model (salina) to train
-
 proof of concept (venn diagram) -> prototype code -> execution
