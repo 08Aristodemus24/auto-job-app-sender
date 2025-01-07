@@ -46,3 +46,10 @@ great learning experience
 ##   Why should we hire you?
 In all humility apart from obvious skills, I draw from my personal experience of quite frankly being always a lone developer
 if there is such a term, and if I'm given the opportunity here to collaborate with a team of like minded individuals someone as wanting to grow just as much as me, and wanting to contribute just as much as me, I'll be driven to do my best to give back to this organization by doing my due diligence to always committing to the tasks at hand 
+
+# Describing their workflow:
+* ung meron naman impediments like yung siguro nahihirapan sa tasks ganun kilangan iresolve kasi every week dapat may milestone na natatapos
+* they use agile methodology to develop applications, scrum to be specific. 2 - 4 weeks sprints. After these 2 or 4 weeks may natatapos na na feature ng application or nakapagpush na sa dev then into production branch. As a result some tools you really need to learn are docker for containerization, pulling from development branch and then merging in this branch
+* product backlog - list of tasks for all sprints
+* sprint backlog - specific tasks in the product backlog for a specific sprint lasting 1 to 4 weeks. E.g. for week 1 these are the tasks
+* after completing tasks in the sprint after say 1 week there will be a presentation of your work to your colleagues
