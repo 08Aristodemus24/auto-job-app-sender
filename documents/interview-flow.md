@@ -33,3 +33,16 @@ orchestrate
 transform data
 pass transformed data to ml model (salina) to train
 proof of concept (venn diagram) -> prototype code -> execution
+
+# Final interview might consist of the common...
+
+## Why do you want to work here?
+I think the idea of collecting and operating on large swathes of data
+and using data from news articles, technological trends, medical data to allow other clients
+to make their own decisions based on the data we could process for them really caught my eye
+because in all honesty I'm just someone who's fond of doing so and i think doing it on the job will be a
+great learning experience 
+
+##   Why should we hire you?
+In all humility apart from obvious skills, I draw from my personal experience of quite frankly being always a lone developer
+if there is such a term, and if I'm given the opportunity here to collaborate with a team of like minded individuals someone as wanting to grow just as much as me, and wanting to contribute just as much as me, I'll be driven to do my best to give back to this organization by doing my due diligence to always committing to the tasks at hand 
