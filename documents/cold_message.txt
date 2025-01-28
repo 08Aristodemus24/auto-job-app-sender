@@ -1,0 +1,18 @@
+Hello {salutation} {name} 
+
+Thanks for accepting my invitation by the way, but I'll be actually quite straightforward with this inquiry of mine: I was acutally in the business of finding a {position e.g. Data Engineer or Machine Learning} related role in your company {company_name}. 
+
+Would it be possible during this time for the availability for this role? 
+
+I'd be happy to send my CV to you and be considered for an interview. 
+
+I think through this we can help each other meet our daily "quotas" so to speak, you being able to recruit top individuals for the role and me hopefully having such a role at your company.
+
+Let me know if we can set something up.
+
+Godspeed.
+
+Sincerely, Larry
+
+My Website: https://project-alexander.vercel.app/
+My Contact No: (+63) 970 745 1021
