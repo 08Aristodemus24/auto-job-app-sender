@@ -2,11 +2,7 @@ import tensorflow as tf
 from tensorflow.keras.regularizers import L2
 from tensorflow.keras.layers import Dense, Dropout, LSTM, Bidirectional, Activation, Embedding
 from tensorflow.keras import Model, Input, Sequential
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.losses import Dice
-from tensorflow.keras.metrics import BinaryAccuracy, BinaryCrossentropy as bce_metric, F1Score, AUC, Precision, Recall
-from tensorflow.keras.initializers import GlorotNormal, GlorotUniform
-from tensorflow.keras.optimizers import Adam
+
 
 import json
 
@@ -30,7 +26,7 @@ def init_embedding_layer(vocab_len, emb_dim, emb_matrix):
     return embedding_layer
 
 
-def load_lstm_model(input_shape, vocab_len, emb_dim=256, emb_matrix=None):
+def load_lstm_model(input_shape, vocab_len, emb_dim, emb_matrix, n_a, rnn_drop_prob, dense_drop_prob, n_units):
     """
     Define architecture of LSTM model then return for later training
 
@@ -49,16 +45,9 @@ def load_lstm_model(input_shape, vocab_len, emb_dim=256, emb_matrix=None):
     model.add(embedding_layer)
 
     # initialize lstm layers
-    model.add(Bidirectional(LSTM(units=128, recurrent_dropout=0.2, return_sequences=False)))
-    model.add(Dropout(0.2))
-    model.add(Dense(units=1))
+    model.add(Bidirectional(LSTM(units=n_a, recurrent_dropout=rnn_drop_prob, return_sequences=False)))
+    model.add(Dropout(rate=dense_drop_prob))
+    model.add(Dense(units=n_units))
     model.add(Activation(activation="sigmoid"))
-
-    # compile model
-    model.compile(
-        loss=Dice(),
-        optimizer=Adam(learning_rate=0.01),
-        metrics=[bce_metric(), BinaryAccuracy(), Precision(), Recall(), F1Score(), AUC()]
-    )
 
     return model
