@@ -2,6 +2,7 @@ import re
 import requests
 import numpy as np
 import pandas as pd
+import tqdm
 
 def preprocess(name: str):
     """
@@ -98,3 +99,82 @@ def assign_gender(row, api_key):
         return data.get('gender', gender)
     else:
         return row['gender']
+
+
+
+def series_to_1D_array(series):
+    """this converts the series or column of a df
+    of lists 
+    """
+
+    return [item for sublist in series for item in sublist]
+
+
+
+def construct_embedding_dict(word_emb_path, word_to_index):
+    """
+    returns an embedding dictionary populated with all the words and
+    their respective vector representations from the file of the 
+    pretrained embeddings of GloVe 
+    """
+
+    embedding_dict = {}
+    with open(word_emb_path, 'r') as file:
+        for index, line in enumerate(file):
+            # each line consists of: <word> <feature 1> <feature 2> ... <feature d>
+            # where d is the 300th feature of the word embedding of that word
+            values = line.split()
+
+            # get the word
+            word = values[0]
+
+            # if such word exists in our tokenized dictionary
+            # then if the reverse is the case that means that 
+            # that word exists in the 1.9m word vocab of glove
+            if word in word_to_index.keys():
+                # get the vector
+                vector = np.asarray(values[1:], 'float64')
+                
+                # build the key and value pair of this word and its vector representation
+                embedding_dict[word] = vector
+                
+                # get embedding vector length which will be constant across all keys
+                EMB_VEC_LEN = vector.shape[0]
+
+        file.close()
+
+    return embedding_dict, EMB_VEC_LEN
+
+
+
+def construct_embedding_matrix(word_to_index, embedding_dict, EMB_VEC_LEN):
+    """
+    Constructs the embedding matrix upon finishing the phase of 
+    constructing the embedding dictionary. So that reading the GloVe 
+    embeddings is only done ones to increase time efficiency
+    """
+
+    # oov words (out of vacabulary words) will be mapped to 0 vectors
+    # this is why we have a plus one always to the number of our words in 
+    # our embedding matrix since that is reserved for an unknown or OOV word
+    vocab_len = len(word_to_index) + 1
+
+    # initialize it to 0
+    embedding_matrix = np.zeros((vocab_len, EMB_VEC_LEN))
+
+    for word, index in tqdm.tqdm(word_to_index.items()):
+        # skip if, if index is already equal to the number of
+        # words in our vocab. A break statement if you will
+        if index < vocab_len:
+            # if word does not exist in the pretrained word embedding itself
+            # then return an empty array
+            vector = embedding_dict.get(word, [])
+
+            # if in cases vect is indeed otherwise an empty array due 
+            # to the word existing in the pretrained word embeddings
+            # then place it in our embedding matrix. Otherwise its index
+            # where a word does not exist will stay a row of zeros
+            if len(vector) > 0:
+                embedding_matrix[index] = vector[:EMB_VEC_LEN]
+
+    return embedding_matrix

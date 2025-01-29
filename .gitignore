@@ -6,3 +6,7 @@
 /client_secrets.json
 /.env
 /apps/data/
+/apps/embeddings/
+
+# files to exclude
+!/apps/embeddings/dummy
