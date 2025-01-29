@@ -3,6 +3,7 @@ import requests
 import numpy as np
 import pandas as pd
 import tqdm
+import tensorflow as tf
 
 def preprocess(name: str):
     """
@@ -109,7 +110,21 @@ def series_to_1D_array(series):
 
     return [item for sublist in series for item in sublist]
 
+def map_value_to_index(unique_tokens: list, inverted=False):
+    """
+    returns a lookup table mapping each unique value to an integer. 
+    This is akin to generating a word to index dictionary where each
+    unique word based on their freqeuncy will be mapped from indeces
+    1 to |V|.
 
+    args:
+        unique_tokens - 
+        inverted - 
+    """
+    char_to_idx = tf.keras.layers.StringLookup(vocabulary=unique_tokens, mask_token=None)
+    idx_to_char = tf.keras.layers.StringLookup(vocabulary=char_to_idx.get_vocabulary(), invert=True, mask_token=None)
+
+    return char_to_idx if inverted == False else idx_to_char
 
 def construct_embedding_dict(word_emb_path, word_to_index):
     """
