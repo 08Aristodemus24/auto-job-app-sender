@@ -158,6 +158,22 @@ Stacktrace:
 # chrome_options.add_experimental_option('useAutomationExtension', False)
 ```
 
+k.
+```
+ raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+```
+in reality it is rate limiting you due to the bulk requests you are sending to send your email
+
+```
+ retcode (421); Msg: 4.7.0 [ip.octets.listed.here      15] Our system has detected an unusual rate of
+    4.7.0 unsolicited mail originating from your IP address. To protect our
+    4.7.0 users from spam, mail sent from your IP address has been temporarily
+    4.7.0 rate limited. Please visit
+    4.7.0  https://support.google.com/mail/answer/81126 to review our Bulk Email
+    4.7.0 Senders Guidelines. qa9si9093954wjc.138 - gsmtp
+```
+
 # Insights
 **A vague plan for getting a job**
 1. Exhaust networking by messaging each of my classmates if a spot is open in their company, or if they have an email of their recruiter
