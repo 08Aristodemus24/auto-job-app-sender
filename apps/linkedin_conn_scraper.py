@@ -40,43 +40,44 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
     emails = []
     mobile_nums = []
     company_names = []
+    is_scraped = []
 
     click_permitted = False
 
     try:
-        # login first
-        driver.get("https://www.linkedin.com/uas/login/")
+        # # login first
+        # driver.get("https://www.linkedin.com/uas/login/")
 
-        # wait until the document is loaded
-        _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
+        # # wait until the document is loaded
+        # _ = WebDriverWait(driver, timeout=20).until(lambda driver: driver.execute_script('return document.readyState === "complete"'))
 
-        # get parent window
-        parent_window = driver.current_window_handle
+        # # get parent window
+        # parent_window = driver.current_window_handle
 
-        # click sign in with google
-        time.sleep(5)
-        gsign_in_btn = driver.find_element(By.CSS_SELECTOR, ".alternate-signin__btn--google")
-        gsign_in_btn.click()
-        time.sleep(5)
+        # # click sign in with google
+        # time.sleep(5)
+        # gsign_in_btn = driver.find_element(By.CSS_SELECTOR, ".alternate-signin__btn--google")
+        # gsign_in_btn.click()
+        # time.sleep(5)
 
-        # get all windows currently open
-        windows = driver.window_handles
-        driver.switch_to.window(windows[1])
+        # # get all windows currently open
+        # windows = driver.window_handles
+        # driver.switch_to.window(windows[1])
 
-        # select the username input in popup authentication window of google
-        username = driver.find_element(By.CSS_SELECTOR, "input[type='email'].whsOnd")
-        username.send_keys(os.environ['GOOGLE_EMAIL'])
-        username.send_keys(Keys.ENTER)
-        time.sleep(5)
+        # # select the username input in popup authentication window of google
+        # username = driver.find_element(By.CSS_SELECTOR, "input[type='email'].whsOnd")
+        # username.send_keys(os.environ['GOOGLE_EMAIL'])
+        # username.send_keys(Keys.ENTER)
+        # time.sleep(5)
 
-        # select the password input in popup authentication window of google
-        password = driver.find_element(By.CSS_SELECTOR, "input[type='password'].whsOnd")
-        password.send_keys(os.environ['GOOGLE_PASS'])
-        password.send_keys(Keys.ENTER)
+        # # select the password input in popup authentication window of google
+        # password = driver.find_element(By.CSS_SELECTOR, "input[type='password'].whsOnd")
+        # password.send_keys(os.environ['GOOGLE_PASS'])
+        # password.send_keys(Keys.ENTER)
         
-        # switch again to current window
-        driver.switch_to.window(parent_window)
-        time.sleep(5)
+        # # switch again to current window
+        # driver.switch_to.window(parent_window)
+        # time.sleep(5)
 
         # go to new link where connections live
         driver.get("https://www.linkedin.com/mynetwork/invite-connect/connections/")
@@ -101,7 +102,7 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
             # call this function over and over until it returns a flag indicating it has 
             # finished clicking
             if click_permitted == False:
-                click_permitted = click_until_permitted(driver=driver, css_path=".scaffold-layout__main .scaffold-finite-scroll__load-button")
+                click_permitted = click_until_permitted(driver=driver, css_path=".scaffold-finite-scroll .scaffold-finite-scroll__load-button")
                 
         
         connections = driver.find_elements(By.CSS_SELECTOR, ".artdeco-list")
@@ -128,6 +129,7 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
             emails.append("")
             mobile_nums.append(0)
             company_names.append("")
+            is_scraped.append(False)
 
 
     except TimeoutError as error:
@@ -142,7 +144,7 @@ def extract_con_links(driver: webdriver.Chrome | webdriver.Edge, lookup_file: pd
 
     # concatenate collected connection names and respective links
     print(conn_links)
-    temp = pd.DataFrame({'conn_link': conn_links, 'conn_name': conn_names, 'gender': genders, 'salutation': salutations, 'email': emails, 'mobile_no': mobile_nums, 'company_name': company_names})
+    temp = pd.DataFrame({'conn_link': conn_links, 'conn_name': conn_names, 'gender': genders, 'salutation': salutations, 'email': emails, 'mobile_no': mobile_nums, 'company_name': company_names, 'is_scraped': is_scraped})
     dump = pd.concat([temp, lookup_file], axis=0)
     dump.reset_index(drop=True, inplace=True)
     dump.to_csv('../documents/profiles_dump.csv')
@@ -172,21 +174,22 @@ def main(args):
     # C:\Users\<user>\AppData\Local\Microsoft\Edge\User Data\<folder of the 
     # profile being used> just assign this to the profile-directory argument 
     # and pass the string in the self.add_argument() method
-    # chrome_options.add_argument("user-data-dir=C:/Users/Mig/AppData/Local/Google/Chrome/User Data/")
-    # chrome_options.add_argument("profile-directory=Profile 3")
+    chrome_options.add_argument("--user-data-dir=C:/Users/LARRY/AppData/Local/Google/Chrome/User Data")
+    chrome_options.add_argument("--profile-directory=Profile 4")
     
-    chrome_options.add_experimental_option('detach', True)
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    # chrome_options.add_experimental_option('detach', True)
+    # chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # chrome_options.add_experimental_option('useAutomationExtension', False)
-    # service = ChromeService(executable_path="C:/Program Setups.Exe/chromedriver/chromedriver-win64/chromedriver.exe")
+    
+    service = ChromeService(executable_path="C:/Executables/chromedriver-win64/chromedriver.exe")
+    # service = ChromeService(executable_path=ChromeDriverManager().install())
 
-    service = ChromeService(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # extract all connections info
     dump = load_file(
         '../documents/profiles_dump.csv',
-        pd.DataFrame({'conn_link': [], 'conn_name': [], 'gender': [], 'salutation': [], 'email': [], 'mobile_no': [], 'company_name': []})
+        pd.DataFrame({'conn_link': [], 'conn_name': [], 'gender': [], 'salutation': [], 'email': [], 'mobile_no': [], 'company_name': [], 'is_scraped': []})
     )
 
     # extract connection links and names

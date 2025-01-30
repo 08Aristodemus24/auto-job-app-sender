@@ -79,27 +79,42 @@ def extract_conn_info(driver: webdriver.Chrome, lookup_file: pd.DataFrame, dump:
             # and there is no mobile number which will also result in true
             
             # if either the email or mobile number is null or a "0" string then skip the row
+
+            # if email exists but mobile number is not present 
             if not pd.isnull(dump.loc[index, 'email']) and (dump.loc[index, 'mobile_no'] == "0"):
+                print("not pd.isnull(dump.loc[index, 'email']) and (dump.loc[index, 'mobile_no'] == '0')")
                 print(dump.loc[index, 'email'])
                 print(dump.loc[index, 'mobile_no'])
+                print(type(dump.loc[index, 'email']))
+                print(type(dump.loc[index, 'mobile_no']))
                 print(f"skipping {dump.loc[index, 'conn_name']}", end='\n\n')
                 continue
 
-            elif pd.isnull(dump.loc[index, 'email']) and not (dump.loc[index, 'mobile_no'] == "0"):
+            # if email does not exist but mobile number is present 
+            elif pd.isnull(dump.loc[index, 'email']) and not ((dump.loc[index, 'mobile_no'] == "0") or pd.isnull(dump.loc[index, 'mobile_no'])):
+                print("pd.isnull(dump.loc[index, 'email']) and not (dump.loc[index, 'mobile_no'] == '0')")
                 print(dump.loc[index, 'email'])
                 print(dump.loc[index, 'mobile_no'])
+                print(type(dump.loc[index, 'email']))
+                print(type(dump.loc[index, 'mobile_no']))
                 print(f"skipping {dump.loc[index, 'conn_name']}", end='\n\n')
                 continue
 
-            elif not pd.isnull(dump.loc[index, 'company_name']) :
+            
+            elif not pd.isnull(dump.loc[index, 'company_name']):
                 print(dump.loc[index, 'email'])
                 print(dump.loc[index, 'mobile_no'])
+                print(type(dump.loc[index, 'email']))
+                print(type(dump.loc[index, 'mobile_no']))
                 print(f"skipping {dump.loc[index, 'conn_name']}", end='\n\n')
                 continue
 
-            elif not pd.isnull(dump.loc[index, 'email']) and not (dump.loc[index, 'mobile_no'] == "0"):
+            elif not pd.isnull(dump.loc[index, 'email']) and not ((dump.loc[index, 'mobile_no'] == "0") or pd.isnull(dump.loc[index, 'mobile_no'])):
+                print("not pd.isnull(dump.loc[index, 'email']) and not (dump.loc[index, 'mobile_no'] == '0')")
                 print(dump.loc[index, 'email'])
                 print(dump.loc[index, 'mobile_no'])
+                print(type(dump.loc[index, 'email']))
+                print(type(dump.loc[index, 'mobile_no']))
                 print(f"skipping {dump.loc[index, 'conn_name']}", end='\n\n')
                 continue
 
@@ -216,7 +231,7 @@ def main(args):
     print('loading file...')
     lookup_file = load_file(
         '../documents/profiles_dump.csv',
-        pd.DataFrame({'email': [], 'mobile_no': [], 'company_name': [], 'conn_link': [], 'conn_name': [], 'gender': [], 'salutation': []})
+        pd.DataFrame({'email': [], 'mobile_no': [], 'company_name': [], 'conn_link': [], 'conn_name': [], 'gender': []})
     )
 
     # load preexisting dataframe or create and/or augment it
