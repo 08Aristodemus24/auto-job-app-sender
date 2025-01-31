@@ -1,3 +1,5 @@
+
+# Media Meter
 interviewer descrbes workflow and technologies
 - web scraping
 - data orchestration
@@ -34,22 +36,35 @@ transform data
 pass transformed data to ml model (salina) to train
 proof of concept (venn diagram) -> prototype code -> execution
 
-# Final interview might consist of the common...
+## Final interview might consist of the common...
 
-## Why do you want to work here?
+### Why do you want to work here?
 I think the idea of collecting and operating on large swathes of data
 and using data from news articles, technological trends, medical data to allow other clients
 to make their own decisions based on the data we could process for them really caught my eye
 because in all honesty I'm just someone who's fond of doing so and i think doing it on the job will be a
 great learning experience 
 
-##   Why should we hire you?
+### Why should we hire you?
 In all humility apart from obvious skills, I draw from my personal experience of quite frankly being always a lone developer
 if there is such a term, and if I'm given the opportunity here to collaborate with a team of like minded individuals someone as wanting to grow just as much as me, and wanting to contribute just as much as me, I'll be driven to do my best to give back to this organization by doing my due diligence to always committing to the tasks at hand 
 
-# Describing their workflow:
+### Describing their workflow:
 * ung meron naman impediments like yung siguro nahihirapan sa tasks ganun kilangan iresolve kasi every week dapat may milestone na natatapos
 * they use agile methodology to develop applications, scrum to be specific. 2 - 4 weeks sprints. After these 2 or 4 weeks may natatapos na na feature ng application or nakapagpush na sa dev then into production branch. As a result some tools you really need to learn are docker for containerization, pulling from development branch and then merging in this branch
 * product backlog - list of tasks for all sprints
 * sprint backlog - specific tasks in the product backlog for a specific sprint lasting 1 to 4 weeks. E.g. for week 1 these are the tasks
 * after completing tasks in the sprint after say 1 week there will be a presentation of your work to your colleagues
+
+
+
+# GCash
+* find malicious users
+* gscore
+* recommender systems, had cold start problems too much new items and new users 
+* generative ai chatbot for welath advice for
+* for llms azure enteerprise are the ones they use
+* internship nalang
+* thomson sampling online reinforcement algorithm
+* add inigo miguel benavides on linked in
+* they use AWS sagemaker for ML deployment, 

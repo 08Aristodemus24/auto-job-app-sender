@@ -179,8 +179,9 @@ in reality it is rate limiting you due to the bulk requests you are sending to s
 1. Exhaust networking by messaging each of my classmates if a spot is open in their company, or if they have an email of their recruiter
 2. Go to healthy gamer and ask for websites where to apply for a software engineering job or any data related job
 3. Apply at the ff. according to rank in terms of probability of success (list of websites are in `.env` file)
-
-* referral from colleague. This strategy you will message each of your remotely close colleagues and old classmates and see if they have their HRs email, and then email that HR regarding if there is an open position at their <comapny name> and that your <friend or colleage who works at said company> can vouch for your skills and accomplished projects
+* referral from colleague. This strategy you will message each of your remotely close colleagues and old classmates and see if they have their HRs email, and then email that HR regarding if there is an open position at their `<company name>` and that your `<friend or colleage who works at said company>` can vouch for your skills and accomplished projects
+* cold emailing recruiters personally
+* cold messaging recruiters on linked in personally usign other account with connections that are mostly recruiters
 
 4. Use fiverr and accept clients only that are within reason of your work sched, project scope i.e. no chat gpt related, research how clients pay you for your services
 5. Create accounts for each career website if you have to
@@ -194,6 +195,7 @@ in reality it is rate limiting you due to the bulk requests you are sending to s
 * attach your CV or resume
 * Minimum salary. 50000php/$850 per month or 600000php/$10000 per month 
 * 
+
 12. so if I am to work in Pacific Standard Time? (dayshift), i.e. start time of work is 9:00am in the us what tiem would I work in the philippines?
 
 If you're working a 9 AM to 5 PM Pacific Standard Time (PST) shift, considering the 16-hour time difference between PST and Philippine Standard Time (PST), your work hours in the Philippines would be:
@@ -204,9 +206,11 @@ If you're working a 9 AM to 5 PM Pacific Standard Time (PST) shift, considering 
 So, you'd be working an overnight shift from 9:00 PM to 5:00 AM Philippine Standard Time.
 
 Philippine Standard Time: Tuesday, Wednesday, Thursday at 9am-12pm and 1pm-5pm 
+
 13. reply to recruiters after application: 
 `Hello and Good day Maam Edna I've answered the application form you've sent me, about the AI Engineer position. I also look forward to your response to me back. Best, regards.`
 
-
 with this you should always have your `generate_cover_letter` script always ready, and the `message body to professionals` document always ready which is part of `project Solzhenitsyn`, so you can move and apply quickly. This is a numbers game and it all depends hwo much input you put in during the day. Recall that `generate_cover_letter.py` usage requires `position` and `company` args
+
+14. use simplify chrome extension para di kana mahirapan mag manually fill up lagi ng application ddahil yung job details and experience you have like your projects work experience education skills etc. ito na ipprovide mo dito sa chrome extension na to para the next time you apply and you are met with a page with blank fields the simplify will use the work information you provided and use it to autofill the fields mostly if not all so you don't hae to do everything from scratch. https://simplify.jobs/
 
