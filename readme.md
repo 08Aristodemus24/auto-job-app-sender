@@ -235,4 +235,53 @@ Philippine Standard Time: Tuesday, Wednesday, Thursday at 9am-12pm and 1pm-5pm
 * `software%20engineer`
 i.e. if we want a data engineer job that has just been posted 30 minutes ago we can have the `f_TPR` value be `r1800` and the `keywords` value be `data%20engineer` (`%20` is denotes a whitespace). Thus the full URL would be https://www.linkedin.com/jobs/search/?currentJobId=4138965537&f_TPR=r1800&f_WT=1%2C3&geoId=103121230&keywords=data%20engineer&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true
 
+7. post resume/cv on linkedin account with connections that are mostly recruiters. With the caption 
+```
+"It's tough to get an interview call from Oracle, Canva, etc. so I tried to be creative with my resume.
 
+I created it using Canva
+
+Do you think it will grab recruiters attention? Any feedback would be appreciated
+
+If you need an editable version of this resume and create one for yourself please comment your email id below. I'd be happy to share it with you.
+
+#oracle #canva #jobsearch #recruitment #software #jobhiring #jobseeking"
+```
+this post will as byproduct give you potential recruiters giving you potential opportunities to apply for the role you are looking for when they comment on your post
+
+8. seaarching for posts by recruiters instead of jobs 
+- search on linkedin for instance the keyword "software engineer" and add the "recruiter" keyword. The search results will give a list of recruiters possibly hiring for this role you typed as a keyword. Go to their linkedin profile connect with them and they probably have a recent post asking their connections to send them their CV for the role you want. 
+- another way you could search for a role that's potentially hiring and where there is less competition is by searching on LinkedIn for instance the keyword "software engineer", the keyword "AND" (in all caps), and the keyword "hiring", which all in all is "software engineer 
+
+9. testing out if CV/Resume will go through a sample ATS (application tracker system) that's more likely than not operated by AI. To do this go to https://app.jobscan.co/ and upload your resume and cv. It will ask you what role are you trying to go for e.g. data engineer, machine learning engineer, or what job description you have where you can supply its field e.g.
+
+```
+The Data Engineer is responsible for the creation, maintenance, and continuous improvement of data pipelines. Part of the responsibilities is to implement best practices in data management practices (i.e., cleaning, validation, and transformation of data) and make data into usable datasets that can easily be consumed by other teams.
+
+What you will do:
+
+Work on existing data pipelines, including development of data models, and data management may it be in a data warehouse, data/delta lake or lakehouse. Collaboratively work with upstream teams that pass data to the data architecture and with downstream teams that use data within it.
+Helps in the maintenance of the overall data architecture, ensuring its scalability, high availability, on-time data ingestions, and ensuring operations are not disrupted.
+Build data pipelines as new data comes in, applying best practices and DataOps principles.
+Acquire and maintain an in-depth domain knowledge of the data within the assigned scope. This domain knowledge is crucial in the creation of data models and development of the said data models for Zone 2 and Zone 3 data (a.k.a. silver and gold layer, respectively). This expertise ensures that DE-transformed business datasets are usable for downstream teams.
+
+What we are looking for:
+
+BS or MS in Computer Science or equivalent
+Proven years of experience with Data Engineering roles focusing on Data Architecture, Data Management, and DataOps practices
+Has relevant experience in data modelling
+Has good working knowledge on Shell (e.g. bash, zsh) scripting
+Has good working knowledge on data manipulation (SQL statements, JSON, NOSQL query, etc.)
+Has good working knowledge on AWS services (EC2, S3, Glue Crawlers, Jobs, Batch, Athena, Lambda, etc.) or equivalent cloud offerings a big plus
+Has good working knowledge on Apache Spark using SQL/Python
+Has good understanding of the concepts of Datawarehouse, Data Lake/Delta Lake and/or Lakehouse
+Has good knowledge on Linux/Unix Administration
+Has good working knowledge on data modeling
+Able to work with other Leads to foster a culture of collaboration and teamwork
+CI/CD experience using Terraform is a huge advantage
+Experience working with Amazon Web Services / Cloud is a big plus
+```
+
+Once you scan the jobscan application will tell you the results of whether your CV passed the hypothetical ATS. If it didn't it will tell you what keywords you should add more to your CV based on the specified job description or just the general description of the role you're going for i.e. data engineer.
+
+In your case missing keywords were Data Architecture, Unix Administration, Amazon Web Service. Other issues like searchability jobscan can give you an insight to, in this case a tip could be adding the address on top of your CV
