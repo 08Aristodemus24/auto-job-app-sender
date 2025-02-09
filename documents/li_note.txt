@@ -1,0 +1,1 @@
+Hello {salutation} {first_name} my name's Larry I see your an IT recruiter, would it be possible to connect with you I think we may be able to help each other as I'm from the IT industry as well. 
