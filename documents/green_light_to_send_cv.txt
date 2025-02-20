@@ -1,0 +1,7 @@
+Hello {salutation} {first_name}
+
+I really appreciate the prompt response on linked in regarding my inquiries on {position} related roles. Here's my CV attached below for your reference.
+
+Thank you and Godspeed. 
+
+Sincerely, Larry

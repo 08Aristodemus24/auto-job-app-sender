@@ -1,1 +1,5 @@
-Hello {salutation} {first_name} my name's Larry I see your an IT recruiter, would it be possible to connect with you I think we may be able to help each other as I'm from the IT industry as well. 
+For IT recruiters: Hi {salutation} {first_name} my name's Larry I see your an IT recruiter, would it be possible to connect with you? I think we might help each other as I'm from the IT industry as well looking for technical roles. 
+
+For recruiters Hello: {salutation} {first_name} my name's Larry I see your a recruiter, would it be possible to connect with you I think we may be able to help each other as I'm from the IT industry.
+
+For business managers, software engineers: Hi Ms. Libbie my name's Larry I see you're a Business Manager, would it be possible to connect with you? I think might help each other as I'm from the IT industry looking for technical roles as well.
