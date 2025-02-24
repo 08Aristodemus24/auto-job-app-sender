@@ -312,6 +312,10 @@ I believe that by combining my technical expertise with PDAX's commitment to fin
 "In my most recent role as a subject matter expert although I did not mentor them personally (most of it was online) I was very fond of writing articles that could further encourage them to pursue Machine Learning or Artificial Intelligence which at the time was something I was pursuing myself, and wrote in such a manner that inclined them not to be afraid of what they were going to undertake but the reward instead of what they would get from it i.e. understanding some math concepts. I also experienced being the main developer and might as well say leader in our current Thesis Dissertation revolving around AI/ML. Here I was inclined to get out of my comfort zone further and truly with all resources at my disposal provide my team members with a firm and thorough understanding that they would need inn order to understand the inner workings of our AI system that was to be developed by us ourselves, and how I said it would greatly impact their career in the future being the ones who contributed in hte development of our system themselves."
 
 
+**What is the reason your applying**
+*Answer:*
+I'll be actually quite straightforward but I am in the business of finding a Machine Learning Engineer related role in your company xfusion.io. Your company's goal to leverage Data in the field of Machine Learning caught my eye and I think with some amount of conviction I can be the right candidate for the role as I'm fond of building, training, and deploying machine learning models, like probably those you do build on a daily basis. 
+
 
 **What can you uniquely contribute to the team?**
 *Context:*
