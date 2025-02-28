@@ -104,7 +104,7 @@ def create_inquiry_emails(company_list: pd.DataFrame, position: str):
             "Machine Learning Engineer": lambda: load_files('../documents/Larry_Miguel_R_Cueva_ML_CV.pdf')
         }
         
-        load_letter_of_inq = lambda: load_files('../documents/cold_message.txt', is_txt=True)
+        load_letter_of_inq = lambda: load_files('../documents/cold_email.txt', is_txt=True)
 
         # load cover letter and resume
         resume, resume_name = load_resume[position]()
@@ -174,6 +174,7 @@ def main(args):
 
     # drop rows without emails
     new_list = company_list[~pd.isnull(company_list["email"])]
+    new_list = new_list.sample(frac=1).reset_index(drop=True)
 
     # create emails based on company meta data
     # messages = create_application_emails(company_list)
