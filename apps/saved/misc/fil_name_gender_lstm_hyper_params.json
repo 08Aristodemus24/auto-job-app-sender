@@ -1,0 +1,1 @@
+{"input_shape": 21, "vocab_len": 29, "emb_dim": 256, "emb_matrix": null, "n_a": 128, "rnn_drop_prob": 0.2, "dense_drop_prob": 0.2, "n_units": 1}

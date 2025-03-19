@@ -1,0 +1,16 @@
+# sensitive files to ignore
+/documents/ask_recruiters_list.xlsx
+/documents/companies_submitted_apps_to.xlsx
+/documents/follow_up_recruiters_list.xlsx
+/documents/dummy.xlsx
+/documents/Cracking-the-Coding-Interview-189-Programming-Questions-and-Solutions-6th-Edition.pdf
+/documents/behavioral-interview-questions.md
+/documents/*.txt
+/documents/*.docx
+
+/.env
+/apps/data/
+/apps/embeddings/
+
+# files to exclude
+!/apps/embeddings/dummy
