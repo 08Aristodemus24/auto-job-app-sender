@@ -292,10 +292,10 @@ External data is important. The ledger alone will not provide a target variable 
 ## These are list of companies that you can always check the companies page for careers hindi  na masyado pwede pag linked in lang then after applying you can find the hiring manager themself on linked in and message them directly that you've applied and that you are enthusiastic to join their team because you have X amount of skills and that you work in this manner with other people
 
 ## Tier 1:
-GCash
-Maya
-BPI
-Security Bank
+GCash$
+Maya$
+BPI$
+Security Bank$
 ING
 BDO
 Philippine National Bank
@@ -346,3 +346,12 @@ Octal Philippines, Inc.
 Lightweight Solutions
 Moreton Bay Technology
 HMR Philippines
+
+For me because mas viable ang junior data analyst or junioro data scientist para sa experience ko mea ning I cannot enter into ml engineering or data engineering head first kilangan talagang yung former munan mga roles
+
+look up company's people on linked in
+if < 20 often the CEO will be interviewing and hiring for a position
+if 20 - 100 often the vp of engineering or chief tech. officer
+if > 100 it will be the IT director, data director or a similar director baesd on the role/field your getting into
+
+don't try to apply for job boards and then send a cold email saying you've applied to them (kaya lang contradictory kasi other people will say after online applying you should reach out to the recruiter or hiring manager)
