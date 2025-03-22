@@ -287,3 +287,92 @@ The quality of the ledger data is crucial.
 These are just examples; you can engineer more variables based on the specific needs of your model.
 Always consider the context of the business when analyzing the data.
 External data is important. The ledger alone will not provide a target variable for training a predictive model.
+
+To whom it may concern
+
+
+{position} {company_name}
+
+We strive to provide sound technical consultancy and implementation services for complex IT systems while building a company that respects its employees.
+
+To achieve our mission, we strive:
+
+To position ourselves as a cost-effective market leader facilitating our customers to be competitive
+To understand our customers’ needs and challenges precisely, so as to align our solutions to meet their needs
+To respect our employees by believing in their creative talents, harnessing their sense of commitment and entrepreneurial flair, while providing an excellent environment for people to work in
+To leverage technology and industry knowledge in innovating best-in-breed solutions for our customers
+
+Commitment to the highest quality
+We are committed to our clients in delivering quality services that have so far won their confidence.
+Responsibility and Integrity
+We believe that it is very important to demonstrate professionalism in all of our client engagements, especially to maintain open and honest communication in delivering services.
+Collaboration and Teamwork
+We encourage and promote an environment of teamwork and collaboration among our people so as to grow and share the success of Azeus.
+
+# Companies:
+## These are list of companies that you can always check the companies page for careers hindi  na masyado pwede pag linked in lang then after applying you can find the hiring manager themself on linked in and message them directly that you've applied and that you are enthusiastic to join their team because you have X amount of skills and that you work in this manner with other people
+
+## Tier 1:
+GCash$
+Maya$
+BPI$
+Security Bank$
+ING
+BDO
+Philippine National Bank
+Chinabank
+East West Bank
+Union Bank
+GoTyme
+Universal Robina Corps.
+Concentrix
+TaskUs
+Accenture
+IBM
+Ubiquity
+Telus International Philippines
+Teleperformance
+Media Meter
+Gardenia
+Sprout Solutions
+SBSI
+Macquarie
+PLDT
+Cognizant
+Seven Seven
+Emerson
+Zendesk
+Procter & Gamble Solutions
+Stratpoint Technologies
+CTBC Bank Philippines
+Oracle
+Trend Micro
+Twist Resources
+VXI
+Manulife
+Thinking Machines
+Okada
+Philippine Airlines
+Asian Development Bank
+Deutsche Bank
+
+## Tier 2:
+AboitizPower
+Octal Philippine
+Azeus Systems Ltd.
+Medgrocer
+TTEC
+Integrated OS
+Octal Philippines, Inc.
+Lightweight Solutions
+Moreton Bay Technology
+HMR Philippines
+
+For me because mas viable ang junior data analyst or junioro data scientist para sa experience ko mea ning I cannot enter into ml engineering or data engineering head first kilangan talagang yung former munan mga roles
+
+look up company's people on linked in
+if < 20 often the CEO will be interviewing and hiring for a position
+if 20 - 100 often the vp of engineering or chief tech. officer
+if > 100 it will be the IT director, data director or a similar director baesd on the role/field your getting into
+
+don't try to apply for job boards and then send a cold email saying you've applied to them (kaya lang contradictory kasi other people will say after online applying you should reach out to the recruiter or hiring manager)
