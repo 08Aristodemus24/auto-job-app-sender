@@ -287,3 +287,4 @@ The quality of the ledger data is crucial.
 These are just examples; you can engineer more variables based on the specific needs of your model.
 Always consider the context of the business when analyzing the data.
 External data is important. The ledger alone will not provide a target variable for training a predictive model.
+
