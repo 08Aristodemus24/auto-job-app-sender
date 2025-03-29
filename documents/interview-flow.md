@@ -325,30 +325,12 @@ East West Bank
 Union Bank
 GoTyme
 Universal Robina Corps.
-Concentrix
-TaskUs
 Accenture
 IBM
-Ubiquity
-Telus International Philippines
-Teleperformance
-Media Meter
-Gardenia
-Sprout Solutions
-SBSI
-Macquarie
 PLDT
-Cognizant
-Seven Seven
-Emerson
-Zendesk
 Procter & Gamble Solutions
-Stratpoint Technologies
 CTBC Bank Philippines
 Oracle
-Trend Micro
-Twist Resources
-VXI
 Manulife
 Thinking Machines
 Okada
@@ -357,9 +339,29 @@ Asian Development Bank
 Deutsche Bank
 
 ## Tier 2:
+Cognizant
+Seven Seven
+Emerson
+Zendesk
+Stratpoint Technologies
+Trend Micro
+Twist Resources
+VXI
+Concentrix
+TaskUs
+Ubiquity
+Telus International Philippines
+Teleperformance
+Media Meter
+Gardenia
+Sprout Solutions
+SBSI
+Macquarie
+Azeus Systems Ltd.
+
+## Tier 3:
 AboitizPower
 Octal Philippine
-Azeus Systems Ltd.
 Medgrocer
 TTEC
 Integrated OS
@@ -367,6 +369,7 @@ Octal Philippines, Inc.
 Lightweight Solutions
 Moreton Bay Technology
 HMR Philippines
+Macro8 IT Solutions
 
 For me because mas viable ang junior data analyst or junioro data scientist para sa experience ko mea ning I cannot enter into ml engineering or data engineering head first kilangan talagang yung former munan mga roles
 

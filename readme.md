@@ -239,15 +239,15 @@ i.e. if we want a data engineer job that has just been posted 30 minutes ago we 
 
 7. post resume/cv on linkedin account with connections that are mostly recruiters. With the caption 
 ```
-"It's tough to get an interview call from Oracle, Canva, etc. so I tried to be creative with my resume.
+"This is my first time posting in a long time
 
-I created it using Canva
+but from a hiring manager or recruiters perspective what would a fresh graduate trying to land a junior data analytics role have to add or remove in this resume/CV
 
-Do you think it will grab recruiters attention? Any feedback would be appreciated
+I created this using Canva so do you think it will grab recruiters attention? Any feedback would be appreciated.
 
-If you need an editable version of this resume and create one for yourself please comment your email id below. I'd be happy to share it with you.
+If you need an editable version of this resume and create one for yourself you can comment your email id below. I'd be happy to share it with you.
 
-#oracle #canva #jobsearch #recruitment #software #jobhiring #jobseeking"
+#canva #jobsearch #recruitment #software #dataanalytics #jobhiring #jobseeking"
 ```
 this post will as byproduct give you potential recruiters giving you potential opportunities to apply for the role you are looking for when they comment on your post
 
@@ -310,3 +310,5 @@ kung puro excel sheet pa ang company, use power apps to migrate the excel sheet 
 
 * after applying reach out to hiring manager or recruiter
 * Di pwede nakabuklat lahat ng projects mo, you need to allow for some mystery at least and reveal it through your portfolio website
+
+11. reach out to top data analysts in the field. Hindi uubra yung selling yourself and marketing yourself because it comes across as disingenious, instead talk to them like a normal human being trying to know genuinely what it takes to stand out as a data analyst, tell them the projects you've made and what you can improve, what data you can use next time, what data sources you can pool from next project etc. **If you ask for a job you get time and if you ask for time you get a job (through referrals)**.
