@@ -309,6 +309,37 @@ We believe that it is very important to demonstrate professionalism in all of ou
 Collaboration and Teamwork
 We encourage and promote an environment of teamwork and collaboration among our people so as to grow and share the success of Azeus.
 
+# Azeus Systems LTd.
+## Behavioral Questions:
+* what qualities are you trying to find in a company? `open honest communication, support, responsibility and integrity `
+* what are your 3 biggest strengths and explain each one? `meticulousness: as I always make sure to analyze the quality of the code I write as with the case of, creativity: I really like to implement designs in code that elicit beauty and inspiration, collaboration: I like to share my thoughts of approaching a problem with my teammates and askingin turn their opinion on how they would solve it, and sharing our solutions right after and come to reasonable way how to integrate it`
+* what are your weakness as a person and as a worker/student and how did you confront them? `sometimes I tend to keep problems (both technical and non-technical) to myself, and while independence has its merits it means that I lead myself at times to unnecessary amounts stress, so I always make sure to understand the problem clearly by asking my colleagues and then ask without shame help if needed`
+* what are you trying to avoid when working? `(they give work life balance kaya answer you don't want to burn out well not explicitly but as much as possible you try to avoid enough work and then balance with it other endeavors)`
+* how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given.`
+* were there times that you had to choose schoolworks over personal events? ``
+* What were the results of your 3 strengths in thesis? `meticulousness: I made sure the signal features we had were properly extracted and through the functions we wrote, we made sure to understand the dataset fully in order to `
+* what are the programming languages you're familiar and proficient in? `Python, JavaScript, SQL, C++`
+
+* what to do when having conflicting ideas with other members?
+* what kind of personality you like to work with?
+* what are the types of people you don't want to work with?
+
+
+* tell me about yourself: 
+- `I was a data engineer intern at virtuals protocol where I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents`
+- `I took Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
+- `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
+- `outside of work I've really been fond of creating personal projects more geared in data analytics and using tools like python, SQL, powerbi to transform data and visualize it using dashboards`
+- `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
+
+## TEchnical Coding Interview Questions:
+1. FIzzBuzz variation question from Leetcode 
+2. Simple mathematics and logic question 
+3. Maximum subarray sum from Leetcode 
+4. Print an hourglass (according to their hourglass pattern)
+5. Given two arrays, one which is rotated (either left or right), find the least times of rotations of the un-rotated array to match the rotated one. (gawin mo dito ay compare the newly rotated array each time to the old rotated array, and count the number of times you compared the array to get the two to be equal to each other)
+
+
 # Companies:
 ## These are list of companies that you can always check the companies page for careers hindi  na masyado pwede pag linked in lang then after applying you can find the hiring manager themself on linked in and message them directly that you've applied and that you are enthusiastic to join their team because you have X amount of skills and that you work in this manner with other people
 
