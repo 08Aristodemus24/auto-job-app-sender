@@ -233,7 +233,7 @@ Philippine Standard Time: Tuesday, Wednesday, Thursday at 9am-12pm and 1pm-5pm
 * `data%20scientist`
 * `software%20engineer`
 * `software%20engineer`
-i.e. if we want a data engineer job that has just been posted 30 minutes ago we can have the `f_TPR` value be `r1800` and the `keywords` value be `data%20engineer` (`%20` is denotes a whitespace). Thus the full URL would be https://www.linkedin.com/jobs/search/?currentJobId=4138965537&f_TPR=r1800&f_WT=1%2C3&geoId=103121230&keywords=data%20engineer&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true
+i.e. if we want a data engineer job that has just been posted 30 minutes ago we can have the `f_TPR` value be `r1800` and the `keywords` value be `data%20engineer` (`%20` is denotes a whitespace). Thus the full URL would be https://www.linkedin.com/jobs/search/?currentJobId=4138965537&f_TPR=r1800&f_WT=1%2C3&geoId=103121230&keywords=data%20analyst&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true
 * `junior%software%engineer`, `junior%data%engineer`, `junior%machine%learning%engineer`,
 * the main filter you need to have is that it must be and kilangan junior role, a data/software/machine learning/data scientist engineer/developer, 30000php per month as base pay after tax, onsite or at least hybrid, around pasig, taguig, mandaluyong, ortigas, quezon city (except commonwealth), dayshift, 9-5  
 

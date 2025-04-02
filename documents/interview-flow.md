@@ -381,3 +381,37 @@ if 20 - 100 often the vp of engineering or chief tech. officer
 if > 100 it will be the IT director, data director or a similar director baesd on the role/field your getting into
 
 don't try to apply for job boards and then send a cold email saying you've applied to them (kaya lang contradictory kasi other people will say after online applying you should reach out to the recruiter or hiring manager)
+
+## Government Owned and Controlled Corporations Advantages & Disadvantages
+Pros:
+* If you get yourself promoted to a casual or permanent position, madami benifits. From mid-year and end of the year bonuses, uniform allowance, misc. allowances and incentives, GSIS, PhilHealth etc.
+* Relaxed environment(or at least where I am working at). The job is easy, but very unfulfilling and boring. I can "destress" browsing reddit, listen to music, etc.
+* Madali mag pa approve ng leaves(VL or SL) and generous sila mag bigay ng leaves. I think I already used up more than half of my 20/year VLs. You also get 5 days MANDATORY vacation leave(deducted from VL), and 3 special privilege leave(not deducted from VL or SL).
+* If your boss is generous he'll give you some of that "ayuda" that he got from contractors.
+* Stability. Whatever happens: typhoons, pandemic, natural disasters, etc.. (with the exception of war/invasion I guess), you'll still get your salary in full.
+* Good retirement package. Monthly pensions for retirees in the gov't is based on the last 3 years' monthly salary. So let's say you managed to get 90k/month, more or less that'll be your monthly pension until you die.
+* You have an opportunity to connect with or become one of the "people in high places".
+* I'm handling a digitization project of our LGU and I have full autonomy regarding the project. I decide on everything from what tech stack to use up to deployment dates. What's important is it follows the relevant laws and it's IRR.
+* You can take paid trainings, as well as scholarships to further your education. And afaik, this have no bond.
+* You virtually have unlimited budget to use for the project at your disposal, as long as you can properly justify it to the internal budget committee and COA.
+* It's not working at a government position that's a career suicide. It's being stagnant working at the same position be it government or not. You could say the same if I applied for an entry level job at a private company and stayed there for my entire career.
+* Working in the government is the fastest route to get formal experience which you can use to hop to better jobs. Plus, if you are assigned on system maintenance, that opens up opportunity to upskill while being paid and earning experience for your next job. It's a win.
+
+Cons:
+* Data Analyst BUT iba ginagawa ko comapred sa job title. I'm a tech support, programmer, data encoder (you could probably automate this with python) in one. I don't do any data analytics or anything close to my job description.
+* Most IT positions in government offices are dead-end jobs. Wala career growth, di ka magiging head ng IT unit.
+* Most agencies/offices don't have an independent IT unit. IT Staff will be attached to the office of the agency's head. Kaya yun marami paper trail para lang maapprove IT related stuff.
+* If ikaw lang programmer, wala ka matutunan sa seniors mo since glorified clerks/admin aide lang sila.
+* IT personnel's equipment is on the low list of priorities. Unless laptop ng boss yan na gaming shit laptop worth 60k-150k pero pang eexcel lang syempre approved agad yan or unless may memo galing central office.
+* Technologically illerate co-workers specially bosses. Dito ka maiirita, simple problem like no power sa monitor or during video cons(google meet/zoom), need nila ikaw pa gagawa ng link. Need mo pa sila bantayan during video cons and ikaw taga mute and unmute pag di mo ma unmute on time, magagalit yung boomer boss mo.
+* Anything that went wrong with office IT equipment, sigurado IT Staff agad may kasalanan. Na ransomware buong office kasi yung bobong mong boss/co-worker nag open ng email and file na may ransomware? Ikaw may kasalanan.
+* IT contingency planning and risk reduction doesn't exist. Our server is sitting at an old unused office room that's very dusty(yikes a big fire hazard). That's why I do my own database backups.
+* You'll see how corrupt a government office is. It will drain your soul and love for country.
+* I'm upskilling myself right now so I can transfer to the private sector.
+
+
+
+-Government if you want a relaxed, okay pay, low risks, low rewards job.
+-Private if you want career growth and a fulfilling career that is high in rewards, and high in risks.
+
+recommended if you go for DICT or DOST
