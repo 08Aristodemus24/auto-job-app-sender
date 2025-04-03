@@ -333,7 +333,14 @@ We encourage and promote an environment of teamwork and collaboration among our 
 
 * what are the programming languages you're familiar and proficient in? `Python, JavaScript, SQL, C++`
 
-* what to do when having conflicting ideas with other members?
+* what to do when having conflicting ideas with other members? 
+```
+1. know the idea I have in mind and want implemented 
+2. know the idea my team member personally wants to implement
+3. assess the strengths and weaknesses of each idea
+4. it is at times unavoidable that he/she will have the better solution and so sometimes you have to put your ego aside but sometimes I reasonable integration of both ideas strengths can be in fact better as it not only maybe a better solution but both parties can be mutually satisified. (You can both have your cake and eat it too so to speak)
+```
+ 
 * what kind of personality you like to work with?
 * what are the types of people you don't want to work with?
 
