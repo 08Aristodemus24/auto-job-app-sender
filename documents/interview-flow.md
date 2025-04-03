@@ -311,13 +311,26 @@ We encourage and promote an environment of teamwork and collaboration among our 
 
 # Azeus Systems LTd.
 ## Behavioral Questions:
-* what qualities are you trying to find in a company? `open honest communication, support, responsibility and integrity `
-* what are your 3 biggest strengths and explain each one? `meticulousness: as I always make sure to analyze the quality of the code I write as with the case of, creativity: I really like to implement designs in code that elicit beauty and inspiration, collaboration: I like to share my thoughts of approaching a problem with my teammates and askingin turn their opinion on how they would solve it, and sharing our solutions right after and come to reasonable way how to integrate it`
+* what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
+
+* what are your 3 biggest strengths and explain each one? 
+- `meticulousness: as I always make sure to analyze the quality of the code I write and make sure most if not every case is taken into consideration`
+- `creativity: I really like to implement designs in code that elicit beauty and inspiration`
+- `collaboration: I like to share my thoughts of approaching a problem with my teammates and asking in turn their opinion on how they would solve it, and sharing our solutions right after and come to a reasonable way how to integrate it`
+
 * what are your weakness as a person and as a worker/student and how did you confront them? `sometimes I tend to keep problems (both technical and non-technical) to myself, and while independence has its merits it means that I lead myself at times to unnecessary amounts stress, so I always make sure to understand the problem clearly by asking my colleagues and then ask without shame help if needed`
-* what are you trying to avoid when working? `(they give work life balance kaya answer you don't want to burn out well not explicitly but as much as possible you try to avoid enough work and then balance with it other endeavors)`
-* how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given.`
+
+* what are you trying to avoid when working (they give work life balance kaya answer you don't want to burn out well not explicitly but as much as possible you try to avoid enough work and then balance with it other endeavors)? `I know I'm a young developer I have much to learn and naturally that may come out in trying to take on as much responsibility as physically possible as a way to learn and prove myself, so I avoid biting off more than I can chew because I've learned that everything can just be taken one step at a time as opposed to all at once at the cost of being burnt out in long run`
+
+* how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given. I make sure to also do my routine like eating, sleeping, taking little breaks here and there in an orderly manner so as to keep my schedule and time on track.`
+
 * were there times that you had to choose schoolworks over personal events? ``
-* What were the results of your 3 strengths in thesis? `meticulousness: I made sure the signal features we had were properly extracted and through the functions we wrote, we made sure to understand the dataset fully in order to `
+
+* What were the results of your 3 strengths in thesis? 
+- `meticulousness: I made sure the signal features we had were properly extracted and through the functions we wrote, we made sure to understand the dataset fully in order to implement the features needed for our system to train on`
+- `creativity: the user interface is something I'm most proud of because of its ability to be simple but also functional and informative, the design is also something I'm most proud of as it elicits the paradigm of minimalism in something as complex a system as ours`
+- `collaboration: me and my group mates had our strengths in doing other aspects of our thesis, but one aspect was really challenging in that we had no adequate resources to train our system using our large dataset. I offered solutions to avail computing resources from providers like google to my groupmates but with mutual effort in researching other means my other groupmate offered to instead avail computing resources from DOST which was luckily completely free of charge, and luckily could be used using a Linux OS which I was already familiar with, allowing us to train our system without much hassle from cost and most especially not having a large learning curve to use the resource`
+
 * what are the programming languages you're familiar and proficient in? `Python, JavaScript, SQL, C++`
 
 * what to do when having conflicting ideas with other members?
@@ -332,11 +345,19 @@ We encourage and promote an environment of teamwork and collaboration among our 
 - `outside of work I've really been fond of creating personal projects more geared in data analytics and using tools like python, SQL, powerbi to transform data and visualize it using dashboards`
 - `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
 
+* why should we hire you (more selfish reasons)?
+apart from the technical skills
+
+* why do you want to work here?
+`Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
+
+`I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
+
 ## TEchnical Coding Interview Questions:
 1. FIzzBuzz variation question from Leetcode 
 2. Simple mathematics and logic question 
-3. Maximum subarray sum from Leetcode 
-4. Print an hourglass (according to their hourglass pattern)
+3. Maximum subarray sum from Leetcode (uses kadanes algorithm)
+4. Print an hourglass (according to their hourglass pattern) `done practicing`
 5. Given two arrays, one which is rotated (either left or right), find the least times of rotations of the un-rotated array to match the rotated one. (gawin mo dito ay compare the newly rotated array each time to the old rotated array, and count the number of times you compared the array to get the two to be equal to each other)
 
 
