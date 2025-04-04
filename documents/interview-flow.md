@@ -366,9 +366,19 @@ apart from the technical skills
 ## TEchnical Coding Interview Questions:
 1. FIzzBuzz variation question from Leetcode 
 2. Simple mathematics and logic question 
-3. Maximum subarray sum from Leetcode (uses kadanes algorithm)
+3. Maximum subarray sum from Leetcode (uses kadanes algorithm) `done practicing`
 4. Print an hourglass (according to their hourglass pattern) `done practicing`
 5. Given two arrays, one which is rotated (either left or right), find the least times of rotations of the un-rotated array to match the rotated one. (gawin mo dito ay compare the newly rotated array each time to the old rotated array, and count the number of times you compared the array to get the two to be equal to each other)
+6. last unique character
+7. check if array is sorted or not
+
+# MSCI
+## Values:
+* relentlessly innovative
+* actively connect to collaborate
+* always act with integrity
+
+## Behavioral Questions:
 
 
 # Companies:
@@ -418,6 +428,7 @@ Media Meter
 Gardenia
 Sprout Solutions
 SBSI
+MSCI
 Macquarie
 Azeus Systems Ltd.
 philtrustbank
