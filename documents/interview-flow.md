@@ -340,7 +340,10 @@ We encourage and promote an environment of teamwork and collaboration among our 
 3. assess the strengths and weaknesses of each idea
 4. it is at times unavoidable that he/she will have the better solution and so sometimes you have to put your ego aside but sometimes I reasonable integration of both ideas strengths can be in fact better as it not only maybe a better solution but both parties can be mutually satisified. (You can both have your cake and eat it too so to speak)
 ```
- 
+
+* what's your salary expectation
+`I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
+
 * what kind of personality you like to work with?
 * what are the types of people you don't want to work with?
 
