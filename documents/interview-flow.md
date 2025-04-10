@@ -381,6 +381,12 @@ apart from the technical skills
 ## Behavioral Questions:
 
 
+# Xpress
+## Values:
+The organizational culture at XPRESS is dynamic, with a strong emphasis on collaboration and resource accessibility, which supports a productive work environment. However, the company faces challenges such as high turnover and a lack of remote work flexibility. Management practices often lean towards micromanagement, and there are noticeable gaps in cultural sensitivity, particularly regarding local customs and holidays. These issues can impact employee morale and the overall workplace atmosphere.
+
+
+
 # Companies:
 ## These are list of companies that you can always check the companies page for careers hindi  na masyado pwede pag linked in lang then after applying you can find the hiring manager themself on linked in and message them directly that you've applied and that you are enthusiastic to join their team because you have X amount of skills and that you work in this manner with other people
 
@@ -488,3 +494,22 @@ Cons:
 -Private if you want career growth and a fulfilling career that is high in rewards, and high in risks.
 
 recommended if you go for DICT or DOST
+
+# Upskilling
+* essentially the MS PL-300 PowerBI data analyst certification and the MS DP-300 Azure DBA certification then a AWS Cloud Practitioner certification then a AWS Solutions Architect Associate certification then finally to a AWS Data Engineer Associate certification is what will lead me to eventually become a data engineer 
+
+and for that I need to respectively sign up for these courses in order to pass the certification exams
+
+- Microsoft PowerBI data analyst professional certificate course
+- a course on the dp300 azure dba certification 
+
+this is for the phase of being a data analyst, but for the phase of now stepping into data engineering we need...
+
+- a course on aws cloud practitioner certification
+- course on aws solutions architect certification 
+- course on aws data engineer certification 
+
+### Applying for financial aid:
+I am quite frankly still a student trying to build his way into having a better career in data engineering which I know will help my prospects in the future, and I firmly believe that this course on data engineering will help me so much in ways that I can use for the industry I am to endeavor in which is hopefully in this industry applied to business, or at the least an entry level role in it. I am applying for a financial aid because given my current situation I cannot at the moment being an unemployed student be able to pay for these tremendously helpful resources, and I hope I can benefit still from these resources given my situation. And I hope to repay this debt in whatever way I can given that it has helped me as I said in more ways than I can describe, and I hope that by providing me with the necessary resources to help me build my future prospects I can one day hopefully repay everything I owe that helped me get where I am now.
+
+Currently because I'm am trying my absolute best and doing what I can to land at least an opportunity if not an entry level job in the data industry together, I firmly believe that this specific course will help me do my job intuitively in the future hopefully, which I know can give me the edge over other potential competitors and applicants in the data industry in my country. Given that I've tasted but a small aspect of the instructors at Microsoft way of teaching I genuinely believe that in learning specialization courses like this one, I can better have the skills especially the foundational skills in doing my Job more efficiently and again intuitively in the future, and moreover be a better and more productive person given the deep understanding that this course I believe offers genuinely, which I can not only use in my potential opportunities in the future but in venturing into starting my own business as well with the knowledge this has taught, teaches, and will teach me
