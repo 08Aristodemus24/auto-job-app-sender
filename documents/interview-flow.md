@@ -385,6 +385,14 @@ apart from the technical skills
 ## Values:
 The organizational culture at XPRESS is dynamic, with a strong emphasis on collaboration and resource accessibility, which supports a productive work environment. However, the company faces challenges such as high turnover and a lack of remote work flexibility. Management practices often lean towards micromanagement, and there are noticeable gaps in cultural sensitivity, particularly regarding local customs and holidays. These issues can impact employee morale and the overall workplace atmosphere.
 
+# Cebuana Lhuillier
+* salary range is around 
+do you have any more questions for us?
+- "how's it like working there?"
+- "I really learned alot from the company but I'm curious would there be some advice or feedback you could give for applicants such as myself on what I could improve more on should I potentially have a chance to work here?"
+
+# Accenture
+* salar yrange for ASWE is 20000 to 25000 per month
 
 
 # Companies:
