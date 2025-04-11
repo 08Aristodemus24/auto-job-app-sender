@@ -395,6 +395,10 @@ do you have any more questions for us?
 * salar yrange for ASWE is 20000 to 25000 per month
 
 
+# Plan
+* eo basically even a junior data analyst role is so saturated with competition because its the only entry level data role. No one is hiring emtry level data engineers and machine learning engineer or ai developers if anyone gets hired for it out of college they are already the exceptions the superstars the ones who were lucky enough to learn data at a quick level and who had enough connections for someone to take them under their wing and evntualy get opportunities to train and then have that data role. Pero ikaw you're a statistic, you're just like anybody else na kumakayod, you're not special, you're not a quick learner, you don't have many connections for referrals. you are starting at the bottom of the barrel and you wont have any chamce at someone spoonfeeding you like those lucky bastards. You're going to have to start at the very bottom like a junior financial analyst, junior sales operations analyst, 
+and then once in you can leverage your python, sql, powerbi skills to automate what is supposed to be a "manual" job, you can use your data skills to automate these things and thereby gain domain knowledge especially financial or sales or healthcare knowledge and domain knowledge combined with tools you've used that wasn't even oart of the job description in your resume when your finding your next job will be unbelievably powerful
+
 # Companies:
 ## These are list of companies that you can always check the companies page for careers hindi  na masyado pwede pag linked in lang then after applying you can find the hiring manager themself on linked in and message them directly that you've applied and that you are enthusiastic to join their team because you have X amount of skills and that you work in this manner with other people
 
