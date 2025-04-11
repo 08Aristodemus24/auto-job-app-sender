@@ -1,3 +1,25 @@
+# Path to data engineering starts at the bottom of the barrel: 
+Any kind of analyst. From there you can pivot to a regular data analyst role then to a senior data analyst then to a data engineer 
+
+Most data teams in 2023 are shrinking, and I think the trend will continue in 2024, mainly because of AI. That makes it difficult to get a junior role as a data analyst because the bar is constantly being raised. Business users leveraging AI today are equivalent to data analysts from 5 years ago, albeit lacking some skills such as SQL.  
+  
+One way to approach this challenge is to target roles containing the term 'analyst,' even if 'data' is not explicitly mentioned, and then apply for a data analyst position. However, if I were to start anew, I would focus on utilizing AI for data analysis and mastering storytelling, rather than personally delving deep into data analysis.  
+  
+Sales Operations can be a decent entryway. Working with largely transactional data, light sql and heavy spreadsheet work. At least from my experience. Depends what your end-goal is.
+
+Hey buddy. Basically any job that has access to Excel or SQL can help you transition into a data analyst role. Before I got my first job in tech I was working as an administrative assistant for a property management company and they often needed custom reports off of their crystal reports server. Using this tool allowed me to learn the foundation of SQL Syntax (using FILTERS predicates simple joins etc). From there I transitioned from using a GUI to make the queries into writing them direct in SQL myself.
+
+Def use a course online or book to learn SQL. There is so many available but I personally like eDx since it's free but the courses are taught by Harvard and MIT professors.
+
+Logistics Analyst
+
+Import/Export Analyst
+
+Supply Chain Analyst
+
+I'm trying to transition from Logistics over to Data Viz. & Analysis, so I'm leveraging my experience & knowledge in this industry to jump over to the other side.
+
+In my current industry, excel is really all you need for an Analyst position, but if you can incorporate things like Power BI or Tableau in to this, you can start creating a portfolio.
 
 # Media Meter
 interviewer descrbes workflow and technologies
@@ -397,7 +419,86 @@ do you have any more questions for us?
 
 # Plan
 * eo basically even a junior data analyst role is so saturated with competition because its the only entry level data role. No one is hiring emtry level data engineers and machine learning engineer or ai developers if anyone gets hired for it out of college they are already the exceptions the superstars the ones who were lucky enough to learn data at a quick level and who had enough connections for someone to take them under their wing and evntualy get opportunities to train and then have that data role. Pero ikaw you're a statistic, you're just like anybody else na kumakayod, you're not special, you're not a quick learner, you don't have many connections for referrals. you are starting at the bottom of the barrel and you wont have any chamce at someone spoonfeeding you like those lucky bastards. You're going to have to start at the very bottom like a junior financial analyst, junior sales operations analyst, 
-and then once in you can leverage your python, sql, powerbi skills to automate what is supposed to be a "manual" job, you can use your data skills to automate these things and thereby gain domain knowledge especially financial or sales or healthcare knowledge and domain knowledge combined with tools you've used that wasn't even oart of the job description in your resume when your finding your next job will be unbelievably powerful
+and then once in you can leverage your python, sql, powerbi skills to automate what is supposed to be a "manual" job, you can use your data skills to automate these things and thereby gain domain knowledge especially financial or sales or healthcare knowledge and domain knowledge combined with tools you've used that wasn't even oart of the job description in your resume when your finding your next job will be unbelievably powerful. You have to document these things though and this can be done by the ff.
+
+That's a smart and proactive strategy! Many people gain valuable data analysis experience in roles that aren't explicitly titled "Data Analyst." The key is to effectively document and showcase these experiences in your CV/resume. Here's how you can do that:
+1. Quantify Your Achievements Whenever Possible:
+ * Numbers Speak Volumes: Instead of saying "Improved reporting," say "Automated weekly sales reports using Python and reduced reporting time by 40%."
+ * Impact-Focused Language: Frame your accomplishments in terms of their impact on the business. For example, "Developed a Power BI dashboard to visualize key logistics KPIs, enabling a 15% reduction in delivery delays."
+ * Use Metrics: Mention specific metrics like cost savings, efficiency gains, error reduction, increased revenue, or improved customer satisfaction.
+2. Detail Your Data Analysis Tasks Under Each Relevant Job:
+ * Go Beyond the Official Job Description: Don't just list your formal responsibilities. Think about the tasks you actually performed that involved data analysis, even if they weren't in your initial job description.
+ * Use Action Verbs: Start each bullet point with strong action verbs that highlight your skills (e.g., Analyzed, Developed, Implemented, Automated, Visualized, Extracted, Transformed, Loaded, Queried, Identified, Predicted).
+ * Be Specific: Instead of "Worked with data," be specific about the tools and techniques you used and the outcomes.
+Example of Detailing Data Analysis Tasks:
+Let's say your official job title was "Logistics Coordinator." You could describe your responsibilities like this:
+Logistics Coordinator | ABC Company | [Dates of Employment]
+ * Managed and tracked daily shipment schedules, ensuring timely deliveries and resolving logistical issues.
+ * Leveraged SQL queries to extract and analyze shipment data from the company database to identify bottlenecks and inefficiencies in the delivery process.
+ * Developed a Python script to automate the generation of daily delivery performance reports, reducing manual reporting time by 50%.
+ * Designed and implemented interactive dashboards using Power BI to visualize key logistics KPIs (e.g., on-time delivery rate, transportation costs), enabling stakeholders to monitor performance and identify areas for improvement.
+ * Conducted ad-hoc data analysis using Excel and Power BI to investigate specific logistical challenges and provide data-driven recommendations to management.
+ * Collaborated with the warehouse and transportation teams to implement process improvements based on data insights, resulting in a 10% reduction in late deliveries.
+3. Create a "Skills" Section that Highlights Your Data Analysis Proficiency:
+ * List Technical Skills: Clearly list your proficiency in Python, SQL, Power BI (or other BI tools), Excel, and any other relevant software or programming languages.
+ * Categorize Skills (Optional but Helpful): You can group your skills into categories like "Programming Languages," "Database Management," "Data Visualization," and "Statistical Analysis" for better readability.
+4. Use a "Projects" or "Portfolio" Section (Highly Recommended):
+ * Showcase Your Work: If you have personal projects or significant data analysis tasks from your previous roles that you can showcase (even in an anonymized or summarized way if company data is sensitive), create a dedicated section.
+ * Describe the Problem, Your Approach, and the Outcome: For each project or task, briefly explain the problem you were trying to solve, the tools and techniques you used, and the results you achieved.
+ * Link to a Portfolio (If Applicable): If you have a GitHub repository or a personal website showcasing your data analysis projects, include a link in your contact information.
+5. Tailor Your CV/Resume to Each Job Application:
+ * Match Keywords: Carefully review the job description and incorporate relevant keywords related to data analysis, the industry, and the specific tools mentioned.
+ * Highlight Relevant Experiences: Emphasize the experiences and skills that are most relevant to the specific requirements of the job you are applying for.
+6. Be Prepared to Elaborate in Interviews:
+ * STAR Method: When discussing your experiences, use the STAR method (Situation, Task, Action, Result) to provide clear and concise examples of your data analysis work.
+ * Be Confident: Be prepared to confidently explain how the tasks you performed in your previous roles demonstrate your data analysis skills and your ability to contribute to the new role.
+Example of CV Snippets:
+Skills:
+ * Programming Languages: Python (Pandas, NumPy, Scikit-learn), SQL
+ * Data Visualization: Power BI, Tableau, Matplotlib, Seaborn
+ * Database Management: MySQL, PostgreSQL
+ * Tools & Technologies: Excel (Advanced), Git, Cloud Platforms (e.g., AWS, Azure - if applicable)
+ * Analytical Skills: Data Mining, Statistical Analysis, Data Cleaning, Data Wrangling, Exploratory Data Analysis (EDA)
+Experience:
+[Previous Job Title] | [Company Name] | [Dates of Employment]
+ * [Regular job duties]
+ * Conducted in-depth analysis of [specific dataset related to finance/logistics] using SQL to identify trends and anomalies, leading to [quantifiable result].
+ * Automated the generation of [specific report] using Python, reducing the monthly reporting cycle by [percentage].
+ * Developed interactive dashboards in Power BI to track [key performance indicators], providing stakeholders with real-time insights into [area of impact].
+By meticulously documenting your data-related tasks, quantifying your achievements, and highlighting your skills, you can effectively demonstrate your data analysis capabilities in your CV/resume, even if your previous job titles weren't explicitly "Data Analyst." Good luck with your job search!
+
+Yes, absolutely! A Property Specialist position at a real estate company like ALVEO can definitely involve working with data, although the extent might vary depending on the specific responsibilities and the company's data infrastructure.
+Here's how a Property Specialist role could involve data:
+Types of Data a Property Specialist Might Work With:
+ * Property Data: Details about the properties being sold (e.g., size, number of bedrooms/bathrooms, amenities, location, pricing history, features, unique selling points).
+ * Market Data: Information about the real estate market in specific areas (e.g., average selling prices, price trends, inventory levels, competitor pricing, recent sales data, neighborhood demographics, upcoming developments).
+ * Customer Data: Information about potential and existing clients (e.g., contact information, preferences, budget, property viewing history, inquiries, feedback).
+ * Sales Data: Records of past sales transactions (e.g., sale prices, closing dates, buyer demographics, commission earned).
+ * Marketing Data: Performance of marketing campaigns (e.g., leads generated from online ads, website traffic, open house attendance).
+ * Financial Data: Information related to property financing options, investment potential, and return on investment for clients.
+ * Geographic Data: Information related to property locations, surrounding amenities, accessibility, and potential for future development in the area.
+How a Property Specialist Might Use Data:
+ * Market Research: Analyzing market data to understand trends, identify opportunities, and advise clients on optimal buying or selling strategies. For example, comparing average prices in different ALVEO developments or identifying areas with high growth potential.
+ * Property Valuation: While there might be dedicated valuation teams, a Property Specialist might use comparative sales data to provide clients with an initial understanding of a property's potential value.
+ * Client Relationship Management (CRM): Inputting and managing client data in CRM systems to track interactions, preferences, and follow-ups. This data can be used to personalize communication and identify potential leads.
+ * Sales Reporting: Tracking their own sales performance, lead generation activities, and conversion rates. They might use basic reports or dashboards to monitor their progress.
+ * Marketing and Lead Generation: Analyzing the effectiveness of different marketing channels based on the leads and sales generated.
+ * Client Presentations: Using data and visualizations (e.g., charts showing price trends or investment potential) to present information to clients in a compelling way.
+ * Identifying Client Needs: Analyzing client preferences and search criteria to identify suitable properties from ALVEO's portfolio.
+ * Competitive Analysis: Understanding how ALVEO's properties and pricing compare to those of competitors in the market.
+Leveraging Your Data Analysis Skills:
+Even if the "official" job description doesn't heavily emphasize data analysis, your skills in Python, SQL, and Power BI can be a significant advantage. You could:
+ * Automate Reporting: If there are repetitive reporting tasks, you could use Python scripts to automate them, saving time and improving accuracy.
+ * Generate Deeper Insights: Go beyond basic reports by using SQL to query databases for more specific information and Power BI to create insightful visualizations for your own understanding or to share with your team (if appropriate). For example, analyzing which property types are most popular with certain demographics.
+ * Improve Lead Generation: By analyzing marketing data, you might identify which channels are most effective in reaching potential clients for ALVEO's properties.
+ * Personalize Client Interactions: By effectively managing and analyzing client data in a CRM, you can tailor your approach and property recommendations to individual client needs.
+How to Document This:
+Follow the same advice as before:
+ * Quantify where possible: "Analyzed local market trends using Excel and identified a 10% increase in property values in [specific area] over the past year, providing key insights for client consultations."
+ * Use action verbs: "Leveraged CRM data to segment leads based on property preferences, resulting in a more targeted outreach strategy."
+ * Highlight tools: "Utilized Excel and potentially Power BI (if you get the chance) to create visual reports on sales performance and market comparisons."
+While a Property Specialist role might not be a dedicated "Data Analyst" position, the real estate industry, including companies like ALVEO, increasingly relies on data for decision-making. Your data analysis skills can make you a more effective and valuable Property Specialist. Be proactive in identifying opportunities to use data in your role and document those instances clearly on your resume.
+
 
 # Companies:
 ## These are list of companies that you can always check the companies page for careers hindi  na masyado pwede pag linked in lang then after applying you can find the hiring manager themself on linked in and message them directly that you've applied and that you are enthusiastic to join their team because you have X amount of skills and that you work in this manner with other people
