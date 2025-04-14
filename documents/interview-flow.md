@@ -1,10 +1,13 @@
 # Path to data engineering starts at the bottom of the barrel: 
 Any kind of analyst. From there you can pivot to a regular data analyst role then to a senior data analyst then to a data engineer 
 
-Most data teams in 2023 are shrinking, and I think the trend will continue in 2024, mainly because of AI. That makes it difficult to get a junior role as a data analyst because the bar is constantly being raised. Business users leveraging AI today are equivalent to data analysts from 5 years ago, albeit lacking some skills such as SQL.  
-  
-One way to approach this challenge is to target roles containing the term 'analyst,' even if 'data' is not explicitly mentioned, and then apply for a data analyst position. However, if I were to start anew, I would focus on utilizing AI for data analysis and mastering storytelling, rather than personally delving deep into data analysis.  
-  
+Most data teams in 2023 are shrinking, and I think the trend will continue in 2024, mainly because of AI. That makes it difficult to get a junior role as a data analyst because the bar is constantly being raised. Business users leveraging AI today are equivalent to data analysts from 5 years ago, albeit lacking some skills such as SQL.
+
+  
+One way to approach this challenge is to target roles containing the term 'analyst,' even if 'data' is not explicitly mentioned, and then apply for a data analyst position. However, if I were to start anew, I would focus on utilizing AI for data analysis and mastering storytelling, rather than personally delving deep into data analysis.
+  
+
+  
 Sales Operations can be a decent entryway. Working with largely transactional data, light sql and heavy spreadsheet work. At least from my experience. Depends what your end-goal is.
 
 Hey buddy. Basically any job that has access to Excel or SQL can help you transition into a data analyst role. Before I got my first job in tech I was working as an administrative assistant for a property management company and they often needed custom reports off of their crystal reports server. Using this tool allowed me to learn the foundation of SQL Syntax (using FILTERS predicates simple joins etc). From there I transitioned from using a GUI to make the queries into writing them direct in SQL myself.
@@ -370,8 +373,13 @@ We encourage and promote an environment of teamwork and collaboration among our 
 * what are the types of people you don't want to work with?
 
 
-* tell me about yourself: 
-- `I was a data engineer intern at virtuals protocol where I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents`
+* tell me about yourself:  
+```
+I was a data engineer intern at virtuals protocol where 
+* I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents the technologies 
+* I used here was mainly numpy, pandas, specific frameworks for extracting ifnormation from files such as word documents and pdf files, * I also worked on developing shell scripts to automate the ingestion process of the ai agent of a client of the datasets we processed
+* I also worked on writing relevant guides for clients on how to write their own 
+```
 - `I took Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
 - `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
 - `outside of work I've really been fond of creating personal projects more geared in data analytics and using tools like python, SQL, powerbi to transform data and visualize it using dashboards`
@@ -408,13 +416,14 @@ apart from the technical skills
 The organizational culture at XPRESS is dynamic, with a strong emphasis on collaboration and resource accessibility, which supports a productive work environment. However, the company faces challenges such as high turnover and a lack of remote work flexibility. Management practices often lean towards micromanagement, and there are noticeable gaps in cultural sensitivity, particularly regarding local customs and holidays. These issues can impact employee morale and the overall workplace atmosphere.
 
 # Cebuana Lhuillier
-* salary range is around 
-do you have any more questions for us?
+* what is your expected salary? I've personally done some research on roles similar to the data analyst role in your company and  the salary range I'm comfortable in disclosing is around 20000/month to 25000/month, but in order to say the exact amount I will have to learn more about the tasks I will have to do on a daily basis and from there gauge my own performance and the value I give back as it will determine further a reasonable expectation for my salary
+
+* do you have any more questions for us?
 - "how's it like working there?"
-- "I really learned alot from the company but I'm curious would there be some advice or feedback you could give for applicants such as myself on what I could improve more on should I potentially have a chance to work here?"
+- "I really learned alot from the company but I'm curious would there be some advice or feedback you could give for applicants such as myself on what I could improve more on should I potentially have a chance to work here?": work on being able to deliver your work experience in a concise manner e.g. saying what you did and what technologies you used to do whaht you did
 
 # Accenture
-* salar yrange for ASWE is 20000 to 25000 per month
+* salary range for ASWE is 20000 to 25000 per month
 
 
 # Plan
@@ -629,3 +638,12 @@ this is for the phase of being a data analyst, but for the phase of now stepping
 I am quite frankly still a student trying to build his way into having a better career in data engineering which I know will help my prospects in the future, and I firmly believe that this course on data engineering will help me so much in ways that I can use for the industry I am to endeavor in which is hopefully in this industry applied to business, or at the least an entry level role in it. I am applying for a financial aid because given my current situation I cannot at the moment being an unemployed student be able to pay for these tremendously helpful resources, and I hope I can benefit still from these resources given my situation. And I hope to repay this debt in whatever way I can given that it has helped me as I said in more ways than I can describe, and I hope that by providing me with the necessary resources to help me build my future prospects I can one day hopefully repay everything I owe that helped me get where I am now.
 
 Currently because I'm am trying my absolute best and doing what I can to land at least an opportunity if not an entry level job in the data industry together, I firmly believe that this specific course will help me do my job intuitively in the future hopefully, which I know can give me the edge over other potential competitors and applicants in the data industry in my country. Given that I've tasted but a small aspect of the instructors at Microsoft way of teaching I genuinely believe that in learning specialization courses like this one, I can better have the skills especially the foundational skills in doing my Job more efficiently and again intuitively in the future, and moreover be a better and more productive person given the deep understanding that this course I believe offers genuinely, which I can not only use in my potential opportunities in the future but in venturing into starting my own business as well with the knowledge this has taught, teaches, and will teach me
+
+# Commuting
+* pasig to taguig (BGC)
+* pasig to mandaluyong (ortigas)
+* pasig to makati (corporate makati, 9 to 6 sched)
+- wake up at 5, take shower, prep breakfast, commute to palengke, commute to san joaquin station for 7 oclock schedule, book destination to hulo station since malapit na sa corporate makati (unlike mrt route which would take going to palengke, then to crossing via edsa shaw jeep, then to mrt ayala station from mrt ortigas station, then another ride from mrt ayala station to the office itself which is 4 rides in total which is sayang pera)
+- 
+* pasig to quezon (near GMA kamuning station)
+- you could take an MRT going here and walk to the office if within thhe vicinity of GMA kamuning station lang naman
