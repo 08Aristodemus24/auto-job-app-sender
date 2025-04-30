@@ -425,6 +425,9 @@ The organizational culture at XPRESS is dynamic, with a strong emphasis on colla
 # Accenture
 * salary range for ASWE is 20000 to 25000 per month
 
+# Inquiro
+* https://inquiro.ph/location-data-and-footfall-analytics-insights/
+
 
 # Plan
 * eo basically even a junior data analyst role is so saturated with competition because its the only entry level data role. No one is hiring emtry level data engineers and machine learning engineer or ai developers if anyone gets hired for it out of college they are already the exceptions the superstars the ones who were lucky enough to learn data at a quick level and who had enough connections for someone to take them under their wing and evntualy get opportunities to train and then have that data role. Pero ikaw you're a statistic, you're just like anybody else na kumakayod, you're not special, you're not a quick learner, you don't have many connections for referrals. you are starting at the bottom of the barrel and you wont have any chamce at someone spoonfeeding you like those lucky bastards. You're going to have to start at the very bottom like a junior financial analyst, junior sales operations analyst, 
@@ -565,6 +568,7 @@ development bank of the philippines
 ## Tier 3:
 AboitizPower
 Octal Philippine
+Inquiro, Inc.
 Medgrocer
 TTEC
 Integrated OS
