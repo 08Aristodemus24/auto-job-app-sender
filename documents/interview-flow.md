@@ -417,6 +417,7 @@ The organizational culture at XPRESS is dynamic, with a strong emphasis on colla
 
 # Cebuana Lhuillier
 * what is your expected salary? I've personally done some research on roles similar to the data analyst role in your company and  the salary range I'm comfortable in disclosing is around 20000/month to 25000/month, but in order to say the exact amount I will have to learn more about the tasks I will have to do on a daily basis and from there gauge my own performance and the value I give back as it will determine further a reasonable expectation for my salary
+* Shift your mindset from i want to work at this prestigious company to instead i want to work at a company doesn't matter how prestigious and i want to be able to leave it at least 1% better
 
 * do you have any more questions for us?
 - "how's it like working there?"
@@ -427,6 +428,7 @@ The organizational culture at XPRESS is dynamic, with a strong emphasis on colla
 
 # Inquiro
 * https://inquiro.ph/location-data-and-footfall-analytics-insights/
+
 
 
 # Plan
