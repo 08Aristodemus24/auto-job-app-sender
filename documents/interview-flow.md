@@ -377,10 +377,11 @@ We encourage and promote an environment of teamwork and collaboration among our 
 ```
 I was a data engineer intern at virtuals protocol where 
 * I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents the technologies 
-* I used here was mainly numpy, pandas, specific frameworks for extracting ifnormation from files such as word documents and pdf files, * I also worked on developing shell scripts to automate the ingestion process of the ai agent of a client of the datasets we processed
+* I used here was mainly numpy, pandas, specific frameworks for extracting ifnormation from files such as word documents and pdf files
+* I also worked on developing shell scripts to automate the ingestion process of the ai agent of a client of the datasets we processed
 * I also worked on writing relevant guides for clients on how to write their own 
 ```
-- `I took Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
+- `I'm a recent graduate of Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
 - `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
 - `outside of work I've really been fond of creating personal projects more geared in data analytics and using tools like python, SQL, powerbi to transform data and visualize it using dashboards`
 - `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
@@ -393,6 +394,10 @@ apart from the technical skills
 
 `I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
 
+* when would you use median vs mean in analyzing data
+* learn to defend your code if your teammate does not agree with how you wrote it e.g. using performant code over readable code in some cases
+* dont work in silence, communicate if may mali sa data niyo to data engineers, have someone quality assure your code
+
 ## TEchnical Coding Interview Questions:
 1. FIzzBuzz variation question from Leetcode 
 2. Simple mathematics and logic question 
@@ -401,6 +406,12 @@ apart from the technical skills
 5. Given two arrays, one which is rotated (either left or right), find the least times of rotations of the un-rotated array to match the rotated one. (gawin mo dito ay compare the newly rotated array each time to the old rotated array, and count the number of times you compared the array to get the two to be equal to each other)
 6. last unique character
 7. check if array is sorted or not
+8. identify which rows are duplicated
+select id, dense_rank() over()
+from employee
+
+9. remove duplicate values
+10. 
 
 # MSCI
 ## Values:
