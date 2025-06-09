@@ -398,6 +398,12 @@ apart from the technical skills
 * learn to defend your code if your teammate does not agree with how you wrote it e.g. using performant code over readable code in some cases
 * dont work in silence, communicate if may mali sa data niyo to data engineers, have someone quality assure your code
 
+* How do you make sure that you deploy quality code in
+production?
+* What would you do if you deploy bad code in prod?
+* What would you do if you have duplicates in your data in prod?
+* If your teammate does not agree with your code, how do you handle that situation?
+
 ## TEchnical Coding Interview Questions:
 1. FIzzBuzz variation question from Leetcode 
 2. Simple mathematics and logic question 
@@ -406,12 +412,30 @@ apart from the technical skills
 5. Given two arrays, one which is rotated (either left or right), find the least times of rotations of the un-rotated array to match the rotated one. (gawin mo dito ay compare the newly rotated array each time to the old rotated array, and count the number of times you compared the array to get the two to be equal to each other)
 6. last unique character
 7. check if array is sorted or not
+
 8. identify which rows are duplicated
-select id, dense_rank() over()
-from employee
+```
+with duplicates as (
+    select emp_id, row_number() over(partition by emp_id, emp_name, emp_salary order by emp_id) as row_occ
+    from employee
+)
+
+select emp_id, max(row_occ)
+from duplicates
+group by emp_id
+```
 
 9. remove duplicate values
-10. 
+10. check if all values in a table have the same values in another table
+```
+select id from table_a
+minus
+select id from table_b
+union all
+select id from table_b
+minus
+select id from table_a
+```
 
 # MSCI
 ## Values:
