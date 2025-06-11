@@ -394,7 +394,7 @@ apart from the technical skills
 
 `I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
 
-* when would you use median vs mean in analyzing data
+
 * learn to defend your code if your teammate does not agree with how you wrote it e.g. using performant code over readable code in some cases
 * dont work in silence, communicate if may mali sa data niyo to data engineers, have someone quality assure your code
 
@@ -404,16 +404,18 @@ production?
 * What would you do if you have duplicates in your data in prod?
 * If your teammate does not agree with your code, how do you handle that situation?
 
-## TEchnical Coding Interview Questions:
-1. FIzzBuzz variation question from Leetcode 
+## Technical Coding Interview Questions:
+### DSA Related:
+1. FizzBuzz variation question from Leetcode 
 2. Simple mathematics and logic question 
 3. Maximum subarray sum from Leetcode (uses kadanes algorithm) `done practicing`
 4. Print an hourglass (according to their hourglass pattern) `done practicing`
 5. Given two arrays, one which is rotated (either left or right), find the least times of rotations of the un-rotated array to match the rotated one. (gawin mo dito ay compare the newly rotated array each time to the old rotated array, and count the number of times you compared the array to get the two to be equal to each other)
-6. last unique character
-7. check if array is sorted or not
+6. Last unique character
+7. Check if array is sorted or not
 
-8. identify which rows are duplicated
+### SQL Related
+1. Identify which rows are duplicated
 ```
 with duplicates as (
     select emp_id, row_number() over(partition by emp_id, emp_name, emp_salary order by emp_id) as row_occ
@@ -425,8 +427,14 @@ from duplicates
 group by emp_id
 ```
 
-9. remove duplicate values
-10. check if all values in a table have the same values in another table
+2. remove duplicate values
+```
+select *
+from employee
+group by emp_id, emp_name, emp_salary
+```
+
+3. check if all values in a table have the same values in another table
 ```
 select id from table_a
 minus
@@ -437,6 +445,412 @@ minus
 select id from table_a
 ```
 
+4. find the second-highest salary per department, but exclude departments where fewer than 3 employees exist.
+```
+CREATE TEMPORARY TABLE IF NOT EXISTS temp (
+    emp_id INTEGER PRIMARY KEY,
+    emp_name VARCHAR,
+    emp_salary INTEGER,
+    dept_id INTEGER NOT NULL
+);
+
+INSERT INTO temp (emp_id, emp_name, emp_salary, dept_id) 
+VALUES
+(1, 'john', 50000, 1),
+(2, 'wayne', 50000, 1),
+(3, 'doe', 75000, 1),
+(4, 'chris', 50000, 2),
+(5, 'leo', 80000, 2),
+(6, 'david', 50000, 3),
+(7, 'martin', 60000, 3),
+```
+
+```
+| emp_id | emp_name | emp_salary | dept_id |
+|    1   |   john   |    50000   |    1    |
+|    2   |   wayne  |    50000   |    1    |
+|    3   |    doe   |    75000   |    1    |
+|    4   |   chris  |    50000   |    2    |
+|    5   |    leo   |    80000   |    2    |
+|    6   |   david  |    50000   |    3    |
+|    7   |  martin  |    60000   |    3    |
+```
+since we are trying to find the 2nd highest employee salary we can't simply use group bys, to find the max. We can use a `dense_rank()` to assign ranks to each salary according to or partitioned by their `dept_id`. For instance we assign a rank of 1 to the hgihest salary lets say in the tech department, we assign a rank of 2 to the 2nd highest salary in the tech department, and so on. We need to partition on the `dept_id` and then order by the employee salary in descending order so that the hghest salary is always 1st the 2nd highest 2nd, the 3rd highest 3rd and so on.
+```
+SELECT *, DENSE_RANK() OVER(PARTITION BY dept_id ORDER BY emp_salary DESC)
+FROM temp
+```
+
+```
+emp_id	emp_name	emp_salary	dept_id	dense_rank() OVER (PARTITION BY dept_id ORDER BY emp_salary DESC)
+7	martin	60000	3	1
+6	david	50000	3	2
+3	doe	75000	1	1
+1	john	50000	1	2
+2	wayne	50000	1	2
+5	leo	80000	2	1
+4	chris	50000	2	2
+```
+
+because we are also trying to exclude finding employees with the 2nd highest salary in a department where fewer than 3 (< 3) employees exist we can use also a `COUNT()` as a window function and assign counts each row according to or partitioned by each rows department. Kind of like using `SUM()` as a window function where instead of aggregating we calculate the sum of the values along the unique values of a column in this case the `dept_id` but still retain the number of rows.
+```
+SELECT *, 
+  DENSE_RANK() OVER(PARTITION BY dept_id ORDER BY emp_salary DESC), 
+  COUNT() OVER(PARTITION BY dept_id)
+FROM temp
+```
+
+```
+emp_id	emp_name	emp_salary	dept_id	dense_rank() OVER (PARTITION BY dept_id ORDER BY emp_salary DESC)	count() OVER (PARTITION BY dept_id)
+7	martin	60000	3	1	2
+6	david	50000	3	2	2
+3	doe	75000	1	1	3
+1	john	50000	1	2	3
+2	wayne	50000	1	2	3
+5	leo	80000	2	1	2
+4	chris	50000	2	2	2
+```
+
+from here we can use a simple filter to get only the rows with >= 3 employees and a row with rank of 2 
+```
+WITH ranked_employees AS (
+  SELECT *, 
+    DENSE_RANK() OVER(PARTITION BY dept_id ORDER BY emp_salary DESC) AS emp_rank, 
+    COUNT() OVER(PARTITION BY dept_id) AS dept_cnt
+  FROM temp
+)
+
+SELECT *
+FROM ranked_employees
+WHERE emp_rank = 2 AND dept_cnt >= 3
+```
+
+or by using subquery (because window functions ussed with where cannot be used as it will raise an error)
+
+```
+SELECT * 
+FROM (
+    SELECT *, 
+        DENSE_RANK() OVER(PARTITION BY dept_id ORDER BY emp_salary DESC) AS emp_rank, 
+        COUNT() OVER(PARTITION BY dept_id) AS dept_cnt
+    FROM temp
+) WHERE emp_rank = 2 AND dept_cnt >= 3
+```
+
+5. For each user, calculate the 7-day moving average of transactions, considering transaction dates with gaps.
+```
+-- Create the transactions table
+CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    transaction_date DATE NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL
+);
+
+-- Insert sample data
+INSERT INTO transactions (transaction_id, user_id, transaction_date, amount) VALUES
+(1, 101, '2024-01-01', 10.50),
+(2, 101, '2024-01-02', 15.00),
+(3, 101, '2024-01-03', 20.00),
+(4, 101, '2024-01-05', 12.75), -- Gap on Jan 4
+(5, 101, '2024-01-06', 18.20),
+(6, 101, '2024-01-07', 25.00),
+(7, 101, '2024-01-08', 30.00),
+(8, 101, '2024-01-09', 11.00),
+(9, 101, '2024-01-12', 14.50), -- Another gap of 2 days since 2024-01-10 and 2024-01-11 have no transactions
+(10, 101, '2024-01-13', 22.00),
+(11, 101, '2024-01-14', 16.80),
+(1, 102, '2024-01-01', 5.00),
+(2, 102, '2024-01-03', 7.50),
+(3, 102, '2024-01-04', 12.00),
+(4, 102, '2024-01-08', 9.00),
+(5, 102, '2024-01-09', 11.20),
+(6, 102, '2024-01-10', 8.00);
+```
+
+because we have different users like 101 and 102, we will have to partition the table such that we calculate the 7-day moving average of a group of transactions of a specific user. Since the user will probably have days where they will not have transactions leaving dates where there are no transactions, this is of no obstacle to calculating the 7 day moving average. This would be a different matter however if we strictly needed to get the moving average of not only a users transactions but also their non transactions, if this was the case we would have to somehow impute the days without transactins or gap days with a value of 0 so that the avg() window function can pool instead the days with non transaction or values with 0 as opposed to pooling 7 days with purely only transactions. More on imputation on gap dates: 
+- https://stackoverflow.com/questions/76203662/best-way-to-fill-in-gaps-between-dates-in-sql-table
+- https://www.geeksforgeeks.org/mysql-lead-and-lag-function/
+
+```
+SELECT 
+  *,
+  AVG(amount) OVER(
+    PARTITION BY user_id 
+    ORDER BY transaction_date ASC 
+    ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+  ) AS ma_7
+FROM transactions
+```
+Here we partitioned by each user. We also need to make sure the transaction date is ordered in ascending order to that our moving average is calculated according to this manner.
+
+if we were however going to impute we would need to get the date difference in each subsequent transactin and count how many gap days there are inbetween each transaction.
+```
+WITH new_transactions AS (
+  SELECT
+    transaction_id,
+    user_id,
+    transaction_date AS curr_txn_date,
+    LEAD(transaction_date) OVER(
+      PARTITION BY user_id 
+      ORDER BY transaction_date
+    ) AS next_txn_date,
+    amount
+  FROM transactions
+),
+
+transactions_b AS (
+  SELECT 
+    *,
+    -- we add a one because if a difference between a date is only
+    -- 1 day then resulting value will be -1, we turn this to 0 by
+    -- adding 1 to represent that there are no gaps in between the
+    -- dates
+    DATEDIFF('day', curr_txn_date, next_txn_date) - 1 AS date_diff
+  FROM new_transactions
+)
+
+SELECT *
+FROM transactions_b
+```
+
+resulting in table
+
+```
+transaction_id	user_id	curr_txn_date	next_txn_date	amount	date_diff
+12	102	2024-01-01	2024-01-03	5.00	1
+13	102	2024-01-03	2024-01-04	7.50	0
+14	102	2024-01-04	2024-01-08	12.00	3
+15	102	2024-01-08	2024-01-09	9.00	0
+16	102	2024-01-09	2024-01-10	11.20	0
+17	102	2024-01-10		8.00	
+1	101	2024-01-01	2024-01-02	10.50	0
+2	101	2024-01-02	2024-01-03	15.00	0
+3	101	2024-01-03	2024-01-05	20.00	1
+4	101	2024-01-05	2024-01-06	12.75	0
+5	101	2024-01-06	2024-01-07	18.20	0
+6	101	2024-01-07	2024-01-08	25.00	0
+7	101	2024-01-08	2024-01-09	30.00	0
+8	101	2024-01-09	2024-01-12	11.00	2
+9	101	2024-01-12	2024-01-13	14.50	0
+10	101	2024-01-13	2024-01-14	22.00	0
+11	101	2024-01-14		16.80	
+```
+
+
+```
+-- we generate a series starting from minimum date to
+-- the maximum date as we will be using this temp generated
+-- table to cross join on our transactions table
+WITH date_lookup AS (
+  SELECT * AS dt FROM GENERATE_SERIES( 
+    (SELECT MIN(transaction_date)
+    FROM transactions),
+    (SELECT MAX(transaction_date)
+    FROM transactions),
+    INTERVAL 1 DAY
+  )
+),
+
+user_max_min_txn_dates AS (
+  SELECT 
+    user_id, 
+    MIN(transaction_date) AS min_txn_date, 
+    MAX(transaction_date) AS max_txn_date
+  FROM transactions
+  GROUP BY user_id
+),
+
+imputed_dates AS (
+  SELECT
+    b.user_id,
+    a.dt
+  FROM date_lookup a
+  LEFT JOIN user_max_min_txn_dates b
+  ON a.dt BETWEEN b.min_txn_date AND b.max_txn_date
+),
+
+fixed_transactions AS (
+  SELECT 
+    b.transaction_id AS txn_id, 
+    a.user_id, 
+    a.dt AS txn_date, 
+    COALESCE(b.amount, 0) AS amount,
+  FROM imputed_dates a 
+  LEFT JOIN transactions b
+  ON a.user_id = b.user_id
+  AND a.dt = b.transaction_date
+  ORDER BY a.user_id, a.dt
+)
+
+SELECT 
+  *, 
+  AVG(amount) OVER(
+    PARTITION BY user_id 
+    ORDER BY txn_date ASC
+    ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+  ) AS amount_7ma
+FROM fixed_transactions
+```
+
+6. Given two tables: projects(project_id, budget), employees(employee_id, project_id), find the project with the highest “budget per unique role.” Assume an employee_roles table exists.
+
+7. Identify users who had a transaction amount 2x higher than their average transaction amount in the past 30 days.
+
+8. Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
+
+### PowerBI Related
+1. What is the difference between a visual-level filter, page-level filter, and a report-level filter? Provide an example where improper use leads to misleading analytics.
+
+2. Design a Power BI dashboard with Row-Level Security (RLS) where a user might belong to multiple departments. How would you implement dynamic RLS using DAX? 
+
+### Python Related
+1. Using pandas, merge three datasets (sales, promotions, inventory). Return top 5 products with the highest uplift in sales during a valid promotion window.
+
+2. Implement a custom function in pandas that bins continuous numerical data into deciles and labels outliers based on the IQR method. Return a summary table.|
+
+3. Compare and contrast defaultdict, Counter, and regular dictionaries in Python. When would you use each for analyzing customer purchase patterns?
+
+### Data Analytics related
+* when would you use median vs mean in analyzing data?
+
+* what is CAC? Customer Acquisition Cost. It is an indicator
+
+* what is CLTV? Customer Lifetime Value
+
+* what is MRR? Monthly Recurring Revenue
+
+* what is Churn? te – % of users who stop using the product
+
+* what is ARPU? Average Revenue Per User
+
+* what is ROI? Return on Investment
+
+* What is data analytics? Data analytics is the process of examining, cleaning, transforming, and modeling data to extract useful information, draw conclusions, and support decision-making.
+
+* What are the types of data analytics? Descriptive, diagnostic, predictive, and prescriptive analysis.
+
+* Explain the difference between qualitative and quantitative data? Qualitative data is non numerical, such as text or images, while quantitative data is numerical, such as measurements or counts.
+
+* What is data cleansing? Data cleansing is the process of identifying and correcting errors, inconsistencies, and inaccuracies in datasets.
+
+* What is data outlier? An outlier is a data point that significantly differs from the rest of the data points in a dataset.
+
+* Explain the difference between SQL and NOSQL databases? SQL databases are relational, use structured query language, and have a predefined schema, while NoSQL databases are non-relational, use various query languages, and have a dynamic schema.
+
+* What is ETL? ETL stands for Extract, Transform, and Load. It's a process for retrieving data from various sources, transforming it into a usable format, and loading it into a database or data warehouse.
+
+* What is primary key in a database ? A primary key is a unique identifier for each record in table.
+
+* What is foreign key in a database? A foreign key is a field in a table that refers to the primary key of another table, establishing a relationship between the two tables.
+
+* Explain the difference between inner join and outer join in SQL? Inner join returns records with matching values in both tables, while outer join returns records from one table and the matching records from the other table, filing in NULL values for non-matching records.
+
+* What is a histogram? A histogram is a graphical representation of the distribution of a dataset, showing the frequency of data points in specified intervals.
+
+* What is a box plot? A box plot is a graphical representation of the distribution of a dataset, showing the median, quartiles, and possible outliers.
+
+### Data Science/ML related
+* What is linear regression? Linear regression is a statistical method used to modethe relationship between a dependent variable and one or more independent variables.
+
+* What is overfitting? Overfitting occurs when a model is too complex and performs well.
+
+* Explain the difference between Rsquared and adjusted R-squared? R-squared measures the proportion of variation the dependent variable explained by the independent variables, while adjusted R-squared adjusts for the number of independent variables in the model.
+
+* What is a confusion matrix? In a confusion matrix is a table used to evaluate the performance of a classification model, showing the true positives, true negatives, false positives, and false negatives.
+
+* What is K-means clustering? K-means clustering is an unsupervised machine learning algorithm used to partition data into k clusters based on their similarity.
+
+* What is cross-validation? Cross-validation is a technique used to evaluate the performance of a model by splitting the dataset into training and testing sets multiple times and calculating the average performance.
+
+* What is a decision tree? A decision tree is a flowchart-like structure used indecision making and machine learning, where each internalnode represents a feature, each branch represents adecision rule, and each leaf node represents an outcome.
+
+* What is the difference between supervised and unsupervised learning? Supervised learning uses labeled data and a known output, while unsupervised learning uses unlabeled data and discovers patterns or structures in the data.
+
+* Explain principal component analysis (PCA)?
+ANS :- PCA is a dimensionality reduction technique that
+transforms data into a new coordinate system, reducing
+the number of dimensions while retaining as much
+information as possible.
+* What is time series analysis? Time series analysis is a statistical technique for
+analyzing and forecasting data points collected over time,
+such as stock prices or weather data.
+* What is difference between a bar chart
+and a pie chart? A bar chart represents data using rectangular bars,
+showing the relationship between categories and values,
+while a pie chart represents data as slices of a circle,
+showing the relative proportion of each category.
+* What is a pivot table? A pivot table is a data summarization tool that
+allows users to reorganize, filter, and aggregate data in a
+spreadsheet or database. 
+* What is data normalization?
+ANS :- Data normalization is the process of scaling and
+transforming data to eliminate redundancy and improve
+consistency, making it easier to compare and analyze.
+* Explain the concept of data warehousing?
+ANS :- A data warehouse is a large, centralized repository
+of data used for reporting and analysis, combining data
+from different sources and organizing it for efficient
+querying and reporting.
+* What is the role of a data analyst in a
+company? A data analyst collects, processes, and analyzes
+data to help organizations make informed decisions, identify
+trends, and improve efficiency.
+* How do you handle missing data in a
+dataset? Missing data can be handled by imputing values
+(mean, median, mode), deleting rows with missing data, or
+using models that can handle missing data.
+* How do you deal with outliers in a dataset? Outliers can be dealt with by deleting,
+transforming, or replacing them, or by using models that
+are less sensitive to outliers.
+* Describe a situation where you used data
+analysis to solve a problem? Answer this based on your personal experience,
+detailing the problem, your approach, and the outcome.
+* How do you ensure data quality and
+accuracy in your analysis? Ensuring data quality and accuracy involves data
+cleansing, validation, normalization, and cross-referencing
+with other sources, as we I as using appropriate analytical
+methods and tools. 
+* Describe your experience with
+programming languages, such as R or Python,
+used in data analysis? Answer this based on your personal experience,
+highlighting your proficiency
+* How do you handle large datasets?
+ANS :- Handling large datasets involves using efficient
+data storage and processing techniques, such as SQL
+databases, para lel computing, or cloud-based solutions,
+and optimizing code and algorithms for performance.
+* What is your experience with data
+visualization tools, such as Tableau, Power Bl, or
+Excel? Answer this based on your personal experience and
+familiarity with the mentioned tools, providing examples of
+projects or tasks you have completed using them
+* How do you stay. upadated on the latest
+trends and developments in data analysis? Mention resources such as blogs, podcasts, online
+courses, conferences, and industry publications that you use
+to stay informed and up-to-date.
+* How do you handle data privacy and
+security concerns in your analysis ?
+* How do you ensure your data analysis is
+unbiased? By being aware of potential biases, using diverse
+data sources, applying objective analytical methods, and
+cross-validating results with other sources or techniques.
+* What metrics do you use to evaluate the
+sucess of a data analysis project? Metrics may include accuracy, precision, reca I, F1
+score, R-squared, or other relevant performance measures,
+depending on the project's goals and objectives
+* How do you determine the most
+appropriate data analysis technique for a given
+problem? By understanding the problem's context, the nature
+of the data, the desired outcome, and the assumptions and
+limitations of various techniques, selecting the most suitable
+method through experimentation and validation.
+* How do you validate the results of your
+data analysis? By using cross-validation, holdout samples,
+comparing results with known benchmarks, and checking
+for consistency and reasonableness in the findings.
+
+
 # MSCI
 ## Values:
 * relentlessly innovative
@@ -446,9 +860,12 @@ select id from table_a
 ## Behavioral Questions:
 
 
+
 # Xpress
 ## Values:
 The organizational culture at XPRESS is dynamic, with a strong emphasis on collaboration and resource accessibility, which supports a productive work environment. However, the company faces challenges such as high turnover and a lack of remote work flexibility. Management practices often lean towards micromanagement, and there are noticeable gaps in cultural sensitivity, particularly regarding local customs and holidays. These issues can impact employee morale and the overall workplace atmosphere.
+
+
 
 # Cebuana Lhuillier
 * what is your expected salary? I've personally done some research on roles similar to the data analyst role in your company and  the salary range I'm comfortable in disclosing is around 20000/month to 25000/month, but in order to say the exact amount I will have to learn more about the tasks I will have to do on a daily basis and from there gauge my own performance and the value I give back as it will determine further a reasonable expectation for my salary
