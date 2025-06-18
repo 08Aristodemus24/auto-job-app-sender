@@ -712,7 +712,136 @@ FROM fixed_transactions
 3. Compare and contrast defaultdict, Counter, and regular dictionaries in Python. When would you use each for analyzing customer purchase patterns?
 
 ### Data Analytics related
-* when would you use median vs mean in analyzing data?
+* is it a fair assertion to say that the median should be used in imputation of missing values in a column if the histogram or the distribution of data in the column when plotted is skewed and not normal since this better represents a measure of central tendency and that we would use average if the distribution of the data is normal?
+
+* when would you use median vs mean in analyzing data? IF the histogram or the distribution of data when plotted is skewed and nto normal then it may be helpful to use the middle value for imputation as this better represents a measure of central tendency. We would use average if the distribution of the data is normal.
+
+Mean is the best choice when data is symmetric and free from extreme outliers, as it leverages all data points.
+Median is preferred when data is skewed or contains outliers, as it provides a robust measure of central tendency that isn't unduly affected by extreme values.
+```
+CREATE OR REPLACE TEMPORARY SEQUENCE id_sequence START 1;
+  
+-- Create the transactions table
+CREATE OR REPLACE TEMPORARY TABLE transactions (
+    transaction_id INT DEFAULT nextval('id_sequence') PRIMARY KEY,
+    user_id INT NOT NULL,
+    transaction_date DATE NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL
+);
+
+-- Insert sample data
+INSERT INTO transactions (user_id, transaction_date, amount) VALUES
+(101, '2024-01-01', 10.50),
+(101, '2024-01-02', 15.00),
+(101, '2024-01-03', 20.00),
+(101, '2024-01-05', 12.75), -- Gap on Jan 4
+(101, '2024-01-06', 18.20),
+(101, '2024-01-07', 25.00),
+(101, '2024-01-08', 30.00),
+(101, '2024-01-09', 11.00),
+(101, '2024-01-12', 14.50), -- Another gap
+(101, '2024-01-13', 22.00),
+(101, '2024-01-14', 16.80),
+(102, '2024-01-01', 5.00),
+(102, '2024-01-03', 7.50),
+(102, '2024-01-04', 12.00),
+(102, '2024-01-08', 9.00),
+(102, '2024-01-09', 11.20),
+(102, '2024-01-10', 8.00);
+
+-- we generate a series starting from minimum date to
+-- the maximum date as we will be using this temp generated
+-- table to cross join on our transactions table
+CREATE OR REPLACE TEMPORARY TABLE date_lookup AS (
+  SELECT * AS dt FROM GENERATE_SERIES( 
+    (SELECT MIN(transaction_date)
+    FROM transactions),
+    (SELECT MAX(transaction_date)
+    FROM transactions),
+    INTERVAL 1 DAY
+  )
+)
+
+CREATE OR REPLACE TEMPORARY TABLE user_max_min_txn_dates AS (
+  SELECT 
+    user_id, 
+    MIN(transaction_date) AS min_txn_date, 
+    MAX(transaction_date) AS max_txn_date
+  FROM transactions
+  GROUP BY user_id
+)
+
+CREATE OR REPLACE TABLE imputed_dates AS (
+  SELECT
+    b.user_id,
+    a.dt
+  FROM date_lookup a
+  LEFT JOIN user_max_min_txn_dates b
+  ON a.dt BETWEEN b.min_txn_date AND b.max_txn_date
+)
+
+WITH fixed_transactions AS (
+  SELECT 
+    b.transaction_id AS txn_id, 
+    a.user_id, 
+    a.dt AS txn_date,
+    b.amount AS amount
+  FROM imputed_dates a 
+  LEFT JOIN transactions b
+  ON a.user_id = b.user_id
+  AND a.dt = b.transaction_date
+  ORDER BY a.user_id, a.dt
+),
+
+
+final AS (
+  SELECT 
+    *, 
+    COALESCE(
+      amount, 
+      (SELECT MEDIAN(amount) FROM fixed_transactions)
+    ) AS amount
+  FROM fixed_transactions
+)
+
+SELECT 
+  *, 
+  AVG(amount) OVER(
+    PARTITION BY user_id 
+    ORDER BY txn_date ASC
+    ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+  ) AS amount_7ma
+FROM final
+```
+
+```
+txn_id	user_id	txn_date	amount	amount_1	amount_7ma
+1	101	2024-01-01 00:00:00	10.50	10.50	10.5
+2	101	2024-01-02 00:00:00	15.00	15.00	12.75
+3	101	2024-01-03 00:00:00	20.00	20.00	15.166666666666666
+	101	2024-01-04 00:00:00	NULL 12.75	15.166666666666666
+4	101	2024-01-05 00:00:00	12.75	12.75	14.5625
+5	101	2024-01-06 00:00:00	18.20	18.20	15.29
+6	101	2024-01-07 00:00:00	25.00	25.00	16.908333333333335
+7	101	2024-01-08 00:00:00	30.00	30.00	20.158333333333335
+8	101	2024-01-09 00:00:00	11.00	11.00	19.491666666666667
+	101	2024-01-10 00:00:00	NULL 12.75	19.39
+	101	2024-01-11 00:00:00	NULL 12.75	19.39
+9	101	2024-01-12 00:00:00	14.50	14.50	19.74
+10	101	2024-01-13 00:00:00	22.00	22.00	20.5
+11	101	2024-01-14 00:00:00	16.80	16.80	18.86
+12	102	2024-01-01 00:00:00	5.00	5.00	5.0
+	102	2024-01-02 00:00:00	NULL 12.75	5.0
+13	102	2024-01-03 00:00:00	7.50	7.50	6.25
+14	102	2024-01-04 00:00:00	12.00	12.00	8.166666666666666
+	102	2024-01-05 00:00:00	NULL 12.75	8.166666666666666
+	102	2024-01-06 00:00:00	NULL 12.75	8.166666666666666
+	102	2024-01-07 00:00:00	NULL 12.75	8.166666666666666
+15	102	2024-01-08 00:00:00	9.00	9.00	9.5
+16	102	2024-01-09 00:00:00	11.20	11.20	9.925
+17	102	2024-01-10 00:00:00	8.00	8.00	10.05
+```
+
 
 * what is CAC? Customer Acquisition Cost. It is an indicator
 

@@ -87,5 +87,10 @@ Option
 Leveraged Spark to extract and transform 20 years of chronic disease and population data across US states, optimizing data aggregation efficiency by Y% for subsequent analysis.
 Uncovered critical insights from alcohol-related chronic disease indicators, pinpointing statistically significant correlations between specific drinking patterns and chronic liver disease mortality rates across diverse demographics and US states, informing potential public health strategies.
 
+revised:
+Conducted in-depth analysis of chronic disease data linked to various indicators such as various cancer mortality rates
+
+, identifying significant positive correlations between binge drinking frequency/intensity and chronic liver disease mortality rates across various demographics and states. This insight highlights critical areas for public health intervention.
+
 * What was the impact of the project-alexander?
 * What was the analysis of the chronic-disease-indicators about?
