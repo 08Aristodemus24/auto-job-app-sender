@@ -14,7 +14,7 @@ sisyphus 9722
 roron 450
 sport bettor 469790
 500990 total rows produced from cleaning and preprocessing for 9 RAG AI agents
-55665.556 rows ingested by retrieval augment generated 
+55665.556 rows ingested by retrieval augmented generated ai agents
 
 
 then yun pwede mo ilagay ang x number of hours automated
@@ -30,6 +30,7 @@ then multiply mo sa number of hours na gagawin sya nang manual
 yun magigung estimated savings mo
 then convert mo sya into annual savings
 
+the shell scripts I wrote 
 
 # 
 * Move the experience on top if you don't have Professional summar
@@ -79,7 +80,7 @@ Engineered a robust data pipeline utilizing Spark for ingestion and transformati
 Developed dynamic analytical models to identify correlations between alcohol use indicators and chronic disease mortality across 50+ US states and diverse demographics, providing data-driven insights for public health understanding.
 Option 2: Focus on Insights & Impact (if you found specific correlations)
 
-Processed and transformed 20 years of comprehensive US public health data (from 2001-2021) using Spark, consolidating disparate datasets to quantify chronic disease cases and population figures at a granular state level.
+
 Conducted in-depth analysis of key chronic disease indicators linked to alcohol consumption, identifying significant positive correlations between binge drinking frequency/intensity and chronic liver disease mortality rates across various demographics and states. This insight highlights critical areas for public health intervention.
 Option 
 
@@ -88,7 +89,8 @@ Leveraged Spark to extract and transform 20 years of chronic disease and populat
 Uncovered critical insights from alcohol-related chronic disease indicators, pinpointing statistically significant correlations between specific drinking patterns and chronic liver disease mortality rates across diverse demographics and US states, informing potential public health strategies.
 
 revised:
-Conducted in-depth analysis of chronic disease data linked to various indicators such as various cancer mortality rates
+- Conducted analysis of chronic disease data to identify most prevalent disease, allowing for potential in more targeted interventions and improving cost efficiency for less prevalent diseases
+- Processed and transformed 20 years of comprehensive US public health data (from 2001-2021) using Spark, consolidating disparate datasets to quantify chronic disease cases and population figures.
 
 , identifying significant positive correlations between binge drinking frequency/intensity and chronic liver disease mortality rates across various demographics and states. This insight highlights critical areas for public health intervention.
 
