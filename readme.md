@@ -312,3 +312,15 @@ kung puro excel sheet pa ang company, use power apps to migrate the excel sheet 
 * Di pwede nakabuklat lahat ng projects mo, you need to allow for some mystery at least and reveal it through your portfolio website
 
 11. reach out to top data analysts in the field. Hindi uubra yung selling yourself and marketing yourself because it comes across as disingenious, instead talk to them like a normal human being trying to know genuinely what it takes to stand out as a data analyst, tell them the projects you've made and what you can improve, what data you can use next time, what data sources you can pool from next project etc. **If you ask for a job you get time and if you ask for time you get a job (through referrals)**.
+
+12. the heirarchy of job applications from bottom to top according to I believe their interview conversion rate (probability that applying will lead to at least an HR phone interview) are the following:
+* Tier 1:
+- Applying on linked in using url technique e.g. https://www.linkedin.com/jobs/search/?currentJobId=4138965537&f_TPR=r1800&f_WT=1%2C3&geoId=103121230&keywords=data%20analyst&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true making sure time elapsed since job posting is 12 hours or less makign sure competition is left out 
+- indeed for some reason has landed me more calls so its part of this tier
+- using job boards of company websites and applying to them directly. The way you do this is list companies you see on linkedin, usually big names or companies that have websites (usually a website is a good indication that the company is starting out in its data maturity)
+
+* Tier 2:
+- kalibrr
+- jora jobs
+- jobslin
+-

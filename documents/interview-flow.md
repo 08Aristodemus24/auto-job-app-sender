@@ -383,7 +383,7 @@ I was a data engineer intern at virtuals protocol where
 ```
 - `I'm a recent graduate of Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
 - `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
-- `outside of work I've really been fond of creating personal projects more geared in data analytics and using tools like python, SQL, powerbi to transform data and visualize it using dashboards`
+- `outside of work I've really been fond of creating personal projects more geared in data analytics and engineering and using tools like selenium, beautifulsoup and other web scraping frameworks to extract data, transform them using SQL and distributed computing frameworks like Spark, load it in a cloud storage providers like MotherDuck and AWS S3 and finally use powerbi to use it for some form of analytics, visualizing it using dashboards. I also use orchestration tools like airflow to automate the whole process`
 - `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
 
 * why should we hire you (more selfish reasons)?
