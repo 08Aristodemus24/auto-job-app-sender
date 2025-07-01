@@ -324,3 +324,5 @@ kung puro excel sheet pa ang company, use power apps to migrate the excel sheet 
 - jora jobs
 - jobslin
 -
+
+ganto dapat mangyari: dahil most banking analyst jobs require 2-3 years of experience, kilangan makahanap ka muna ng day job (mind you day job so you don't sacrifice your health) that's entry level low barrier, pwera na kung maliit sahod basta maggrow ka and you'll have tsomething to put on your resume while still having enough to put food on the table. All of this while upskilling of course

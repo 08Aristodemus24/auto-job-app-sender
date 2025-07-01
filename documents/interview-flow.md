@@ -334,75 +334,82 @@ We believe that it is very important to demonstrate professionalism in all of ou
 Collaboration and Teamwork
 We encourage and promote an environment of teamwork and collaboration among our people so as to grow and share the success of Azeus.
 
-# Azeus Systems LTd.
-## Behavioral Questions:
-* what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
+# Denova Consulting
+* uses source to pay (s2p)
 
-* what are your 3 biggest strengths and explain each one? 
-- `meticulousness: as I always make sure to analyze the quality of the code I write and make sure most if not every case is taken into consideration`
-- `creativity: I really like to implement designs in code that elicit beauty and inspiration`
-- `collaboration: I like to share my thoughts of approaching a problem with my teammates and asking in turn their opinion on how they would solve it, and sharing our solutions right after and come to a reasonable way how to integrate it`
+Imagine a company, big or small, that needs to buy anything – from pens and paper, to computer servers, to the ingredients for their products, or even huge factory machines.
 
-* what are your weakness as a person and as a worker/student and how did you confront them? `sometimes I tend to keep problems (both technical and non-technical) to myself, and while independence has its merits it means that I lead myself at times to unnecessary amounts stress, so I always make sure to understand the problem clearly by asking my colleagues and then ask without shame help if needed`
+A Source-to-Pay Specialist is like the company's "Smart Shopper" or "Procurement Manager". Their job is to make sure the company buys things in the smartest, most efficient, and most cost-effective way possible, from start to finish.
 
-* what are you trying to avoid when working (they give work life balance kaya answer you don't want to burn out well not explicitly but as much as possible you try to avoid enough work and then balance with it other endeavors)? `I know I'm a young developer I have much to learn and naturally that may come out in trying to take on as much responsibility as physically possible as a way to learn and prove myself, so I avoid biting off more than I can chew because I've learned that everything can just be taken one step at a time as opposed to all at once at the cost of being burnt out in long run`
+Here's what that means in simple steps:
 
-* how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given. I make sure to also do my routine like eating, sleeping, taking little breaks here and there in an orderly manner so as to keep my schedule and time on track.`
+"Source" (Finding the Best Deals):
 
-* were there times that you had to choose schoolworks over personal events? ``
+They figure out what the company needs.
 
-* What were the results of your 3 strengths in thesis? 
-- `meticulousness: I made sure the signal features we had were properly extracted and through the functions we wrote, we made sure to understand the dataset fully in order to implement the features needed for our system to train on`
-- `creativity: the user interface is something I'm most proud of because of its ability to be simple but also functional and informative, the design is also something I'm most proud of as it elicits the paradigm of minimalism in something as complex a system as ours`
-- `collaboration: me and my group mates had our strengths in doing other aspects of our thesis, but one aspect was really challenging in that we had no adequate resources to train our system using our large dataset. I offered solutions to avail computing resources from providers like google to my groupmates but with mutual effort in researching other means my other groupmate offered to instead avail computing resources from DOST which was luckily completely free of charge, and luckily could be used using a Linux OS which I was already familiar with, allowing us to train our system without much hassle from cost and most especially not having a large learning curve to use the resource`
+They find the best suppliers (like finding the best store or brand for what you need). This involves researching, getting quotes, and negotiating prices.
 
-* what are the programming languages you're familiar and proficient in? `Python, JavaScript, SQL, C++`
+They make sure the suppliers are reliable and meet quality standards.
 
-* what to do when having conflicting ideas with other members? 
-```
-1. know the idea I have in mind and want implemented 
-2. know the idea my team member personally wants to implement
-3. assess the strengths and weaknesses of each idea
-4. it is at times unavoidable that he/she will have the better solution and so sometimes you have to put your ego aside but sometimes I reasonable integration of both ideas strengths can be in fact better as it not only maybe a better solution but both parties can be mutually satisified. (You can both have your cake and eat it too so to speak)
-```
+"Procure" (Getting Permission to Buy):
 
-* what's your salary expectation
-`I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
+They help create the official request to buy something (like asking your parents for permission to buy a new toy).
 
-* what kind of personality you like to work with?
-* what are the types of people you don't want to work with?
+They make sure all the right approvals are in place before a purchase is made.
 
+"Order" (Actually Buying It):
 
-* tell me about yourself:  
-```
-I was a data engineer intern at virtuals protocol where 
-* I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents the technologies 
-* I used here was mainly numpy, pandas, specific frameworks for extracting ifnormation from files such as word documents and pdf files
-* I also worked on developing shell scripts to automate the ingestion process of the ai agent of a client of the datasets we processed
-* I also worked on writing relevant guides for clients on how to write their own 
-```
-- `I'm a recent graduate of Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
-- `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
-- `outside of work I've really been fond of creating personal projects more geared in data analytics and engineering and using tools like selenium, beautifulsoup and other web scraping frameworks to extract data, transform them using SQL and distributed computing frameworks like Spark, load it in a cloud storage providers like MotherDuck and AWS S3 and finally use powerbi to use it for some form of analytics, visualizing it using dashboards. I also use orchestration tools like airflow to automate the whole process`
-- `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
+They make sure the order is placed correctly with the chosen supplier.
 
-* why should we hire you (more selfish reasons)?
-apart from the technical skills
+"Receive" (Getting the Stuff):
 
-* why do you want to work here?
-`Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
+They track the order to make sure the stuff arrives when and how it's supposed to.
 
-`I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
+"Pay" (Paying for It):
 
+They make sure the company pays the supplier correctly and on time, and that the bill matches what was ordered and received.
 
-* learn to defend your code if your teammate does not agree with how you wrote it e.g. using performant code over readable code in some cases
-* dont work in silence, communicate if may mali sa data niyo to data engineers, have someone quality assure your code
+So, a Source-to-Pay Specialist is the person who manages this whole journey, from the moment the company realizes it needs something, all the way to paying the bill. Their main goal is to save the company money, make sure they get good quality stuff, and keep everything running smoothly so everyone else in the company has what they need to do their jobs. They're basically the guardians of the company's spending on goods and services!
 
-* How do you make sure that you deploy quality code in
-production?
-* What would you do if you deploy bad code in prod?
-* What would you do if you have duplicates in your data in prod?
-* If your teammate does not agree with your code, how do you handle that situation?
+* uses colleague as a service (CLaaS)
+
+Okay, "Colleague as a Service" (CLaaS) is a fairly new and interesting concept, especially in the context of how specialized roles like data analysts are being utilized.
+
+In layman's terms, if you think of "Software as a Service" (SaaS) as using a piece of software over the internet without owning it (like Netflix or Google Docs), then "Colleague as a Service" (CLaaS) means:
+
+Instead of hiring a full-time, permanent employee, a company can "rent" or "subscribe to" the skills and expertise of a specialized professional for a specific project, period, or on an as-needed basis.
+
+Think of it like this:
+
+Traditional: If your company needs someone to build a beautiful Power BI dashboard, you'd try to hire a full-time Power BI Specialist.
+
+CLaaS: Instead, you "subscribe" to a Power BI Specialist from a CLaaS provider. This specialist works on your dashboard project for a few weeks or months, delivers the result, and then might move on to another project for a different company, all while remaining part of the CLaaS provider's team.
+
+Why would companies use CLaaS?
+
+Flexibility: They might not need a specific skill (like a niche data analyst for a one-off project) full-time. CLaaS lets them scale up or down expertise as needed.
+
+Cost-Efficiency: Hiring a full-time employee involves salary, benefits, office space, training, etc. CLaaS is often a more direct cost for specific output.
+
+Access to Specialized Skills: Smaller companies might not be able to afford a full-time, highly specialized data analyst or a Power BI expert, but they can afford to "rent" their expertise for a crucial project.
+
+Reduced Overhead: Less HR, less management for the hiring company.
+
+What does this mean for a Data Analyst, Power BI Specialist, etc. in a CLaaS model?
+
+If you're a data analyst working for a company that provides CLaaS, you would:
+
+Be a "Consultant" or "Project-Based Expert": You'd work on various projects for different client companies. One month you might be building a Power BI dashboard for a retail client, the next you're doing data cleaning for a healthcare client.
+
+Focus on Deliverables: Your role would be very output-oriented. You'd be expected to deliver specific analyses, reports, dashboards, or data solutions within agreed-upon timelines.
+
+Continuous Learning: You'd be exposed to many different industries, datasets, and business problems, which forces you to constantly learn and adapt.
+
+Part of a "Service Team": Even if you're working on different projects, you'd still likely be part of a core team at the CLaaS provider, learning from each other and sharing best practices.
+
+For an entry-level Data Analyst looking at a role like this:
+
+It means you'd be a key part of a service that companies need. You might get exposure to a wider range of industries and data challenges quicker than in a single company's traditional setup. You need to be adaptable, a fast learner, and good at delivering concrete results. It's a way for companies to access data expertise without the full commitment of a traditional hire, and for analysts to gain diverse experience.
 
 ## Technical Coding Interview Questions:
 ### DSA Related:
@@ -896,35 +903,20 @@ txn_id	user_id	txn_date	amount	amount_1	amount_7ma
 
 * What is the difference between supervised and unsupervised learning? Supervised learning uses labeled data and a known output, while unsupervised learning uses unlabeled data and discovers patterns or structures in the data.
 
-* Explain principal component analysis (PCA)?
-ANS :- PCA is a dimensionality reduction technique that
-transforms data into a new coordinate system, reducing
-the number of dimensions while retaining as much
-information as possible.
-* What is time series analysis? Time series analysis is a statistical technique for
-analyzing and forecasting data points collected over time,
-such as stock prices or weather data.
-* What is difference between a bar chart
-and a pie chart? A bar chart represents data using rectangular bars,
-showing the relationship between categories and values,
-while a pie chart represents data as slices of a circle,
-showing the relative proportion of each category.
-* What is a pivot table? A pivot table is a data summarization tool that
-allows users to reorganize, filter, and aggregate data in a
-spreadsheet or database. 
-* What is data normalization?
-ANS :- Data normalization is the process of scaling and
-transforming data to eliminate redundancy and improve
-consistency, making it easier to compare and analyze.
-* Explain the concept of data warehousing?
-ANS :- A data warehouse is a large, centralized repository
-of data used for reporting and analysis, combining data
-from different sources and organizing it for efficient
-querying and reporting.
-* What is the role of a data analyst in a
-company? A data analyst collects, processes, and analyzes
-data to help organizations make informed decisions, identify
-trends, and improve efficiency.
+* Explain principal component analysis (PCA)? PCA is a dimensionality reduction technique that transforms data into a new coordinate system, reducing the number of dimensions while retaining as much information as possible.
+
+* What is time series analysis? Time series analysis is a statistical technique for analyzing and forecasting data points collected over time, such as stock prices or weather data.
+
+* What is difference between a bar chart and a pie chart? A bar chart represents data using rectangular bars, showing the relationship between categories and values, while a pie chart represents data as slices of a circle, showing the relative proportion of each category.
+
+* What is a pivot table? A pivot table is a data summarization tool that allows users to reorganize, filter, and aggregate data in a spreadsheet or database. 
+
+* What is data normalization? Data normalization is the process of scaling and transforming data to eliminate redundancy and improve consistency, making it easier to compare and analyze.
+
+* Explain the concept of data warehousing? A data warehouse is a large, centralized repository of data used for reporting and analysis, combining data from different sources and organizing it for efficient querying and reporting.
+
+* What is the role of a data analyst in a company? A data analyst collects, processes, and analyzes data to help organizations make informed decisions, identify trends, and improve efficiency.
+
 * How do you handle missing data in a
 dataset? Missing data can be handled by imputing values
 (mean, median, mode), deleting rows with missing data, or
@@ -944,8 +936,7 @@ methods and tools.
 programming languages, such as R or Python,
 used in data analysis? Answer this based on your personal experience,
 highlighting your proficiency
-* How do you handle large datasets?
-ANS :- Handling large datasets involves using efficient
+* How do you handle large datasets? Handling large datasets involves using efficient
 data storage and processing techniques, such as SQL
 databases, para lel computing, or cloud-based solutions,
 and optimizing code and algorithms for performance.
@@ -978,6 +969,243 @@ method through experimentation and validation.
 data analysis? By using cross-validation, holdout samples,
 comparing results with known benchmarks, and checking
 for consistency and reasonableness in the findings.
+
+## Behavioral Interview Questions:
+* what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
+
+* what are your 3 biggest strengths and explain each one? 
+- `meticulousness: as I always make sure to analyze the quality of the code I write and make sure most if not every case is taken into consideration`
+- `creativity: I really like to implement designs in code that elicit beauty and inspiration`
+- `collaboration: I like to share my thoughts of approaching a problem with my teammates and asking in turn their opinion on how they would solve it, and sharing our solutions right after and come to a reasonable way how to integrate it`
+
+* what are your weakness as a person and as a worker/student and how did you confront them? `sometimes I tend to keep problems (both technical and non-technical) to myself, and while independence has its merits it means that I lead myself at times to unnecessary amounts stress, so I always make sure to understand the problem clearly by asking my colleagues and then ask without shame help if needed`
+
+* what are you trying to avoid when working (they give work life balance kaya answer you don't want to burn out well not explicitly but as much as possible you try to avoid enough work and then balance with it other endeavors)? `I know I'm a young developer I have much to learn and naturally that may come out in trying to take on as much responsibility as physically possible as a way to learn and prove myself, so I avoid biting off more than I can chew because I've learned that everything can just be taken one step at a time as opposed to all at once at the cost of being burnt out in long run`
+
+* how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given. I make sure to also do my routine like eating, sleeping, taking little breaks here and there in an orderly manner so as to keep my schedule and time on track.`
+
+* were there times that you had to choose schoolworks over personal events? ``
+
+* What were the results of your 3 strengths in thesis? 
+- `meticulousness: I made sure the signal features we had were properly extracted and through the functions we wrote, we made sure to understand the dataset fully in order to implement the features needed for our system to train on`
+- `creativity: the user interface is something I'm most proud of because of its ability to be simple but also functional and informative, the design is also something I'm most proud of as it elicits the paradigm of minimalism in something as complex a system as ours`
+- `collaboration: me and my group mates had our strengths in doing other aspects of our thesis, but one aspect was really challenging in that we had no adequate resources to train our system using our large dataset. I offered solutions to avail computing resources from providers like google to my groupmates but with mutual effort in researching other means my other groupmate offered to instead avail computing resources from DOST which was luckily completely free of charge, and luckily could be used using a Linux OS which I was already familiar with, allowing us to train our system without much hassle from cost and most especially not having a large learning curve to use the resource`
+
+* what's your salary expectation
+`I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
+
+* tell me about yourself:  
+```
+I was a data engineer intern at virtuals protocol where 
+* I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents the technologies 
+* I used here was mainly numpy, pandas, specific frameworks for extracting ifnormation from files such as word documents and pdf files
+* I also worked on developing shell scripts to automate the ingestion process of the ai agent of a client of the datasets we processed
+* I also worked on writing relevant guides for clients on how to write their own 
+```
+- `I'm a recent graduate of Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
+- `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
+- `outside of work I've really been fond of creating personal projects more geared in data analytics and engineering and using tools like selenium, beautifulsoup and other web scraping frameworks to extract data, transform them using SQL and distributed computing frameworks like Spark, load it in a cloud storage providers like MotherDuck and AWS S3 and finally use powerbi to use it for some form of analytics, visualizing it using dashboards. I also use orchestration tools like airflow to automate the whole process`
+- `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
+
+* why should we hire you (more selfish reasons)? `Apart from the technical skills`
+
+* why do you want to work here?
+`Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
+
+`I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
+
+
+* what would you do if your teammate does not agree with how you wrote your code? `In this case I think uncovering the reasons why we wrote our code how we wanted it to and justifying it is something that can always be discussed. An example of this is writing SQL code that's more readable by your peer but you wrote a more "unreadable" version that achieves the same result yet out performs the other in terms of efficiency and scalability. In this case we may not want to push code to production that's more costly but readable instead of the code that's harder to understand yes but is virtually more cost efficient and scalable. This may be used as justification in ordert to have consensus between the two parties`
+```
+SELECT emp_name, emp_id, dept_id
+FROM employee
+LEFT JOIN department
+ON employee.dept_id = department.dept_id
+WHERE department.dept_id = 1
+```
+may very well be readable but sometimes the code below is much more performant and efficient
+```
+SELECT emp_name, emp_id, dept_id
+FROM employee
+LEFT JOIN department
+ON employee.dept_id = department.dept_id
+AND department.dept_id = 1
+```
+this is much performatn than the latter because rather than joining all potential rows of the tables that have the same department id and then filtering them right after, we immediately filter the rows that have a certain department id while also joining these rows to the other tables corresponding rows with the same department id, making it scalable and efficient
+
+* what to do when having conflicting ideas with other members? 
+```
+1. know the idea I have in mind and want implemented 
+2. know the idea my team member personally wants to implement
+3. assess the strengths and weaknesses of each idea
+4. it is at times unavoidable that he/she will have the better solution and so sometimes you have to put your ego aside but sometimes I reasonable integration of both ideas strengths can be in fact better as it not only maybe a better solution but both parties can be mutually satisified. (You can both have your cake and eat it too so to speak)
+```
+
+* what kind of personality you like to work with?
+
+* what are the types of people you don't want to work with?
+
+
+* How do you make sure that you deploy quality code in production? `One dont work in silence, communicate if may mali sa data niyo to data engineers. And two have someone quality assure your code`
+
+Key Focus: Prevention, thorough testing, collaboration, and robust processes.
+
+Suggested Answer:
+
+"Ensuring quality code in production is a multi-faceted process that involves a combination of preventative measures, rigorous testing, and strong team collaboration. My approach would cover these areas:
+
+Robust Local Development & Version Control:
+
+Modular and Testable Code: Write code in a modular fashion, making individual components easily testable.
+
+Local Unit and Integration Tests: Develop comprehensive unit tests for individual functions and integration tests to ensure different components work together as expected.
+
+Git and Feature Branches: All code is developed on feature branches and managed with Git for version control.
+
+Code Review and Collaboration:
+
+Pull Requests (PRs): Changes are submitted via PRs, requiring at least one peer reviewer (or more for critical changes).
+
+Thorough Code Review: Reviewers check for logic correctness, adherence to coding standards, potential edge cases, performance implications, and security vulnerabilities. This is also where discussions about data handling and assumptions take place.
+
+Documentation: Ensure code is well-commented, and relevant documentation is updated.
+
+Automated Testing and Continuous Integration (CI):
+
+CI Pipeline Integration: Integrate automated tests (unit, integration, data quality tests) into a CI pipeline (e.g., GitHub Actions, GitLab CI, Azure DevOps Pipelines).
+
+Automated Data Quality Tests: Crucially, implement tests (e.g., using dbt test or Great Expectations) that validate assumptions about the data itself – checking for uniqueness, non-null values, expected ranges, and schema conformity before data transformations are applied or moved to production.
+
+Static Code Analysis/Linting: Use tools to automatically check for code style, potential bugs, and best practices.
+
+Automated Build & Package: Ensure the code can be built and packaged correctly without manual intervention.
+
+Staging/Pre-Production Environments:
+
+Environment Parity: Deploy changes to a staging environment that closely mirrors production (data volume, configuration, infrastructure).
+
+End-to-End Testing: Run end-to-end tests in staging to validate the entire pipeline flow, from data ingestion to final consumption (e.g., dashboard updates, downstream system feeds).
+
+Performance and Scalability Testing: Assess how the code performs under realistic loads.
+
+Clear Deployment Strategy:
+
+Controlled Deployments: Use automated deployment tools (part of CI/CD) to ensure consistent and repeatable deployments.
+
+Rollback Plan: Always have a clear and tested rollback strategy in case issues arise post-deployment.
+
+* What would you do if you deploy bad code in prod? `My first answer was to pull the code from production again, push it to a development branch and have someone quality test it before pushing to production`
+
+Key Focus: Immediate mitigation, communication, root cause analysis, and prevention of recurrence.
+
+Suggested Answer:
+
+"If I were to deploy bad code to production, my immediate actions would prioritize mitigating impact, communicating effectively, and then systematically resolving the issue to prevent recurrence.
+
+Immediate Impact Mitigation (Stop the Bleeding):
+
+Rollback: The absolute first step is to rollback to the last known good version of the code. Most CI/CD pipelines support fast, automated rollbacks. This stops further data corruption or service disruption.
+
+Disable/Quarantine: If a rollback isn't immediately feasible, I'd disable or quarantine the affected pipeline or service to prevent it from processing any more data or serving incorrect information.
+
+Notify Key Stakeholders: Immediately communicate the issue to relevant teams (e.g., data consumers, business users, engineering leadership) with a brief summary of the problem and the ongoing mitigation efforts. Transparency is crucial.
+
+Isolate & Diagnose:
+
+Gather Information: Collect logs, metrics, and any error messages from the production environment to pinpoint the exact nature and scope of the problem.
+
+Reproduce in Non-Prod: Attempt to reproduce the bug in a development or staging environment to allow for debugging without impacting production.
+
+Root Cause Analysis (RCA - Initial): Begin to identify why the bad code got through. Was it a missed edge case in testing? An environment configuration difference? A flaw in the testing strategy?
+
+Fix, Test, and Re-deploy:
+
+Develop the Fix: Create a dedicated fix branch, apply the necessary code changes.
+
+Rigorous Testing: This fix would undergo more rigorous testing than usual, including unit tests, integration tests, and specific regression tests designed to prevent this exact bug from recurring. It would be tested in a staging environment with production-like data.
+
+Thorough Code Review: The fix would go through an expedited but thorough code review.
+
+Controlled Redeployment: Deploy the validated fix using the standard deployment process.
+
+Monitor and Verify:
+
+Post-Deployment Monitoring: Closely monitor logs, metrics, and data quality checks in production to ensure the fix is effective and no new issues have been introduced.
+
+Data Backfill/Correction: If data was corrupted, develop a plan for data correction or backfill to restore data integrity.
+
+Post-Mortem & Prevention:
+
+Document: Conduct a blameless post-mortem analysis to fully understand the root cause.
+
+Implement Preventative Measures: Update automated tests, improve monitoring alerts, refine code review checklists, or adjust deployment processes to ensure this type of issue cannot happen again in the future."
+
+* What would you do if you have duplicates in your data in prod? `pull data from production like the previous question, push it to a development branch, and have someone quality test it before pushing to production again`
+
+Key Focus: Assessment, root cause analysis of data issue, data correction, and pipeline fixes for prevention.
+
+Suggested Answer:
+
+"Discovering duplicates in production data requires a methodical approach, distinguishing it slightly from a pure code bug. The focus shifts to understanding the data integrity issue and rectifying both the data and the pipeline that produced it.
+
+Immediate Assessment & Containment:
+
+Assess Scope and Impact: First, I'd determine the extent of the duplication: which tables are affected, how many records, what's the time frame of the issue, and what's the downstream impact on reports, dashboards, or other systems? This helps prioritize the fix.
+
+Stop/Pause Ingestion (if ongoing): If the duplicates are actively being generated by a running pipeline, the first priority is to pause or stop that specific ingestion/transformation process to prevent further data corruption.
+
+Notify Stakeholders: Communicate the issue and the estimated impact to data consumers and business teams.
+
+Diagnosis and Root Cause Analysis:
+
+Identify the Source: The critical step is to pinpoint where the duplicates originated. Common culprits include:
+
+Source System Issues: The upstream source providing duplicate records.
+
+Ingestion Process Failure: Retries without idempotency, misconfigured connectors.
+
+Transformation Logic Errors: Missing DISTINCT clauses, incorrect JOIN conditions, improper handling of incremental loads.
+
+Missing Unique Constraints: Lack of primary key or unique constraints in the destination database.
+
+Reproduce in Non-Prod: Attempt to recreate the duplicate generation in a controlled development or staging environment using a subset of the problematic data.
+
+Data Remediation & Pipeline Fix:
+
+Data Cleanup Strategy:
+
+Hard Delete/Deduplicate: For simpler cases, a one-off SQL script might be run to delete duplicate records based on a defined key, keeping only the 'first' or 'last' occurrence. This requires extreme caution and database backups.
+
+Soft Delete/Flag: For more sensitive data, duplicates might be flagged with a status column rather than physically deleted, to allow for auditing.
+
+Backfill/Re-processing: If the root cause is in a transformation, it might be necessary to re-process the affected historical data from a trusted source (e.g., raw layer) once the pipeline fix is deployed.
+
+Pipeline Code Fix: Modify the ETL/ELT pipeline code to prevent future duplicates. This might involve:
+
+Adding DISTINCT clauses where appropriate.
+
+Implementing robust upsert logic (e.g., MERGE statements) if records are updated.
+
+Enforcing unique constraints at the database level.
+
+Ensuring ingestion processes are idempotent (running them multiple times doesn't create new records).
+
+Testing and Redeploy:
+
+Rigorous Testing: Test the fixed pipeline logic thoroughly in staging, specifically using data patterns known to cause duplicates.
+
+Code Review: Get the fix reviewed by a peer.
+
+Controlled Redeployment: Deploy the corrected pipeline code to production.
+
+Monitor and Prevent Recurrence:
+
+Automated Data Quality Tests: Implement recurring automated tests specifically designed to detect duplicates (e.g., using dbt test unique_key or Great Expectations data assertions) as part of your regular pipeline runs.
+
+Alerting: Set up monitoring and alerts for when duplicate counts exceed a threshold.
+
+Post-Mortem: Document the incident, its root cause, and the preventative measures implemented to ensure continuous improvement in data quality."
+
 
 
 # MSCI
