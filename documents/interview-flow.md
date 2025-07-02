@@ -443,13 +443,151 @@ group by emp_id, emp_name, emp_salary
 
 3. check if all values in a table have the same values in another table
 ```
-select id from table_a
-minus
-select id from table_b
-union all
-select id from table_b
-minus
-select id from table_a
+-- Create EmployeeA
+CREATE OR REPLACE TEMPORARY TABLE EmployeeA (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+-- Insert data into EmployeeA
+INSERT INTO EmployeeA (employee_id, first_name, last_name, department, salary) VALUES
+(1, 'Alice', 'Smith', 'HR', 60000.00),
+(2, 'Bob', 'Johnson', 'IT', 75000.00),
+(3, 'Charlie', 'Brown', 'Finance', 80000.00),
+(4, 'Diana', 'Miller', 'Marketing', 65000.00),
+(5, 'Eve', 'Davis', 'IT', 90000.00);
+
+
+-- Create EmployeeB
+CREATE OR REPLACE TEMPORARY TABLE EmployeeB (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+-- Insert data into EmployeeB
+-- Note: Employee 4 (Diana) has a different department in B
+-- Note: Employee 6 (Frank) exists in B but not in A
+-- Note: Employee 5 (Eve) has a different salary in B
+INSERT INTO EmployeeB (employee_id, first_name, last_name, department, salary) VALUES
+(1, 'Alice', 'Smith', 'HR', 60000.00),    -- Same as A
+(2, 'Bob', 'Johnson', 'IT', 75000.00),    -- Same as A
+(3, 'Charlie', 'Brown', 'Finance', 80000.00),-- Same as A
+(4, 'Diana', 'Miller', 'Sales', 65000.00),   -- Different department from A
+(5, 'Eve', 'Davis', 'IT', 92000.00),       -- Different salary from A
+(6, 'Frank', 'White', 'HR', 70000.00);   -- Exists only in B
+
+
+-- Create EmployeeC to simulate that there is a table 
+-- with same values and count of rows as A ordered or not
+CREATE OR REPLACE TEMPORARY TABLE EmployeeC (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+-- Insert data into EmployeeC
+INSERT INTO EmployeeC (employee_id, first_name, last_name, department, salary) VALUES
+(1, 'Alice', 'Smith', 'HR', 60000.00),
+(2, 'Bob', 'Johnson', 'IT', 75000.00),
+(3, 'Charlie', 'Brown', 'Finance', 80000.00),
+(4, 'Diana', 'Miller', 'Marketing', 65000.00),
+(5, 'Eve', 'Davis', 'IT', 90000.00);
+```
+
+This is table A
+```
+employee_id	first_name	last_name	department	salary
+1	Alice	Smith	HR	60000.00
+2	Bob	Johnson	IT	75000.00
+3	Charlie	Brown	Finance	80000.00
+4	Diana	Miller	Marketing	65000.00
+5	Eve	Davis	IT	90000.00
+```
+
+this is table B
+```
+employee_id	first_name	last_name	department	salary
+1	Alice	Smith	HR	60000.00
+2	Bob	Johnson	IT	75000.00
+3	Charlie	Brown	Finance	80000.00
+4	Diana	Miller	Marketing	65000.00
+5	Eve	Davis	IT	90000.00
+```
+
+And this is table C
+```
+employee_id	first_name	last_name	department	salary
+1	Alice	Smith	HR	60000.00
+2	Bob	Johnson	IT	75000.00
+3	Charlie	Brown	Finance	80000.00
+4	Diana	Miller	Marketing	65000.00
+5	Eve	Davis	IT	90000.00
+```
+
+This is what this query `SELECT * FROM EmployeeA EXCEPT SELECT * FROM EmployeeB` returns
+```
+employee_id	first_name	last_name	department	salary
+4	Diana	Miller	Marketing	65000.00
+5	Eve	Davis	IT	90000.00
+```
+
+and this query `SELECT * FROM EmployeeB EXCEPT SELECT * FROM EmployeeA` returns
+```
+employee_id	first_name	last_name	department	salary
+4	Diana	Miller	Sales	65000.00
+5	Eve	Davis	IT	92000.00
+6	Frank	White	HR	70000.00
+```
+
+As you can see it takes all elements in A not occuring in B strictly it doesn't get the difference of the subtrahend which wouldbe table B, because taking the full difference would mean for instance having {1, 2, 3} - {3, 4, 5} = {1, 2, 4, 5}. But now I understand that since we cannot achieve thisdirectly in SQL we'd have to use both the table B as subtrahend and table A as subtrahend also.
+
+to explain further a complement is the following
+```
+>>> {1, 2, 3, 4, 5} - {1, 2}
+{3, 4, 5}
+```
+where B's elements are part of a more universal set it calculates all the elements in A that are not in B
+
+difference is the following
+```
+>>> {1, 2, 3} - { 3, 4, 5}
+{1, 2}
+>>> {3, 4, 5} - {1, 2, 3}
+{4, 5}
+```
+where there are no universal sets but it still calculates all the elements in A that are not in B
+
+but since we'd like to take the full difference also we'd have to also make table A as now the subtrahend and not only table B so it calculates the elements of B strictly not occuring in A, and then subsequently combine these two differences using UNION ALL
+
+
+```
+SELECT * FROM EmployeeA
+MINUS
+SELECT * FROM EmployeeB
+UNION ALL
+SELECT * FROM EmployeeB
+MINUS
+SELECT * FROM EmployeeA
+```
+
+this is dialect is in PostgreSQL and in SQL Transact in more broad dialects like ANSI SQL the code would use `EXCEPT` as keyword instead of `MINUS` 
+
+```
+SELECT * FROM EmployeeA
+EXCEPT
+SELECT * FROM EmployeeB
+UNION ALL
+SELECT * FROM EmployeeB
+EXCEPT
+SELECT * FROM EmployeeA
 ```
 
 4. find the second-highest salary per department, but exclude departments where fewer than 3 employees exist.
@@ -959,47 +1097,83 @@ cross-validating results with other sources or techniques.
 sucess of a data analysis project? Metrics may include accuracy, precision, reca I, F1
 score, R-squared, or other relevant performance measures,
 depending on the project's goals and objectives
-* How do you determine the most
-appropriate data analysis technique for a given
-problem? By understanding the problem's context, the nature
-of the data, the desired outcome, and the assumptions and
-limitations of various techniques, selecting the most suitable
-method through experimentation and validation.
-* How do you validate the results of your
-data analysis? By using cross-validation, holdout samples,
-comparing results with known benchmarks, and checking
-for consistency and reasonableness in the findings.
+* How do you determine the most appropriate data analysis technique for a given problem? By understanding the problem's context, the nature of the data, the desired outcome, and the assumptions and limitations of various techniques, selecting the most suitable method through experimentation and validation.
+* How do you validate the results of your data analysis? By using cross-validation, holdout samples, comparing results with known benchmarks, and checking for consistency and reasonableness in the findings.
+* What are AI agents and RAG AI agents?
+
+AI agents takes in information from its environment (like reading Twitter posts, stock data, or even a user's question).
+
+Reason/Decide: It processes that information and decides what action to take or what output to generate based on its goals and programming. This often involves using a Large Language Model (LLM) as its "brain."
+
+Act: It performs an action or generates a response (like drafting a summary, answering a question, or giving feedback).
+
+The key idea is that an AI agent has some level of autonomy and can perform tasks to achieve a goal, often by interacting with external tools or information sources.
+
+RAG AI agents specific AI agents which receives a Query/Request: A user asks the RAG agent a question or gives it a task (e.g., "What's the sentiment on Apple stock among users?", or "Summarize recent user feedback on market trends").
+
+Retrieval (Your Data Comes In Here!): Instead of just relying on its internal, pre-trained knowledge (which might be outdated or not specific enough), the RAG agent first performs a retrieval step.
+
+It looks up relevant information from an external, curated knowledge base. This is the vector database or search index that contains the data you transformed.
+
+Your Data Engineering Role: You transformed raw, tabular stock data (and other types) into a text format (e.g., descriptions, news articles, reports) suitable for this knowledge base. You then fed it into the "ingestion layer," which likely involved preparing it for vectorization (converting text into numerical representations that capture meaning) and indexing in a search-optimized database. This ensures the RAG agent has access to specific, up-to-date, and relevant context.
+
+Augmentation: The relevant pieces of information retrieved from your knowledge base are then "augmented" or added to the user's original query. This provides the LLM with context.
+
+Generation: The augmented query (original query + retrieved context) is then fed into the core LLM. The LLM uses this specific context to generate a much more informed, accurate, and relevant response.
+
+Analogy: Imagine asking a very smart person a question.
+
+Without RAG: They just answer based on what they already know.
+
+With RAG: They first quickly look up relevant facts in a well-organized library (your transformed data!), then use those facts to formulate a precise answer.
+
+How Your RAG AI Agents Operated (on Twitter data):
+Based on your description, the flow for an agent focused on "giving feedback on the stock market" might have looked like this:
+
+User Creates Agent: A user configures an AI agent to monitor Twitter for stock market discussions.
+
+Twitter Data Ingestion: The company's system continuously collects tweets from users related to specific stocks or market trends.
+
+Your Data Transformation & Ingestion:
+
+You receive raw stock data (prices, company news, financial reports – likely tabular).
+
+You transform this tabular data into meaningful textual formats (e.g., converting price movements into descriptive sentences, summarizing key financial metrics, turning news articles into searchable chunks).
+
+This transformed text is then fed into an "ingestion layer" which processes it (e.g., chunks it, vectorizes it) and adds it to the knowledge base/vector database that the RAG agents query.
+
+Agent Activation/Querying: When a user asks the stock market feedback agent a question (or the agent needs to generate a summary/feedback):
+
+It queries the knowledge base (which contains your transformed stock data and potentially other relevant information).
+
+It retrieves the most relevant textual pieces of stock market context.
+
+Feedback Generation: The agent (using its LLM) then uses this retrieved context, combined with the real-time Twitter data it's monitoring, to generate informed feedback or analysis on the stock market.
+
+Describing Your Work in Interviews:
+When describing your work, emphasize these points:
+
+"As a Data Engineer Intern, I specialized in building data pipelines to support Retrieval Augmented Generation (RAG) AI agents."
+
+"My core responsibility involved transforming diverse data sources, particularly tabular financial/stock market data, into a structured textual format. This preparation was crucial for optimizing its use by Large Language Models (LLMs)."
+
+"I ensured this prepared data was accurately fed into an ingestion layer, which facilitated its vectorization and indexing in a knowledge base (or vector database). This knowledge base served as the external memory for RAG agents."
+
+"This enabled the AI agents, which primarily analyzed real-time user-generated content from platforms like Twitter, to provide highly accurate, contextually relevant, and up-to-date insights – for example, generating detailed feedback on stock market trends, augmented by the specific financial data I prepared."
+
+"Essentially, I was the bridge ensuring the AI agents had access to precise, external, and up-to-the-minute information, allowing them to go beyond their pre-trained knowledge and provide more factual and valuable responses to users."
+
+This highlights your understanding of AI, your specific technical contributions, and the direct business impact of your data engineering work. You weren't just moving data; you were making AI smarter and more reliable.
 
 ## Behavioral Interview Questions:
-* what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
 
-* what are your 3 biggest strengths and explain each one? 
-- `meticulousness: as I always make sure to analyze the quality of the code I write and make sure most if not every case is taken into consideration`
-- `creativity: I really like to implement designs in code that elicit beauty and inspiration`
-- `collaboration: I like to share my thoughts of approaching a problem with my teammates and asking in turn their opinion on how they would solve it, and sharing our solutions right after and come to a reasonable way how to integrate it`
-
-* what are your weakness as a person and as a worker/student and how did you confront them? `sometimes I tend to keep problems (both technical and non-technical) to myself, and while independence has its merits it means that I lead myself at times to unnecessary amounts stress, so I always make sure to understand the problem clearly by asking my colleagues and then ask without shame help if needed`
-
-* what are you trying to avoid when working (they give work life balance kaya answer you don't want to burn out well not explicitly but as much as possible you try to avoid enough work and then balance with it other endeavors)? `I know I'm a young developer I have much to learn and naturally that may come out in trying to take on as much responsibility as physically possible as a way to learn and prove myself, so I avoid biting off more than I can chew because I've learned that everything can just be taken one step at a time as opposed to all at once at the cost of being burnt out in long run`
-
-* how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given. I make sure to also do my routine like eating, sleeping, taking little breaks here and there in an orderly manner so as to keep my schedule and time on track.`
-
-* were there times that you had to choose schoolworks over personal events? ``
-
-* What were the results of your 3 strengths in thesis? 
-- `meticulousness: I made sure the signal features we had were properly extracted and through the functions we wrote, we made sure to understand the dataset fully in order to implement the features needed for our system to train on`
-- `creativity: the user interface is something I'm most proud of because of its ability to be simple but also functional and informative, the design is also something I'm most proud of as it elicits the paradigm of minimalism in something as complex a system as ours`
-- `collaboration: me and my group mates had our strengths in doing other aspects of our thesis, but one aspect was really challenging in that we had no adequate resources to train our system using our large dataset. I offered solutions to avail computing resources from providers like google to my groupmates but with mutual effort in researching other means my other groupmate offered to instead avail computing resources from DOST which was luckily completely free of charge, and luckily could be used using a Linux OS which I was already familiar with, allowing us to train our system without much hassle from cost and most especially not having a large learning curve to use the resource`
-
-* what's your salary expectation
-`I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
-
-* tell me about yourself:  
+### Background
+* tell me about yourself:
 ```
 I was a data engineer intern at virtuals protocol where 
-* I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents the technologies 
-* I used here was mainly numpy, pandas, specific frameworks for extracting ifnormation from files such as word documents and pdf files
-* I also worked on developing shell scripts to automate the ingestion process of the ai agent of a client of the datasets we processed
+* I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents
+* the technologies I used here was mainly numpy, pandas, specific frameworks for extracting information from various file types such as word documents, pdf files, and even images
+* I also worked on developing shell scripts to automate the ingestion process of the datasets we transformed in the companys data pipeline where RAG AI agents eventually consume data from
 * I also worked on writing relevant guides for clients on how to write their own 
 ```
 - `I'm a recent graduate of Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
@@ -1007,15 +1181,59 @@ I was a data engineer intern at virtuals protocol where
 - `outside of work I've really been fond of creating personal projects more geared in data analytics and engineering and using tools like selenium, beautifulsoup and other web scraping frameworks to extract data, transform them using SQL and distributed computing frameworks like Spark, load it in a cloud storage providers like MotherDuck and AWS S3 and finally use powerbi to use it for some form of analytics, visualizing it using dashboards. I also use orchestration tools like airflow to automate the whole process`
 - `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
 
-* why should we hire you (more selfish reasons)? `Apart from the technical skills`
+### Company Related
+* what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
+
+* what do you know about this organization?
+|- 3 values
+|- dedicate
+|- business
+
+* what's your salary expectation
+`I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
+
+* Do you have experience in data analysis? `Yes, my recent project involved me analyzing healthcare data specifically geared towards chronic disease indicators in the US.` Refer more to the business use case in `readme.md` of `chronic-disease-analyses`
+
+* why should we hire you (more selfish reasons)? `My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL. It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
 * why do you want to work here?
 `Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
 
 `I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
 
+### Personality
+* what are your 3 biggest strengths and explain each one?
+|- meticulousness
+|- creativity
+|- collaboration
+    |- sharing
+    |- ideas
+    |- improvement
+    |- consensus
+- `meticulousness: as I always make sure to analyze the quality of the code I write and make sure most if not every case is taken into consideration`
+- `creativity: I really like to implement designs in code that elicit beauty and inspiration`
+- `collaboration: I like to share my thoughts of approaching a problem with my teammates and asking in turn their opinion on how they would solve it, and sharing our solutions right after and come to a reasonable way how to integrate it`
 
-* what would you do if your teammate does not agree with how you wrote your code? `In this case I think uncovering the reasons why we wrote our code how we wanted it to and justifying it is something that can always be discussed. An example of this is writing SQL code that's more readable by your peer but you wrote a more "unreadable" version that achieves the same result yet out performs the other in terms of efficiency and scalability. In this case we may not want to push code to production that's more costly but readable instead of the code that's harder to understand yes but is virtually more cost efficient and scalable. This may be used as justification in ordert to have consensus between the two parties`
+* What were the results of your 3 strengths in thesis? 
+- `meticulousness: I made sure the signal features we had were properly extracted and through the functions we wrote, we made sure to understand the dataset fully in order to implement the features needed for our system to train on`
+- `creativity: the user interface is something I'm most proud of because of its ability to be simple but also functional and informative, the design is also something I'm most proud of as it elicits the paradigm of minimalism in something as complex a system as ours`
+- `collaboration: me and my group mates had our strengths in doing other aspects of our thesis, but one aspect was really challenging in that we had no adequate resources to train our system using our large dataset. I offered solutions to avail computing resources from providers like google to my groupmates but with mutual effort in researching other means my other groupmate offered to instead avail computing resources from DOST which was luckily completely free of charge, and luckily could be used using a Linux OS which I was already familiar with, allowing us to train our system without much hassle from cost and most especially not having a large learning curve to use the resource`
+
+* what are your weakness as a person and as a worker/student and how did you confront them? 
+- `sometimes *I tend to keep problems (both technical and non-technical) to myself*, and while independence has its merits it means that I lead myself at times to unnecessary amounts stress, so I always make sure to understand the problem clearly by asking my colleagues and then ask without shame help if needed`
+- `due to me being *overly independent sometimes* I fail to have my team check on what I've done and whether it measures up to their approval, so what I do to confront this is to make sure that in times where I catch myself working on something and having thoughts of perhaps submitting it before approval of others, I have my team members assess the thing I've worked on and come to a reasonable agreement on what else could be improved before submitting it as a final product`
+
+* describe a time where you failed at work or in a project.
+- `I think it was the time when I was making my personal projects because when I was running into error after error I sometimes like any other human felt the frustration of being unable to sovle it however I noticed that whenever I gave myself some time or perhaps a break that the will so to speak or the idea of potentially solving the problem at hand would come to me, and I'd use it to solve the problem at hand. I did have times where I really could not sovle the problem I was facing case on point the 1st attempt of my undergrad thesis because we did not seemingly come to identify what part our algorithm was going wrong, we could not figure out why our results were the way they were, even when we tried every other means of solving it or trying to make it better. In the end however we learned a ton from it and made us more resilient in tackling errors in the future which would come to also manifest in our 2nd attempt at our thesis`
+
+* what are you trying to avoid when working (they give work life balance kaya answer you don't want to burn out well not explicitly but as much as possible you try to avoid enough work and then balance with it other endeavors)? `I know I'm a young developer I have much to learn and naturally that may come out in trying to take on as much responsibility as physically possible as a way to learn and prove myself, so I avoid biting off more than I can chew because I've learned that everything can just be taken one step at a time as opposed to all at once at the cost of being burnt out in long run`
+
+* how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given. I make sure to also do my routine like eating, sleeping, taking little breaks here and there in an orderly manner so as to keep my schedule and time on track.`
+
+### Team Playing Related
+* what would you do if your teammate does not agree with how you wrote your code? 
+- `In this case I think uncovering the reasons why we wrote our code how we wanted it to and justifying it is something that can always be discussed. An example of this is writing SQL code that's more readable by your peer but you wrote a more "unreadable" version that achieves the same result yet out performs the other in terms of efficiency and scalability. In this case we may not want to push code to production that's more costly but readable instead of the code that's harder to understand yes but is virtually more cost efficient and scalable. This may be used as justification in ordert to have consensus between the two parties`
+
 ```
 SELECT emp_name, emp_id, dept_id
 FROM employee
@@ -1023,28 +1241,31 @@ LEFT JOIN department
 ON employee.dept_id = department.dept_id
 WHERE department.dept_id = 1
 ```
+
 may very well be readable but sometimes the code below is much more performant and efficient
+
 ```
 SELECT emp_name, emp_id, dept_id
 FROM employee
 LEFT JOIN department
 ON employee.dept_id = department.dept_id
 AND department.dept_id = 1
+
 ```
-this is much performatn than the latter because rather than joining all potential rows of the tables that have the same department id and then filtering them right after, we immediately filter the rows that have a certain department id while also joining these rows to the other tables corresponding rows with the same department id, making it scalable and efficient
+- `this is much performatn than the latter because rather than joining all potential rows of the tables that have the same department id and then filtering them right after, we immediately filter the rows that have a certain department id while also joining these rows to the other tables corresponding rows with the same department id, making it scalable and efficient`
 
 * what to do when having conflicting ideas with other members? 
 ```
+similar to the previous answer of having certain justifications for the code I write I would do the ff:
 1. know the idea I have in mind and want implemented 
 2. know the idea my team member personally wants to implement
 3. assess the strengths and weaknesses of each idea
 4. it is at times unavoidable that he/she will have the better solution and so sometimes you have to put your ego aside but sometimes I reasonable integration of both ideas strengths can be in fact better as it not only maybe a better solution but both parties can be mutually satisified. (You can both have your cake and eat it too so to speak)
 ```
 
-* what kind of personality you like to work with?
+* what kind of personality you like to work with? `A kind that fosters a collaborative, supportive, and teamwork oriented environment, one that works with fellow team member through the problem when needed while allowing the growth of his fellow team members, and one that is capable of providing the team with an encouraging voice towards success which may mean finishing even the smallest of tasks for the day`
 
-* what are the types of people you don't want to work with?
-
+* what are the types of people you don't want to work with? `I honestly think that I can get along with anyone so long as there is mutual respect, but one thing I cannot tolerate in a person is dishonesty by taking credit for other peoples work that is the only exception i would say to the person I would not want to work with`
 
 * How do you make sure that you deploy quality code in production? `One dont work in silence, communicate if may mali sa data niyo to data engineers. And two have someone quality assure your code`
 
@@ -1206,7 +1427,24 @@ Alerting: Set up monitoring and alerts for when duplicate counts exceed a thresh
 
 Post-Mortem: Document the incident, its root cause, and the preventative measures implemented to ensure continuous improvement in data quality."
 
+* were there times that you had to choose schoolworks over personal events?
 
+
+## Behavioral Interview Feedback:
+Strengths:
+Strong technical background in data engineering and analytics
+Demonstrated experience with various technologies and tools in data analysis
+Shows willingness to learn and grow professionally
+
+Weaknesses:
+Tends to provide overly detailed and repetitive responses
+May benefit from refining communication skills to be more concise and focused
+Did not address the final question about staff turnover rate and competing companies
+
+Improvement suggestions:
+Practice summarizing responses to be more succinct and to the point
+Research the specific company's technologies and tailor responses accordingly
+Remember to address all questions asked during the interview to demonstrate thoroughness and attention to detail
 
 # MSCI
 ## Values:
