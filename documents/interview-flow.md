@@ -1165,9 +1165,9 @@ When describing your work, emphasize these points:
 
 This highlights your understanding of AI, your specific technical contributions, and the direct business impact of your data engineering work. You weren't just moving data; you were making AI smarter and more reliable.
 
-## Behavioral Interview Questions:
+## Behavioral Interview Questions (21):
 
-### Background
+### Background (1):
 * tell me about yourself:
 ```
 I was a data engineer intern at virtuals protocol where 
@@ -1181,27 +1181,38 @@ I was a data engineer intern at virtuals protocol where
 - `outside of work I've really been fond of creating personal projects more geared in data analytics and engineering and using tools like selenium, beautifulsoup and other web scraping frameworks to extract data, transform them using SQL and distributed computing frameworks like Spark, load it in a cloud storage providers like MotherDuck and AWS S3 and finally use powerbi to use it for some form of analytics, visualizing it using dashboards. I also use orchestration tools like airflow to automate the whole process`
 - `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
 
-### Company Related
-* what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
-
-* what do you know about this organization?
-|- 3 values
-|- dedicate
-|- business
-
+### Company Related (6):
 * what's your salary expectation
+|- seen
+|- typical
+|- range
+|- application
+|- comfortable
+|- based
+|- ask
+|- know more
+|- align
+|- technology
+
 `I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
 
 * Do you have experience in data analysis? `Yes, my recent project involved me analyzing healthcare data specifically geared towards chronic disease indicators in the US.` Refer more to the business use case in `readme.md` of `chronic-disease-analyses`
 
 * why should we hire you (more selfish reasons)? `My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL. It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
-* why do you want to work here?
+* why do you want to work here (more selfless reasons)?
 `Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
 
 `I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
 
-### Personality
+* what do you know about this organization?
+|- 3 values
+|- dedicate
+|- business
+
+* what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
+
+### Personality (6):
 * what are your 3 biggest strengths and explain each one?
 |- meticulousness
 |- creativity
@@ -1230,7 +1241,7 @@ I was a data engineer intern at virtuals protocol where
 
 * how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given. I make sure to also do my routine like eating, sleeping, taking little breaks here and there in an orderly manner so as to keep my schedule and time on track.`
 
-### Team Playing Related
+### Team Playing Related (8):
 * what would you do if your teammate does not agree with how you wrote your code? 
 - `In this case I think uncovering the reasons why we wrote our code how we wanted it to and justifying it is something that can always be discussed. An example of this is writing SQL code that's more readable by your peer but you wrote a more "unreadable" version that achieves the same result yet out performs the other in terms of efficiency and scalability. In this case we may not want to push code to production that's more costly but readable instead of the code that's harder to understand yes but is virtually more cost efficient and scalable. This may be used as justification in ordert to have consensus between the two parties`
 
@@ -1254,7 +1265,7 @@ AND department.dept_id = 1
 ```
 - `this is much performatn than the latter because rather than joining all potential rows of the tables that have the same department id and then filtering them right after, we immediately filter the rows that have a certain department id while also joining these rows to the other tables corresponding rows with the same department id, making it scalable and efficient`
 
-* what to do when having conflicting ideas with other members? 
+* what do you do when having conflicting ideas with other members? 
 ```
 similar to the previous answer of having certain justifications for the code I write I would do the ff:
 1. know the idea I have in mind and want implemented 
@@ -1277,19 +1288,19 @@ Suggested Answer:
 
 Robust Local Development & Version Control:
 
-Modular and Testable Code: Write code in a modular fashion, making individual components easily testable.
+Modular and Testable Code: **Write code in a modular fashion, making individual components easily testable**.
 
-Local Unit and Integration Tests: Develop comprehensive unit tests for individual functions and integration tests to ensure different components work together as expected.
+Local Unit and Integration Tests: **Develop comprehensive unit tests for individual functions and integration tests to ensure different components work together as expected**.
 
-Git and Feature Branches: All code is developed on feature branches and managed with Git for version control.
+Git and Feature Branches: **All code is developed on feature branches** and managed with Git for version control.
 
 Code Review and Collaboration:
 
-Pull Requests (PRs): Changes are submitted via PRs, requiring at least one peer reviewer (or more for critical changes).
+Pull Requests (PRs): Changes are submitted via PRs, requiring **at least one peer reviewer (or more for critical changes)**.
 
-Thorough Code Review: Reviewers check for logic correctness, adherence to coding standards, potential edge cases, performance implications, and security vulnerabilities. This is also where discussions about data handling and assumptions take place.
+Thorough Code Review: Reviewers **check for logic correctness, adherence to coding standards, potential edge cases, performance implications, and security vulnerabilities**. This is also where discussions about data handling and assumptions take place.
 
-Documentation: Ensure code is well-commented, and relevant documentation is updated.
+Documentation: **Ensure code is well-commented and documented**
 
 Automated Testing and Continuous Integration (CI):
 
@@ -1325,33 +1336,33 @@ Suggested Answer:
 
 Immediate Impact Mitigation (Stop the Bleeding):
 
-Rollback: The absolute first step is to rollback to the last known good version of the code. Most CI/CD pipelines support fast, automated rollbacks. This stops further data corruption or service disruption.
+Rollback: The absolute first step is to **rollback to the last known good version of the code**. Most CI/CD pipelines support fast, automated rollbacks. This stops further data corruption or service disruption.
 
-Disable/Quarantine: If a rollback isn't immediately feasible, I'd disable or quarantine the affected pipeline or service to prevent it from processing any more data or serving incorrect information.
+Disable/Quarantine: If a rollback isn't immediately feasible, **I'd disable or quarantine the affected pipeline or service to prevent it from processing any more data** or serving incorrect information.
 
-Notify Key Stakeholders: Immediately communicate the issue to relevant teams (e.g., data consumers, business users, engineering leadership) with a brief summary of the problem and the ongoing mitigation efforts. Transparency is crucial.
+Notify Key Stakeholders/direct consumers of your product in your team: **Immediately communicate the issue to relevant teams (e.g., data consumers, business users, engineering leadership)** with a brief summary of the problem and the ongoing mitigation efforts. Transparency is crucial.
 
 Isolate & Diagnose:
 
-Gather Information: Collect logs, metrics, and any error messages from the production environment to pinpoint the exact nature and scope of the problem.
+Gather Information: **Collect logs, metrics, and any error messages** from the production environment to **pinpoint the exact nature and scope of the problem**.
 
-Reproduce in Non-Prod: Attempt to reproduce the bug in a development or staging environment to allow for debugging without impacting production.
+Reproduce in Non-Prod: **Attempt to reproduce the bug in a development or staging environment** to allow **for debugging** without impacting production.
 
 Root Cause Analysis (RCA - Initial): Begin to identify why the bad code got through. Was it a missed edge case in testing? An environment configuration difference? A flaw in the testing strategy?
 
 Fix, Test, and Re-deploy:
 
-Develop the Fix: Create a dedicated fix branch, apply the necessary code changes.
+**Develop the Fix**: Create a dedicated fix branch, **apply the necessary code changes**.
 
-Rigorous Testing: This fix would undergo more rigorous testing than usual, including unit tests, integration tests, and specific regression tests designed to prevent this exact bug from recurring. It would be tested in a staging environment with production-like data.
+Rigorous Testing: This fix would **undergo more rigorous testing than usual**, including unit tests, integration tests, and specific regression tests designed **to prevent this exact bug from recurring**. It would be tested in a staging environment with production-like data.
 
-Thorough Code Review: The fix would go through an expedited but thorough code review.
+Thorough Code Review: The fix would **go through an expedited but thorough code review**.
 
-Controlled Redeployment: Deploy the validated fix using the standard deployment process.
+Controlled Redeployment: **Deploy the validated fix** using the standard deployment process.
 
 Monitor and Verify:
 
-Post-Deployment Monitoring: Closely monitor logs, metrics, and data quality checks in production to ensure the fix is effective and no new issues have been introduced.
+Post-Deployment Monitoring: Closely monitor logs, metrics, and data quality checks in production to **ensure the fix is effective and no new issues have been introduced**.
 
 Data Backfill/Correction: If data was corrupted, develop a plan for data correction or backfill to restore data integrity.
 
@@ -1369,13 +1380,13 @@ Suggested Answer:
 
 "Discovering duplicates in production data requires a methodical approach, distinguishing it slightly from a pure code bug. The focus shifts to understanding the data integrity issue and rectifying both the data and the pipeline that produced it.
 
-Immediate Assessment & Containment:
+Immediate Assessment & **Containment**:
 
-Assess Scope and Impact: First, I'd determine the extent of the duplication: which tables are affected, how many records, what's the time frame of the issue, and what's the downstream impact on reports, dashboards, or other systems? This helps prioritize the fix.
+Assess Scope and Impact: First, I'd determine the extent of the duplication: **which tables are affected, how many records**, what's the time frame of the issue, and what's the downstream impact on reports, dashboards, or other systems? This helps prioritize the fix.
 
-Stop/Pause Ingestion (if ongoing): If the duplicates are actively being generated by a running pipeline, the first priority is to pause or stop that specific ingestion/transformation process to prevent further data corruption.
+Stop/Pause Ingestion (if ongoing): If the duplicates are actively being generated by a running pipeline, the **first priority is to pause or stop that specific ingestion/transformation process to prevent further data corruption**.
 
-Notify Stakeholders: Communicate the issue and the estimated impact to data consumers and business teams.
+**Notify Stakeholders: Communicate the issue** and the **estimated impact to data consumers** and business teams.
 
 Diagnosis and Root Cause Analysis:
 
@@ -1700,3 +1711,110 @@ Currently because I'm am trying my absolute best and doing what I can to land at
 - 
 * pasig to quezon (near GMA kamuning station)
 - you could take an MRT going here and walk to the office if within thhe vicinity of GMA kamuning station lang naman
+
+# Insights:
+* Your anxiety about notifying high-level individuals like Directors, CEOs, or shareholders is completely understandable, and it's a common concern, especially early in your career!
+
+Let me clarify what "stakeholders" generally means in this context and who you would typically inform:
+
+What "Stakeholders" Means:
+
+In a business context, a "stakeholder" is anyone who has an interest in or is affected by a project, decision, or, in this case, an incident. This is a very broad term and includes people both inside and outside your immediate team.
+
+Who You'd Typically Notify (and the Hierarchy of Communication):
+
+When you deploy bad code to production, the communication usually follows a structured path, not a direct jump to the CEO:
+
+Your Immediate Team & Manager/Lead:
+
+These are your first and most immediate stakeholders to notify. They are crucial for assessing the problem, collaborating on the fix, and providing support.
+
+This includes fellow data engineers, your team lead, and your immediate manager.
+
+Internal Data Consumers / Downstream Teams:
+
+These are the people whose work depends on the data or service you provide.
+
+Examples: Data analysts (who use your data for reports), BI specialists (who build dashboards from your data), other engineering teams (whose applications rely on your data feeds), or even marketing/sales teams if they use real-time data from your pipeline.
+
+They need to know because the bad data might affect their reports, dashboards, or operations. They are directly impacted by your work.
+
+Business Users / Department Heads (Indirectly Affected):
+
+These are the people who rely on the reports or insights generated from the data.
+
+Examples: A Marketing Director who uses a dashboard to track campaign performance, or a Sales Manager who relies on lead data.
+
+You (or more likely, your manager or team lead) would inform them so they understand why a report might be wrong or delayed, or why a system isn't working as expected. This allows them to adjust their operations or communication.
+
+Higher Management / Leadership (Less Common for You to Directly Inform Immediately):
+
+This would typically be your manager's or team lead's responsibility to escalate to their directors or VPs if the impact is significant (e.g., major financial loss, legal implications, extended system downtime, highly visible public impact).
+
+You generally wouldn't be directly notifying the CEO or shareholders for a bad code deployment unless it's a catastrophic, company-stopping event. Your role is to fix the problem and provide the necessary information to your direct line of management so they can handle higher-level communication and strategy.
+
+Addressing Your Anxiety:
+
+It's natural to feel anxious, but remember:
+
+You're part of a team: You're not expected to handle this crisis alone. Your first step is always to notify your team and manager.
+
+Transparency is key: Companies value quick, honest communication about issues. It's not about blame, but about problem-solving and minimizing impact. Trying to hide it is far worse.
+
+Most issues are fixed internally: The vast majority of incidents are resolved by the engineering team, with communication contained to those directly affected or responsible for fixing it.
+
+So, while "stakeholders" can indeed include directors and CEOs, your immediate responsibility is typically to your technical team and the direct consumers of your data/service. Your manager will handle the appropriate level of escalation. Focusing on fixing the problem quickly and communicating clearly within your immediate circle is what's expected.
+
+* If you were a data analyst, your typical stakeholders would be diverse, spanning various departments and levels within an organization. Essentially, anyone who uses your insights, provides you with data, or is impacted by the decisions made from your analysis is a stakeholder.
+
+Here are your typical stakeholders:
+
+Your Immediate Team & Manager:
+
+Who: Other data analysts, data scientists, data engineers, your team lead, and your direct manager.
+
+Why: They review your work, collaborate on projects, provide guidance, and are directly responsible for the team's output. Your manager needs to know your progress and challenges.
+
+Business Unit/Department Heads & Managers:
+
+Who: Leaders and managers from departments like Marketing, Sales, Operations, Finance, Product, HR, Customer Service.
+
+Why: These are often your primary "customers." They come to you with business questions, need reports, dashboards, and insights to make strategic and operational decisions. They rely on your analysis to understand performance, identify opportunities, or solve problems.
+
+Data Consumers (End Users of Reports/Dashboards):
+
+Who: Any individual within a department who regularly uses the reports, dashboards, or data products you create. This could be sales reps, marketing specialists, operational staff, etc.
+
+Why: They use your outputs to guide their daily work. Their feedback is crucial for improving the usability and relevance of your data products.
+
+Product Managers/Owners:
+
+Who: Individuals responsible for the development and success of specific products or features.
+
+Why: They need your analysis to understand user behavior, product performance, A/B test results, and to make data-driven decisions about product roadmaps and features.
+
+Data Engineering Team:
+
+Who: The engineers responsible for building and maintaining the data pipelines, data warehouses, and data lakes.
+
+Why: You rely on them for clean, reliable, and accessible data. You communicate data quality issues, new data requirements, or schema changes to them.
+
+IT/Infrastructure Team:
+
+Who: The team responsible for underlying systems, servers, security, and access management.
+
+Why: You might interact with them for access permissions, software installations, or troubleshooting connectivity issues to data sources.
+
+Senior Leadership/Executives (e.g., CEO, CTO, CFO, VPs):
+
+Who: High-level decision-makers in the company.
+
+Why: While you might not directly report to them often, your analyses (especially strategic dashboards or executive summaries) ultimately inform their high-level decisions, resource allocation, and company direction. Your manager or a more senior analyst might be the one presenting directly to them, but your work feeds into it.
+
+External Stakeholders (Less Common for Entry-Level, but Possible):
+
+Who: Customers, partners, regulators, or auditors.
+
+Why: If your analysis involves external reporting, compliance, or customer-facing metrics, these groups could indirectly be stakeholders.
+
+In an entry-level role, your most frequent interactions will likely be with your immediate team, your manager, and the business unit managers/users who directly request your reports. As you grow, your circle of stakeholders will naturally expand.
