@@ -1173,6 +1173,24 @@ This highlights your understanding of AI, your specific technical contributions,
 I was a data engineer intern at virtuals protocol where 
 * I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents
 * the technologies I used here was mainly numpy, pandas, specific frameworks for extracting information from various file types such as word documents, pdf files, and even images
+
+usuable format like text
+ingested 
+ETL 
+developed
+data engineers
+transformed
+vector
+augment
+rag ai
+knowledge
+existing
+predict
+up-to-date
+domain 
+specialize
+
+
 * I also worked on developing shell scripts to automate the ingestion process of the datasets we transformed in the companys data pipeline where RAG AI agents eventually consume data from
 * I also worked on writing relevant guides for clients on how to write their own 
 ```
