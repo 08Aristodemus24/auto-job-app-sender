@@ -1836,3 +1836,34 @@ Who: Customers, partners, regulators, or auditors.
 Why: If your analysis involves external reporting, compliance, or customer-facing metrics, these groups could indirectly be stakeholders.
 
 In an entry-level role, your most frequent interactions will likely be with your immediate team, your manager, and the business unit managers/users who directly request your reports. As you grow, your circle of stakeholders will naturally expand.
+
+* name 3 bullet points that can be made to explain the relationship between the dominant topics in absolute value and percentage share the absolute value here is the whole number in each industry e.g. media publisher, financial services etc. andthe percentage share is the one with the % symbol
+
+
+
+
+Analysis
+Here are three bullet points explaining the relationship between the absolute value (Ads Volume) and percentage share for the dominant topics in the "Advertising Trends" image:
+
+The "Media, Publisher" industry is the dominant topic with the highest absolute advertising volume at 359, which also translates to the largest percentage share of 9.599% of all industries by ads volume.
+
+"Financial Services" and "Automotive" are the next dominant topics, with absolute ad volumes of 270 and 258 respectively, corresponding to percentage shares of 7.219% and 6.898% respectively.
+
+The hierarchy of industries by absolute advertising volume directly reflects their ranking by percentage share, indicating that the larger the absolute ad volume, the higher its proportion of the total advertising landscape.
+
+
+oh so indicates that the higher an industries ability to pay for advertisements the higher its capita?
+
+Based on the "Advertising Trends" image you provided, I cannot confirm that a higher advertising volume directly indicates an industry's "ability to pay for advertisements" or its "capita."
+
+The image only displays the "Ads Volume" (absolute value) and the "Percentage Share" of advertising volume for various industries. It doesn't provide information on their financial capacity to spend on advertising or their economic "capita" beyond their share of ad volume.
+
+Yes, hypothetically, it absolutely could be that an industry's higher advertising volume correlates with its ability to pay for advertisements and, more broadly, its economic "capita" (or market size, influence, and financial health).
+
+In a real-world business context:
+
+Ability to Pay: Industries with higher profits, larger market shares, or stronger financial health generally have more budget available for advertising. Significant ad spend often indicates that a company or industry has the resources and sees the value in investing heavily in marketing.
+
+Market Share/Influence: High advertising volume can also reflect an industry's overall size, competitive landscape, or its strategic importance. Larger, more established industries or those in highly competitive sectors often advertise more because they have more products/services to sell and are fighting for larger market shares.
+
+While the "Advertising Trends" image itself only shows the volume of ads, it's a common area of analysis in business intelligence to cross-reference advertising spend with other financial metrics like revenue, profit margins, or market capitalization to draw such conclusions.
