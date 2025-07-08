@@ -1169,31 +1169,53 @@ This highlights your understanding of AI, your specific technical contributions,
 
 ### Background (1):
 * tell me about yourself:
-```
-I was a data engineer intern at virtuals protocol where 
-* I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents
-* the technologies I used here was mainly numpy, pandas, specific frameworks for extracting information from various file types such as word documents, pdf files, and even images
+|- data engineer intern
+|- cleaned transformed
+|- incoming data
+|- text
+|- ingested
+|- ETL 
+|- developed
+|- data engineers
+|- transformed
+|- vector
+|- augment
+|- rag ai
+|- knowledge
+|- existing
+|- predict
+|- up-to-date
+|- domain 
+|- specialize 
 
-usuable format like text
-ingested 
-ETL 
-developed
-data engineers
-transformed
-vector
-augment
-rag ai
-knowledge
-existing
-predict
-up-to-date
-domain 
-specialize
+|- recent grad
+|- picked up
+|- data science
+|- during
+|- personal projects
+|- AI/ML
+|- now
+|- geared
+|- data engineering
+|- analytics
+|- more fun personally
+|- where
+|- recent
+|- project
+|- analyzed
+|- healthcare
 
+|- eager
+|- opportunity
+|- skills
+|- use
+|- grow
 
-* I also worked on developing shell scripts to automate the ingestion process of the datasets we transformed in the companys data pipeline where RAG AI agents eventually consume data from
-* I also worked on writing relevant guides for clients on how to write their own 
-```
+- I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents
+- the technologies I used here was mainly numpy, pandas, specific frameworks for extracting information from various file types such as word documents, pdf files, and even images
+- I also worked on developing shell scripts to automate the ingestion process of the datasets we transformed in the companys data pipeline where RAG AI agents eventually consume data from
+- I also worked on writing relevant guides for clients on how to write their own 
+
 - `I'm a recent graduate of Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
 - `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
 - `outside of work I've really been fond of creating personal projects more geared in data analytics and engineering and using tools like selenium, beautifulsoup and other web scraping frameworks to extract data, transform them using SQL and distributed computing frameworks like Spark, load it in a cloud storage providers like MotherDuck and AWS S3 and finally use powerbi to use it for some form of analytics, visualizing it using dashboards. I also use orchestration tools like airflow to automate the whole process`
