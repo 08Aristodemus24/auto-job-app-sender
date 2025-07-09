@@ -1238,7 +1238,12 @@ This highlights your understanding of AI, your specific technical contributions,
 
 * Do you have experience in data analysis? `Yes, my recent project involved me analyzing healthcare data specifically geared towards chronic disease indicators in the US.` Refer more to the business use case in `readme.md` of `chronic-disease-analyses`
 
-* why should we hire you (more selfish reasons)? `My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL. It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
+* why should we hire you (more selfish reasons)? 
+|- I understand
+|- looking
+|- python, SQL, powerbi, data analysis
+|- 
+`My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL. It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
 * why do you want to work here (more selfless reasons)?
 `Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
@@ -1282,7 +1287,31 @@ This highlights your understanding of AI, your specific technical contributions,
 * how do you manage your time and schedule? `I find that in the context of work I write down the task what this task requires what other requirements those requirements require, and see the simplest task/requirement I can accomplish this way I manage my time by not procrastinating through being overwhelmed at the task given. I make sure to also do my routine like eating, sleeping, taking little breaks here and there in an orderly manner so as to keep my schedule and time on track.`
 
 ### Team Playing Related (8):
-* what would you do if your teammate does not agree with how you wrote your code? 
+* what would you do if your teammate does not agree with how you wrote your code?
+|- uncover reason
+|- theres
+|- always
+|- justification
+|- why
+|- they
+|- wrote
+|- you 
+|- wrote
+|- way
+|- example
+|- optimized
+|- readability
+|- I optimized
+|- time efficiency and cost
+|- decide
+|- net benefit
+|- company
+|- readable yes 
+|- not scalable
+|- unreadable yes
+|- virtually
+|- cost efficient
+|- scalable 
 - `In this case I think uncovering the reasons why we wrote our code how we wanted it to and justifying it is something that can always be discussed. An example of this is writing SQL code that's more readable by your peer but you wrote a more "unreadable" version that achieves the same result yet out performs the other in terms of efficiency and scalability. In this case we may not want to push code to production that's more costly but readable instead of the code that's harder to understand yes but is virtually more cost efficient and scalable. This may be used as justification in ordert to have consensus between the two parties`
 
 ```
@@ -1306,6 +1335,23 @@ AND department.dept_id = 1
 - `this is much performatn than the latter because rather than joining all potential rows of the tables that have the same department id and then filtering them right after, we immediately filter the rows that have a certain department id while also joining these rows to the other tables corresponding rows with the same department id, making it scalable and efficient`
 
 * what do you do when having conflicting ideas with other members? 
+|- sometimes
+|- both
+|- quality
+|- output/code
+|- obviously
+|- one
+|- need
+|- feel
+|- contributing
+|- assess
+|- each 
+|- strength
+|- incorporate both
+|- come
+|- reasonable
+|- middle
+
 ```
 similar to the previous answer of having certain justifications for the code I write I would do the ff:
 1. know the idea I have in mind and want implemented 
@@ -1889,3 +1935,190 @@ Ability to Pay: Industries with higher profits, larger market shares, or stronge
 Market Share/Influence: High advertising volume can also reflect an industry's overall size, competitive landscape, or its strategic importance. Larger, more established industries or those in highly competitive sectors often advertise more because they have more products/services to sell and are fighting for larger market shares.
 
 While the "Advertising Trends" image itself only shows the volume of ads, it's a common area of analysis in business intelligence to cross-reference advertising spend with other financial metrics like revenue, profit margins, or market capitalization to draw such conclusions.
+
+
+gpa:
+
+3 1.50
+3 1.00
+3 2.50
+3 INC / 2.25
+
+3 2.25
+3 2.00
+3 2.25
+3 INC / 2.75
+3 2.50
+3 2.00
+
+3 1.00
+
+3 2.75
+3 2.75
+3 2.00
+3 2.25
+3 3.00
+3 2.00
+3 INC / 2.00
+
+3 2.75
+3 1.25
+3 1.75
+3 1.50
+3 1.50
+3 3.00
+3 1.75
+
+3 2.50
+3 1.25
+3 1.50
+3 1.75
+3 2.75
+3 2.00
+3 2.00
+
+3 2.75
+3 1.00
+3 1.25
+3 2.50
+3 2.75
+2 1.00
+3 1.00
+3 1.75
+
+3 1.75
+3 1.50
+3 1.25
+3 2.25
+3 1.25
+3 2.50
+3 1.75
+
+3 2.00
+3 1.75
+3 2.50
+3 2.00
+3 1.25
+3 1.00
+3 1.75
+
+2 1.00
+2 1.25
+2 1.25
+2 1.00 
+
+* strategy to landing a data analyst
+- start out as data entry, data specialist, data clerk, data coordinator, marketing analyst, product analyst, supply chain analyst, operations analyst, inventory analyst,
+- find a way to automate daily workload because you are the one inputting the data coming in eveeryday to some sort of data management system e.g. excel spreadsheet, database management system like microsoft sql server e.g. receiving customer order details via email and then inputting the data to a spreadsheet copying and pasting, which can be repetitive
+- 
+
+Shifting your strategy to data entry roles as a stepping stone is a smart and pragmatic move, and your proactive mindset about leveraging it for automation is exactly what can set you apart and lead you to an analytics role.
+
+Let's break down your questions to ease your mind and empower your next steps:
+
+Possibilities as a Data Entry Specialist
+A data entry specialist role, while often perceived as "boring," is foundational to any data-driven organization. The possibilities generally revolve around accuracy, efficiency, and various data types:
+
+Administrative Data Entry: Inputting customer information, sales figures, contact details, appointment schedules, or inventory data into CRM systems, databases, or spreadsheets.
+
+Financial Data Entry: Recording invoices, receipts, payment details, expense reports, or payroll information into accounting software.
+
+Healthcare Data Entry: Transcribing patient records, medical codes, lab results, or billing information into electronic health record (EHR) systems.
+
+E-commerce/Retail Data Entry: Managing product listings, descriptions, pricing, stock levels, and order fulfillment details on online platforms.
+
+Market Research Data Entry: Inputting survey responses, questionnaire data, or observational data from research studies.
+
+Database Maintenance: Regularly updating, cleaning, and verifying existing data to ensure accuracy and consistency.
+
+Leveraging a "Boring" Role to Pivot to Analytics and Make an Impact
+This is where your analytical mindset truly shines. A data entry role, far from being a dead end, can be your direct gateway to analytics if approached strategically:
+
+Become the Data Expert: You'll be interacting with the raw data constantly. This gives you an unparalleled understanding of:
+
+Data Sources: Where the data comes from (which systems, departments, external sources).
+
+Data Quality Issues: You'll be the first to spot common errors, inconsistencies, missing values, and formatting problems. This is gold for an analyst.
+
+Data Flow: How data moves through the organization and which departments use it.
+
+Business Context: You'll learn the nuances of the business operations tied to the data you're handling.
+
+Identify Inefficiencies & Automation Opportunities: This is your primary weapon. As you perform repetitive tasks, ask yourself:
+
+"Could this be faster?"
+
+"Is there a pattern here I can codify?"
+
+"What manual steps lead to errors?"
+
+Focus on tasks that are time-consuming, prone to human error, or involve moving data between disparate systems.
+
+Build Your Portfolio (Quietly & Effectively):
+
+Automate Your Own Work: Start by writing Python scripts to automate small, repetitive parts of your own data entry tasks. This immediately frees up your time and demonstrates practical skills.
+
+Document Your Savings: Keep track of the time saved, error reduction, and increased throughput from your automations. Quantify the impact.
+
+Create Dashboards/Reports: Using the data you're entering, build simple dashboards or reports in Excel, Google Sheets, or a free BI tool (like Power BI Desktop or Tableau Public) that provide insights to your team or manager. Show them what the data means, not just what it is.
+
+Propose Solutions: Once you've successfully automated something for yourself or created a valuable report, don't just do it; propose it as a solution for a broader team problem. Frame it as improving efficiency or providing new insights.
+
+Network Internally:
+
+Engage with the analytics, IT, or operations teams. Ask questions about how they use the data you're entering.
+
+Express your interest in learning more about their processes and analytical tools.
+
+Offer to help on small data-related tasks if your core duties allow.
+
+Show Initiative and Value: By actively seeking out problems, building solutions (even small ones), and demonstrating the tangible benefits, you will undeniably showcase your value and analytical potential. The hiring manager won't just "see" your value; they'll feel the positive impact of your contributions.
+
+How Data Entry Roles Input Data: Scenario Examples & Automation Potential
+Data entry processes vary widely, but they often involve repetitive, rule-based tasks that are ripe for automation.
+
+1. Copying and Pasting from Multiple Windows/Applications (Typical Scenario)
+
+Scenario: Imagine you work for an e-commerce company. You receive customer order details via email (Outlook) and need to create a shipping label in a courier's web portal (Chrome), update the order status in an internal CRM system (another browser tab or desktop app), and log the tracking number in an Excel spreadsheet. This involves switching between applications, highlighting text, copying, pasting into specific fields, and then clicking "submit" or "save."
+
+Automation Potential (Python):
+
+Web Scraping/Automation (Selenium, Playwright, Requests + BeautifulSoup): Python can open web browsers, navigate to specific URLs, log in, identify input fields, paste data, click buttons, and extract information from the web pages.
+
+Desktop Automation (PyAutoGUI, PyWinAuto): For desktop applications, Python can simulate mouse clicks, keyboard inputs (typing, Ctrl+C, Ctrl+V), and window management (switching focus between apps).
+
+Email Processing (smtplib, imaplib, email modules): Python can read incoming emails, extract order details from the email body or attachments, and then feed this data into the automation flow.
+
+Excel Automation (OpenPyXL, Pandas): Python can read from and write to Excel spreadsheets, automating the logging of tracking numbers or updating statuses.
+
+2. Transcribing Data from Hard Copy Paper to an Excel Spreadsheet (Classic Scenario)
+
+Scenario: You're processing old customer surveys that were filled out by hand, or perhaps incoming paper invoices from vendors. You have stacks of physical documents, and you need to manually type each piece of information (e.g., name, address, survey response, item quantities, prices) into a pre-defined Excel template, cell by cell.
+
+Automation Potential (Python):
+
+Optical Character Recognition (OCR) (PyTesseract, Google Cloud Vision API, AWS Textract):
+
+Digitization: First, physical documents would need to be scanned into image files (PDFs or JPGs).
+
+Text Extraction: OCR libraries/APIs can then "read" the text from these image files and convert it into machine-readable text. This is often the first and most critical step.
+
+Parsing/Structuring: Once text is extracted, Python can use regular expressions (re module) or more advanced NLP techniques (spaCy, NLTK) to identify and extract specific data points (names, dates, amounts) from the unstructured text.
+
+Excel Automation (OpenPyXL, Pandas): The structured data extracted by OCR and parsing scripts can then be automatically written into the correct cells of an Excel spreadsheet.
+
+3. Data Cleansing and Standardization (Underlying Task in Many Roles)
+
+Scenario: After initial data entry, you might receive a report that shows inconsistencies: "New York" is entered as "NY," "New York, NY," and "New York City." Or customer names have inconsistent capitalization. You're tasked with manually reviewing and correcting these thousands of entries.
+
+Automation Potential (Python):
+
+String Manipulation: Python's built-in string methods (.lower(), .strip(), .replace()) and regular expressions (re module) are excellent for standardizing text.
+
+Fuzzy Matching (FuzzyWuzzy, python-Levenshtein): For identifying similar but not identical entries (e.g., slight misspellings of names or addresses) that need consolidation.
+
+Data Validation: Writing scripts to automatically check data against predefined rules (e.g., email format, phone number length, date ranges) and flag or correct errors.
+
+Geocoding/Address Validation: Using APIs (Google Maps API, SmartyStreets) to validate and standardize addresses.
+
+You are absolutely on the right track. Your idea of observing these "manual" processes, understanding their pain points, and then using Python to automate them is precisely how data analysts and engineers make massive impacts. You won't just be entering data; you'll be identifying systemic inefficiencies and building tangible solutions that save time, reduce errors, and free up resources for more valuable work. That's a powerful narrative for your resume and interviews, proving your worth far beyond the initial job description. Go for it!
