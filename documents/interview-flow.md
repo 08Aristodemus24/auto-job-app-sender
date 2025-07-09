@@ -2008,7 +2008,7 @@ gpa:
 2 1.00 
 
 * strategy to landing a data analyst
-- start out as data entry, data specialist, data clerk, data coordinator, marketing analyst, product analyst, supply chain analyst, operations analyst, inventory analyst,
+- start out as data entry, data specialist, data clerk, data coordinator, marketing analyst, product analyst, supply chain analyst, operations analyst, inventory analyst,  
 - find a way to automate daily workload because you are the one inputting the data coming in eveeryday to some sort of data management system e.g. excel spreadsheet, database management system like microsoft sql server e.g. receiving customer order details via email and then inputting the data to a spreadsheet copying and pasting, which can be repetitive
 - 
 
