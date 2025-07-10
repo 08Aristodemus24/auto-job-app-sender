@@ -1236,7 +1236,40 @@ This highlights your understanding of AI, your specific technical contributions,
 
 `I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
 
-* Do you have experience in data analysis? `Yes, my recent project involved me analyzing healthcare data specifically geared towards chronic disease indicators in the US.` Refer more to the business use case in `readme.md` of `chronic-disease-analyses`
+* Do you have experience in data analysis? 
+|- yes
+|- recent project
+|- healthcare
+|- chronic disease indicators
+|- us
+|- analyzed
+|- KPI
+|- driving
+|- populations
+|- high rate
+|- cdi
+
+|- business use case
+|- potentially 
+|- solve
+|- lack
+|- insights
+|- which
+|- demographic
+|- target
+
+|- by
+|- identifying
+|- KPI
+|- (see above)
+
+|- allocate 
+|- healthcare
+|- efficiently
+
+`Yes, my recent project involved me analyzing healthcare data specifically geared towards chronic disease indicators in the US.` Refer more to the business use case in `readme.md` of `chronic-disease-analyses`
+
+what are the key performance indicators driving high populations of chronic disease
 
 * why should we hire you (more selfish reasons)? 
 |- I understand
