@@ -844,6 +844,108 @@ FROM fixed_transactions
 
 8. Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
 
+9. https://www.datacamp.com/blog/data-warehouse-interview-questions
+
+10. What are slowly changing dimensions (SCD), and how do you handle them? Slowly changing dimensions (SCD) refer to data in dimension tables that evolve gradually over time. For example, a customer's address may change, but the historical data needs to be preserved for accurate reporting.
+
+There are three main types of SCD:
+
+- Type 1: Overwrite the old data with new data (e.g., update the address directly).
+- Type 2: Maintain historical data by adding a new record with a start and end date.
+- Type 3: Keep limited historical data by adding new fields/attributes for the old and current values.
+
+11. Can you explain the differences between OLAP and OLTP?
+Understanding the difference between OLAP and OLTP is very important because they serve distinct purposes in data systems.
+
+OLAP (online analytical processing) is optimized for complex queries and historical data analysis. It is designed for read-heavy operations such as generating reports, visualizations, and trend analysis.
+OLTP (online transaction processing) Focuses on real-time transaction management, such as processing orders or recording customer payments. It is optimized for fast, write-heavy operations.
+
+12. Designing a data warehouse schema for an e-commerce website is a common task for data professionals. Interviewees typically approach this by outlining a structured, logical process.
+
+- Understand Business Requirements & Key Metrics.
+- Identify Core E-commerce Business Processes.
+- Choose a Dimensional Modeling Methodology.
+- Define Fact Tables (Measures & Granularity).
+- Identify Dimension Tables.
+- Determine Attributes for Each Dimension.
+- Establish Relationships (Fact-Dimension Joins).
+- Plan for Slowly Changing Dimensions (SCDs).
+- Consider Aggregation Strategies.
+- Review, Validate, and Iterate.
+
+Data Warehouse Schema Design Steps (Simple & Concise)
+Understand Business Requirements & Key Metrics:
+
+What: Talk to business users. Find out what questions they need answers to (e.g., "What are our best-selling products by region?", "Which marketing campaigns drive the most revenue?"). Also, identify the specific numbers (metrics) they care about (e.g., total sales, average order value, conversion rate).
+
+Why: This step defines the purpose of your data warehouse. You're building it to answer these questions and track these metrics.
+
+Identify Core E-commerce Business Processes:
+
+What: List the fundamental activities an e-commerce platform handles: Browse products, adding to cart, placing an order, payment, shipping, returns, customer registration, product reviews.
+
+Why: Each major process often becomes the basis for a "fact" in your data warehouse.
+
+Choose a Dimensional Modeling Methodology:
+
+What: Decide between a Star Schema (most common and recommended for data warehousing) or a Snowflake Schema.
+
+Star Schema: A central "fact" table connected directly to multiple "dimension" tables. It's simpler, faster for querying.
+
+Snowflake Schema: Dimensions are further normalized (split into sub-dimensions). More complex joins, but less data redundancy.
+
+Why: This choice defines the overall structure and impacts query performance and ease of use.
+
+Define Fact Tables (Measures & Granularity):
+
+What: For each core business process (e.g., "Order Line Item"), identify:
+
+Measures: The quantifiable numerical data (e.g., sales_amount, quantity_sold, discount_value).
+
+Granularity (Grain): The lowest level of detail for each record (e.g., one row per item within a single order, not just one row per order).
+
+Why: Fact tables contain the core numerical data you will analyze.
+
+Identify Dimension Tables:
+
+What: For each fact, think about the "who, what, where, when, why, how" context. Common e-commerce dimensions include: Customer, Product, Time, Store/Location, Promotion, Order Status.
+
+Why: Dimensions provide the descriptive attributes (text, dates) that allow you to slice, dice, and group your measures.
+
+Determine Attributes for Each Dimension:
+
+What: For each dimension, list all relevant descriptive characteristics.
+
+E.g., for Customer dimension: customer_id, customer_name, email, address, city, state, country, customer_segment.
+
+E.g., for Product dimension: product_id, product_name, category, brand, SKU.
+
+Why: These attributes are what business users will use to filter, group, and analyze data in their reports.
+
+Establish Relationships (Fact-Dimension Joins):
+
+What: Connect your fact tables to your dimension tables using foreign keys. The fact table will contain numeric IDs that link to the primary keys of the dimension tables.
+
+Why: This is how queries can combine the measures (from facts) with their contextual descriptions (from dimensions).
+
+Plan for Slowly Changing Dimensions (SCDs):
+
+What: Decide how to handle changes in dimension attributes over time. For example, if a customer changes their address, do you overwrite the old address (SCD Type 1), create a new row to preserve history (SCD Type 2), or add new columns for old/new values (SCD Type 3)?
+
+Why: Crucial for ensuring historical accuracy in reporting (e.g., knowing sales attributed to a customer's old address versus their new address).
+
+Consider Aggregation Strategies:
+
+What: Identify common queries (e.g., "total sales per month for each product category") and create pre-calculated summary tables (aggregate tables) that store these results.
+
+Why: Greatly speeds up query performance for frequently run reports, as the calculations are already done.
+
+Review, Validate, and Iterate:
+
+What: Present your proposed schema to business users, data engineers, and other stakeholders. Get their feedback, make necessary adjustments, and refine the design.
+
+Why: Ensures the data warehouse actually meets business needs and is technically feasible and maintainable.
+
 ### PowerBI Related
 1. What is the difference between a visual-level filter, page-level filter, and a report-level filter? Provide an example where improper use leads to misleading analytics.
 
@@ -1272,11 +1374,45 @@ This highlights your understanding of AI, your specific technical contributions,
 what are the key performance indicators driving high populations of chronic disease
 
 * why should we hire you (more selfish reasons)? 
+|- hoping
+|- ask
 |- I understand
 |- looking
-|- python, SQL, powerbi, data analysis
-|- 
-`My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL. It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
+|- python, SQL, powerbi, data analysis, (informatica)
+|- used
+|- python 
+|- all years 
+|- college
+|- all personal projects
+
+|- while I (insert lack of skill in what their lookign for)
+|- recently
+|- developed
+|- DE/DA project
+|- refer above to (chronic-disease-analyses) project
+|- used
+|- orchestration framework
+|- airflow
+|- extract
+|- raw cdi
+|- raw population
+|- consolidated
+|- over 20
+|- transform 
+|- data trans
+|- modelled
+|- spark
+|- load
+|- cloud DWH
+|- motherduck
+|- faster querying
+|- due
+|- OLAP struct
+|- visualized
+|- PowerBI
+`My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL.`
+
+`It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
 * why do you want to work here (more selfless reasons)?
 `Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
