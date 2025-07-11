@@ -1335,6 +1335,8 @@ This highlights your understanding of AI, your specific technical contributions,
 |- know more
 |- align
 |- technology
+|- determine
+|- expectations
 
 `I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
 
@@ -1378,12 +1380,13 @@ what are the key performance indicators driving high populations of chronic dise
 |- ask
 |- I understand
 |- looking
-|- python, SQL, powerbi, data analysis, (informatica)
+|- <insert job qualifications e.g. Data Pipelines, MLOps, Python, SQL, powerbi, data analysis, informatica>
 |- used
 |- python 
 |- all years 
 |- college
 |- all personal projects
+|- thesis
 
 |- while I (insert lack of skill in what their lookign for)
 |- recently
@@ -1394,8 +1397,7 @@ what are the key performance indicators driving high populations of chronic dise
 |- orchestration framework
 |- airflow
 |- extract
-|- raw cdi
-|- raw population
+|- raw data
 |- consolidated
 |- over 20
 |- transform 
