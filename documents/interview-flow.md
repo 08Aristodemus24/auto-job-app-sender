@@ -411,6 +411,22 @@ For an entry-level Data Analyst looking at a role like this:
 
 It means you'd be a key part of a service that companies need. You might get exposure to a wider range of industries and data challenges quicker than in a single company's traditional setup. You need to be adaptable, a fast learner, and good at delivering concrete results. It's a way for companies to access data expertise without the full commitment of a traditional hire, and for analysts to gain diverse experience.
 
+* Hi Tech Smart Solutions:
+
+Hi-Tech Smart Solutions, innovative digital partner for financial and lending companies, is dedicated to support companies growth using digital space, unique technologies of data enrichment and processing. We focus on helping our clients to increase the number and quality of their customers, as well as to optimize business' processes and raise profitability, hence to bring businesses to a new level.
+
+We specialize in adding value to clients day-to-day operations through intelligent digital solutions. Our exceptional technologies are applied by companies in different South East Asian financial markets to lessen credit risk, replace excess workforce, minimize human errors in routine activities.
+
+We believe that every company should be focused on its core business and improving its performance. We will take care of communication with your customers. We know how to achieve efficiency when interacting with customers, build the right dialogue. And detailed statistics and reporting allow us to analyze all stages of communications, correctly allocate resources and adjust the strategy to achieve your goals.
+
+# Z-Lift Solutions
+Values:
+- Holacracy is a decentralized management and organizational governance system where authority and decision-making are distributed throughout the organization, rather than being concentrated at the top
+- self-service
+- empowerment
+- Management consulting is a professional service where external experts provide advice and solutions to organizations to improve their performance and achieve their objectives
+
+
 ## Technical Coding Interview Questions:
 ### DSA Related:
 1. FizzBuzz variation question from Leetcode 
@@ -842,109 +858,7 @@ FROM fixed_transactions
 
 7. Identify users who had a transaction amount 2x higher than their average transaction amount in the past 30 days.
 
-8. Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
 
-9. https://www.datacamp.com/blog/data-warehouse-interview-questions
-
-10. What are slowly changing dimensions (SCD), and how do you handle them? Slowly changing dimensions (SCD) refer to data in dimension tables that evolve gradually over time. For example, a customer's address may change, but the historical data needs to be preserved for accurate reporting.
-
-There are three main types of SCD:
-
-- Type 1: Overwrite the old data with new data (e.g., update the address directly).
-- Type 2: Maintain historical data by adding a new record with a start and end date.
-- Type 3: Keep limited historical data by adding new fields/attributes for the old and current values.
-
-11. Can you explain the differences between OLAP and OLTP?
-Understanding the difference between OLAP and OLTP is very important because they serve distinct purposes in data systems.
-
-OLAP (online analytical processing) is optimized for complex queries and historical data analysis. It is designed for read-heavy operations such as generating reports, visualizations, and trend analysis.
-OLTP (online transaction processing) Focuses on real-time transaction management, such as processing orders or recording customer payments. It is optimized for fast, write-heavy operations.
-
-12. Designing a data warehouse schema for an e-commerce website is a common task for data professionals. Interviewees typically approach this by outlining a structured, logical process.
-
-- Understand Business Requirements & Key Metrics.
-- Identify Core E-commerce Business Processes.
-- Choose a Dimensional Modeling Methodology.
-- Define Fact Tables (Measures & Granularity).
-- Identify Dimension Tables.
-- Determine Attributes for Each Dimension.
-- Establish Relationships (Fact-Dimension Joins).
-- Plan for Slowly Changing Dimensions (SCDs).
-- Consider Aggregation Strategies.
-- Review, Validate, and Iterate.
-
-Data Warehouse Schema Design Steps (Simple & Concise)
-Understand Business Requirements & Key Metrics:
-
-What: Talk to business users. Find out what questions they need answers to (e.g., "What are our best-selling products by region?", "Which marketing campaigns drive the most revenue?"). Also, identify the specific numbers (metrics) they care about (e.g., total sales, average order value, conversion rate).
-
-Why: This step defines the purpose of your data warehouse. You're building it to answer these questions and track these metrics.
-
-Identify Core E-commerce Business Processes:
-
-What: List the fundamental activities an e-commerce platform handles: Browse products, adding to cart, placing an order, payment, shipping, returns, customer registration, product reviews.
-
-Why: Each major process often becomes the basis for a "fact" in your data warehouse.
-
-Choose a Dimensional Modeling Methodology:
-
-What: Decide between a Star Schema (most common and recommended for data warehousing) or a Snowflake Schema.
-
-Star Schema: A central "fact" table connected directly to multiple "dimension" tables. It's simpler, faster for querying.
-
-Snowflake Schema: Dimensions are further normalized (split into sub-dimensions). More complex joins, but less data redundancy.
-
-Why: This choice defines the overall structure and impacts query performance and ease of use.
-
-Define Fact Tables (Measures & Granularity):
-
-What: For each core business process (e.g., "Order Line Item"), identify:
-
-Measures: The quantifiable numerical data (e.g., sales_amount, quantity_sold, discount_value).
-
-Granularity (Grain): The lowest level of detail for each record (e.g., one row per item within a single order, not just one row per order).
-
-Why: Fact tables contain the core numerical data you will analyze.
-
-Identify Dimension Tables:
-
-What: For each fact, think about the "who, what, where, when, why, how" context. Common e-commerce dimensions include: Customer, Product, Time, Store/Location, Promotion, Order Status.
-
-Why: Dimensions provide the descriptive attributes (text, dates) that allow you to slice, dice, and group your measures.
-
-Determine Attributes for Each Dimension:
-
-What: For each dimension, list all relevant descriptive characteristics.
-
-E.g., for Customer dimension: customer_id, customer_name, email, address, city, state, country, customer_segment.
-
-E.g., for Product dimension: product_id, product_name, category, brand, SKU.
-
-Why: These attributes are what business users will use to filter, group, and analyze data in their reports.
-
-Establish Relationships (Fact-Dimension Joins):
-
-What: Connect your fact tables to your dimension tables using foreign keys. The fact table will contain numeric IDs that link to the primary keys of the dimension tables.
-
-Why: This is how queries can combine the measures (from facts) with their contextual descriptions (from dimensions).
-
-Plan for Slowly Changing Dimensions (SCDs):
-
-What: Decide how to handle changes in dimension attributes over time. For example, if a customer changes their address, do you overwrite the old address (SCD Type 1), create a new row to preserve history (SCD Type 2), or add new columns for old/new values (SCD Type 3)?
-
-Why: Crucial for ensuring historical accuracy in reporting (e.g., knowing sales attributed to a customer's old address versus their new address).
-
-Consider Aggregation Strategies:
-
-What: Identify common queries (e.g., "total sales per month for each product category") and create pre-calculated summary tables (aggregate tables) that store these results.
-
-Why: Greatly speeds up query performance for frequently run reports, as the calculations are already done.
-
-Review, Validate, and Iterate:
-
-What: Present your proposed schema to business users, data engineers, and other stakeholders. Get their feedback, make necessary adjustments, and refine the design.
-
-Why: Ensures the data warehouse actually meets business needs and is technically feasible and maintainable.
 
 ### PowerBI Related
 1. What is the difference between a visual-level filter, page-level filter, and a report-level filter? Provide an example where improper use leads to misleading analytics.
@@ -954,14 +868,14 @@ Why: Ensures the data warehouse actually meets business needs and is technically
 ### Python Related
 1. Using pandas, merge three datasets (sales, promotions, inventory). Return top 5 products with the highest uplift in sales during a valid promotion window.
 
-2. Implement a custom function in pandas that bins continuous numerical data into deciles and labels outliers based on the IQR method. Return a summary table.|
+2. Implement a custom function in pandas that bins continuous numerical data into deciles and labels outliers based on the IQR method. Return a summary table.
 
 3. Compare and contrast defaultdict, Counter, and regular dictionaries in Python. When would you use each for analyzing customer purchase patterns?
 
-### Data Analytics related
+### Data Analytics/Engineering related
 * is it a fair assertion to say that the median should be used in imputation of missing values in a column if the histogram or the distribution of data in the column when plotted is skewed and not normal since this better represents a measure of central tendency and that we would use average if the distribution of the data is normal?
 
-* when would you use median vs mean in analyzing data? IF the histogram or the distribution of data when plotted is skewed and nto normal then it may be helpful to use the middle value for imputation as this better represents a measure of central tendency. We would use average if the distribution of the data is normal.
+* when would you use median vs mean in analyzing data? If the histogram or the distribution of data when plotted is skewed and nto normal then it may be helpful to use the middle value for imputation as this better represents a measure of central tendency. We would use average if the distribution of the data is normal.
 
 Mean is the best choice when data is symmetric and free from extreme outliers, as it leverages all data points.
 Median is preferred when data is skewed or contains outliers, as it provides a robust measure of central tendency that isn't unduly affected by extreme values.
@@ -1125,6 +1039,191 @@ txn_id	user_id	txn_date	amount	amount_1	amount_7ma
 * What is a histogram? A histogram is a graphical representation of the distribution of a dataset, showing the frequency of data points in specified intervals.
 
 * What is a box plot? A box plot is a graphical representation of the distribution of a dataset, showing the median, quartiles, and possible outliers.
+
+* What are slowly changing dimensions (SCD), and how do you handle them? 
+|- refer
+|- dim tables
+|- evolve
+|- overwrite
+|- inserting
+|- adding col/attribute/fields
+|- based
+|- fact table
+|- fact table orders
+|- added new customer
+|- added new product
+|- changed customer name, phone, email, address
+|- changed product label
+|-  
+Slowly changing dimensions (SCD) refer to data in dimension tables that evolve gradually over time. For example, a customer's address may change, but the historical data needs to be preserved for accurate reporting.
+
+There are three main types of SCD:
+
+- Type 1: Overwrite the old data with new data (e.g., update the address directly).
+- Type 2: Maintain historical data by adding a new record with a start and end date.
+- Type 3: Keep limited historical data by adding new fields/attributes for the old and current values.
+
+* Can you explain the differences between OLAP and OLTP?
+|- OLTP
+|- real time
+|- fast transaction
+|- insertion
+|- deletion
+|- update
+|- OLAP
+|- consolidated 
+|- long time
+|- complex
+|- aggregations
+|- joins
+|- fast querying
+|- for analytics
+
+* How do you design a data warehouse schema?
+|- fundamental
+|- activities
+|- business/platform/app?
+|- clicking on products
+|- placing an order
+|- adding to cart
+|- payment
+|- product shipping
+|- product returns
+|- customer signups/registrations
+
+|- each process
+|- has transactions
+|- make fact table in DWH
+|- depending on size of data
+|- identify quantifiable data
+|- numerical data change each row
+|- for analyses
+|- sales
+|- prie
+|- units/quantity sold
+|- discount value
+
+|- if 10m rows below 
+|- use flat table or one big table (OBT)
+|- no joins 
+|- reduced
+|- computational complexity
+|- faster queries
+|- faster retrieval
+|- due to columnar nature of OLAP 
+|- storage inefficient
+|- above 10m
+|- example
+|- data redundant
+
+|- if 100m above
+|- snowflake
+|- high storage efficiency
+|- fact table attributes
+|- reduced
+|- foreign key
+|- refers to
+|- primary key
+|- dim table
+|- all unique attributes
+|- even dim tables
+|- highly normalized
+|- all redundant values
+|- split
+|- smaller
+|- dim tables
+|- query performance 
+|- inefficient
+|- multiple
+|- joins
+
+|- if between 10m and 100m (inclusive)
+|- use star schema
+|- highly storage efficient
+|- redundant fact table attributes
+|- reduced
+|- to unique val
+|- dim table
+|- moderately normalized
+|- fast query
+|- less joins
+|- close 2nd to OBT
+|- storage efficiency
+|- less dim tables
+|- close 2nd to snowflake
+
+|- think of the transactions one big table
+|- which attributes are redundant
+|- which attibutes are numeric
+|- which attributes numeric or non numeric can be grouped into their own table
+|- split identified attributes into their own table
+|- customer_id, customer_name, email, address, city, state, region, total_txn, txn_date, order_id, prod_id, prod_name, category, brand, stock keeping units
+|- group 1 attributes: customer_id, customer_name, email, customer_id, city, state, region
+|- group 2 attributes: prod_id, prod_name, category, brand, stock keeping units, 
+|- 
+
+|- all this to improve cost efficiency and query performance in analytical tasks
+
+Designing a data warehouse schema for an e-commerce website is a common task for data professionals. Interviewees typically approach this by outlining a structured, logical process.
+
+- Understand Business Requirements & Key Metrics.
+- Identify Core E-commerce Business Processes.
+- Choose a Dimensional Modeling Methodology.
+- Define Fact Tables (Measures & Granularity).
+- Identify Dimension Tables.
+- Determine Attributes for Each Dimension.
+- Establish Relationships (Fact-Dimension Joins).
+- Plan for Slowly Changing Dimensions (SCDs).
+- Consider Aggregation Strategies.
+- Review, Validate, and Iterate.
+
+Data Warehouse Schema Design Steps (Simple & Concise)
+Understand Business Requirements & Key Metrics:
+
+What: Talk to business users. Find out what questions they need answers to (e.g., "What are our best-selling products by region?", "Which marketing campaigns drive the most revenue?"). Also, identify the specific numbers (metrics) they care about (e.g., total sales, average order value, conversion rate).
+
+
+
+Establish Relationships (Fact-Dimension Joins):
+
+What: Connect your fact tables to your dimension tables using foreign keys. The fact table will contain numeric IDs that link to the primary keys of the dimension tables.
+
+
+
+
+* how do you define the role of a data engineer?
+* what is a data engineer?
+* what is ETL?
+* how do you handle 
+* Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
+* how do you handle large volume of data efficiently?
+|- multiple ways
+|- parquet file format
+|- normalizing
+|- structured data
+|- little (dimension) tables
+|- using distributed compute
+|- concurrent
+|- processing
+|- across 
+|- multiple
+|- nodes 
+|- cores
+* what is data transformation
+|- changing
+|- rwa
+* how do you stay updated in tech in data engineering?
+* have you worked with real time data streaming tech?
+* what is data ingestion?
+* how do you handle data security and privacy concerns?
+* Difference between SQL and MySQL?
+* Primary key vs foreign key?
+* what are CRUD operations?
+* difference betweeen DELETE and TRUNCATE
+* how to display unique rows?
+* is there any waay to retrieve a deleted database?
+* what is data modelling?
+* https://www.datacamp.com/blog/data-warehouse-interview-questions
 
 ### Data Science/ML related
 * What is linear regression? Linear regression is a statistical method used to modethe relationship between a dependent variable and one or more independent variables.
@@ -1417,6 +1516,9 @@ what are the key performance indicators driving high populations of chronic dise
 `It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
 * why do you want to work here (more selfless reasons)?
+|- learned about
+|- company
+|- 
 `Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
 
 `I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
@@ -1425,6 +1527,8 @@ what are the key performance indicators driving high populations of chronic dise
 |- 3 values
 |- dedicate
 |- business
+
+
 
 * what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
 
@@ -1857,6 +1961,9 @@ Okada
 Philippine Airlines
 Asian Development Bank
 Deutsche Bank
+Confidential Healthcare and Life Sciences Company
+Z-Lift Solutions
+RCBC
 
 ## Tier 2:
 Cognizant
@@ -1966,8 +2073,10 @@ Currently because I'm am trying my absolute best and doing what I can to land at
 * pasig to makati (corporate makati, 9 to 6 sched)
 - wake up at 5, take shower, prep breakfast, commute to palengke, commute to san joaquin station for 7 oclock schedule, book destination to hulo station since malapit na sa corporate makati (unlike mrt route which would take going to palengke, then to crossing via edsa shaw jeep, then to mrt ayala station from mrt ortigas station, then another ride from mrt ayala station to the office itself which is 4 rides in total which is sayang pera)
 - 
+
 * pasig to quezon (near GMA kamuning station)
 - you could take an MRT going here and walk to the office if within thhe vicinity of GMA kamuning station lang naman
+- ok lang mag pang gabi jung malaki company and malaki sahod, pero kung maliit pa lang company and sahod tangapin mo lang ang pang umaga, ok lang yan pang gain ng experience
 
 # Insights:
 * Your anxiety about notifying high-level individuals like Directors, CEOs, or shareholders is completely understandable, and it's a common concern, especially early in your career!
