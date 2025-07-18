@@ -1192,8 +1192,33 @@ What: Connect your fact tables to your dimension tables using foreign keys. The 
 
 
 * how do you define the role of a data engineer?
+|- perform
+|- data transformatio
+|- presenting
+|- stakeholder
+
 * what is a data engineer?
+|- backbone
+|- data driven org
+|- collecting/storing
+|- usble
+|- data scientist/analyst/business
+
 * what is ETL?
+|- extract
+|- collect
+|- various
+|- sources
+|- cleaning
+|- organzing
+|- ussable
+|- loading
+|- destination
+|- OLAP
+|- analytical
+|- vector 
+|- AI/ML
+
 * how do you handle 
 * Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
 * how do you handle large volume of data efficiently?
