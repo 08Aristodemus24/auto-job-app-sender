@@ -1548,14 +1548,20 @@ what are the key performance indicators driving high populations of chronic dise
 
 `I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
 
-* what do you know about this organization?
-|- 3 values
-|- dedicate
+* what do you know about this organization (gcash for example)?
+|- I understand
+|- <company name>
+|- dedicated
 |- business
-
+|- of
+|- finance
+|- finance technology
+|- <as a long time user myself I enjoy features of app e.g. digital wallet, money transfer, GLoan, g invest feature>
+|- 
 
 
 * what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
+
 
 ### Personality (6):
 * what are your 3 biggest strengths and explain each one?
