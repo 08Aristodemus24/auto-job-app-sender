@@ -1989,6 +1989,9 @@ Deutsche Bank
 Confidential Healthcare and Life Sciences Company
 Z-Lift Solutions
 RCBC
+Bank of Commerce
+Home Credit Philippines
+
 
 ## Tier 2:
 Cognizant
@@ -2012,10 +2015,13 @@ MSCI
 Macquarie
 Azeus Systems Ltd.
 philtrustbank
-development bank of the philippines
+Development Bank of The Philippines
+AboitizPower
+JWAY GROUP
+
 
 ## Tier 3:
-AboitizPower
+Isentia
 Octal Philippine
 Inquiro, Inc.
 Medgrocer
