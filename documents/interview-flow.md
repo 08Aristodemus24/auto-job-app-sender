@@ -94,6 +94,141 @@ if there is such a term, and if I'm given the opportunity here to collaborate wi
 * add inigo miguel benavides on linked in
 * they use AWS sagemaker for ML deployment, 
 
+* credit risk 
+* lending
+* g-invest, g-gives
+* What is Credit Risk Analytics?
+At its core, Credit Risk Analytics is about predicting the likelihood that a borrower (an individual or a company) will fail to repay a debt (a loan, credit card, etc.), and quantifying the potential financial loss if they do.
+
+Think of it as using data and statistical methods to answer the question: "How risky is it to lend money to this person/entity, and what's the worst-case scenario if they can't pay us back?"
+
+Why is it Crucial (Especially for G-Cash)?
+For a company like G-Cash, which offers financial products (like loans or credit lines), managing credit risk is absolutely vital for its survival and profitability:
+
+Preventing Losses: It directly minimizes the amount of money lost to bad loans.
+
+Responsible Lending: It ensures loans are offered to those who can reasonably afford to repay them.
+
+Pricing: It helps set appropriate interest rates and terms based on the borrower's risk profile.
+
+Regulatory Compliance: Financial institutions are heavily regulated and must demonstrate robust risk management.
+
+Growth Strategy: Understanding risk allows the company to safely expand into new markets or offer new products without taking on excessive default rates.
+
+Key Concepts in Credit Risk Analytics:
+While it can get complex, focus on these fundamental components:
+
+Probability of Default (PD):
+
+What it is: The likelihood (expressed as a percentage or decimal) that a borrower will default on their loan over a specific period (e.g., within the next 12 months).
+
+Analytic Role: This is where models (like credit scoring models) come in. They take various data points about a borrower and output a PD score.
+
+Exposure at Default (EAD):
+
+What it is: The total outstanding amount that a lender expects to be owed by a borrower at the time of default. For a simple fixed loan, it might just be the principal plus accrued interest. For a credit line, it's how much the borrower has drawn down when they default.
+
+Analytic Role: Involves looking at loan terms, usage patterns, and potential future drawdowns.
+
+Loss Given Default (LGD):
+
+What it is: The actual percentage of the EAD that the lender expects to lose if a default occurs, after accounting for any recoveries (e.g., collateral, collections efforts).
+
+Analytic Role: This is where historical data on collection success, collateral values, and recovery rates are analyzed to estimate the percentage of loss.
+
+The Big Picture: The expected loss for a single loan is often calculated as: Expected Loss = PD x EAD x LGD
+
+How Data and Analytics Fit In:
+Credit risk analytics is inherently data-driven:
+
+Data Collection: Gathering vast amounts of historical data:
+
+Borrower Data: Demographics (age, income, location), employment history, past financial behavior (payment history on other loans, savings, spending patterns).
+
+Loan Data: Loan type, amount, term, interest rate, collateral.
+
+External Data: Credit bureau scores, macroeconomic indicators (inflation, unemployment), social media data (though less common for traditional credit risk).
+
+Feature Engineering: This is where your SQL skills shine! Transforming raw data into meaningful features for models (e.g., "debt-to-income ratio," "number of missed payments in last 6 months," "average balance over time").
+
+Model Building: Using statistical and machine learning models (e.g., logistic regression for PD, decision trees, neural networks) to predict default, EAD, and LGD.
+
+Segmentation: Grouping borrowers into different risk categories to apply different lending strategies.
+
+Monitoring & Reporting: Continuously tracking the performance of loan portfolios, identifying emerging risks, and reporting to management and regulators.
+
+Your SQL Skills in Credit Risk Analytics:
+Your solid SQL foundation is extremely valuable here. You'll be using SQL extensively for:
+
+Data Extraction & Cleaning: Pulling data from various databases (operational systems, data warehouses, data lakes) and cleaning it (handling missing values, inconsistencies).
+
+Data Transformation: Reshaping data for analysis and modeling.
+
+Aggregation: Summarizing vast amounts of transactional data (e.g., "sum of payments last 12 months," "count of late payments").
+
+Feature Engineering: Creating the variables that go into risk models (e.g., complex joins to combine credit history with demographic data, calculating ratios, creating time-series features).
+
+Reporting & Dashboards: Building queries that feed business intelligence tools for risk monitoring.
+
+Context for a Business Development Analyst (Credit Risk):
+As a Business Development Analyst focusing on credit risk at G-Cash, you're not just crunching numbers in isolation. Your understanding of credit risk analytics enables you to:
+
+Evaluate New Product Ideas: Assess the inherent risk of a new lending product or market segment before it's launched.
+
+Optimize Existing Products: Suggest changes to loan terms, target demographics, or marketing strategies to balance growth and risk.
+
+Identify Growth Opportunities: Pinpoint segments where G-Cash can lend more safely, or where risk mitigation strategies can open up new customer pools.
+
+Communicate Risk: Translate complex analytical findings into clear, actionable insights for non-technical stakeholders (sales, product teams, management). You'd explain why certain borrowers are riskier or what terms are appropriate given the risk.
+
+In essence, you'd be using data and risk insights to drive profitable and responsible business expansion.
+
+This field combines financial acumen, data skills, and strategic thinking. Your SQL knowledge is a fantastic entry point! Good luck with your technical assessment!
+
+that's a lot of info thanks. But do you think I could do this? I know about SQL, data analysis and python but have doubts (nevertheless I will push through it no matter what and paubaya nalang lahat kay Lord) but how credit risk ties into it no, and I'm scared people who know much more than me will see me as a failure or the wrong guy.
+
+It's completely normal to feel that way, especially when you're stepping into a new domain like credit risk that seems specialized. That feeling of "imposter syndrome" or the fear of being seen as "the wrong guy" is something almost everyone experiences, regardless of how experienced they are.
+
+Let me tell you, your existing skills are not just "solid foundations"; they are the absolute essential toolkit for a Data Analytics Engineer in credit risk.
+
+Here's why you are absolutely capable, and why your doubts, while natural, don't reflect your potential:
+
+SQL, Data Analysis, and Python ARE the Core:
+
+SQL is the backbone: In any data-intensive field, SQL is king for querying, extracting, cleaning, transforming, and aggregating data. Credit risk analytics generates massive amounts of data, and 90% of your initial work will involve getting that data into a usable format, which is all SQL.
+
+Python is the engine: Once data is prepped, Python is used for more advanced analysis, building dashboards, automating processes, and yes, even building simpler predictive models (though specialized data scientists might handle the most complex ones). Your ability to write clean, efficient Python code for data tasks is invaluable.
+
+Data Analysis is the mindset: Knowing how to approach a business problem with data, identify trends, spot anomalies, and draw insights – that's your superpower. Credit risk is all about identifying patterns in financial behavior.
+
+Domain Knowledge is Learned On The Job:
+
+No one expects you to be an expert in credit risk on Day 1. What interviewers look for in fresh hires or those transitioning fields is aptitude, curiosity, and a willingness to learn.
+
+You've just been given a fantastic head start by your interviewer: he told you exactly what to research! This is a gift. It shows they're assessing your potential to acquire domain knowledge, not just your current possession of it.
+
+The concepts of PD, EAD, and LGD are fundamental. Once you grasp those, the rest is applying your data skills to specific business problems within that framework.
+
+Your "Failure" Mindset is Actually a Strength:
+
+That doubt you feel, combined with your "no matter what, I will push through" attitude and faith – that's incredibly powerful. It means you're humble enough to know you don't know everything, but tenacious enough to learn it. That resilience is precisely what makes someone succeed in a complex, fast-moving field like FinTech.
+
+People who "know much more than you" (which will always be the case when you're starting in a new area) expect you to ask questions, to learn, and to grow. They were once in your shoes. They won't see you as a failure; they'll see your raw potential and your drive.
+
+How to Address This for Tomorrow's Technical Assessment & Beyond:
+For the SQL Assessment: Just focus on demonstrating your excellent SQL skills. That's what it's testing.
+
+For Follow-up Conversations (and the role itself):
+
+Show your curiosity: Explicitly mention that you've started researching credit risk (because you did!). Talk about PD, EAD, LGD in simple terms. This demonstrates initiative.
+
+Frame your skills: Explain how your SQL, Python, and data analysis skills are perfectly suited to tackle the data challenges in credit risk. (e.g., "I understand that analyzing historical payment patterns is crucial for PD models, and my SQL skills are strong in aggregating transactional data for that purpose.")
+
+Emphasize your eagerness to learn: Be honest about being new to the domain but confident in your abilities to master it. "I'm excited by the challenge of applying my data skills to the critical area of credit risk, and I'm a fast learner when it comes to new business domains."
+
+You are not "the wrong guy." You are the right guy with the right foundational skills and the right mindset to learn and excel in this field. Keep that head down, keep learning, and keep trusting in your path. God indeed provides, and He's given you the tools and the grit to push through.
+
+
 
 # Xurpas Enterprise, Inc.
 * what are 3 main you'd want to resign. Work culture, or if meron toxicity in the workplace, micro management
@@ -1512,7 +1647,6 @@ what are the key performance indicators driving high populations of chronic dise
 |- all personal projects
 |- thesis
 
-|- while I (insert lack of skill in what their lookign for)
 |- recently
 |- developed
 |- DE/DA project
@@ -1536,14 +1670,56 @@ what are the key performance indicators driving high populations of chronic dise
 |- OLAP struct
 |- visualized
 |- PowerBI
+
+|- while I (insert lack of skill in what their lookign for e.g. exp in credit risk, fintech as a whole)
+|- I believe
+|- adept
+|- skills
+|- to learn
+|- not so much
+|- whole
+|- domain
+|- juts
+|- enough
+|- do the job
+
 `My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL.`
 
 `It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
 * why do you want to work here (more selfless reasons)?
-|- learned about
-|- company
-|- 
+|- I understand 
+|- <insert work env e.g. growth, recognition and social impact>
+|- real
+|- skills
+|- alone
+|- important
+|- matters
+|- moreso
+|- ones
+|- drive/fire
+|- learn
+|- grow
+|- which
+|- I believe
+|- <insert company name>
+|- holds
+|- on
+|- to
+
+|- I honestly
+|- want
+|- impact
+|- give value
+|- contribute
+|- organization
+|- cause
+|- matters
+
+|- sincerely 
+|- all I
+|- need
+|- shot
 `Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
 
 `I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
@@ -1557,10 +1733,20 @@ what are the key performance indicators driving high populations of chronic dise
 |- finance
 |- finance technology
 |- <as a long time user myself I enjoy features of app e.g. digital wallet, money transfer, GLoan, g invest feature>
-|- 
-
+|- other than
+|- that
+|- heard 
+|- positive 
+|- work environment
+|- people
+|- came across
+|- I actually interviewed
+|- learned
+|- interesting
+|- tech stack
 
 * what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
+
 
 
 ### Personality (6):
