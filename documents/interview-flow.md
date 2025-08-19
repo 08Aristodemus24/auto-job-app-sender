@@ -1671,7 +1671,12 @@ what are the key performance indicators driving high populations of chronic dise
 |- visualized
 |- PowerBI
 
-|- while I (insert lack of skill in what their lookign for e.g. exp in credit risk, fintech as a whole)
+|- I understnd 
+|- looking
+|- communicate/understand
+|- business
+
+|- while I (insert lack of skill in what their lookign for e.g. exp in credit risk, fintech as a whole, domain knowledge in business)
 |- I believe
 |- adept
 |- skills
@@ -1679,9 +1684,46 @@ what are the key performance indicators driving high populations of chronic dise
 |- not so much
 |- whole
 |- domain
-|- juts
+|- just
 |- enough
 |- do the job
+
+|- thesis 
+|- business use case
+|- help 
+|- bio signal analysts
+|- interpret
+|- accurately biosignals
+|- chronic-disease-analyses
+|- help 
+|- healthcare institutions
+|- allocate
+|- effectively
+|- my projects serve
+|- as foundations
+|- figure
+|- solutions
+|- net benefit
+|- organization
+|- technically
+|- manifest
+|- maybe
+|- someones code
+|- optimized
+|- readability
+|- performance
+|- personally
+|- look at it from
+|- performance
+|- readability
+|- recetn projects
+|- reflected
+|- student
+|- no money
+|- effectively
+|- make
+|- storage/performance efficient
+|- save cost 
 
 `My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL.`
 
@@ -1689,7 +1731,10 @@ what are the key performance indicators driving high populations of chronic dise
 
 * why do you want to work here (more selfless reasons)?
 |- I understand 
-|- <insert work env e.g. growth, recognition and social impact>
+|- <insert work env e.g. 
+    gcash: growth, recognition and social impact
+    z-lift: empowerment, consultancy, 
+    >
 |- real
 |- skills
 |- alone
