@@ -561,6 +561,26 @@ Values:
 - empowerment
 - Management consulting is a professional service where external experts provide advice and solutions to organizations to improve their performance and achieve their objectives
 
+# Monroe Consulting
+Values:
+Executive recruitment company Monroe Consulting Group team of experts are able to identify the best talents within the Life Science sector. Our consultant has the in-depth industry knowledge to help our clients uncover hard-to-find talents within the Life Science industry.
+
+Monroe's Health division’s knowledge of the Life Science industry allows our executive search consultants to excel in headhunting senior executives for leading national and multinational brands within the life science market. Monroe Consulting Group headhunters are well-entrenched across the Life Sciences industry, enabling consultants to provide both our clients and candidates with a wealth of experience, intimate industry knowledge and the networks required for placing high-profile talent into key positions.
+
+Our recruitment consultants are not only experts in their fields but also provide executive recruitment services for all job vacancies in any sub-sectors, including biopharmaceuticals, medical technology, genomics, diagnostics and digital health
+
+Executive Search & Headhunting Recruitment Services for the Hospital & Healthcare Industry
+Monroe Consulting Group is a leading provider of executive search services, within the fast-growing economies of Asia. Our Hospital & Healthcare team of experts are well placed to support multinational and local companies to identify the best available candidates within the Hospital and Healthcare sector. Monroe Consulting Group’s Hospital and Healthcare works across many sub-sectors, including pharmaceuticals, biotechnology, equipment, distribution, facilities, and managed healthcare
+
+In this fast-paced and competitive market, our unique recruitment approach targets mid-level professionals to senior executives for companies in the Hospital and Health industry. In many cases, our executive search firm acts as an essential recruitment partner for building mid to senior-level management teams, which are critical to the success of the company. Our consultants know their markets meticulously and continue to adapt to the changes in market conditions and trends.
+
+Executive Search & Headhunting Recruitment Services for the Software and IT Consulting Industry
+
+Executive recruitment company Monroe Consulting Group provides outstanding headhunting services to identify the best talent within the Software and IT Consulting sector. Our executive search company’s industry knowledge means that our recruitment consultants are experts in uncovering hard-to-find, passive candidates that are often overlooked.
+
+Monroe's team of experts are equipped with the market knowledge of the fast-growing Software and IT Consulting industry, which allows us to meet the demand of our clients. With offices across Asia and a global network across 19 countries, we can cater to local and international clients in finding talents across the globe.
+
+Monroe's Software and IT Consulting industry recruitment consultants are not only experts in their fields but also provide executive recruitment services for all job vacancies in any department, including but not limited to executive management, Data Scientist. Software Developer, Information Security Analyst. Computer Systems Analyst. Web Developer. Sales Engineer. Information Technology Manager, and Computer Research Scientist.
 
 ## Technical Coding Interview Questions:
 ### DSA Related:
@@ -1356,6 +1376,7 @@ What: Connect your fact tables to your dimension tables using foreign keys. The 
 
 * how do you handle 
 * Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
+
 * how do you handle large volume of data efficiently?
 |- multiple ways
 |- parquet file format
@@ -1369,21 +1390,96 @@ What: Connect your fact tables to your dimension tables using foreign keys. The 
 |- multiple
 |- nodes 
 |- cores
+
 * what is data transformation
 |- changing
-|- rwa
+|- raw
+
 * how do you stay updated in tech in data engineering?
+
 * have you worked with real time data streaming tech?
+
 * what is data ingestion?
+
 * how do you handle data security and privacy concerns?
+
 * Difference between SQL and MySQL?
+
 * Primary key vs foreign key?
+
 * what are CRUD operations?
+
 * difference betweeen DELETE and TRUNCATE
+
 * how to display unique rows?
+
 * is there any waay to retrieve a deleted database?
+
 * what is data modelling?
+
 * https://www.datacamp.com/blog/data-warehouse-interview-questions
+
+* what is ACID compliant transactions?
+|- acronym
+|- atomicity
+    |- treated as 
+    |- single
+    |- unit
+    |- if transaction fails
+    |- rolled back
+    |- original state
+|- consistency
+    |- transaction
+    |- bring DB 
+    |- from 
+    |- valid state 
+    |- to another
+    |- ensures
+    |- data
+    |- 
+|- isolation
+    |- transactions/queries
+    |- no interference
+    |- each other
+    |- prevent
+    |- corruption
+|- durability 
+    |- a transaction
+    |- after success
+    |- remain
+    |- permanent
+|- systems
+|- use
+|- as standard
+|- ensure
+|- data integrity
+
+* what are some data quality checks you can do for your final data in an ETL pipeline?
+|- Null or missing values check
+|- Primary key uniqueness check
+|- Duplicate record detection
+|- Referential integrity validation
+|- Data type validation against schema
+|- Numeric range checks (e.g., 0–100%)
+|- String length validation
+|- Regex pattern validation (email, phone, IDs)
+|- Allowed values/domain validation
+|- Business rule consistency (aggregates, totals)
+|- Cross-column consistency checks
+|- Timeliness/freshness check against SLA
+|- Completeness check (all expected partitions/files)
+|- Volume checks against historical thresholds
+|- Distribution checks (mean, median, std deviation)
+|- Outlier detection for abnormal values
+|- Schema drift detection (new/removed columns)
+|- End-to-end reconciliation across systems
+|- Duplicate file ingestion prevention
+|- Negative value checks were not allowed
+|- Percentage/total consistency checks
+|- Hierarchy validation (region → country → state)
+|- Multi-source consistency checks
+|- Audit column validation (created_at, updated_at)
+|- Change data capture consistency
 
 ### Data Science/ML related
 * What is linear regression? Linear regression is a statistical method used to modethe relationship between a dependent variable and one or more independent variables.
@@ -1549,6 +1645,7 @@ This highlights your understanding of AI, your specific technical contributions,
 |- domain 
 |- specialize 
 
+|- additionally
 |- recent grad
 |- picked up
 |- data science
@@ -1761,7 +1858,9 @@ what are the key performance indicators driving high populations of chronic dise
 |- cause
 |- matters
 
-|- sincerely 
+|- sincerely
+|- for lack
+|- better 
 |- all I
 |- need
 |- shot
