@@ -52,6 +52,8 @@ Best, Name
 email@gmail.com
 
 *4. if recruiter is hiring for the role* 
+Hi, Joan
+
 I saw that you were for recruiting for an Azure Data Engineer, and I was quite excited to see the detailed descriptions you posted on the role. As it appears it's still open and I thought it wise to send this message directly to you to tell you more about how I fit perfectly for this role:
 
 1. My recent project involved an end to end MLOps pipeline for a voice based machine learning model API where leveraging tools like Azure Functions, Azure Data Factory, and Azure Data Lake allowed me to extract, transform, and load 20gb/3.7billion data points of audio recordings from individuals to use for predicting their gender potentially for use in better derivation of insights in product/market analytics.
