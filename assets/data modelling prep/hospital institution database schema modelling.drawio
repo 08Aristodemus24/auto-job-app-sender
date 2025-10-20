@@ -1,0 +1,317 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Page-1" id="xd23shvON2OgnjN9HKNj">
+    <mxGraphModel dx="4852" dy="2416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="D7DD2PTMReRadF5jAejt-17" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Department&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="420" y="440" width="170" height="130" as="geometry">
+            <mxRectangle x="370" y="190" width="110" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-18" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+name&lt;br&gt;+id&lt;br&gt;+floor&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+rooms&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-17" vertex="1">
+          <mxGeometry y="50" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-19" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Patient&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="770" y="445" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-20" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+age&lt;br&gt;+place_of_birth&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+contact&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_visit&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-19" vertex="1">
+          <mxGeometry y="50" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-21" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Doctor&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="450" width="170" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-22" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+age&lt;br&gt;+place_of_birth&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;+specialization&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+contact&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+license_id&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+department_id&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-21" vertex="1">
+          <mxGeometry y="50" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-23" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;FacilityVisit&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="990" y="820" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-24" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+authorized_personel&lt;br&gt;+facility_used&lt;br&gt;+facility_id&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+assigned_personel&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=#36393d;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-23" vertex="1">
+          <mxGeometry y="50" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-25" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Prescription&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="690" y="790" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-26" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+authorized_personel&lt;br&gt;+patient_id&lt;br&gt;+prescription&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+diagnoses&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-25" vertex="1">
+          <mxGeometry y="50" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-27" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Personel&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="750" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-28" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;br&gt;+last_name&lt;br&gt;+middle_name&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+facility_id&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-27" vertex="1">
+          <mxGeometry y="50" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-29" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Appointment&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="380" y="710" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-30" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+patient_id&lt;br&gt;+appointment_id&lt;br&gt;+appointmend_date&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+assigned_doctor&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+purpose&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-29" vertex="1">
+          <mxGeometry y="50" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-35" value="&lt;font style=&quot;font-size: 14px; color: rgb(255, 0, 0);&quot;&gt;Only problem with the department entity is it has a rooms attribute that is potentially a list type violating 1NF and 2NF database normalization rules&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="150" y="460" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-36" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;PROBLEM:&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;design a relational data model for a Hospital Management system that can track the flow of patients and resources&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Core entities may include:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;- patients (with details like contact medical history, etc.)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;- doctors (with details like specialization, license ID)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;- departments e.g. cardiology, radiology, emergency&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;- rooms/beds (with location e.g. floor and room number, is it occupied?, etc.)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Key relationships may include:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;- how patients are checked into the hospital and assigned a room/bed&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;- consulation/appointment which patients make with doctors including date and purpose of visit&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;- doctor which the department belongs to&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="50" width="770" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-37" value="&lt;font style=&quot;font-size: 14px; color: rgb(102, 102, 255);&quot;&gt;1. there needs to be a fact table/entity where certain transactions are made by the dimension tables/entities&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="850" y="80" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-38" value="&lt;font style=&quot;font-size: 14px; color: rgb(102, 102, 255);&quot;&gt;2. what about for amount of rooms or beds in each room? How do we represent these tables? Do we represent them as dimension tables/entities or fact tables/entities?&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="850" y="180" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-39" value="&lt;font style=&quot;font-size: 14px; color: rgb(102, 102, 255);&quot;&gt;3. we could add details to each department like what floor it is in, what rooms does it occupy&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="850" y="290" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-40" value="&lt;font style=&quot;font-size: 14px; color: rgb(102, 102, 255);&quot;&gt;4. transactions made by dimension tables/entities could be &lt;u&gt;appointments&lt;/u&gt; made by patients, the &lt;u&gt;payments&lt;/u&gt; made by patients to doctors, the &lt;u&gt;prescriptions&lt;/u&gt; made by doctors, the &lt;u&gt;usage of facilities&lt;/u&gt; of patients approved by doctors&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1235" y="80" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-43" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Room&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1275" width="170" height="130" as="geometry">
+            <mxRectangle x="370" y="190" width="110" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-44" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+department_id (FK)&lt;br&gt;+room_id&lt;br&gt;+room_num&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+floor&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-43" vertex="1">
+          <mxGeometry y="50" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-45" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Department&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1290" width="170" height="100" as="geometry">
+            <mxRectangle x="370" y="190" width="110" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-46" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+name&lt;br&gt;+id (PK)&lt;br&gt;&lt;/font&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-45" vertex="1">
+          <mxGeometry y="50" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-49" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(102, 102, 255), rgb(255, 144, 144));&quot;&gt;that way we can still Department entity still has its primary keys as unique keys and have the Room entity have multiple instances of these primary keys as foreign keys in a one to many relationship&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1700" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-51" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;color: rgb(102, 102, 255);&quot;&gt;the way to solve potential violation for 1NF and 2NF by having an attribute be a list/array type is to create a so called Bridge table/entity that turns these array elements into individual rows in this Bridge table e.g.&lt;/font&gt;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1430" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-67" value="-------------------------------------------------------------&#xa;| department_id | room_id | room_num | floor |&#xa;-------------------------------------------------------------&#xa;|     1                  |   CarA    |    101         |   1    |&#xa;|     1                  |   CarB    |    102         |   1    |&#xa;|     1                  |   CarB    |    103         |   1    |&#xa;|     2                  |   RadA    |    305        |   3    |&#xa;|     2                  |   RadA    |    306        |   3    |&#xa;|     2                  |   RadA    |    307        |   3    |&#xa;-------------------------------------------------------------" style="text;whiteSpace=wrap;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1520" width="340" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-68" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Patient&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="860" y="1230" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-69" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+place_of_birth&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+mobile_num&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+age&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-68" vertex="1">
+          <mxGeometry y="50" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-70" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Doctor&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1250" y="1205" width="170" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-71" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+place_of_birth&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+mobile_num&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+age&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+license_id&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+department_id (FK)&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;+specialization_id (FK)&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-70" vertex="1">
+          <mxGeometry y="50" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-72" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;FacilityVisit&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="1260" y="1625" width="200" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-73" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+authorized_doctor_id (FK)&lt;br&gt;+patient_id (FK)&lt;br&gt;+facility_id (FK)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+assigned_personel_id (FK)&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=#36393d;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-72" vertex="1">
+          <mxGeometry y="50" width="200" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-74" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Prescription&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1605" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-75" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+authorized_doctor_id (FK)&lt;br&gt;+patient_id (FK)&lt;br&gt;+prescription_item_id (FK)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+diagnoses&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-74" vertex="1">
+          <mxGeometry y="50" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-76" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Personel&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1550" y="1250" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-77" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+place_of_birth&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+mobile_num&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+designation_id (FK)&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-76" vertex="1">
+          <mxGeometry y="50" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-78" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Appointment&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="600" y="1525" width="180" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-79" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+patient_id (FK)&lt;br&gt;+appointment_date&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+assigned_doctor_id (PK)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+purpose&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+fee&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-78" vertex="1">
+          <mxGeometry y="50" width="180" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-80" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;PrescriptionItem&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1860" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-81" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;br&gt;+name&lt;br&gt;+description&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+price&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sku&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-80" vertex="1">
+          <mxGeometry y="50" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-82" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Facility&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="1880" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-83" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+&lt;/font&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;id&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+description&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+price&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-82" vertex="1">
+          <mxGeometry y="50" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-86" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(102, 102, 255), rgb(255, 144, 144));&quot;&gt;added&amp;nbsp; fee as a quantifiable value in the Appointment fact/transaction entity&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1710" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-87" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(102, 102, 255), rgb(255, 144, 144));&quot;&gt;we can add a dimension table called PrescriptionItem which will hold the prescripted items descripiton, name, and price&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1770" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-88" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(102, 102, 255), rgb(255, 144, 144));&quot;&gt;we can also add a dimension table/entity Facility which will hold the facilities description, name, and price per usage&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1270" y="1790" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-89" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Payment&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="1620" y="1610" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-90" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+patient_id (FK)&lt;br&gt;+category&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+fee&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=#36393d;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-89" vertex="1">
+          <mxGeometry y="50" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-91" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(102, 102, 255), rgb(255, 144, 144));&quot;&gt;Payment will also be a fact/transaction table that will keep track of all transactions made by patients in a hospital either through purchase of prescripted items or usage of facilities&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1600" y="1760" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-92" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Room&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1890" y="2280" width="170" height="130" as="geometry">
+            <mxRectangle x="370" y="190" width="110" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-93" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+department_id (FK)&lt;br&gt;+room_id&lt;br&gt;+room_num&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+floor&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-92" vertex="1">
+          <mxGeometry y="50" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-94" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Department&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1610" y="2330" width="170" height="115" as="geometry">
+            <mxRectangle x="370" y="190" width="110" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-95" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+name&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+description&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-94" vertex="1">
+          <mxGeometry y="50" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-100" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Patient&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="880" y="2365" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-101" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+place_of_birth&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+mobile_num&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+age&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-100" vertex="1">
+          <mxGeometry y="50" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-102" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Doctor&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1270" y="2340" width="170" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-103" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+place_of_birth&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+mobile_num&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+age&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+license_id&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+department_id (FK)&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;+specialization_id (FK)&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-102" vertex="1">
+          <mxGeometry y="50" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-104" target="D7DD2PTMReRadF5jAejt-103" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-104" target="D7DD2PTMReRadF5jAejt-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1385" y="2630" />
+              <mxPoint x="1008" y="2630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-104" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;FacilityVisit&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="1595" y="2735" width="200" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-105" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+authorized_doctor_id (FK)&lt;br&gt;+patient_id (FK)&lt;br&gt;+facility_id (FK)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+assigned_personel_id (FK)&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=#36393d;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-104" vertex="1">
+          <mxGeometry y="50" width="200" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-106" target="D7DD2PTMReRadF5jAejt-103" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-106" target="D7DD2PTMReRadF5jAejt-101" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-106" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Prescription&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="2737.5" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-107" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+authorized_doctor_id (FK)&lt;br&gt;+patient_id (FK)&lt;br&gt;+prescription_item_id (FK)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+diagnoses&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-106" vertex="1">
+          <mxGeometry y="50" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-108" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Personel&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="3030" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-109" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+first_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+last_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+middle_name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+place_of_birth&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+mobile_num&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+email&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sex&lt;br&gt;+designation_id (FK)&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-108" vertex="1">
+          <mxGeometry y="50" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-110" target="D7DD2PTMReRadF5jAejt-103" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="2690" />
+              <mxPoint x="1313" y="2690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-110" target="D7DD2PTMReRadF5jAejt-101" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-110" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Appointment&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="750" y="2720" width="180" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-111" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+patient_id (FK)&lt;br&gt;+appointment_date&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+assigned_doctor_id (FK)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+purpose&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+fee&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-110" vertex="1">
+          <mxGeometry y="50" width="180" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-112" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;PrescriptionItem&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="700" y="2995" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-113" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;br&gt;+name&lt;br&gt;+description&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+price&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+sku&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-112" vertex="1">
+          <mxGeometry y="50" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-114" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Facility&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#B5739D;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="3015" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-115" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;+&lt;/font&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;id&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+description&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+price&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-114" vertex="1">
+          <mxGeometry y="50" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-119" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Payment&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="435" y="2570" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-120" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+patient_id (FK)&lt;br&gt;+category&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+fee&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=#36393d;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-119" vertex="1">
+          <mxGeometry y="50" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-44" target="D7DD2PTMReRadF5jAejt-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-93" target="D7DD2PTMReRadF5jAejt-94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-103" target="D7DD2PTMReRadF5jAejt-95" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-126" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Specialization&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1660" y="2495" width="170" height="115" as="geometry">
+            <mxRectangle x="370" y="190" width="110" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-127" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+id (PK)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+name&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+description&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="D7DD2PTMReRadF5jAejt-126" vertex="1">
+          <mxGeometry y="50" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-103" target="D7DD2PTMReRadF5jAejt-127" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-107" target="D7DD2PTMReRadF5jAejt-112" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-105" target="D7DD2PTMReRadF5jAejt-114" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-105" target="D7DD2PTMReRadF5jAejt-108" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="D7DD2PTMReRadF5jAejt-120" target="D7DD2PTMReRadF5jAejt-101" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-147" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="1" vertex="1">
+          <mxGeometry x="60" y="2620" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-148" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="60" y="2580" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-149" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="60" y="2660" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-150" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#66B2FF;" parent="1" vertex="1">
+          <mxGeometry x="60" y="2700" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-151" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;- smaller dimension table/entity&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="2575" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-153" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;- dimension table/entity&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="2615" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-154" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;- fact/transaction table/entity&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="2655" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D7DD2PTMReRadF5jAejt-155" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;- bridge table/entity&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="2695" width="180" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

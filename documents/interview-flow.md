@@ -1183,58 +1183,11 @@ txn_id	user_id	txn_date	amount	amount_1	amount_7ma
 
 * Explain the difference between SQL and NOSQL databases? SQL databases are relational, use structured query language, and have a predefined schema, while NoSQL databases are non-relational, use various query languages, and have a dynamic schema.
 
-* What is ETL? ETL stands for Extract, Transform, and Load. It's a process for retrieving data from various sources, transforming it into a usable format, and loading it into a database or data warehouse.
-
-* What is primary key in a database ? A primary key is a unique identifier for each record in table.
-
-* What is foreign key in a database? A foreign key is a field in a table that refers to the primary key of another table, establishing a relationship between the two tables.
-
-* Explain the difference between inner join and outer join in SQL? Inner join returns records with matching values in both tables, while outer join returns records from one table and the matching records from the other table, filing in NULL values for non-matching records.
-
 * What is a histogram? A histogram is a graphical representation of the distribution of a dataset, showing the frequency of data points in specified intervals.
 
 * What is a box plot? A box plot is a graphical representation of the distribution of a dataset, showing the median, quartiles, and possible outliers.
 
-* What are slowly changing dimensions (SCD), and how do you handle them? 
-|- refer
-|- dim tables
-|- evolve
-|- overwrite
-|- inserting
-|- adding col/attribute/fields
-|- based
-|- fact table
-|- fact table orders
-|- added new customer
-|- added new product
-|- changed customer name, phone, email, address
-|- changed product label
-|-  
-Slowly changing dimensions (SCD) refer to data in dimension tables that evolve gradually over time. For example, a customer's address may change, but the historical data needs to be preserved for accurate reporting.
-
-There are three main types of SCD:
-
-- Type 1: Overwrite the old data with new data (e.g., update the address directly).
-- Type 2: Maintain historical data by adding a new record with a start and end date.
-- Type 3: Keep limited historical data by adding new fields/attributes for the old and current values.
-
-* Can you explain the differences between OLAP and OLTP?
-|- OLTP
-|- real time
-|- fast transaction
-|- insertion
-|- deletion
-|- update
-|- OLAP
-|- consolidated 
-|- long time
-|- complex
-|- aggregations
-|- joins
-|- fast querying
-|- for analytics
-
-* How do you design a data warehouse schema?
+* How do you design/data model a data warehouse schema?
 |- fundamental
 |- activities
 |- business/platform/app?
@@ -1343,81 +1296,28 @@ Establish Relationships (Fact-Dimension Joins):
 
 What: Connect your fact tables to your dimension tables using foreign keys. The fact table will contain numeric IDs that link to the primary keys of the dimension tables.
 
+* What are slowly changing dimensions (SCD), and how do you handle them?
+|- refer
+|- dim tables
+|- evolve
+|- overwrite
+|- inserting
+|- adding col/attribute/fields
+|- based
+|- fact table
+|- fact table orders
+|- added new customer
+|- added new product
+|- changed customer name, phone, email, address
+|- changed product label
+|-  
+Slowly changing dimensions (SCD) refer to data in dimension tables that evolve gradually over time. For example, a customer's address may change, but the historical data needs to be preserved for accurate reporting.
 
+There are three main types of SCD:
 
-
-* how do you define the role of a data engineer?
-|- perform
-|- data transformatio
-|- presenting
-|- stakeholder
-
-* what is a data engineer?
-|- backbone
-|- data driven org
-|- collecting/storing
-|- usble
-|- data scientist/analyst/business
-
-* what is ETL?
-|- extract
-|- collect
-|- various
-|- sources
-|- cleaning
-|- organzing
-|- ussable
-|- loading
-|- destination
-|- OLAP
-|- analytical
-|- vector 
-|- AI/ML
-
-* how do you handle 
-* Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
-
-* how do you handle large volume of data efficiently?
-|- multiple ways
-|- parquet file format
-|- normalizing
-|- structured data
-|- little (dimension) tables
-|- using distributed compute
-|- concurrent
-|- processing
-|- across 
-|- multiple
-|- nodes 
-|- cores
-
-* what is data transformation
-|- changing
-|- raw
-
-* how do you stay updated in tech in data engineering?
-
-* have you worked with real time data streaming tech?
-
-* what is data ingestion?
-
-* how do you handle data security and privacy concerns?
-
-* Difference between SQL and MySQL?
-
-* Primary key vs foreign key?
-
-* what are CRUD operations?
-
-* difference betweeen DELETE and TRUNCATE
-
-* how to display unique rows?
-
-* is there any waay to retrieve a deleted database?
-
-* what is data modelling?
-
-* https://www.datacamp.com/blog/data-warehouse-interview-questions
+- Type 1: Overwrite the old data with new data (e.g., update the address directly).
+- Type 2: Maintain historical data by adding a new record with a start and end date.
+- Type 3: Keep limited historical data by adding new fields/attributes for the old and current values.
 
 * what is ACID compliant transactions?
 |- acronym
@@ -1453,6 +1353,112 @@ What: Connect your fact tables to your dimension tables using foreign keys. The 
 |- as standard
 |- ensure
 |- data integrity
+
+* Can you explain the differences between OLAP and OLTP?
+|- OLTP
+|- real time
+|- fast transaction
+|- insertion
+|- deletion
+|- update
+|- OLAP
+|- consolidated 
+|- long time
+|- complex
+|- aggregations
+|- joins
+|- fast querying
+|- for analytics
+
+* how do you handle large volume of data efficiently?
+|- multiple ways
+|- parquet file format
+|- normalizing
+|- structured data
+|- little (dimension) tables
+|- using distributed compute
+|- concurrent
+|- processing
+|- across 
+|- multiple
+|- nodes 
+|- cores
+
+* Explain the difference between inner join and outer join in SQL. 
+|- Inner join returns records 
+|- with matching values in both tables
+|- while outer join returns records 
+|- from one table and the matching 
+|- records from the other table, filing
+|- in NULL values for non-matching records.
+
+* What is primary key in a database? 
+|- A primary key is a unique 
+|- identifier for each record in table.
+
+* What is foreign key in a database? 
+|- A foreign key is a field in a table
+|- that refers to the primary key of 
+|- another table, establishing a relationship
+|- between the two tables.
+
+* difference betweeen DELETE and TRUNCATE
+
+* how do you define the role of a data engineer?
+|- perform
+|- data transformatio
+|- presenting
+|- stakeholder
+
+* what is a data engineer?
+|- backbone
+|- data driven org
+|- collecting/storing
+|- usble
+|- data scientist/analyst/business
+
+* what is ETL?
+|- extract
+|- collect
+|- various
+|- sources
+|- cleaning
+|- organzing
+|- ussable
+|- loading
+|- destination
+|- OLAP
+|- for
+|- analytical
+|- vector
+|- for 
+|- AI/ML
+
+* how do you handle 
+
+* Compare Import vs Direct Query modes in the context of handling real-time data from a distributed warehouse system with high latency.
+
+* what is data transformation
+|- changing
+|- raw
+
+* how do you stay updated in tech in data engineering?
+
+* have you worked with real time data streaming tech?
+
+* what is data ingestion?
+
+* how do you handle data security and privacy concerns?
+
+* Difference between SQL and MySQL?
+
+* what are CRUD operations?
+
+* how to display unique rows?
+
+* is there any way to retrieve a deleted database?
+
+* https://www.datacamp.com/blog/data-warehouse-interview-questions
 
 * what are some data quality checks you can do for your final data in an ETL pipeline?
 |- Null or missing values check
@@ -1654,14 +1660,24 @@ This highlights your understanding of AI, your specific technical contributions,
 |- AI/ML
 |- now
 |- geared
+|- more recent
+|- shifted
 |- data engineering
 |- analytics
 |- more fun personally
 |- where
-|- recent
-|- project
-|- analyzed
-|- healthcare
+|- 2 recent
+|- I'm most
+|- Proud of
+|- Healthcare
+|- Data
+|- Analytics
+|- End2end
+|- DE pipeline
+|- Gender based
+|- ML
+|- model
+|- API
 
 |- eager
 |- opportunity
@@ -1669,15 +1685,73 @@ This highlights your understanding of AI, your specific technical contributions,
 |- use
 |- grow
 
-- I mostly cleaned, preprocessed mostly stock data for fine tuning Retrieval Augmented Generation AI agents
-- the technologies I used here was mainly numpy, pandas, specific frameworks for extracting information from various file types such as word documents, pdf files, and even images
-- I also worked on developing shell scripts to automate the ingestion process of the datasets we transformed in the companys data pipeline where RAG AI agents eventually consume data from
-- I also worked on writing relevant guides for clients on how to write their own 
+* Do you have experience in data analysis/engineering, ETL/ELT, data warehousing, etc.? 
+|- yes
+|- actually 2/<n> 
+|- best 
+|- projects
+|- 1st
+    |- full on
+    |- end2end
+    |- ETL
+    |- for 
+    |- healthcare
+    |- analytics
+    |- chronic disease indicators
+    |- us
+    |- analyzed
+    |- KPI
+    |- driving
+    |- populations
+    |- high rate
+    |- cdi
 
-- `I'm a recent graduate of Computer Science in the Polytechnic University of the Philippines where I picked up in part most of my skills in software development & data science and now more personally to data analytics`
-- `in my time during and after college I made personal projects mostly revolving around machine learning integrated with fullstack web frameworks learning a ton about how typical machine learning projects work and how each step like preprocessing, deploymnet, and testing works under the hood.`
-- `outside of work I've really been fond of creating personal projects more geared in data analytics and engineering and using tools like selenium, beautifulsoup and other web scraping frameworks to extract data, transform them using SQL and distributed computing frameworks like Spark, load it in a cloud storage providers like MotherDuck and AWS S3 and finally use powerbi to use it for some form of analytics, visualizing it using dashboards. I also use orchestration tools like airflow to automate the whole process`
-- `all in all I'm just really looking for an opportunity to use the skills I have now in data science and full stakc development and translate it to the workplace where I can continually grow`
+    |- business use case
+    |- potentially 
+    |- solve
+    |- lack
+    |- insights
+    |- which
+    |- demographic
+    |- target
+
+    |- by
+    |- identifying
+    |- KPI
+    |- (see above)
+
+    |- allocate 
+    |- healthcare
+    |- efficiently
+|- 2nd
+    |- full on
+    |- end2end
+    |- MLOps
+    |- pipeline
+    |- for 
+    |- voice 
+    |- based
+    |- AI/ML app
+    |- capable
+    |- predicting
+    |- gender
+    |- audio recording
+    |- individuals
+* voice and audio data can be difficult to efficiently and affordably convert raw, unstructured audio files into actionable intelligence
+
+* Potentially relevant for analyzing public interactions and large-scale data in market research and analytics
+- can provide demographic breakdowns of what gender, ethnicity, etc. is interacting with certain products, helping with store layout and inventory planning based on audio of individuals recorded from sensors
+- can provide high level of breakdown of individuals participation by gender, ethnicity, etc. in public forums/political events automatically through their audio offering quick insights than manual labelling
+In summary, the core business impact is the ability to use a foundational demographic data point (gender) to make interactions, advertisements, and service processes demonstrably more efficient and personalized.
+
+* This project was a direct response to these challenges. It is a testament to the power of a hybrid architecture, combining the best of managed cloud services yet still being cost conservative, open-source tools to build a comprehensive MLOps pipeline that is both scalable and cost-effective.
+* Developed an end-to-end MLOps pipeline for a audio signal gender prediction model, reducing cloud operational costs by over 70% by leveraging the cloud only for compute during extraction and storage and the rest for open source tools. 
+* Architected and implemented a scalable data pipeline to process gigabytes of unstructured audio data. The system generates high-impact features for a voice-based gender prediction model providing a repeatable and production-ready framework for real-time audio analytics and a foundation for new voice-based AI applications.
+
+Business use case
+Potentially help businesses reduce operational costs in terms of storage and compute
+
+And subsequently use it potentially for market analytics determining perhaps what products an individual gravitates to based on gender, ethnicity, etc
 
 ### Company Related (6):
 * what's your salary expectation
@@ -1696,47 +1770,12 @@ This highlights your understanding of AI, your specific technical contributions,
 
 `I've researched and seen the typical salary range of mid level software developers and engineers in this company amid my application and the range is between the lower range of 250k/year to 500k/year or 20800/month to 41700/month, so the number I'm comfortable with would be 30000/month based on my current knowledge and expertise does that fit into the company budget? But I'd like to learn more about the specific technologies tailored for this position as that will determine further my expectations for my salary.`
 
-* Do you have experience in data analysis? 
-|- yes
-|- recent project
-|- healthcare
-|- chronic disease indicators
-|- us
-|- analyzed
-|- KPI
-|- driving
-|- populations
-|- high rate
-|- cdi
-
-|- business use case
-|- potentially 
-|- solve
-|- lack
-|- insights
-|- which
-|- demographic
-|- target
-
-|- by
-|- identifying
-|- KPI
-|- (see above)
-
-|- allocate 
-|- healthcare
-|- efficiently
-
-`Yes, my recent project involved me analyzing healthcare data specifically geared towards chronic disease indicators in the US.` Refer more to the business use case in `readme.md` of `chronic-disease-analyses`
-
-what are the key performance indicators driving high populations of chronic disease
-
 * why should we hire you (more selfish reasons)? 
 |- hoping
 |- ask
 |- I understand
 |- looking
-|- <insert job qualifications e.g. Data Pipelines, MLOps, Python, SQL, powerbi, data analysis, informatica>
+|- skilled in <insert job qualifications e.g. Data Pipelines, MLOps, Python, SQL, powerbi, data analysis, informatica>
 |- used
 |- python 
 |- all years 
@@ -1768,15 +1807,16 @@ what are the key performance indicators driving high populations of chronic dise
 |- visualized
 |- PowerBI
 
-|- I understnd 
+|- I understand 
 |- looking
 |- communicate/understand
 |- business
 
 |- while I (insert lack of skill in what their lookign for e.g. exp in credit risk, fintech as a whole, domain knowledge in business)
 |- I believe
+|- can
 |- adept
-|- skills
+|- skills,
 |- to learn
 |- not so much
 |- whole
@@ -1791,6 +1831,7 @@ what are the key performance indicators driving high populations of chronic dise
 |- bio signal analysts
 |- interpret
 |- accurately biosignals
+
 |- chronic-disease-analyses
 |- help 
 |- healthcare institutions
@@ -1822,16 +1863,20 @@ what are the key performance indicators driving high populations of chronic dise
 |- storage/performance efficient
 |- save cost 
 
+
+
 `My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL.`
 
 `It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
 * why do you want to work here (more selfless reasons)?
 |- I understand 
+|- <company name>
+|- prides itself
 |- <insert work env e.g. 
     gcash: growth, recognition and social impact
     z-lift: empowerment, consultancy, 
-    >
+  >
 |- real
 |- skills
 |- alone
