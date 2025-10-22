@@ -1214,54 +1214,11 @@ txn_id	user_id	txn_date	amount	amount_1	amount_7ma
 |- units/quantity sold
 |- discount value
 
-|- if 10m rows below 
-|- use flat table or one big table (OBT)
-|- no joins 
-|- reduced
-|- computational complexity
-|- faster queries
-|- faster retrieval
-|- due to columnar nature of OLAP 
-|- storage inefficient
-|- above 10m
-|- example
-|- data redundant
+|- depending on what is the business situation (e.g. size of data they have)
+|- and what they are optimizing for e.g. optimize for storage efficiency, 
+computational efficiency, or both  
+|- 
 
-|- if 100m above
-|- snowflake
-|- high storage efficiency
-|- fact table attributes
-|- reduced
-|- foreign key
-|- refers to
-|- primary key
-|- dim table
-|- all unique attributes
-|- even dim tables
-|- highly normalized
-|- all redundant values
-|- split
-|- smaller
-|- dim tables
-|- query performance 
-|- inefficient
-|- multiple
-|- joins
-
-|- if between 10m and 100m (inclusive)
-|- use star schema
-|- highly storage efficient
-|- redundant fact table attributes
-|- reduced
-|- to unique val
-|- dim table
-|- moderately normalized
-|- fast query
-|- less joins
-|- close 2nd to OBT
-|- storage efficiency
-|- less dim tables
-|- close 2nd to snowflake
 
 |- think of the transactions one big table
 |- which attributes are redundant
