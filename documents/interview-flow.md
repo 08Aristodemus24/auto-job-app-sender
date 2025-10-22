@@ -1188,16 +1188,19 @@ txn_id	user_id	txn_date	amount	amount_1	amount_7ma
 * What is a box plot? A box plot is a graphical representation of the distribution of a dataset, showing the median, quartiles, and possible outliers.
 
 * How do you design/data model a data warehouse schema?
-|- fundamental
-|- activities
+|- understanding business needs
+    |- what questions they need answers to (e.g. what are the best selling products by region, average sales last year)
+    |- what metrics they care about? (quantifiable numbers e.g. transactions in an institution)
+
+|- identifying fundamental activities and entities
 |- business/platform/app?
-|- clicking on products
-|- placing an order
-|- adding to cart
-|- payment
-|- product shipping
-|- product returns
-|- customer signups/registrations
+    |- clicking on products
+    |- placing an order
+    |- adding to cart
+    |- payment
+    |- product shipping
+    |- product returns
+    |- customer signups/registrations
 
 |- each process
 |- has transactions
@@ -1285,10 +1288,12 @@ Designing a data warehouse schema for an e-commerce website is a common task for
 - Consider Aggregation Strategies.
 - Review, Validate, and Iterate.
 
+
+
 Data Warehouse Schema Design Steps (Simple & Concise)
 Understand Business Requirements & Key Metrics:
 
-What: Talk to business users. Find out what questions they need answers to (e.g., "What are our best-selling products by region?", "Which marketing campaigns drive the most revenue?"). Also, identify the specific numbers (metrics) they care about (e.g., total sales, average order value, conversion rate).
+
 
 
 
@@ -1807,10 +1812,54 @@ And subsequently use it potentially for market analytics determining perhaps wha
 |- visualized
 |- PowerBI
 
+|- another
+|- end 2 end
+|- MLOps pipeline
+|- audio based analytics
+|- orchestration 
+|- airflow
+|- extract
+|- combination (ADF, Az Func, azure data lake)
+|- 3.7billion/20gb audio recordings
+|- transformation
+|- duckdb, librosa, sklearn 
+|- computing features, normalization, imputation, augmentation
+|- loading
+|- cloud DWH
+|- motherduck
+|- open source
+
+|- additionally
 |- I understand 
 |- looking
 |- communicate/understand
-|- business
+|- business needs
+|- and while I believe
+|- being
+|- adept
+|- skills
+|- important
+|- I believe
+|- unique
+|- inclination
+|- build
+|- scalable systems
+|- while
+|- aiming
+|- cost efficiency
+|- in terms
+|- peprformance
+|- storage
+|- is just as important
+|- will I believe
+|- great and unique
+|- addition
+|- to the team, your organization
+
+
+
+
+
 
 |- while I (insert lack of skill in what their lookign for e.g. exp in credit risk, fintech as a whole, domain knowledge in business)
 |- I believe
@@ -1824,44 +1873,6 @@ And subsequently use it potentially for market analytics determining perhaps wha
 |- just
 |- enough
 |- do the job
-
-|- thesis 
-|- business use case
-|- help 
-|- bio signal analysts
-|- interpret
-|- accurately biosignals
-
-|- chronic-disease-analyses
-|- help 
-|- healthcare institutions
-|- allocate
-|- effectively
-|- my projects serve
-|- as foundations
-|- figure
-|- solutions
-|- net benefit
-|- organization
-|- technically
-|- manifest
-|- maybe
-|- someones code
-|- optimized
-|- readability
-|- performance
-|- personally
-|- look at it from
-|- performance
-|- readability
-|- recetn projects
-|- reflected
-|- student
-|- no money
-|- effectively
-|- make
-|- storage/performance efficient
-|- save cost 
 
 
 
