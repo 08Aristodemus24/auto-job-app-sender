@@ -582,6 +582,55 @@ Monroe's team of experts are equipped with the market knowledge of the fast-grow
 
 Monroe's Software and IT Consulting industry recruitment consultants are not only experts in their fields but also provide executive recruitment services for all job vacancies in any department, including but not limited to executive management, Data Scientist. Software Developer, Information Security Analyst. Computer Systems Analyst. Web Developer. Sales Engineer. Information Technology Manager, and Computer Research Scientist.
 
+# Kiya.AI
+1. What do you know about kiya?
+|- AFAIK
+|- Based on the website you sent
+|- I understand that this is an 
+|- organization that aims
+|- offer cloud native solutions for financial institutions
+|- as well as AI and ML to automate business processes of these institutions
+|- allowing scalability and efficiency 
+|- I'm technical 
+|- especially with data
+|- you need a more robust solution especially when data scales to billions
+
+2. what is your understanding of the role of an implementation engineer
+Implementation engineer
+- checking and savings account, loans, deposits, payments,
+- help configure these systems
+- use sql api testing for these systems
+- client facing
+- gathering requirements
+
+3. Why are you interested in this role
+|- I'm curious to know how technology interfaces/combines with the finance industry
+|- Starting point for fintech and banking technology 
+
+|- my skills in data engineering and being able to optimize for costs while aiming for scalability and efficiency (performance or storage)
+|- believe
+|- will be great addition and asset to have for this role
+
+4. how do you see yourseelf making an impact and contributing to the team?
+|- while technicality and skills important
+|- being adept is important
+|- I think 
+|- what's even more important
+|- understand business acumen
+
+|- understanding/communicating business needs
+
+|- as for me my unique inclination 
+|- building scalable data pipelines as a data engineer
+|- while maintaining cost efficiency
+|- great asset an d addition to the team
+|- I may come to be part of 
+
+5. what is your experience in sql?
+|- employees after 2023
+
+feedback: tailor fit answers to the role itself but keen to learn about fintech in general 
+
 ## Technical Coding Interview Questions:
 ### DSA Related:
 1. FizzBuzz variation question from Leetcode 
