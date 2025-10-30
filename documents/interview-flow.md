@@ -1326,7 +1326,30 @@ Slowly changing dimensions (SCD) refer to data in dimension tables that evolve g
 
 There are three main types of SCD:
 
-- Type 1: Overwrite the old data with new data (e.g., update the address directly).
+- Type 1: Overwrite the old data with new data (e.g., update the address directly)
+there are different columns
+
+a natural key is a column
+comes from and created by OLTP systems
+user1
+user2
+...
+user3
+used to track a specific entity
+distinguishes it from all other rows
+oh so a natural key is like 
+1, 2, 3 - surrogate key
+0001, 0002, 0003 - natural key with semantic meaning
+ZCZ371, NIJ120, OHP234 - natural key with semantic meaning
+basically natural keys are like primary keys but have
+semantic meanings for business contexts especially
+kaya lang if you try to optimize for readability
+then use natural key if for optimizing storage
+
+target table - 
+
+source (staging) table - 
+
 - Type 2: Maintain historical data by adding a new record with a start and end date.
 - Type 3: Keep limited historical data by adding new fields/attributes for the old and current values.
 

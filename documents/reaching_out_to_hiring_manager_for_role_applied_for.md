@@ -144,7 +144,7 @@ portfolio: https://project-alexander.vercel.app/
 *9.*
 Hi, Maica
 
-I received your LinkedIn message that you were for recruiting for an Azure Data Engineer, and I was quite excited to see more of the detailed descriptions you posted for the role. As of today I'm still really eager in finding new opportunities and I thought it wise to send this message directly to you to tell you more about how I fit perfectly for this role:
+I received yourq LinkedIn message that you were for recruiting for an Azure Data Engineer, and I was quite excited to see more of the detailed descriptions you posted for the role. As of today I'm still really eager in finding new opportunities and I thought it wise to send this message directly to you to tell you more about how I fit perfectly for this role:
 
 1. My recent project involved an end to end MLOps pipeline for a voice based machine learning model API where leveraging tools like Azure Functions, Azure Data Factory, and Azure Data Lake allowed me to extract, transform, and load 20gb/3.7billion data points of audio recordings from individuals to use for predicting their gender potentially for use in better derivation of insights in product/market analytics.
 2. Another project involved me in building an end to end ETL pipeline for healtcare analytics revolving around chronic disease utilizing PowerBI and open source data warehousing solutions to manage costs and to identify KPIs that drove high rates of chronic disease in the US.
@@ -160,3 +160,21 @@ email: larrymiguelcueva@gmail.com
 portfolio: https://project-alexander.vercel.app/
 
 P.S. below is my attached resume
+
+*10. if hiring manager themselves has already reached out*
+Hi Cha here's my resume/cv as requested
+
+I wanted also write this in due time, because I was excited to see that opportunity for the recent opening ETL Developer role at IntouchCX you sent me via DM. And while sending my resume to you, I wanted to also write this, as I thought it wise to tell you more about how fit perfectly for this role:
+
+1. My recent project involved an end to end MLOps pipeline for a voice based machine learning model API where leveraging tools like Azure Functions, Azure Data Factory, and Azure Data Lake allowed me to extract, transform, and load 20gb/3.7billion data points of audio recordings from individuals to use for predicting their gender potentially for use in better derivation of insights in product/market analytics.
+2. Another project involved me in building an end to end ETL pipeline for healtcare analytics revolving around chronic disease utilizing PowerBI and open source data warehousing solutions to manage costs and to identify KPIs that drove high rates of chronic disease in the US.
+3. I'm proficient in various data analytics/engineering and especially tools which allowed me to build these projects, allowing me to gain experience in being able to not only maintain cloud infrastructure but also combine with open source tools for cost efficiency in terms of performance and storage.
+
+While I have no doubt there are plenty of qualified applicants for this role, I think I possess the right skills that strike a balance in being able to optimize costs in terms of performance and storage AND being able to build as well scalable data solutions (without making your pockets hurt). So if it makes sense to talk further about my qualifications about this opportunity, I'd be thrilled if I can speak to you or anyone in your organization for this role.
+
+Thank you and warm regards,
+
+Larry
+
+email: larrymiguelcueva@gmail.com
+portfolio: https://project-alexander.vercel.app/
