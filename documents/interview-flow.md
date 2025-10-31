@@ -1268,7 +1268,6 @@ txn_id	user_id	txn_date	amount	amount_1	amount_7ma
 computational efficiency, or both  
 |- 
 
-
 |- think of the transactions one big table
 |- which attributes are redundant
 |- which attibutes are numeric
@@ -1294,14 +1293,8 @@ Designing a data warehouse schema for an e-commerce website is a common task for
 - Consider Aggregation Strategies.
 - Review, Validate, and Iterate.
 
-
-
 Data Warehouse Schema Design Steps (Simple & Concise)
 Understand Business Requirements & Key Metrics:
-
-
-
-
 
 Establish Relationships (Fact-Dimension Joins):
 
@@ -1771,21 +1764,34 @@ This highlights your understanding of AI, your specific technical contributions,
     |- gender
     |- audio recording
     |- individuals
-* voice and audio data can be difficult to efficiently and affordably convert raw, unstructured audio files into actionable intelligence
-
-* Potentially relevant for analyzing public interactions and large-scale data in market research and analytics
-- can provide demographic breakdowns of what gender, ethnicity, etc. is interacting with certain products, helping with store layout and inventory planning based on audio of individuals recorded from sensors
-- can provide high level of breakdown of individuals participation by gender, ethnicity, etc. in public forums/political events automatically through their audio offering quick insights than manual labelling
-In summary, the core business impact is the ability to use a foundational demographic data point (gender) to make interactions, advertisements, and service processes demonstrably more efficient and personalized.
-
-* This project was a direct response to these challenges. It is a testament to the power of a hybrid architecture, combining the best of managed cloud services yet still being cost conservative, open-source tools to build a comprehensive MLOps pipeline that is both scalable and cost-effective.
-* Developed an end-to-end MLOps pipeline for a audio signal gender prediction model, reducing cloud operational costs by over 70% by leveraging the cloud only for compute during extraction and storage and the rest for open source tools. 
-* Architected and implemented a scalable data pipeline to process gigabytes of unstructured audio data. The system generates high-impact features for a voice-based gender prediction model providing a repeatable and production-ready framework for real-time audio analytics and a foundation for new voice-based AI applications.
-
-Business use case
-Potentially help businesses reduce operational costs in terms of storage and compute
-
-And subsequently use it potentially for market analytics determining perhaps what products an individual gravitates to based on gender, ethnicity, etc
+    
+    |- business use case
+    |- two fold
+    |- potentially
+    |- automate market analyses/research
+    |- largely manual 
+    |- knowing what products individuals of specfic demographics gravitate to
+    |- 
+    |- by utilizing audio devices coupled
+    |- this developed predictive power model
+    |- 
+    |- product/market insights may be achieved
+    |- obtained faster
+    |- therefore driving market growth
+    |-
+    |- audio data
+    |- difficult to 
+    |- efficiently & affordably convert from
+    |- unstructured format to actionable intelligence
+    |-
+    |- by developing this pipeline
+    |- I was
+    |- able to reduce cloud operational costs
+    |- 70% 
+    |- using only the remaining 30% for important aspects
+    |- such as large scale extraction
+    |- and scalable storage
+    |- and automate processing of over 20gb/3.7b rows of data points
 
 ### Company Related (6):
 * what's your salary expectation
@@ -1885,11 +1891,6 @@ And subsequently use it potentially for market analytics determining perhaps wha
 |- addition
 |- to the team, your organization
 
-
-
-
-
-
 |- while I (insert lack of skill in what their lookign for e.g. exp in credit risk, fintech as a whole, domain knowledge in business)
 |- I believe
 |- can
@@ -1902,12 +1903,6 @@ And subsequently use it potentially for market analytics determining perhaps wha
 |- just
 |- enough
 |- do the job
-
-
-
-`My long standing meticulousness and coupled with it my skills in python and using it in Machine Learning/AI have been a foundational aspect in my quickly learning new things, case on point the newly acquired skills I have in a recent data analytics project I made where I analyzed chronic disease indicators data using tools like PowerBI, Python, and SQL.`
-
-`It potentially solves a business use case of potentially making cost efficient allocation of health care resources to more targeted demographics, those with more frequently occurring chronic disease and factors driving it. With this I can provide value to your business by leveraging the data I have for in depth analyses.`
 
 * why do you want to work here (more selfless reasons)?
 |- I understand 
@@ -1959,9 +1954,27 @@ And subsequently use it potentially for market analytics determining perhaps wha
 |- dedicated
 |- business
 |- of
-|- finance
-|- finance technology
-|- <as a long time user myself I enjoy features of app e.g. digital wallet, money transfer, GLoan, g invest feature>
+
+|- finance, finance technology, 
+|- as a long time user myself I enjoy features of app e.g. digital wallet, money transfer, GLoan, g invest feature
+
+|- search & referral
+|- company
+|- aim
+|- to put
+|- best
+|- most qualified
+|- candidates
+|- assisting
+|- client company
+|- in filling
+|- various
+|- positions
+|- in their organization
+(|- and as I understood
+|- positions
+|- suited more for tech/IT)
+
 |- other than
 |- that
 |- heard 
@@ -1973,6 +1986,10 @@ And subsequently use it potentially for market analytics determining perhaps wha
 |- learned
 |- interesting
 |- tech stack
+
+|- Understand
+
+
 
 * what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
 
@@ -2033,7 +2050,6 @@ And subsequently use it potentially for market analytics determining perhaps wha
 |- virtually
 |- cost efficient
 |- scalable 
-- `In this case I think uncovering the reasons why we wrote our code how we wanted it to and justifying it is something that can always be discussed. An example of this is writing SQL code that's more readable by your peer but you wrote a more "unreadable" version that achieves the same result yet out performs the other in terms of efficiency and scalability. In this case we may not want to push code to production that's more costly but readable instead of the code that's harder to understand yes but is virtually more cost efficient and scalable. This may be used as justification in ordert to have consensus between the two parties`
 
 ```
 SELECT emp_name, emp_id, dept_id
