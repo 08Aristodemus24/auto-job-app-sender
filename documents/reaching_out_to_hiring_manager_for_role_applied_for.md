@@ -1,3 +1,10 @@
+# Sending A connection request note:
+Hi Princess, I saw that your company Ascendion was hiring for an Data Engineer so I thought I'd reach out directly to discuss more how I may fit to what you're looking for so I hope we can connect :)
+
+# sending a conenction request with note when a recruiter has already messaged you via other platforms
+Hi Angel, Larry here from Kalibrr on the DE role at Yondu, I thought I'd reach here directly on this platform so we can discuss more how I may fit to what you're looking for. hope we can connect :)
+
+
 # If you have a connection in the inside:
 Hello Cyrene I wasn't sure if this message would be timely, and I noticed you were my connection too, so I thought why not reach out to you personally.
 
@@ -178,3 +185,39 @@ Larry
 
 email: larrymiguelcueva@gmail.com
 portfolio: https://project-alexander.vercel.app/
+
+*11. reaching out to a recruiter for a second time of application*
+Hello Maam/Sir,
+
+I'm writing this because, I was excited to learn about an opportunity for the recent opening for an Azure Data Engineer at Yondu. I wanted to write this letter in due time as I immediately was ecstatic that most requirements for the role fit perfectly with the skills I have. I also noticed that ah I did send an application once before for the same role and as of today I'm still really eager in trying out the second time, and I thought it wise to send this message directly to you to tell you more about how I fit at present now perfectly for this role:
+
+1. My recent project involved an end to end MLOps pipeline for a voice based machine learning model API where leveraging tools like Azure Functions, Azure Data Factory, and Azure Data Lake allowed me to extract, transform, and load 20gb/3.7billion data points of audio recordings from individuals to use for predicting their gender potentially for use in better derivation of insights in product/market analytics.
+2. Another project involved me in building an end to end ETL pipeline for healtcare analytics revolving around chronic disease utilizing PowerBI and open source data warehousing solutions to manage costs and to identify KPIs that drove high rates of chronic disease in the US.
+3. I'm proficient in various data analytics/engineering and especially tools which allowed me to build these projects, allowing me to gain experience in being able to not only maintain cloud infrastructure but also combine with open source tools for cost efficiency in terms of performance and storage.
+
+While I have no doubt there are plenty of qualified applicants for this role, I think I possess the right skills that strike a balance in being able to optimize costs in terms of performance and storage AND being able to build as well scalable data solutions (without making your pockets hurt). So if it makes sense to talk further about my qualifications about this opportunity, I'd be thrilled if I can speak to you or anyone in your organization for this role.
+
+Thank you and warm regards,
+
+Larry
+
+email: larrymiguelcueva@gmail.com
+portfolio: https://project-alexander.vercel.app/
+
+*12. reaching out to ahiring manager that has accepted your connection request and where you've alreayd passed your resume to a recruiter in his company*
+Hi Adriel
+
+Thank you for accepting my invite. I just wanted to write this letter in due time because, I was excited to learn about an opportunity told to me by your perhaps a colleague of yours Anton Roxas a recruiter from IBM who reached out for an open role for a Data Engineer for Data Warehousing there. And while I've already submitted my resume to him for endorsement, I wanted to reach out directly to a senior like yourself already with extensive experience in data, as I thought it wise to tell you more about how I fit perfectly for this role:
+
+1. My recent project involved an end to end MLOps pipeline for a voice based machine learning model API where leveraging tools like Azure Functions, Azure Data Factory, and Azure Data Lake allowed me to extract, transform, and load 20gb/3.7billion data points of audio recordings from individuals to use for predicting their gender potentially for use in better derivation of insights in product/market analytics.
+2. Another project involved me in building an end to end ETL pipeline for healtcare analytics revolving around chronic disease utilizing PowerBI and open source data warehousing solutions to manage costs and to identify KPIs that drove high rates of chronic disease in the US.
+3. I'm proficient in various data analytics/engineering and especially tools which allowed me to build these projects, allowing me to gain experience in being able to not only maintain cloud infrastructure but also combine with open source tools for cost efficiency in terms of performance and storage.
+
+While I have no doubt there may be a number of potentially qualified applicants for this role, I think I possess the right skills that strike a balance in being able to optimize costs in terms of performance and storage AND being able to build as well scalable data solutions (without making your pockets hurt). So if it makes sense to talk further about my qualifications about this opportunity, I'd be thrilled if I can speak to you or anyone in your organization for this role.
+
+Thank you and warm regards,
+
+Larry
+
+email: larrymiguelcueva@gmail.com
+portfolio: https://project-alexander.vercel.app/(Edited)

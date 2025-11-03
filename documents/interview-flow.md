@@ -1208,17 +1208,7 @@ txn_id	user_id	txn_date	amount	amount_1	amount_7ma
 ```
 
 
-* what is CAC? Customer Acquisition Cost. It is an indicator
 
-* what is CLTV? Customer Lifetime Value
-
-* what is MRR? Monthly Recurring Revenue
-
-* what is Churn? te – % of users who stop using the product
-
-* what is ARPU? Average Revenue Per User
-
-* what is ROI? Return on Investment
 
 * What is data analytics? Data analytics is the process of examining, cleaning, transforming, and modeling data to extract useful information, draw conclusions, and support decision-making.
 
@@ -1712,7 +1702,27 @@ This highlights your understanding of AI, your specific technical contributions,
 |- use
 |- grow
 
-* Do you have experience in data analysis/engineering, ETL/ELT, data warehousing, etc.? 
+* Do you have experience in data analysis/engineering, ETL/ELT, data warehousing, etc.?
+
+|- I appreciate 
+|- question 
+|- maam
+|- I'd like
+|- clarify
+|- could the
+|- personal projects
+|- have done
+|- that allowed
+|- onself
+|- gain 
+|- extensive exp
+|- serve
+|- equivalent 
+|- years of exp
+|- done/applied in
+|- a formal work setting
+
+|- if that's the case
 |- yes
 |- actually 2/<n> 
 |- best 
@@ -1767,23 +1777,23 @@ This highlights your understanding of AI, your specific technical contributions,
     
     |- business use case
     |- two fold
+
     |- potentially
     |- automate market analyses/research
     |- largely manual 
     |- knowing what products individuals of specfic demographics gravitate to
-    |- 
+
     |- by utilizing audio devices coupled
     |- this developed predictive power model
-    |- 
     |- product/market insights may be achieved
     |- obtained faster
     |- therefore driving market growth
-    |-
+
     |- audio data
     |- difficult to 
     |- efficiently & affordably convert from
     |- unstructured format to actionable intelligence
-    |-
+
     |- by developing this pipeline
     |- I was
     |- able to reduce cloud operational costs
@@ -1974,6 +1984,22 @@ This highlights your understanding of AI, your specific technical contributions,
 (|- and as I understood
 |- positions
 |- suited more for tech/IT)
+
+|- providing 
+|- information-based analytics
+|- decision tools
+
+help researchers advance scientific knowledge
+help businesses and governments prevent fraud
+help law makers achieve justice and fair results for their clients
+consumers access financial services and get fair prices on insurance
+customers learn about markets and complete transactions
+
+|- for professional and business clients
+|- driving them
+|- in better decision making processes
+|- to get better results
+|- to be more productive.
 
 |- other than
 |- that
