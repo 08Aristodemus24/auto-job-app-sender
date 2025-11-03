@@ -1781,12 +1781,12 @@ This highlights your understanding of AI, your specific technical contributions,
     |- potentially
     |- automate market analyses/research
     |- largely manual 
-    |- knowing what products individuals of specfic demographics gravitate to
+    |- such as knowing what products individuals of specfic demographics gravitate to
 
     |- by utilizing audio devices coupled
     |- this developed predictive power model
     |- product/market insights may be achieved
-    |- obtained faster
+    |-  obtained faster
     |- therefore driving market growth
 
     |- audio data
@@ -2896,3 +2896,7 @@ Data Validation: Writing scripts to automatically check data against predefined 
 Geocoding/Address Validation: Using APIs (Google Maps API, SmartyStreets) to validate and standardize addresses.
 
 You are absolutely on the right track. Your idea of observing these "manual" processes, understanding their pain points, and then using Python to automate them is precisely how data analysts and engineers make massive impacts. You won't just be entering data; you'll be identifying systemic inefficiencies and building tangible solutions that save time, reduce errors, and free up resources for more valuable work. That's a powerful narrative for your resume and interviews, proving your worth far beyond the initial job description. Go for it!
+
+# Relx
+Feedback:
+talk more about strengths, be honest about your weaknesses and say you're actively doing your best to improve upon it.
