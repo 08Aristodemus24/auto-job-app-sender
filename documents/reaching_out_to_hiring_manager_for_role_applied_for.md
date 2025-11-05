@@ -221,3 +221,23 @@ Larry
 
 email: larrymiguelcueva@gmail.com
 portfolio: https://project-alexander.vercel.app/(Edited)
+
+*13. if recruiter is hiring for the role you applied to before*
+Hi, Mayca
+
+I saw that you were for recruiting for a Python Developer, and while I still vividly remember I applied for this a while back and had our initial interview, I am keen to try and 'shoot my shot' again for lack of a better word, I was quite excited to see that the descriptions you posted on the role aligns still with my skill set. While I've already submitted my application in hte job portal, I thought it wise to send this message directly to you to tell you more about how I fit perfectly for this role:
+
+1. My recent project involved an end to end MLOps pipeline for a voice based machine learning model API where leveraging tools like Azure Functions, Azure Data Factory, and Azure Data Lake, allowed me to extract, transform, and load 20gb/3.7billion data points of audio recordings from individuals to use for predicting their gender potentially for use in better derivation of insights in product/market analytics. Addtionally deployed as public API using Docker.
+
+2. Another project involved me in building an end to end AI/ML model that enhanced the accuracy and reliability of bio-signal denoising and stress detection, addressing critical challenges in bio-signal data analysis. Additionally deployed as aa full-stack web application demonstrating the utility and potential of real world health monitoring applications.
+ 
+3. I'm proficient in various cloud engineering and python development tools which allowed me to build these projects, allowing me to gain experience in being able to not only maintain cloud infrastructure and deployed software but also combine with open source tools for cost efficiency in terms of performance and storage 
+
+While I have no doubt there are plenty of qualified applicants for this role, I think I possess the right skills that strike a balance in being able to optimize costs in terms of performance and storage AND being able to build as well scalable software solutions (without making your pockets hurt). So if it makes sense to talk further about my qualifications about this opportunity, I'd be thrilled if I can speak to you or anyone in your organization for this role.
+
+Thank you and warm regards,
+
+Larry
+
+email: larrymiguelcueva@gmail.com
+portfolio: https://project-alexander.vercel.app/

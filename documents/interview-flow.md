@@ -1742,7 +1742,7 @@ This highlights your understanding of AI, your specific technical contributions,
     |- populations
     |- high rate
     |- cdi
-
+    |-
     |- business use case
     |- potentially 
     |- solve
@@ -1751,12 +1751,12 @@ This highlights your understanding of AI, your specific technical contributions,
     |- which
     |- demographic
     |- target
-
+    |-
     |- by
     |- identifying
     |- KPI
     |- (see above)
-
+    |-
     |- allocate 
     |- healthcare
     |- efficiently
@@ -1774,26 +1774,26 @@ This highlights your understanding of AI, your specific technical contributions,
     |- gender
     |- audio recording
     |- individuals
-    
+    |-
     |- business use case
     |- two fold
-
+    |-
     |- potentially
     |- automate market analyses/research
     |- largely manual 
     |- such as knowing what products individuals of specfic demographics gravitate to
-
+    |-
     |- by utilizing audio devices coupled
     |- this developed predictive power model
     |- product/market insights may be achieved
     |-  obtained faster
     |- therefore driving market growth
-
+    |-
     |- audio data
     |- difficult to 
     |- efficiently & affordably convert from
     |- unstructured format to actionable intelligence
-
+    |-
     |- by developing this pipeline
     |- I was
     |- able to reduce cloud operational costs
@@ -1966,40 +1966,72 @@ This highlights your understanding of AI, your specific technical contributions,
 |- of
 
 |- finance, finance technology, 
-|- as a long time user myself I enjoy features of app e.g. digital wallet, money transfer, GLoan, g invest feature
+    |- as a long time user myself I enjoy features of app e.g. digital wallet, money transfer, GLoan, g invest feature
 
 |- search & referral
-|- company
-|- aim
-|- to put
-|- best
-|- most qualified
-|- candidates
-|- assisting
-|- client company
-|- in filling
-|- various
-|- positions
-|- in their organization
-(|- and as I understood
-|- positions
-|- suited more for tech/IT)
+    |- company
+    |- aim
+    |- to put
+    |- best
+    |- most qualified
+    |- candidates
+    |- assisting
+    |- client company
+    |- in filling
+    |- various
+    |- positions
+    |- in their organization
+    (|- and as I understood
+    |- positions
+    |- suited more for tech/IT)
+    |-
+    |- providing information-based analytics & decision tools
+    |- help researchers 
+    |- advance 
+    |- scientific knowledge
+    |- help businesses, governments 
+    |- prevent fraud
+    |- help law makers achieve 
+    |- justice
+    |- fair results for their clients
+    |- help consumers 
+    |- access financial services 
+    |- get fair prices on insurance
+    |- help customers 
+    |- learn about markets
+    |- complete transactions
+    |-
+    |- for professional and business clients
+    |- driving them
+    |- in better decision making processes
+    |- to get better results
+    |- to be more productive.
 
-|- providing 
-|- information-based analytics
-|- decision tools
-
-help researchers advance scientific knowledge
-help businesses and governments prevent fraud
-help law makers achieve justice and fair results for their clients
-consumers access financial services and get fair prices on insurance
-customers learn about markets and complete transactions
-
-|- for professional and business clients
-|- driving them
-|- in better decision making processes
-|- to get better results
-|- to be more productive.
+|- developing pharmaceuticals
+    |- being the one
+    |- leading the charge
+    |- I would say in this 
+    |- domain
+    |- healthcare realted products
+    |- 
+    |- additionally 
+    |- lead manufacturer
+    |- well known otcs, health supplements
+    |- Neozep, Biogesic, Solmux, Ceelin, ImmunPro, Enervon
+    |- 
+    |- committed to world-class
+    |- quality manufacturing of
+    |- these products 
+    |- 
+    |- upholds standardds
+    |- of 'malasakit' 
+    |- above and beyond to serve health needs of Filipinos
+    |- through numerous advocacies 
+    |- like Alagang Unilab
+    |- focuseing on making primary 
+    |-- healthcare accessible to communities
+    |- bayanihan
+    |- emphasizing teamwork for the welfare of the Filipino
 
 |- other than
 |- that
@@ -2013,7 +2045,6 @@ customers learn about markets and complete transactions
 |- interesting
 |- tech stack
 
-|- Understand
 
 
 
