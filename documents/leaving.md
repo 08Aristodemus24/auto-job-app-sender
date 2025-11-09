@@ -1,0 +1,1 @@
+https://www.indeed.com/career-advice/starting-new-job/can-you-quit-contract-job#:~:text=In%20most%20cases%2C%20yes%2C%20you,of%20Employment:%20A%20Comprehensive%20Guide

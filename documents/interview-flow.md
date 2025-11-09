@@ -1803,6 +1803,24 @@ This highlights your understanding of AI, your specific technical contributions,
     |- and scalable storage
     |- and automate processing of over 20gb/3.7b rows of data points
 
+* Tell me about your experience with modern DE tools like dbt and Snowflake?
+|- That's a fair point
+|- While I may not have years of 
+|- employment experience with dbt and Snowflake
+|- my experience is measured by proactive mastery 
+|- and execution—which I believe is more relevant.
+|- 
+|- After completing 2 of my recent end to end ETL projects   
+|- I became obsessively goal-oriented
+|- dedicating the last six months to building my technical foundation to match industry demand.
+|- and it just so happened that the job description itself required dbt and snowflake as I was developing another recent project which I am documenting myself in LinkedIn about it 
+
+The Proof of Mettle: I designed and implemented a full-scale ELT Data Lakehouse pipeline using Snowflake, dbt, and Apache Airflow to ingest and model unstructured forum data for emerging market trend analysis.
+
+The Analytical Mind: My unique inclination is to be a cost optimization maniac. I intentionally architected the solution to be cost-efficient and scalable, leveraging S3/Delta Lake for storage and using Snowflake only for compute-intensive transformations.
+
+The Coachability Factor: This entire project was built using industry best practices, largely due to direct mentorship from senior Data Engineers who guided my use of dbt's staging methodologies, proving my ability to rapidly adopt and implement complex professional feedback.
+
 ### Company Related (6):
 * what's your salary expectation
 |- seen
@@ -1965,8 +1983,42 @@ This highlights your understanding of AI, your specific technical contributions,
 |- business
 |- of
 
-|- finance, finance technology, 
-    |- as a long time user myself I enjoy features of app e.g. digital wallet, money transfer, GLoan, g invest feature
+|- digital financial services, finance technology, 
+    |- leading mobile wallet & finance super-app
+    |- in the Philippines. 
+    |- its core purpose:
+    |- accelerate financial inclusion by making digital financial services accessible to the country's large unbanked population.
+    |-
+    |- Core Business Functions
+    |- 1. e-wallet for instant, secure transactions. 
+    |- to deposit and withdraw in/out
+    |- pay bills to over 400+ billers, 
+    |- and make purchases via QR code (Scan-to-Pay) at millions of partner merchants and social sellers.
+    |- seamless, real-time money transfers between GCash users (GCash-to-GCash) 
+    |- and to and from traditional banks (via InstaPay), 
+    |- eliminating the need for physical bank visits.
+    |- 
+    |- 2. provider for revolving credit lines (GCredit)
+    |- personal loans (GLoan and GGives - buy now, pay later) to users based on
+    |- their GScore (creditworthiness).
+    |-
+    |- 3. other financial services such as
+    |- (GSave) for digital savings
+    |- (GFunds and GStocks) for accessible investment 
+    |- products with low barriers to entry (e.g., no minimum deposit).
+    |- 
+    |- honestly has interested me to know
+    |- that potentially working here
+    |- may entail getting to work with to an
+    |- extent the sheer massive scale of data 
+    |- coming from
+    |- the millions
+    |- active users
+    |- billions of transactions everyday
+    |- generating data at high volumes and velocity: Handling millions of real-time financial transactions daily.
+    |- and its reliance on novel technologies 
+    |- for advanced analytics by means of AI/ML 
+    |- (like the GScore AI) for credit scoring, personalized ads, and fraud detection.
 
 |- search & referral
     |- company
@@ -2029,16 +2081,20 @@ This highlights your understanding of AI, your specific technical contributions,
     |- through numerous advocacies 
     |- like Alagang Unilab
     |- focuseing on making primary 
-    |-- healthcare accessible to communities
+    |- healthcare accessible to communities
     |- bayanihan
     |- emphasizing teamwork for the welfare of the Filipino
+
+
 
 |- other than
 |- that
 |- heard 
 |- positive 
 |- work environment
+
 |- people
+
 |- came across
 |- I actually interviewed
 |- learned
