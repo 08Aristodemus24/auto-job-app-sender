@@ -2987,3 +2987,211 @@ You are absolutely on the right track. Your idea of observing these "manual" pro
 # Relx
 Feedback:
 talk more about strengths, be honest about your weaknesses and say you're actively doing your best to improve upon it.
+
+
+# ISupportWorldwide
+30s
+|- To start my recent role
+|- Data Engineer, intern
+|- responsiblitiese
+|- transform preprocesses
+|- incoming data
+|- daily basis
+|- from users
+|- using application
+|- to a format like text
+|- ingested
+|- ETL pipeline
+|- developed
+|- other DEs
+|- so that augmented
+|- retrieval augmented generated AI
+|- in order
+|- predict
+|- accurate
+|- and up to date 
+|- information
+|- daily basis
+|- based on domain
+|- specializing in
+
+30s
+|- My extensive experience
+|- comes from
+|- actually 2/<n> 
+|- best 
+|- projects
+|- 1st
+    |- full on
+    |- end2end
+    |- ETL
+    |- for 
+    |- healthcare
+    |- analytics
+    |- chronic disease indicators
+    |- us
+    |- analyzed
+    |- KPI
+    |- driving
+    |- populations
+    |- high rate
+    |- cdi
+    |- 
+    |- python for extracting 20
+    |- years of healthcare and pop data
+    |- PySpark and SQL for distributed computation
+    |- for heavy data transformations
+    |- using free cloud DWH like motherduck to store data
+    |- to later analyze it using Power BI
+    |-
+    |- business use case
+    |- potentially 
+    |- solve
+    |- lack
+    |- insights
+    |- healthcare institutions
+    |- which
+    |- demographic
+    |- target
+    |-
+    |- by
+    |- identifying
+    |- KPI
+    |- (see above)
+    |-
+    |- allocate 
+    |- healthcare
+    |- efficiently
+
+30s
+|- 2nd
+    |- full on
+    |- end2end
+    |- MLOps
+    |- pipeline
+    |- for 
+    |- voice 
+    |- based
+    |- AI/ML model API
+    |- capable
+    |- predicting
+    |- gender
+    |- individuals
+    |- based audio recording
+    |-
+    |- where I used azure functions, azure data factory, azure data lake storage
+    |- to extract, process, and store in about 3.7b rows/20gb of audio 
+    |- recordings in a scalable manner 
+    |- transform it into features for ML using duckdb, librosa, and sklearn
+    |- loading it to a free cloud data warehouse called motherduck
+    |- subsequently use it for training the predictive model
+    |- 
+    |- business use case
+    |- two fold
+    |-
+    |- potentially
+    |- automate market analyses/research
+    |- largely manual 
+    |- such as knowing what products individuals of specfic demographics gravitate to
+    |-
+    <!-- |- by utilizing audio devices coupled
+    |- this developed predictive power model
+    |- product/market insights may be achieved
+    |- obtained faster
+    |- therefore driving market growth
+    |-
+    |- audio data
+    |- difficult to 
+    |- efficiently & affordably convert from
+    |- unstructured format to actionable intelligence -->
+    |-
+    |- by developing this pipeline
+    |- I was
+    |- able to reduce cloud operational costs
+    |- 70% 
+    |- using only the remaining 30% for important aspects
+    |- such as large scale extraction
+    |- and scalable storage
+    |- and automate processing of over 20gb/3.7b rows of data points
+
+<!-- |- as for key skills for this role
+|- I understand
+|- looking
+|- skilled in Python, SQL, Azure, and building ETL pipelines 
+|- for starters
+|- 
+|- used
+|- python 
+|- for the last 6 years in
+|- college
+|- all personal projects
+|- thesis -->
+
+<!-- |- recently
+|- developed
+|- DE/DA project
+|- refer above to (chronic-disease-analyses) project
+|- used
+|- airflow
+|- orchestration framework
+|- python 
+|- extract
+|- raw data
+|- consolidated
+|- over 20
+|- transform 
+|- data trans
+|- modelled
+|- spark
+|- load
+|- cloud DWH
+|- motherduck
+|- faster querying
+|- due
+|- OLAP struct
+|- visualized
+|- PowerBI
+
+|- another
+|- end 2 end
+|- MLOps pipeline
+|- audio based analytics
+|- orchestration 
+|- airflow
+|- extract
+|- combination (ADF, Az Func, azure data lake)
+|- 3.7billion/20gb audio recordings
+|- transformation
+|- duckdb, librosa, sklearn 
+|- computing features, normalization, imputation, augmentation
+|- loading
+|- cloud DWH
+|- motherduck
+|- open source -->
+
+|- additionally
+|- I understand 
+|- looking
+|- communicate/understand
+|- business needs
+|- and while I believe
+|- being
+|- adept
+|- skills
+|- important
+|- I believe
+|- unique
+|- inclination
+|- build
+|- scalable systems
+|- while
+|- aiming
+|- cost efficiency
+|- in terms
+|- peprformance
+|- storage
+|- is just as important
+|- will I believe
+|- great and unique
+|- addition
+|- to the team, your organization
