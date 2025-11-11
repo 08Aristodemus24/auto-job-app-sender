@@ -1702,7 +1702,7 @@ This highlights your understanding of AI, your specific technical contributions,
 |- use
 |- grow
 
-* Do you have experience in data analysis/engineering, ETL/ELT, data warehousing, etc.?
+* How many years of, or do you have experience in data analysis/engineering, ETL/ELT, data warehousing, etc.?
 
 |- I appreciate 
 |- question 
@@ -1810,16 +1810,24 @@ This highlights your understanding of AI, your specific technical contributions,
 |- my experience is measured by proactive mastery 
 |- and execution—which I believe is more relevant.
 |- 
-|- After completing 2 of my recent end to end ETL projects   
+<!-- |- After completing 2 of my recent end to end ETL projects   
 |- I became obsessively goal-oriented
 |- dedicating the last six months to building my technical foundation to match industry demand.
-|- and it just so happened that the job description itself required dbt and snowflake as I was developing another recent project which I am documenting myself in LinkedIn about it 
-
-The Proof of Mettle: I designed and implemented a full-scale ELT Data Lakehouse pipeline using Snowflake, dbt, and Apache Airflow to ingest and model unstructured forum data for emerging market trend analysis.
-
-The Analytical Mind: My unique inclination is to be a cost optimization maniac. I intentionally architected the solution to be cost-efficient and scalable, leveraging S3/Delta Lake for storage and using Snowflake only for compute-intensive transformations.
-
-The Coachability Factor: This entire project was built using industry best practices, largely due to direct mentorship from senior Data Engineers who guided my use of dbt's staging methodologies, proving my ability to rapidly adopt and implement complex professional feedback.
+|- and it just so happened that the job description itself required dbt and snowflake as I was developing another recent project which I am documenting myself in LinkedIn about it -->
+|- 
+|- As a way to prove my mettle 
+|- I am 
+|- currently designing
+|- & implementing
+|- full-scale ELT Data Lakehouse pipeline
+|- Snowflake, dbt, and Apache Airflow to 
+|- ingest and model large unstructured 
+|- forum data 
+|- for emerging market trend analysis.
+|- 
+|- I intentionally architected the solution to be cost-efficient and scalable
+|- leveraging S3/Delta Lake for storage instead of on premise OLTP systems 
+|- use Snowflake only for compute-intensive transformations
 
 ### Company Related (6):
 * what's your salary expectation
@@ -1932,6 +1940,10 @@ The Coachability Factor: This entire project was built using industry best pract
 |- enough
 |- do the job
 
+|- answer succinctly
+|- slow down
+|- 
+
 * why do you want to work here (more selfless reasons)?
 |- I understand 
 |- <company name>
@@ -1983,7 +1995,7 @@ The Coachability Factor: This entire project was built using industry best pract
 |- business
 |- of
 
-|- digital financial services, finance technology, 
+|- (GCASH) digital financial services, finance technology, 
     |- leading mobile wallet & finance super-app
     |- in the Philippines. 
     |- its core purpose:
@@ -2020,7 +2032,7 @@ The Coachability Factor: This entire project was built using industry best pract
     |- for advanced analytics by means of AI/ML 
     |- (like the GScore AI) for credit scoring, personalized ads, and fraud detection.
 
-|- search & referral
+|- (Dempsey) search & referral
     |- company
     |- aim
     |- to put
@@ -2059,7 +2071,7 @@ The Coachability Factor: This entire project was built using industry best pract
     |- to get better results
     |- to be more productive.
 
-|- developing pharmaceuticals
+|- (UNILAB) developing pharmaceuticals
     |- being the one
     |- leading the charge
     |- I would say in this 
@@ -2085,7 +2097,30 @@ The Coachability Factor: This entire project was built using industry best pract
     |- bayanihan
     |- emphasizing teamwork for the welfare of the Filipino
 
-
+|- (ACEN) developing, building, operating,
+    |- large-scale 
+    |- renewable energy 
+    |- facilities 
+    |- solar farms, wind farms, and geothermal plants.
+    |- leveraged its agility and collaborative approach to accelerate the energy transition.
+    |- 
+    |- being one of Ayala group’s listed energy platform, 
+    |- one of
+    |- fastest-growing 
+    |- renewable energy platforms in Asia Pacific
+    |- with Philippines as its largest market
+    |-
+    |- Interestingly 
+    |- approx 7 GW
+    |- renewable energy capacity is attributable 
+    |- to ACEN's platform
+    |- spanning operational, under-construction, and committed projects.
+    |- 
+    |- Picqued my interest further
+    |- what I think aligns with my
+    |- visions too is 
+    |- committment to unlocking access to clean, reliable, and affordable renewable energy, 
+    |- the company is on track to achieve 100% renewable energy generation by 2025 and reach Net Zero greenhouse gas emissions by 2050
 
 |- other than
 |- that
@@ -2100,9 +2135,6 @@ The Coachability Factor: This entire project was built using industry best pract
 |- learned
 |- interesting
 |- tech stack
-
-
-
 
 * what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
 
@@ -2541,6 +2573,7 @@ Z-Lift Solutions
 RCBC
 Bank of Commerce
 Home Credit Philippines
+ACEN Shared Services
 
 
 ## Tier 2:
