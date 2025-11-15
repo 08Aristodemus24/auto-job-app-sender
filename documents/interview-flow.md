@@ -1945,13 +1945,65 @@ This highlights your understanding of AI, your specific technical contributions,
 |- 
 
 * why do you want to work here (more selfless reasons)?
-|- I understand 
+|- honestly 
+|- for a period
+|- time
+|- I thought
+|- skills alone
+|- business acumen
+|- important
+|- but I've realized
+|- knowing the vision
+|- goals they aspire to achieve
+|- seein if 
+|- goals or visions
+|- align
+|- own 
+|- advocacies
+|- aspirations
+|- as important 
+
+|- Having researched
+|- learned
+|- about
 |- <company name>
-|- prides itself
-|- <insert work env e.g. 
-    gcash: growth, recognition and social impact
-    z-lift: empowerment, consultancy, 
-  >
+
+|- Gcash:
+    |- prides itself
+    |- growth
+    |- recognition
+    |- and social impact
+    
+|- z-lift: 
+    |- prides itself
+    |- empowerment
+    |- consultancy 
+
+|- ACEN:
+    |- committement to the vision
+    |- not only
+    |- making everyone
+    |- access
+    |- clean
+    |- reliable
+    |- affordable
+    |- renewable energy
+    |- sustainable environment
+    |-
+    |- through the construction, operation, development of these power plants
+    |- 
+    |- and
+    |- effect 
+    |- environmental
+    |- social
+    |- impact
+    |- in a positive way
+    |- through this
+    |- environmental stewardship
+    
+    |- renewable energy initiatives
+
+
 |- real
 |- skills
 |- alone
@@ -1962,12 +2014,20 @@ This highlights your understanding of AI, your specific technical contributions,
 |- drive/fire
 |- learn
 |- grow
+|- and contribute
+
+|- to a ca
 |- which
+
 |- I believe
-|- <insert company name>
-|- holds
-|- on
-|- to
+
+|- ACEN:
+    |- this vision
+    |- 100% renewable energy generation by 2025 and reach Net Zero greenhouse gas emissions by 2050
+  
+
+
+
 
 |- I honestly
 |- want
@@ -1978,15 +2038,18 @@ This highlights your understanding of AI, your specific technical contributions,
 |- cause
 |- matters
 
+all I want is to do the best I can with what I have now 
+to contribute to that goal 
+because I think what really matters is everyone including myself is able to give value and contribute to an organization they believe in and most importantly a cause that matters 
+
 |- sincerely
 |- for lack
 |- better 
 |- all I
 |- need
 |- shot
-`Having first learned about your company 2 years ago what I really value is that your compnay strives for the virtues of responsibility, teamwork, and honesty, which resonate with me because I believe I can be responsible enough to own my shortcomings, support my teammates by listening to their concerns and questions, and be completely honest about certain predicaments I may be in, or concerns I have without fear of ridicule or shame. I think these are essential in the workplace which funnily enough can be translated into human to human relationships themselves be it platonic or romantic.`
 
-`I think the company fosters growth in technologies which I'm greatly enthusiastic about, because while monetary value is important we cannot deny this, learning new things is just as equally important and I think learning new things like technologies can greatly contribute to developing quality products. On a more simple note learning new things is fun for me personally and learning new things through hands on building is what I'm fond of doing the most`
+
 
 * what do you know about this organization (gcash for example)?
 |- I understand
@@ -2120,7 +2183,8 @@ This highlights your understanding of AI, your specific technical contributions,
     |- what I think aligns with my
     |- visions too is 
     |- committment to unlocking access to clean, reliable, and affordable renewable energy, 
-    |- the company is on track to achieve 100% renewable energy generation by 2025 and reach Net Zero greenhouse gas emissions by 2050
+    |- 
+    |- it's aspiration of the company is on track to achieve 100% renewable energy generation by 2025 and reach Net Zero greenhouse gas emissions by 2050
 
 |- other than
 |- that
