@@ -1998,9 +1998,9 @@ This highlights your understanding of AI, your specific technical contributions,
 |- I 
 |- stood there
 |- asked myself, 
-|- what if mas marami pa kaya ganto? 
-|- what if the environment here was as sustainable as all other cities or locations in our country? 
-|- And others? 
+|- what if mas marami? 
+|- what if the environment here was as refreshing
+|- As others? 
 |- Nangarap lang ako
 |-  but stnading or sitting here in your midst, maybe it's not so much of a farfetched dream, maybe I too like many of you effect positive change in my own small way by contributing to a cause like this that truly matters
 
@@ -2019,7 +2019,9 @@ This highlights your understanding of AI, your specific technical contributions,
 |- ultimately aspires to that goal
 |- to make an impact
 |- give value 
-|- and contribute to an organization they believe in to a cause that matters 
+|- and contribute to an organization they believe
+|- cause
+|- matters 
 
 |- sincerely
 |- for lack
