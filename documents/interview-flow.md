@@ -1927,22 +1927,7 @@ This highlights your understanding of AI, your specific technical contributions,
 |- addition
 |- to the team, your organization
 
-|- while I (insert lack of skill in what their lookign for e.g. exp in credit risk, fintech as a whole, domain knowledge in business)
-|- I believe
-|- can
-|- adept
-|- skills,
-|- to learn
-|- not so much
-|- whole
-|- domain
-|- just
-|- enough
-|- do the job
 
-|- answer succinctly
-|- slow down
-|- 
 
 * why do you want to work here (more selfless reasons)?
 |- honestly 
@@ -1968,7 +1953,7 @@ This highlights your understanding of AI, your specific technical contributions,
 |- about
 |- <company name>
 
-|- Gcash:
+<!-- |- Gcash:
     |- prides itself
     |- growth
     |- recognition
@@ -1977,7 +1962,7 @@ This highlights your understanding of AI, your specific technical contributions,
 |- z-lift: 
     |- prides itself
     |- empowerment
-    |- consultancy 
+    |- consultancy  -->
 
 |- ACEN:
     |- committement to the vision
@@ -1988,59 +1973,53 @@ This highlights your understanding of AI, your specific technical contributions,
     |- reliable
     |- affordable
     |- renewable energy
-    |- sustainable environment
-    |-
-    |- through the construction, operation, development of these power plants
     |- 
-    |- and
-    |- effect 
-    |- environmental
-    |- social
-    |- impact
-    |- in a positive way
-    |- through this
-    |- environmental stewardship
-    
-    |- renewable energy initiatives
+    |- sustainable environment
+    |- 100% renewable energy generation by 2025
+    |- reach Net Zero greenhouse emissions by 2050
+    |-
+    |- through
+    |- continuous 
+    |- construction
+    |- operation
+    |- development of these power plants
 
+|- I was just awe struck
+|- by these aspirations
+|- and wondrous achievements ACEN has already
+|- achieved in our time
 
-|- real
+|- and if I 
+|- speak 
+|- native tongue
+|- pililla rizal
+|- close up
+|- windmills
+|- I 
+|- stood there
+|- asked myself, 
+|- what if mas marami pa kaya ganto? 
+|- what if the environment here was as sustainable as all other cities or locations in our country? 
+|- And others? 
+|- Nangarap lang ako
+|-  but stnading or sitting here in your midst, maybe it's not so much of a farfetched dream, maybe I too like many of you effect positive change in my own small way by contributing to a cause like this that truly matters
+
 |- skills
 |- alone
 |- important
 |- matters
 |- moreso
 |- ones
-|- drive/fire
+|- drive/fire/willingness
 |- learn
 |- grow
 |- and contribute
-
-|- to a ca
-|- which
-
-|- I believe
-
-|- ACEN:
-    |- this vision
-    |- 100% renewable energy generation by 2025 and reach Net Zero greenhouse gas emissions by 2050
-  
-
-
-
-
-|- I honestly
-|- want
-|- impact
-|- give value
-|- contribute
-|- organization
-|- cause
-|- matters
-
-all I want is to do the best I can with what I have now 
-to contribute to that goal 
-because I think what really matters is everyone including myself is able to give value and contribute to an organization they believe in and most importantly a cause that matters 
+|- to a cause that truly matters
+|- and I think everyone including myself
+|- ultimately aspires to that goal
+|- to make an impact
+|- give value 
+|- and contribute to an organization they believe in to a cause that matters 
 
 |- sincerely
 |- for lack
