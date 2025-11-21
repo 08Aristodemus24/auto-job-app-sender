@@ -2167,6 +2167,76 @@ This highlights your understanding of AI, your specific technical contributions,
     |- 
     |- it's aspiration of the company is on track to achieve 100% renewable energy generation by 2025 and reach Net Zero greenhouse gas emissions by 2050
 
+|- (Stratpoint)
+    |- accelerating the digital transformation for businesses globally for 20 yrs
+    |- specializing
+    |- agile software development
+    |- managed QA 
+    |- cloud 
+    |- data and AI
+    |-
+    |- continuous experts in modern cloud and data technologies (AWS, Google Cloud, HDP)
+    |- noted as the only AWS Advanced Consulting Partner in the Philippines.
+    |- They are a valued partner of VMware and Pivotal
+    |- 
+    |- Client Base: 
+    |- Silicon Valley
+    |- Globe Telecom
+    |- ABS-CBN
+    |- UnionBank.
+
+    |- Core Initiative: Stratpoint is supporting the TESDA Supervised Industry Learning (SIL) program 
+    |- partnered with TechVoc institution Joysis TVI 
+    |- help communities
+    |- by tech education.
+    |-
+    |- such as
+    |- recent
+    |- free
+    |- 120-hour Java capstone training program 
+    |- last February 10 to 28
+    |- 
+    |- dedicated
+    |- for those 
+    |- techvoc students
+    |- to learn OOP, DB mgmt, QA
+    |- at practical level
+    |- hands on based approach
+    |- build
+    |- real world e-wallet apps
+    |- for capstone
+    |- engage
+    |- entire SWE dev lifecycel
+
+    |- additionally
+    |- Stratpoint Technologies 
+    |- among Top 500 out of 3200 global outsourcing firms in the OA500 2025 ranking
+    |- the most respected benchmarks in the global outsourcing industry
+    |- highlighting Stratpoint's expertise
+    |- delivering high-quality services in 
+    |- agile software development, 
+    |- QA 
+    |- Cloud 
+    |- data, and AI.
+    |- Basing it over STs domain authority, 
+    |- site traffic, 
+    |- employee reviews,
+    |- LinkedIn engagement.
+
+    |- reflecting 
+    |- not only commitment
+    |- innovation
+    |- service excellence
+    |- business impact
+    |- but the vision of
+    |- advancing talent
+    |- and skills of future
+    |- mentors and contributors
+    |- to PH tech ecosystem
+    |- through its pay it forward
+    |- mindset and skill
+    |- initiatives 
+
 |- other than
 |- that
 |- heard 
