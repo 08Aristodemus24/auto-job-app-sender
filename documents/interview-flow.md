@@ -1983,26 +1983,84 @@ This highlights your understanding of AI, your specific technical contributions,
     |- construction
     |- operation
     |- development of these power plants
+    |-
+    |- I was just awe struck
+    |- by these aspirations
+    |- and wondrous achievements ACEN has already
+    |- achieved in our time
+    |- 
+    |- and if I 
+    |- speak 
+    |- native tongue
+    |- pililla rizal
+    |- close up
+    |- windmills
+    |- I 
+    |- stood there
+    |- asked myself, 
+    |- what if mas marami? 
+    |- what if the environment here was as refreshing
+    |- As others? 
+    |- Nangarap lang ako
+    |-  but stnading or sitting here in your midst, maybe it's not so much of a farfetched dream, maybe I too like many of you effect positive change in my own small way by contributing to a cause like this that truly matters
+    |-
+    |- skills
+    |- alone
+    |- important
+    |- matters
+    |- moreso
+    |- ones
+    |- drive/fire/willingness
+    |- learn
+    |- grow
+    |- and contribute
+    |- to a cause that truly matters
+    |- and I think everyone including myself
+    |- ultimately aspires to that goal
+    |- to make an impact
+    |- give value 
+    |- and contribute to an organization they believe
+    |- cause
+    |- matters
 
-|- I was just awe struck
-|- by these aspirations
-|- and wondrous achievements ACEN has already
-|- achieved in our time
-
-|- and if I 
-|- speak 
-|- native tongue
-|- pililla rizal
-|- close up
-|- windmills
-|- I 
-|- stood there
-|- asked myself, 
-|- what if mas marami? 
-|- what if the environment here was as refreshing
-|- As others? 
-|- Nangarap lang ako
-|-  but stnading or sitting here in your midst, maybe it's not so much of a farfetched dream, maybe I too like many of you effect positive change in my own small way by contributing to a cause like this that truly matters
+|- Stratpoint:
+    |- commitment
+    |- not only
+    |- transforming companies digitally
+    |- with innovation
+    |- top tier
+    |- excellence
+    |- providing
+    |- real impact
+    |- business wise
+    |- 
+    |- but also
+    |- advancing talent
+    |- and skills of future
+    |- mentors and contributors
+    |- to PH tech ecosystem
+    |- through its pay it forward
+    |- mindset and skill
+    |- initiatives
+    |- 
+    |- nothing short 
+    |- inspiring
+    |- 
+    |- As someone 
+    |- who dreams/aspires
+    |- make an impact
+    |- contribute to an organization they believe in
+    |- give their best foot forward
+    |- sitting here
+    |- your midst
+    |- maybe it’s not so much of a far fetched dream
+    |- maybe like you
+    |- I too 
+    |- effect positive change
+    |- contribute small way
+    |- through causes
+    |- initiatives
+    |- really matter
 
 |- skills
 |- alone
@@ -2022,6 +2080,7 @@ This highlights your understanding of AI, your specific technical contributions,
 |- and contribute to an organization they believe
 |- cause
 |- matters 
+
 
 |- sincerely
 |- for lack
@@ -2167,34 +2226,42 @@ This highlights your understanding of AI, your specific technical contributions,
     |- 
     |- it's aspiration of the company is on track to achieve 100% renewable energy generation by 2025 and reach Net Zero greenhouse gas emissions by 2050
 
-|- (Stratpoint)
-    |- accelerating the digital transformation for businesses globally for 20 yrs
+|- (Stratpoint) 
+    |- accelerating
+    |- transformation 
+    |- businesses 
+    |- digitally 
+    |- globally for 20 yrs
+    |- 
     |- specializing
+    |- outsourcing top talent
+    |- domains
+    |- revolving
     |- agile software development
     |- managed QA 
     |- cloud 
     |- data and AI
-    |-
-    |- continuous experts in modern cloud and data technologies (AWS, Google Cloud, HDP)
-    |- noted as the only AWS Advanced Consulting Partner in the Philippines.
-    |- They are a valued partner of VMware and Pivotal
     |- 
     |- Client Base: 
     |- Silicon Valley
     |- Globe Telecom
     |- ABS-CBN
-    |- UnionBank.
-
-    |- Core Initiative: Stratpoint is supporting the TESDA Supervised Industry Learning (SIL) program 
-    |- partnered with TechVoc institution Joysis TVI 
-    |- help communities
-    |- by tech education.
+    |- UnionBank
+    |- 
+    |- continuous experts in modern cloud and data technologies such as AWS, Google Cloud, Hortonworks Data Platform (HDP)
+    |- noted as the only AWS Advanced Consulting Partner in the Philippines.
+    |-
+    |- additionally I also 
+    |- admired
+    |- Core Initiative
+    |- supporting the TESDA Supervised Industry Learning (SIL) program 
+    |- partnership with TechVoc institution Joysis TVI 
     |-
     |- such as
     |- recent
     |- free
     |- 120-hour Java capstone training program 
-    |- last February 10 to 28
+    |- last February
     |- 
     |- dedicated
     |- for those 
@@ -2206,8 +2273,11 @@ This highlights your understanding of AI, your specific technical contributions,
     |- real world e-wallet apps
     |- for capstone
     |- engage
-    |- entire SWE dev lifecycel
-
+    |- entire SWE dev lifecyce
+    |- thereby
+    |- help communities
+    |- by tech education.
+    |- 
     |- additionally
     |- Stratpoint Technologies 
     |- among Top 500 out of 3200 global outsourcing firms in the OA500 2025 ranking
@@ -2218,24 +2288,7 @@ This highlights your understanding of AI, your specific technical contributions,
     |- QA 
     |- Cloud 
     |- data, and AI.
-    |- Basing it over STs domain authority, 
-    |- site traffic, 
-    |- employee reviews,
-    |- LinkedIn engagement.
 
-    |- reflecting 
-    |- not only commitment
-    |- innovation
-    |- service excellence
-    |- business impact
-    |- but the vision of
-    |- advancing talent
-    |- and skills of future
-    |- mentors and contributors
-    |- to PH tech ecosystem
-    |- through its pay it forward
-    |- mindset and skill
-    |- initiatives 
 
 |- other than
 |- that
