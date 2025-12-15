@@ -2306,6 +2306,22 @@ This highlights your understanding of AI, your specific technical contributions,
 
 * what qualities are you trying to find in a company? `open honest communication, mutual support, responsibility and integrity `
 
+* What questions do you have for us?
+- Do you have a data team?
+- I'm curious as to what feedback do you have for me so I can be better for the next interview?
+- Hanap ng job with implication of building a data pipeline as a data analyst?
+- roles like Junior da, Junior etl developer, Junior data engineer are good entry level roles
+- Who will i be reporting to?
+- Will I be working with a team of other <insert team e.g. data engineers>?
+- advice how to approach growing as a data analyst then to a senior data analyst or data engineer
+- how is the culture of people?
+- will career growth be a given (this is important)
+- where are the data sources so that you can combine them all into one single source using python especially if a company doesn't use python in its arsenal of tools
+- what's the next steps after this process/interview?
+- Catboost better than XGBoost trees
+- mas maganda pag foreign than local kasi mababait boss
+
+
 
 
 ### Personality (6):
@@ -3396,3 +3412,37 @@ talk more about strengths, be honest about your weaknesses and say you're active
 |- great and unique
 |- addition
 |- to the team, your organization
+
+
+# Mentoring:
+possible roles Andrew might apply for:
+- junior data scientist
+- junior data analyst
+- AI engineer
+- ML engineer
+- MLOps engineer
+- AI developer
+- ML developer
+
+learn cloud:
+- AWS lambda/Azure functions
+- AWS S3/Azure Data Lake Storage
+- AWS EC2/Azure VM
+- AWS EMR/Azure Databricks
+- AWS Sagemaker/Azure ML
+- AWS ECS/Azure Container Services, Azure Container Apps, Azure Container Registry
+
+learn alternate file formats to .csv:
+- .parquet
+- delta
+- .orc
+
+
+Things to do for application:
+- put your projects in GitHub
+- optimize LinkedIn
+- we gotta posting LinkedIn
+- start networking
+- optimize resume
+- start building and documenting projects on linkedin (to learn cloud, tools, etc.)
+

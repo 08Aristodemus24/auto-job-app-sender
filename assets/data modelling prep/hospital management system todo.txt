@@ -1,0 +1,41 @@
+design a relational data model for a Hospital Management system that can track the flow of patients and resources
+
+Core entities may include:
+- patients (with details like contact medical history, etc.)
+- doctors (with details like specialization, license ID)
+- departments e.g. cardiology, radiology, emergency
+- rooms/beds (with location e.g. floor and room number, is it occupied?, etc.)
+
+Key relationships may include:
+- how patients are checked into the hospital and assigned a room/bed
+- consulation/appointment which patients make with doctors including date and purpose of visit
+- doctor which the department belongs to
+
+the way to solve potential violation for 1NF and 2NF by having an attribute be a list/array type is to create a so called Bridge table/entity that turns these array elements into individual rows in this Bridge table e.g.
+
+----------------------------------------------
+| department_id | room_id | room_num | floor |
+----------------------------------------------
+| 1 |   CarA  |101   |   1   |
+| 1 |   CarB  |102   |   1   |
+| 1 |   CarB  |103   |   1   |
+| 2 |   RadA  |305   |   3   |
+| 2 |   RadA  |306   |   3   |
+| 2 |   RadA  |307   |   3   |
+
+
+
+that way we can still Department entity still has its primary keys as unique keys and have the Room entity have multiple instances of these primary keys as foreign keys in a one to many relationship
+
+
+Kimball vs inmon
+
+if x < 10m: 
+then it may be permitted to use a flat table this still promotes okay storage efficiency while maximizing computational efficiency
+
+elif 10m <= x <= 100m
+in this case if a flat table is used storage efficiency may suffer even if computational efficiency is maximized but if a star schema is used it results in a good trade off between storage and computational efficiency as it offers a good balance of both even if not completely maximized
+
+
+
+
